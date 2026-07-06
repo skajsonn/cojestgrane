@@ -1,5 +1,6 @@
-// Asystent AI (Google Gemini). Kontekst budowany jest z lokalnych JSON-ów:
-// repertuar + profil Letterboxd. Ten sam kontekst zasila sekcję rekomendacji.
+// Asystent AI (Google Gemini) — działa jako popup, kontekst budowany
+// z lokalnych JSON-ów: repertuar preferowanych kin + złączone profile
+// Letterboxd. Ten sam kontekst zasila sekcję rekomendacji.
 
 import { el, renderMarkdownSafe, dateInfo, todayIso } from './utils.js';
 import { fmtLabel, genreLabel, langLabel } from './labels.js';
@@ -16,13 +17,7 @@ const $ = (id) => document.getElementById(id);
 
 export function initAssistant(loadedData) {
   data = loadedData;
-  systemPrompt = buildSystemPrompt(data);
-
-  const lb = data.letterboxd;
-  $('chat-context-info').textContent = lb
-    ? `Kontekst: ${data.repertoire.films.length} filmów z repertuaru · profil @${lb.user} ` +
-      `(${lb.counts.watched} obejrzanych, ${lb.counts.watchlist} na watchliście)`
-    : `Kontekst: ${data.repertoire.films.length} filmów z repertuaru · brak danych Letterboxd`;
+  rebuildContext(data);
 
   $('chat-form').addEventListener('submit', (e) => {
     e.preventDefault();
@@ -40,17 +35,28 @@ export function initAssistant(loadedData) {
   });
 
   addMessage('ai',
-    'Cześć! Znam aktualny repertuar Punktu 44 i Silesii oraz Twój profil Letterboxd. ' +
-    'Zapytaj mnie, na co warto pójść — powiem Ci też dlaczego.');
+    `Cześć! Znam repertuar (${data.cinemas.map((c) => c.name).join(', ')}) ` +
+    'i Twój profil Letterboxd. Zapytaj, na co warto pójść — powiem Ci też dlaczego.');
+}
+
+/** Przebudowa kontekstu po zmianie profili/kin (bez utraty rozmowy). */
+export function rebuildContext(loadedData) {
+  data = loadedData;
+  systemPrompt = buildSystemPrompt(data);
+  const m = data.merged;
+  $('chat-context-info').textContent = m.accounts.length
+    ? `Kontekst: ${data.repertoire.films.length} filmów · ${data.cinemas.length} kin(a) · ` +
+      `${m.accounts.map((u) => '@' + u).join(', ')} (${m.counts.watched} obejrzanych, ${m.counts.watchlist} watchlista)`
+    : `Kontekst: ${data.repertoire.films.length} filmów · ${data.cinemas.length} kin(a) · brak profilu Letterboxd`;
 }
 
 /* ── budowa kontekstu (współdzielona z rekomendacjami) ──────────── */
 export function buildSystemPrompt(d) {
   const today = todayIso();
   const rep = d.repertoire;
-  const lb = d.letterboxd;
+  const m = d.merged;
   const horizon = addDaysIso(today, CONTEXT_DAYS);
-  const cinemaName = Object.fromEntries(rep.cinemas.map((c) => [c.id, c.name]));
+  const cinemaName = Object.fromEntries(d.cinemas.map((c) => [c.id, c.name]));
 
   const statusPl = {
     premiere: 'PREMIERA TYGODNIA', new: 'nowość', upcoming: 'zapowiedź (przedpremiera)',
@@ -58,19 +64,9 @@ export function buildSystemPrompt(d) {
   };
 
   const filmLines = rep.films.map((f) => {
-    const head = [
-      `• ${f.title}${f.originalTitle ? ` (oryg. „${f.originalTitle}”)` : ''} (${f.year})`,
-      `[${statusPl[f.status] ?? f.status}]`,
-      f.length ? `${f.length} min` : null,
-      f.genres.length ? f.genres.map(genreLabel).join('/') : null,
-      f.formats.filter((x) => x !== '2d').map(fmtLabel).join(', ') || null,
-      f.tmdb?.voteAverage ? `TMDB ${f.tmdb.voteAverage}` : null,
-      f.lbWatched ? `UŻYTKOWNIK JUŻ OBEJRZAŁ${f.lbWatched.rating10 ? ` (ocenił ${f.lbWatched.rating10}/10)` : ''}` : null,
-      f.lbWatchlisted ? 'NA WATCHLIŚCIE UŻYTKOWNIKA' : null,
-    ].filter(Boolean).join(' | ');
-
     const schedule = [];
     for (const [cid, byDate] of Object.entries(f.showings)) {
+      if (!d.cinemaSet.has(cid)) continue;
       const days = Object.keys(byDate).sort().filter((dd) => dd >= today && dd <= horizon);
       if (!days.length) continue;
       const daysTxt = days.map((dd) => {
@@ -84,50 +80,67 @@ export function buildSystemPrompt(d) {
       }).join('; ');
       schedule.push(`    ${cinemaName[cid] ?? cid}: ${daysTxt}`);
     }
+    if (!schedule.length) return null; // film nie gra w preferowanych kinach
+
+    const head = [
+      `• ${f.title}${f.originalTitle ? ` (oryg. „${f.originalTitle}”)` : ''} (${f.year})`,
+      `[${statusPl[f.status] ?? f.status}]`,
+      f.length ? `${f.length} min` : null,
+      f.genres.length ? f.genres.map(genreLabel).join('/') : null,
+      f.formats.filter((x) => x !== '2d').map(fmtLabel).join(', ') || null,
+      f.tmdb?.voteAverage ? `TMDB ${f.tmdb.voteAverage}` : null,
+      f.lbWatched ? `UŻYTKOWNIK JUŻ OBEJRZAŁ${f.lbWatched.rating10 ? ` (ocenił ${f.lbWatched.rating10}/10)` : ''}` : null,
+      f.lbWatchlisted ? 'NA WATCHLIŚCIE UŻYTKOWNIKA' : null,
+    ].filter(Boolean).join(' | ');
+
     const overview = f.tmdb?.overview ? `    Opis: ${f.tmdb.overview.slice(0, 220)}` : null;
     return [head, overview, ...schedule].filter(Boolean).join('\n');
-  }).join('\n');
+  }).filter(Boolean).join('\n');
 
   let profile = 'Brak danych z Letterboxd.';
-  if (lb) {
-    const rated = lb.watched.filter((w) => w.rating10 != null);
-    const fav = rated.filter((w) => w.rating10 >= 8).map((w) => `${w.title} (${w.year ?? '?'}) ${w.rating10}/10`);
-    const meh = rated.filter((w) => w.rating10 <= 4).map((w) => `${w.title} ${w.rating10}/10`);
-    const wl = lb.watchlist.map((w) => `${w.title} (${w.year ?? '?'})`);
-    const reviews = (lb.recent ?? []).filter((r) => r.review).slice(0, 8)
-      .map((r) => `- ${r.title}${r.rating10 ? ` (${r.rating10}/10)` : ''}: „${r.review.slice(0, 260)}”`);
+  if (m.accounts.length) {
+    const multi = m.accounts.length > 1;
+    const tag = (w) => (multi ? ` [@${w.user}]` : '');
+    const rated = m.watched.filter((w) => w.rating10 != null);
+    const fav = rated.filter((w) => w.rating10 >= 8).map((w) => `${w.title} (${w.year ?? '?'}) ${w.rating10}/10${tag(w)}`);
+    const meh = rated.filter((w) => w.rating10 <= 4).map((w) => `${w.title} ${w.rating10}/10${tag(w)}`);
+    const wl = m.watchlist.map((w) => `${w.title} (${w.year ?? '?'})${tag(w)}`);
+    const reviews = m.recent.filter((r) => r.review).slice(0, 8)
+      .map((r) => `- ${r.title}${r.rating10 ? ` (${r.rating10}/10)` : ''}${multi ? ` [@${r.user}]` : ''}: „${r.review.slice(0, 260)}”`);
 
     profile = [
-      `Profil Letterboxd @${lb.user}: ${lb.counts.watched} obejrzanych, ${lb.counts.watchlist} na watchliście.`,
+      `Profile Letterboxd (${m.accounts.map((u) => '@' + u).join(', ')}): łącznie ${m.counts.watched} obejrzanych, ${m.counts.watchlist} na watchliście.` +
+        (multi ? ' Dane wielu osób — jeśli rekomendacja ma pasować wszystkim, szukaj części wspólnej gustów.' : ''),
       fav.length ? `WYSOKO OCENIONE (8–10/10, to jest gust użytkownika):\n${fav.join('; ')}` : null,
       meh.length ? `NISKO OCENIONE (1–4/10, tego unikać):\n${meh.join('; ')}` : null,
-      wl.length ? `WATCHLISTA (te filmy priorytetyzuj w rekomendacjach):\n${wl.join('; ')}` : null,
-      reviews.length ? `OSTATNIE RECENZJE UŻYTKOWNIKA:\n${reviews.join('\n')}` : null,
-      `PEŁNA LISTA OBEJRZANYCH (nie polecaj ich, chyba że użytkownik chce powtórkę):\n${lb.watched.map((w) => w.title).join('; ')}`,
+      wl.length ? `WATCHLISTA (te filmy priorytetyzuj):\n${wl.join('; ')}` : null,
+      reviews.length ? `OSTATNIE RECENZJE:\n${reviews.join('\n')}` : null,
+      `PEŁNA LISTA OBEJRZANYCH (nie polecaj ich, chyba że użytkownik chce powtórkę):\n${m.watched.map((w) => w.title).join('; ')}`,
     ].filter(Boolean).join('\n\n');
   }
 
   const di = dateInfo(today, today);
+  const cinemasTxt = d.cinemas.map((c) => `Cinema City ${c.name}`).join(', ');
   return `Jesteś asystentem serwisu „Co jest grane?” — osobistym doradcą kinowym użytkownika z kartą Cinema City Unlimited.
-Użytkownik chodzi do dwóch kin w Katowicach: Cinema City Punkt 44 (IMAX, 4DX) i Cinema City Silesia.
+Użytkownik ogląda repertuar kin: ${cinemasTxt}.
 
 DZIŚ JEST: ${di.dowFull}, ${today}.
 
 ZASADY:
 1. Polecasz WYŁĄCZNIE filmy z poniższego repertuaru — nigdy nie wymyślaj tytułów ani seansów.
 2. Nie polecaj filmów, które użytkownik już obejrzał (lista niżej) — chyba że wprost poprosi o powtórkę.
-3. Filmy z watchlisty użytkownika traktuj priorytetowo i zawsze zaznaczaj, że są na jego watchliście.
+3. Filmy z watchlisty traktuj priorytetowo i zawsze zaznaczaj, że są na watchliście.
 4. Zawsze wyjaśniaj DLACZEGO film pasuje do gustu użytkownika, odwołując się do jego ocen i recenzji.
 5. Rozróżniaj premiery tygodnia od powtórek/retro i mów o tym wprost.
 6. Podawaj konkretne seanse: kino, dzień, godzina, format (IMAX/4DX itd.) i wersja językowa.
-7. Ma kartę Unlimited — koszt biletu nie gra roli, zachęcaj do eksperymentów, ale szanuj jego czas.
-8. Jeśli brakuje Ci informacji o preferencjach w danym kontekście (nastrój, towarzystwo, długość) — dopytaj.
+7. Użytkownik ma kartę Unlimited — koszt nie gra roli, zachęcaj do eksperymentów, ale szanuj jego czas.
+8. Jeśli brakuje Ci informacji (nastrój, towarzystwo, dojazd do którego kina) — dopytaj.
 9. Odpowiadaj po polsku, zwięźle i konkretnie. Formatuj listami z pogrubieniami, bez tabel.
 
 REPERTUAR (od ${today}, horyzont ${CONTEXT_DAYS} dni; format godzin: HH:MM[FORMAT](wersja)):
 ${filmLines}
 
-PROFIL FILMOWY UŻYTKOWNIKA:
+PROFIL FILMOWY:
 ${profile}`;
 }
 
@@ -165,7 +178,6 @@ async function send(rawText) {
     const reply = await generate({ system: systemPrompt, contents: chatHistory });
     typing.remove();
     chatHistory.push({ role: 'model', parts: [{ text: reply }] });
-    // historia w ryzach: ostatnie 20 tur wystarczy
     if (chatHistory.length > 40) chatHistory = chatHistory.slice(-40);
     addMessage('ai', reply);
     logRecommendation({ ts: new Date().toISOString(), question: text, answer: reply });

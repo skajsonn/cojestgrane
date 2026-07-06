@@ -1,4 +1,5 @@
 // Renderowanie widoku repertuaru: pasek dat, filtry, karty, szczegóły filmu.
+// Wszystko liczone wyłącznie dla preferowanych kin (data.cinemas / data.cinemaSet).
 // Zasada: dane z JSON-ów nigdy nie trafiają do innerHTML — tylko textContent.
 
 import { el, dateInfo, todayIso, normalizeTitle } from './utils.js';
@@ -23,8 +24,16 @@ export function initRepertoire(data) {
   const today = todayIso();
   state.day = data.dates.find((d) => d >= today) ?? data.dates[0];
 
+  $('brand-tag').textContent = data.cinemas.map((c) => c.name).join(' · ') || 'Cinema City';
+
   renderDatestrip();
   initFilters();
+  renderGrid();
+  renderFooter();
+}
+
+/** Odświeżenie po dosynchronizowaniu profili (bez przeładowania strony). */
+export function rerenderGrid() {
   renderGrid();
   renderFooter();
 }
@@ -53,7 +62,9 @@ function renderDatestrip() {
 /* ── filtry ─────────────────────────────────────────────────────── */
 function initFilters() {
   const cinemaSel = $('f-cinema');
-  for (const c of state.data.repertoire.cinemas) {
+  // opcje kin = tylko preferowane
+  while (cinemaSel.options.length > 1) cinemaSel.remove(1);
+  for (const c of state.data.cinemas) {
     const opt = el('option', null, c.name);
     opt.value = c.id;
     cinemaSel.append(opt);
@@ -62,6 +73,7 @@ function initFilters() {
   const formats = new Set();
   for (const f of state.data.repertoire.films) for (const fm of f.formats) if (fm !== '2d') formats.add(fm);
   const formatSel = $('f-format');
+  while (formatSel.options.length > 1) formatSel.remove(1);
   for (const fm of [...formats].sort()) {
     const opt = el('option', null, fmtLabel(fm));
     opt.value = fm;
@@ -91,8 +103,7 @@ function visibleFilms() {
     if (!filmHasFormat(film, state.format)) return false;
     if (q && !normalizeTitle(film.title).includes(q) &&
         !(film.originalTitle && normalizeTitle(film.originalTitle).includes(q))) return false;
-    // film musi mieć seans w wybranym dniu (w wybranym kinie)
-    return showingsForDay(film, state.day, state.cinema).length > 0;
+    return showingsForDay(film, state.day, state.cinema, state.data.cinemaSet).length > 0;
   });
 }
 
@@ -116,7 +127,7 @@ function plural(n, one, few, many) {
   return many;
 }
 
-function posterEl(film) {
+export function posterEl(film) {
   const wrap = el('div', 'poster-wrap');
   const src = film.poster ?? film.tmdb?.poster;
   if (src) {
@@ -178,9 +189,9 @@ function filmCard(film) {
   }
 
   const times = el('div', 'card-times');
-  for (const { cinemaId, shows } of showingsForDay(film, state.day, state.cinema)) {
+  for (const { cinemaId, shows } of showingsForDay(film, state.day, state.cinema, state.data.cinemaSet)) {
     const row = el('div', 'times-cinema');
-    const cinema = state.data.repertoire.cinemas.find((c) => c.id === cinemaId);
+    const cinema = state.data.cinemas.find((c) => c.id === cinemaId);
     row.append(el('span', 'tc-name', cinema?.short ?? cinemaId));
     for (const s of shows.slice(0, 7)) {
       const pill = el('span',
@@ -235,7 +246,8 @@ export function openFilmDialog(film) {
   if (film.releaseDate) info.append(el('p', 'card-meta', `Premiera: ${film.releaseDate}`));
   if (film.tmdb?.overview) info.append(el('p', 'overview', film.tmdb.overview));
   if (film.lbWatched?.rating10) {
-    info.append(el('p', 'card-meta', `Twoja ocena na Letterboxd: ${film.lbWatched.rating10}/10`));
+    info.append(el('p', 'card-meta',
+      `Ocena na Letterboxd (@${film.lbWatched.user}): ${film.lbWatched.rating10}/10`));
   }
 
   const links = el('div', 'hero-links');
@@ -245,10 +257,10 @@ export function openFilmDialog(film) {
   hero.append(info);
   body.append(hero);
 
-  // Pełny harmonogram: każde kino → każda data → godziny.
+  // Pełny harmonogram: preferowane kina → każda data → godziny.
   const sched = el('div', 'schedule');
   const today = todayIso();
-  for (const cinema of state.data.repertoire.cinemas) {
+  for (const cinema of state.data.cinemas) {
     const byDate = film.showings[cinema.id];
     if (!byDate) continue;
     sched.append(el('h3', null, `Cinema City ${cinema.name}`));
@@ -272,10 +284,7 @@ export function openFilmDialog(film) {
           pill = el('span', 'time-pill' + (s.soldOut ? ' is-soldout' : ''), s.time);
           if (s.soldOut) pill.title = 'Wyprzedane';
         }
-        if (label) {
-          const sub = el('span', 'pill-sub', label);
-          pill.append(sub);
-        }
+        if (label) pill.append(el('span', 'pill-sub', label));
         timesCol.append(pill);
       }
       day.append(timesCol);
@@ -304,10 +313,11 @@ function extLink(href, text, cls) {
 /* ── stopka ─────────────────────────────────────────────────────── */
 function renderFooter() {
   const rep = state.data.repertoire;
-  const lb = state.data.letterboxd;
+  const m = state.data.merged;
   const parts = [`Repertuar zaktualizowany: ${new Date(rep.generatedAt).toLocaleString('pl-PL')}`];
-  if (lb) {
-    parts.push(`Letterboxd (@${lb.user}): ${lb.counts.watched} obejrzanych, ${lb.counts.watchlist} na watchliście`);
+  if (m.accounts.length) {
+    parts.push(`Letterboxd (${m.accounts.map((u) => '@' + u).join(', ')}): ` +
+      `${m.counts.watched} obejrzanych, ${m.counts.watchlist} na watchliście`);
   }
   $('footer-meta').textContent = parts.join(' • ');
 }

@@ -98,42 +98,131 @@ main { flex: 1; width: min(1200px, 100% - 32px); margin: 0 auto; padding: 22px 0
 .nav-btn.is-active { color: var(--gold-hi); border-color: var(--gold); background: var(--gold-dim); }
 .nav-gear { font-size: 16px; padding: 8px 12px; }
 
-/* ── rekomendacje ──────────────────────────────────────────────── */
-.reco { margin-bottom: 26px; }
-.reco-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+/* ── rekomendacje (pionowa lista) ──────────────────────────────── */
+.section-title {
+  font-family: var(--font-display); font-size: clamp(19px, 3vw, 24px);
+  letter-spacing: .08em; text-transform: uppercase; color: var(--gold-hi);
+  margin: 30px 0 12px;
+}
+.reco { margin-bottom: 10px; }
+.reco-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .reco-head h2 {
   font-family: var(--font-display); font-size: clamp(19px, 3vw, 24px);
   letter-spacing: .08em; text-transform: uppercase; color: var(--gold-hi); margin: 0;
 }
 .btn-small { padding: 6px 12px; font-size: 12.5px; }
-.reco-note { color: var(--muted); font-size: 12.5px; margin: 6px 0 12px; min-height: 1em; }
-.reco-strip {
-  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(300px, 380px);
-  gap: 14px; overflow-x: auto; padding: 2px 2px 10px;
-  scrollbar-width: thin; scrollbar-color: var(--line) transparent;
-}
+.reco-note { color: var(--muted); font-size: 12.5px; margin: 6px 0 14px; min-height: 1em; }
+.reco-list { display: flex; flex-direction: column; gap: 14px; }
 .reco-card {
-  display: flex; gap: 12px; cursor: pointer;
-  background: linear-gradient(135deg, var(--card-hi), var(--card));
+  position: relative;
+  display: grid; grid-template-columns: 108px 1fr; gap: 16px; cursor: pointer;
+  background: linear-gradient(120deg, var(--card-hi), var(--card) 55%);
   border: 1px solid rgba(212, 169, 64, .28); border-radius: var(--r);
-  padding: 12px; transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  padding: 14px; transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
 .reco-card:hover, .reco-card:focus-visible {
-  transform: translateY(-3px); border-color: rgba(212,169,64,.65);
+  transform: translateY(-2px); border-color: rgba(212,169,64,.65);
   box-shadow: var(--shadow); outline: none;
 }
-.reco-thumb { flex: 0 0 74px; aspect-ratio: 27/40; border-radius: 8px; overflow: hidden; background: var(--bg-2); position: relative; }
+.reco-rank {
+  position: absolute; top: -9px; left: -9px; width: 26px; height: 26px;
+  background: var(--gold); color: #171205; border-radius: 50%;
+  display: grid; place-items: center; font: 600 13px var(--font-mono);
+}
+.reco-thumb { position: relative; aspect-ratio: 27/40; border-radius: 8px; overflow: hidden; background: var(--bg-2); }
 .reco-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.reco-body { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
-.reco-title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
-.reco-title { font-family: var(--font-display); font-size: 16px; margin: 0; line-height: 1.2; }
+.reco-body { min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.reco-title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+.reco-title { font-family: var(--font-display); font-size: 19px; margin: 0; line-height: 1.2; }
+.reco-meta { color: var(--muted); font-size: 12px; }
 .badge-inline {
   font: 600 9.5px var(--font-body); letter-spacing: .12em; text-transform: uppercase;
   padding: 2.5px 7px; border-radius: 5px;
 }
 .badge-inline.badge-wl { background: rgba(20,42,46,.9); color: #7edce6; border: 1px solid rgba(82,197,212,.5); }
-.reco-why { color: #c9c6d4; font-size: 12.5px; margin: 0; line-height: 1.45; }
-.reco-when { color: var(--gold-hi); font: 500 11.5px var(--font-mono); margin: 2px 0 0; }
+.reco-why { color: #cfccda; font-size: 13.5px; margin: 2px 0 0; line-height: 1.55; }
+.reco-why::before { content: "„"; color: var(--gold); font-family: var(--font-display); font-size: 17px; margin-right: 2px; }
+.reco-why::after { content: "”"; color: var(--gold); font-family: var(--font-display); font-size: 17px; margin-left: 2px; }
+.reco-when { color: var(--gold-hi); font: 500 12px var(--font-mono); margin: 4px 0 0; }
+
+/* ── kalendarz premier ─────────────────────────────────────────── */
+.prem-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+.prem-timeline { position: relative; margin: 6px 0 0 8px; padding-left: 26px; border-left: 2px solid var(--line); }
+.prem-day { position: relative; padding: 6px 0 26px; }
+.prem-day::before {
+  content: ""; position: absolute; left: -34px; top: 14px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--gold); box-shadow: 0 0 0 4px rgba(212,169,64,.18);
+}
+.prem-date {
+  font-family: var(--font-display); font-size: 17px; letter-spacing: .06em;
+  color: var(--gold-hi); margin: 0 0 10px; text-transform: uppercase;
+}
+.prem-date .pd-rel { color: var(--muted); font: 400 12px var(--font-body); letter-spacing: 0; text-transform: none; margin-left: 8px; }
+.prem-films { display: flex; flex-direction: column; gap: 10px; }
+.prem-film {
+  display: grid; grid-template-columns: 64px 1fr; gap: 14px; align-items: center;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 10px 14px 10px 10px; cursor: pointer;
+  transition: border-color .18s, transform .15s;
+}
+.prem-film:hover, .prem-film:focus-visible { border-color: rgba(212,169,64,.6); transform: translateY(-2px); outline: none; }
+.prem-thumb { aspect-ratio: 27/40; border-radius: 6px; overflow: hidden; background: var(--bg-2); }
+.prem-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.prem-info { min-width: 0; }
+.prem-title { font-family: var(--font-display); font-size: 16.5px; margin: 0 0 2px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.prem-sub { color: var(--muted); font-size: 12px; }
+
+/* ── asystent: pływający przycisk + panel ──────────────────────── */
+#chat-fab {
+  position: fixed; right: 20px; bottom: 20px; z-index: 70;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: var(--gold); color: #171205; border: none; cursor: pointer;
+  box-shadow: 0 8px 28px rgba(0,0,0,.5), 0 0 0 1px rgba(212,169,64,.35);
+  display: grid; place-items: center;
+  transition: transform .18s ease, background .2s;
+}
+#chat-fab:hover { transform: scale(1.07); background: var(--gold-hi); }
+#chat-fab svg { animation: reel-spin 24s linear infinite; }
+#chat-fab.is-open svg { animation-play-state: paused; }
+
+.chat-panel {
+  position: fixed; right: 20px; bottom: 90px; z-index: 69;
+  width: min(410px, calc(100vw - 24px));
+  height: min(620px, calc(100dvh - 120px));
+  border-radius: 16px; overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0,0,0,.65);
+  border: 1px solid rgba(212,169,64,.3);
+}
+.chat-panel[hidden] { display: none; }
+.chat-panel .chat-shell { height: 100%; min-height: 0; border: none; border-radius: 0; }
+.chat-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.chat-close {
+  background: none; border: 1px solid var(--line); color: var(--muted);
+  border-radius: 8px; width: 30px; height: 30px; cursor: pointer;
+}
+.chat-close:hover { color: var(--text); border-color: var(--gold); }
+
+/* ── listy wyboru: kina, konta ─────────────────────────────────── */
+.cinema-list { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.cinema-item, .account-item {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px 14px; font-size: 14px;
+}
+.cinema-item input, .account-item input { accent-color: var(--gold); }
+.cinema-item .ci-city, .account-item .ai-src { color: var(--muted); font-size: 11.5px; margin-left: auto; text-align: right; }
+.account-item .ai-remove {
+  background: none; border: none; color: var(--muted); cursor: pointer; font-size: 13px; padding: 2px 6px;
+}
+.account-item .ai-remove:hover { color: var(--red); }
+.add-account-row { display: flex; gap: 8px; margin: 10px 0; }
+.add-account-row input {
+  flex: 1; background: var(--card); color: var(--text);
+  border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px;
+  font: 400 14px var(--font-body);
+}
+.ob-h { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin: 24px 0 6px; }
 
 /* ── wybór konta ───────────────────────────────────────────────── */
 .account-body h2 { font-family: var(--font-display); letter-spacing: .05em; margin-top: 0; }
@@ -386,16 +475,36 @@ a.time-pill:hover { border-color: var(--gold); color: var(--gold-hi); }
 
 /* ── RWD ───────────────────────────────────────────────────────── */
 @media (max-width: 680px) {
+  html, body { overflow-x: hidden; }
   body { font-size: 14px; }
+  main { width: calc(100% - 24px); }
+  .header-inner { width: calc(100% - 24px); }
   .brand-tag { display: none; }
-  .film-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+  .brand-name { font-size: 19px; }
+  .reel { width: 30px; height: 30px; }
+  .nav-btn { padding: 7px 11px; font-size: 13px; }
+  .nav-gear { padding: 7px 9px; }
+  .film-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
   .card-title { font-size: 15px; }
-  .film-hero { grid-template-columns: 120px 1fr; gap: 14px; }
-  .sched-day { grid-template-columns: 92px 1fr; }
-  .dialog-body { padding: 18px 16px 24px; }
-  .chat-shell { height: calc(100dvh - 190px); }
-  .msg { max-width: 92%; }
-  .reco-strip { grid-auto-columns: minmax(260px, 84vw); }
-  .reco-head { flex-wrap: wrap; }
-  .card-times .times-cinema .tc-name { min-width: 48px; }
+  .card-body { padding: 10px 11px 12px; }
+  .film-hero { grid-template-columns: 110px 1fr; gap: 12px; }
+  .sched-day { grid-template-columns: 84px 1fr; }
+  .dialog-body { padding: 18px 14px 24px; }
+  .msg { max-width: 94%; }
+  .reco-card { grid-template-columns: 84px 1fr; gap: 12px; padding: 11px; }
+  .reco-title { font-size: 16.5px; }
+  .reco-why { font-size: 12.5px; }
+  .filters { gap: 8px; }
+  .filters select { flex: 1 1 45%; min-width: 0; }
+  .filters input[type="search"] { flex: 1 1 100%; }
+  .prem-timeline { margin-left: 2px; padding-left: 18px; }
+  .prem-day::before { left: -26px; }
+  .prem-film { grid-template-columns: 52px 1fr; gap: 10px; padding: 8px 10px; }
+  #chat-fab { right: 12px; bottom: 12px; width: 52px; height: 52px; }
+  .chat-panel {
+    right: 8px; left: 8px; bottom: 74px;
+    width: auto; height: min(560px, calc(100dvh - 90px));
+  }
+  .chat-suggestions .sugg { font-size: 11.5px; padding: 5px 10px; }
+  .card-times .times-cinema .tc-name { min-width: 44px; }
 }

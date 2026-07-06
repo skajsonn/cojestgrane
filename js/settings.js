@@ -1,17 +1,25 @@
-// Ustawienia: klucz Gemini (tylko localStorage tej przeglądarki),
+// Ustawienia: kina, konta Letterboxd, klucz Gemini (tylko localStorage),
 // wybór modelu, dziennik rekomendacji. Żadna z tych danych nie opuszcza
-// urządzenia użytkownika (poza wywołaniem API Google jego własnym kluczem).
+// urządzenia użytkownika (poza wywołaniami API Google jego własnym kluczem).
 
 import { downloadJson } from './utils.js';
-import { saveAccount } from './data.js';
+import {
+  getCinemaPrefs, saveCinemaPrefs,
+  getBrowserAccounts, addBrowserAccount, removeBrowserAccount,
+  getActiveAccounts, saveActiveAccounts,
+} from './data.js';
+import { syncAccount, dropCache, USER_RE } from './letterboxd-client.js';
 
 const KEY_API = 'kk_gemini_key';
 const KEY_MODEL = 'kk_gemini_model';
 const KEY_LOG = 'kk_reco_log';
 const DEFAULT_MODEL = 'gemini-2.5-flash';
-const LOG_LIMIT = 100;
+// Limit istnieje, bo dziennik żyje w localStorage (~5 MB na całą domenę,
+// dzielone z cache'ami profili). 500 rozmów to bezpieczny kompromis.
+const LOG_LIMIT = 500;
 
 const $ = (id) => document.getElementById(id);
+let onProfilesChanged = null; // callback z app.js
 
 export function getApiKey() {
   return (localStorage.getItem(KEY_API) ?? '').trim() || null;
@@ -19,14 +27,17 @@ export function getApiKey() {
 
 export function getModel() {
   const m = (localStorage.getItem(KEY_MODEL) ?? '').trim();
-  // walidacja: identyfikator modelu, nic więcej (trafia do URL-a)
   return /^[a-z0-9.-]{3,60}$/.test(m) ? m : DEFAULT_MODEL;
 }
 
 export function logRecommendation(entry) {
   const log = readLog();
   log.push(entry);
-  localStorage.setItem(KEY_LOG, JSON.stringify(log.slice(-LOG_LIMIT)));
+  try {
+    localStorage.setItem(KEY_LOG, JSON.stringify(log.slice(-LOG_LIMIT)));
+  } catch {
+    localStorage.setItem(KEY_LOG, JSON.stringify(log.slice(-50))); // awaryjnie: mniej
+  }
 }
 
 function readLog() {
@@ -39,21 +50,18 @@ function readLog() {
 }
 
 /* ── dialog ustawień ────────────────────────────────────────────── */
-export function initSettings(data) {
+export function initSettings(data, { profilesChanged } = {}) {
+  onProfilesChanged = profilesChanged ?? null;
   const dialog = $('settings-dialog');
 
   $('btn-settings').addEventListener('click', () => {
     $('set-api-key').value = getApiKey() ?? '';
     refreshModelSelect([getModel()]);
-    refreshAccountSelect(data);
+    renderCinemas(data);
+    renderAccounts(data);
     refreshLogInfo();
     refreshDataInfo(data);
     dialog.showModal();
-  });
-
-  $('set-lb-user').addEventListener('change', (e) => {
-    saveAccount(e.target.value);
-    location.reload(); // przeliczenie dopasowań i kontekstu asystenta
   });
 
   $('btn-test-key').addEventListener('click', saveAndTestKey);
@@ -67,6 +75,10 @@ export function initSettings(data) {
     localStorage.setItem(KEY_MODEL, e.target.value);
   });
 
+  $('set-add-account').addEventListener('click', () => {
+    addAccountFlow($('set-new-nick'), $('set-sync-status'), data);
+  });
+
   $('btn-export-log').addEventListener('click', () => {
     downloadJson('cojestgrane-rekomendacje.json', readLog());
   });
@@ -76,6 +88,106 @@ export function initSettings(data) {
   });
 }
 
+/* ── kina ───────────────────────────────────────────────────────── */
+function renderCinemas(data) {
+  const box = $('set-cinemas');
+  box.replaceChildren();
+  const all = data.repertoire.cinemas;
+  const prefs = getCinemaPrefs(all.map((c) => c.id));
+
+  for (const c of all) {
+    const label = document.createElement('label');
+    label.className = 'cinema-item';
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.value = c.id;
+    cb.checked = prefs.includes(c.id);
+    cb.addEventListener('change', () => {
+      const checked = [...box.querySelectorAll('input:checked')].map((i) => i.value);
+      if (!checked.length) { cb.checked = true; return; } // min. 1 kino
+      saveCinemaPrefs(checked);
+      location.reload(); // pełne przeliczenie widoków i kontekstu AI
+    });
+    label.append(cb, document.createTextNode(` ${c.name}`));
+    label.append(Object.assign(document.createElement('span'), { className: 'ci-city', textContent: c.fullName }));
+    box.append(label);
+  }
+}
+
+/* ── konta Letterboxd ───────────────────────────────────────────── */
+function renderAccounts(data) {
+  const box = $('set-accounts');
+  box.replaceChildren();
+  const browser = getBrowserAccounts();
+  const known = [...new Set([...data.configUsers, ...browser])];
+  const active = getActiveAccounts(known);
+
+  for (const user of known) {
+    const item = document.createElement('label');
+    item.className = 'account-item';
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.value = user;
+    cb.checked = active.includes(user);
+    cb.addEventListener('change', async () => {
+      const checked = [...box.querySelectorAll('input:checked')].map((i) => i.value);
+      saveActiveAccounts(checked);
+      await onProfilesChanged?.();
+      refreshDataInfo(data);
+    });
+    item.append(cb, document.createTextNode(` @${user}`));
+
+    const src = document.createElement('span');
+    src.className = 'ai-src';
+    src.textContent = data.configUsers.includes(user) ? 'synchronizacja codzienna' : 'w tej przeglądarce';
+    item.append(src);
+
+    if (!data.configUsers.includes(user)) {
+      const rm = document.createElement('button');
+      rm.type = 'button';
+      rm.className = 'ai-remove';
+      rm.textContent = '✕';
+      rm.title = 'Usuń konto z przeglądarki';
+      rm.addEventListener('click', async (e) => {
+        e.preventDefault();
+        removeBrowserAccount(user);
+        dropCache(user);
+        renderAccounts(data);
+        await onProfilesChanged?.();
+        refreshDataInfo(data);
+      });
+      item.append(rm);
+    }
+    box.append(item);
+  }
+}
+
+/** Wspólny przepływ dodawania konta (ustawienia i onboarding). */
+export async function addAccountFlow(input, statusEl, data) {
+  const nick = input.value.trim().replace(/^@/, '');
+  if (!USER_RE.test(nick)) {
+    statusEl.textContent = 'Nick może zawierać litery, cyfry i podkreślenia (2–30 znaków).';
+    return false;
+  }
+  input.disabled = true;
+  try {
+    await syncAccount(nick, (msg) => { statusEl.textContent = msg; });
+    addBrowserAccount(nick);
+    saveActiveAccounts([...new Set([...getActiveAccounts(), nick])]);
+    input.value = '';
+    if (data) renderAccounts(data);
+    await onProfilesChanged?.();
+    if (data) refreshDataInfo(data);
+    return true;
+  } catch (err) {
+    statusEl.textContent = `Nie udało się: ${err.message}`;
+    return false;
+  } finally {
+    input.disabled = false;
+  }
+}
+
+/* ── klucz / model ──────────────────────────────────────────────── */
 function setKeyStatus(text, cls) {
   const s = $('key-status');
   s.textContent = text;
@@ -96,10 +208,6 @@ function refreshModelSelect(models) {
   }
 }
 
-/**
- * Zapisuje klucz i robi próbne wywołanie ListModels — przy okazji
- * wypełnia listę modeli dostępnych dla tego klucza.
- */
 async function saveAndTestKey() {
   const key = $('set-api-key').value.trim();
   // stary format: AIza… (39 znaków), nowy: AQ.… (z kropką)
@@ -128,45 +236,26 @@ async function saveAndTestKey() {
   }
 }
 
-function refreshAccountSelect(data) {
-  const sel = $('set-lb-user');
-  sel.replaceChildren();
-  const users = data?.users ?? [];
-  if (!users.length) {
-    const opt = document.createElement('option');
-    opt.textContent = 'brak zsynchronizowanych kont';
-    opt.disabled = true;
-    opt.selected = true;
-    sel.append(opt);
-    sel.disabled = true;
-    return;
-  }
-  for (const u of users) {
-    const opt = document.createElement('option');
-    opt.value = u;
-    opt.textContent = `@${u}`;
-    if (u === data.account) opt.selected = true;
-    sel.append(opt);
-  }
-}
-
+/* ── informacje ─────────────────────────────────────────────────── */
 function refreshLogInfo() {
   const log = readLog();
-  $('log-info').textContent = log.length
-    ? `Zapisanych rozmów z asystentem: ${log.length} (maks. ${LOG_LIMIT}, tylko w tej przeglądarce).`
-    : 'Dziennik jest pusty — rozmowy z asystentem zapisują się tutaj automatycznie.';
+  $('log-info').textContent = (log.length
+    ? `Zapisanych rozmów: ${log.length} z maks. ${LOG_LIMIT}. `
+    : 'Dziennik jest pusty — rozmowy z asystentem zapisują się tutaj automatycznie. ')
+    + `Limit wynika z pojemności pamięci przeglądarki (localStorage, ~5 MB wspólne dla całej strony) — `
+    + `najstarsze wpisy ustępują nowym; eksportuj, jeśli chcesz zachować historię na zawsze.`;
 }
 
 function refreshDataInfo(data) {
   const rep = data?.repertoire;
-  const lb = data?.letterboxd;
+  const m = data?.merged;
   const lines = [];
   if (rep) {
-    lines.push(`Repertuar: ${rep.films.length} filmów, aktualizacja ${new Date(rep.generatedAt).toLocaleString('pl-PL')}.`);
+    lines.push(`Repertuar: ${rep.films.length} filmów z ${rep.cinemas.length} kin, aktualizacja ${new Date(rep.generatedAt).toLocaleString('pl-PL')}.`);
   }
-  lines.push(lb
-    ? `Letterboxd @${lb.user}: ${lb.counts.watched} obejrzanych, ${lb.counts.watchlist} na watchliście, synchronizacja ${new Date(lb.generatedAt).toLocaleString('pl-PL')}.`
-    : 'Letterboxd: brak danych (uruchom workflow „Aktualizacja danych”).');
-  lines.push('Dane odświeża codziennie GitHub Actions — patrz README.');
+  lines.push(m?.accounts?.length
+    ? `Aktywne profile: ${m.accounts.map((u) => '@' + u).join(', ')} — łącznie ${m.counts.watched} obejrzanych, ${m.counts.watchlist} na watchliście.`
+    : 'Brak aktywnych profili Letterboxd.');
+  lines.push('Repertuar odświeża codziennie GitHub Actions (~5:45).');
   $('data-info').textContent = lines.join(' ');
 }

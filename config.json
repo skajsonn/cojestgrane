@@ -2,7 +2,10 @@
   "letterboxdUsers": ["skajson"],
   "cinemas": [
     { "id": "1065", "name": "Punkt 44", "fullName": "Cinema City Katowice - Punkt 44", "short": "P44" },
-    { "id": "1079", "name": "Silesia", "fullName": "Cinema City Katowice - Silesia", "short": "SIL" }
+    { "id": "1079", "name": "Silesia", "fullName": "Cinema City Katowice - Silesia", "short": "SIL" },
+    { "id": "1089", "name": "Częstochowa Jurajska", "fullName": "Cinema City Częstochowa - Galeria Jurajska", "short": "CZJ" },
+    { "id": "1075", "name": "Częstochowa Wolność", "fullName": "Cinema City Częstochowa - Wolność", "short": "CZW" },
+    { "id": "1069", "name": "Warszawa Janki", "fullName": "Cinema City Warszawa - Janki", "short": "JAN" }
   ],
   "daysAhead": 35,
   "scheduleDaysInAssistantContext": 14,

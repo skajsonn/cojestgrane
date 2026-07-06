@@ -9,14 +9,14 @@
     style-src 'self' https://fonts.googleapis.com;
     font-src https://fonts.gstatic.com;
     img-src 'self' https://www.cinema-city.pl https://image.tmdb.org https://a.ltrbxd.com data:;
-    connect-src 'self' https://generativelanguage.googleapis.com;
+    connect-src 'self' https://generativelanguage.googleapis.com https://api.allorigins.win https://corsproxy.io;
     base-uri 'none';
     object-src 'none';
     form-action 'none';
   ">
   <meta name="referrer" content="no-referrer">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Co jest grane? — osobisty asystent kinowy dla Cinema City Punkt 44 i Silesia w Katowicach.">
+  <meta name="description" content="Co jest grane? — osobisty asystent kinowy dla kin Cinema City.">
   <title>Co jest grane?</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,12 +37,12 @@
       </svg>
       <span class="brand-text">
         <span class="brand-name">Co jest grane?</span>
-        <span class="brand-tag">Punkt 44 · Silesia</span>
+        <span class="brand-tag" id="brand-tag">Cinema City</span>
       </span>
     </a>
     <nav class="main-nav" aria-label="Nawigacja">
       <button class="nav-btn is-active" data-view="repertoire" type="button">Repertuar</button>
-      <button class="nav-btn" data-view="assistant" type="button">Asystent</button>
+      <button class="nav-btn" data-view="premieres" type="button">Premiery</button>
       <button class="nav-btn nav-gear" id="btn-settings" type="button" aria-label="Ustawienia">⚙</button>
     </nav>
   </div>
@@ -53,21 +53,22 @@
   <!-- ═══════════ REPERTUAR ═══════════ -->
   <section id="view-repertoire" class="view">
 
-    <!-- Rekomendacje na dziś -->
+    <!-- Rekomendacje -->
     <section class="reco" aria-label="Rekomendacje">
       <div class="reco-head">
         <h2>Warto iść</h2>
         <button type="button" class="btn btn-ghost btn-small" id="reco-refresh">✨ Odśwież rekomendacje</button>
       </div>
       <p class="reco-note" id="reco-note"></p>
-      <div class="reco-strip" id="reco-strip"></div>
+      <div class="reco-list" id="reco-list"></div>
     </section>
 
+    <h2 class="section-title">Repertuar</h2>
     <div class="datestrip" id="datestrip" role="tablist" aria-label="Wybór dnia"></div>
 
     <div class="filters">
       <select id="f-cinema" aria-label="Kino">
-        <option value="">Oba kina</option>
+        <option value="">Wybrane kina</option>
       </select>
       <select id="f-format" aria-label="Format">
         <option value="">Wszystkie formaty</option>
@@ -89,45 +90,70 @@
     <p class="empty-note" id="empty-note" hidden>Nic z tego sita nie przeszło. Poluzuj filtry.</p>
   </section>
 
-  <!-- ═══════════ ASYSTENT ═══════════ -->
-  <section id="view-assistant" class="view" hidden>
-    <div class="chat-shell">
-      <div class="chat-head">
-        <h2>Asystent kinomaniaka</h2>
-        <p class="chat-context-info" id="chat-context-info"></p>
-      </div>
-      <div class="chat-log" id="chat-log" aria-live="polite"></div>
-      <div class="chat-suggestions" id="chat-suggestions">
-        <button type="button" class="sugg">Na co pójść w sobotę wieczorem?</button>
-        <button type="button" class="sugg">Coś w IMAX wartego uwagi w tym tygodniu?</button>
-        <button type="button" class="sugg">Które premiery tygodnia pasują do mojego gustu?</button>
-        <button type="button" class="sugg">Ułóż mi kinowy plan na weekend</button>
-      </div>
-      <form class="chat-form" id="chat-form">
-        <textarea id="chat-input" rows="1" placeholder="Zapytaj o repertuar…" maxlength="2000" required></textarea>
-        <button type="submit" id="chat-send" aria-label="Wyślij">➤</button>
-      </form>
+  <!-- ═══════════ PREMIERY (kalendarz) ═══════════ -->
+  <section id="view-premieres" class="view" hidden>
+    <div class="prem-head">
+      <h2 class="section-title">Kalendarz premier</h2>
+      <label class="chk"><input type="checkbox" id="prem-cream" checked> Tylko śmietanka (watchlista + dobre oceny)</label>
     </div>
+    <p class="grid-summary" id="prem-summary"></p>
+    <div class="prem-timeline" id="prem-timeline"></div>
+    <p class="empty-note" id="prem-empty" hidden>Brak nadchodzących premier spełniających kryteria — odznacz „śmietankę”, żeby zobaczyć wszystkie.</p>
   </section>
 </main>
 
-<!-- ═══════════ SZCZEGÓŁY FILMU ═══════════ -->
-<dialog id="film-dialog" aria-label="Szczegóły filmu">
-  <div class="dialog-body" id="film-dialog-body"></div>
-</dialog>
+<!-- ═══════════ ASYSTENT (popup) ═══════════ -->
+<button id="chat-fab" type="button" aria-label="Otwórz asystenta" aria-expanded="false">
+  <svg viewBox="0 0 32 32" aria-hidden="true" width="26" height="26">
+    <circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="2.4"/>
+    <circle cx="16" cy="10" r="2.6" fill="currentColor"/><circle cx="16" cy="22" r="2.6" fill="currentColor"/>
+    <circle cx="10" cy="16" r="2.6" fill="currentColor"/><circle cx="22" cy="16" r="2.6" fill="currentColor"/>
+  </svg>
+</button>
 
-<!-- ═══════════ WYBÓR KONTA LETTERBOXD (pierwsze wejście) ═══════════ -->
-<dialog id="account-dialog" aria-label="Wybór profilu Letterboxd">
+<div id="chat-panel" class="chat-panel" hidden role="dialog" aria-label="Asystent kinomaniaka">
+  <div class="chat-shell">
+    <div class="chat-head">
+      <div>
+        <h2>Asystent</h2>
+        <p class="chat-context-info" id="chat-context-info"></p>
+      </div>
+      <button type="button" class="chat-close" id="chat-close" aria-label="Zamknij">✕</button>
+    </div>
+    <div class="chat-log" id="chat-log" aria-live="polite"></div>
+    <div class="chat-suggestions" id="chat-suggestions">
+      <button type="button" class="sugg">Na co pójść w sobotę wieczorem?</button>
+      <button type="button" class="sugg">Coś w IMAX wartego uwagi?</button>
+      <button type="button" class="sugg">Premiery tygodnia dla mnie</button>
+    </div>
+    <form class="chat-form" id="chat-form">
+      <textarea id="chat-input" rows="1" placeholder="Zapytaj o repertuar…" maxlength="2000" required></textarea>
+      <button type="submit" id="chat-send" aria-label="Wyślij">➤</button>
+    </form>
+  </div>
+</div>
+
+<!-- ═══════════ ONBOARDING (pierwsze wejście) ═══════════ -->
+<dialog id="onboarding-dialog" aria-label="Konfiguracja startowa">
   <div class="dialog-body account-body">
-    <h2>Czyj to gust?</h2>
-    <p class="hint">
-      Wybierz profil Letterboxd, z którym mam pracować — oznaczę obejrzane filmy,
-      podświetlę watchlistę i na tym profilu oprę rekomendacje.
-      Wybór zapisuje się w tej przeglądarce; zmienisz go w Ustawieniach (⚙).
-    </p>
-    <div class="account-list" id="account-list"></div>
-    <p class="hint">Chcesz dodać inne konto? Dopisz nick w <code>config.json</code>
-      (pole <code>letterboxdUsers</code>) — zsynchronizuje się przy kolejnej aktualizacji danych.</p>
+    <h2>Ustawmy Twoje kino</h2>
+
+    <h3 class="ob-h">1 · Z których kin pokazywać repertuar?</h3>
+    <div class="cinema-list" id="ob-cinemas"></div>
+
+    <h3 class="ob-h">2 · Czyj gust śledzimy? (Letterboxd)</h3>
+    <p class="hint">Zaznacz konta, z których zbiorę obejrzane filmy, oceny i watchlisty —
+      możesz też dopisać dowolny publiczny nick.</p>
+    <div class="account-list" id="ob-accounts"></div>
+    <div class="add-account-row">
+      <input type="text" id="ob-new-nick" placeholder="nick z letterboxd.com" maxlength="30" spellcheck="false">
+      <button type="button" class="btn btn-ghost" id="ob-add-account">Dodaj</button>
+    </div>
+    <p class="hint" id="ob-sync-status"></p>
+
+    <div class="btn-row">
+      <button type="button" class="btn" id="ob-done">Zaczynamy 🎬</button>
+    </div>
   </div>
 </dialog>
 
@@ -137,14 +163,22 @@
     <button class="dialog-close" data-close type="button" aria-label="Zamknij">✕</button>
     <h2>Ustawienia</h2>
 
-    <h3>Profil Letterboxd</h3>
+    <h3>Kina</h3>
+    <p class="hint">Odznacz kina, których repertuaru nie chcesz oglądać (zmiana przeładowuje stronę).</p>
+    <div class="cinema-list" id="set-cinemas"></div>
+
+    <h3>Konta Letterboxd</h3>
     <p class="hint">
-      Profil, z którego czytam obejrzane filmy, oceny i watchlistę (zapisywany w tej przeglądarce).
-      Nowe konta dopisz w <code>config.json</code> → <code>letterboxdUsers</code>.
+      Konta z codzienną synchronizacją pochodzą z <code>config.json</code>. Konta dodane tutaj
+      synchronizują się w Twojej przeglądarce (raz na dobę) i nie opuszczają tego urządzenia.
+      Dane aktywnych kont są łączone: obejrzane i watchlisty sumują się.
     </p>
-    <label class="field">Aktywny profil
-      <select id="set-lb-user"></select>
-    </label>
+    <div class="account-list" id="set-accounts"></div>
+    <div class="add-account-row">
+      <input type="text" id="set-new-nick" placeholder="nick z letterboxd.com" maxlength="30" spellcheck="false">
+      <button type="button" class="btn btn-ghost" id="set-add-account">Dodaj konto</button>
+    </div>
+    <p class="hint" id="set-sync-status"></p>
 
     <h3>Asystent AI (Google Gemini)</h3>
     <p class="hint">
@@ -176,11 +210,16 @@
   </div>
 </dialog>
 
+<!-- ═══════════ SZCZEGÓŁY FILMU ═══════════ -->
+<dialog id="film-dialog" aria-label="Szczegóły filmu">
+  <div class="dialog-body" id="film-dialog-body"></div>
+</dialog>
+
 <footer class="site-footer">
   <div class="filmstrip" aria-hidden="true"></div>
   <p id="footer-meta"></p>
   <p class="footer-small">
-    Projekt hobbystyczny. Dane repertuarowe: Cinema City · profil filmowy: Letterboxd · metadane: TMDB.
+    Projekt hobbystyczny. Dane repertuarowe: Cinema City · profile filmowe: Letterboxd · metadane: TMDB.
     Aplikacja nie jest powiązana z żadnym z tych serwisów.
   </p>
 </footer>

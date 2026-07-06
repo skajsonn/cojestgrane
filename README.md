@@ -1,6 +1,8 @@
 # 🎬 Co jest grane? — [cojestgrane.me](https://cojestgrane.me)
 
-Osobisty asystent kinowy dla **Cinema City Katowice — Punkt 44 i Silesia**.
+Osobisty asystent kinowy dla kin **Cinema City** (domyślnie: Katowice Punkt 44
+i Silesia, Częstochowa Jurajska i Wolność, Warszawa Janki — przy pierwszym
+wejściu wybierasz swoje kina, listę zmienisz w Ustawieniach).
 Codziennie pobiera aktualny repertuar obu kin, łączy go z Twoim profilem
 **Letterboxd** i pozwala rozmawiać z asystentem AI (**Gemini**), który wie,
 co już obejrzałeś, co masz na watchliście i jaki masz gust.
@@ -39,20 +41,28 @@ co już obejrzałeś, co masz na watchliście i jaki masz gust.
   logowania ani tokenów: skrypt czyta strony `letterboxd.com/USER/films/`
   (wszystkie obejrzane + oceny), `/watchlist/` i kanał RSS (ostatnia aktywność
   + recenzje). Przez `curl`, bo Cloudflare odrzuca fetch Node'a po fingerprincie TLS.
-  Można zsynchronizować **wiele kont** (`letterboxdUsers` w config.json) —
-  aktywny profil wybiera się przy pierwszym wejściu na stronę lub w Ustawieniach
-  (zapamiętywany w localStorage przeglądarki).
+  Można zsynchronizować **wiele kont** (`letterboxdUsers` w config.json), a
+  dodatkowe konta można też **dopisać nickiem prosto w Ustawieniach** — takie
+  konta synchronizują się w przeglądarce (przez publiczne proxy CORS, cache
+  w localStorage; gdy Cloudflare blokuje pełną historię, spada do trybu
+  częściowego: kompletna watchlista + ostatnie seanse z RSS). Dane wszystkich
+  aktywnych kont są łączone — idealne do wspólnego wybierania filmu.
 - **Dopasowanie repertuaru do profilu** — Cinema City używa polskich tytułów,
   a Letterboxd oryginalnych, więc skrypt mapuje każdy film przez **wyszukiwarkę
   Letterboxd** (indeksuje tytuły alternatywne, w tym polskie) na kanoniczny slug
   i tytuł oryginalny (cache w `data/lb-map.json`, bez żadnego klucza). Dzięki temu
   oznaczenia „✓ obejrzane” / „☆ watchlista” i filtr „ukryj obejrzane” działają
   po identyfikatorze, nie po kruchym porównywaniu tytułów.
-- **Rekomendacje „Warto iść”** — sekcja na górze strony. Bez klucza Gemini:
-  lokalny ranking (watchlista > premiery > oceny TMDB > formaty premium).
-  Z kluczem: rekomendacje układa AI na tym samym kontekście co asystent
-  (repertuar + profil), z uzasadnieniem i konkretnym seansem; wynik jest
-  cache'owany w przeglądarce — jedno zapytanie na dzień/aktualizację danych.
+- **Rekomendacje „Warto iść”** — pionowa lista na górze strony z uzasadnieniem
+  dla każdego filmu. Bez klucza Gemini: lokalny ranking (watchlista > premiery >
+  oceny TMDB > formaty premium). Z kluczem: rekomendacje układa AI na tym samym
+  kontekście co asystent, z cache'em w przeglądarce (jedno zapytanie na
+  dzień/aktualizację danych).
+- **Kalendarz premier** — zakładka „Premiery”: oś czasu nadchodzących premier
+  (w oknie przedsprzedaży Cinema City), z filtrem „śmietanka” (watchlista +
+  dobrze oceniane w TMDB).
+- **Asystent jako popup** — pływający przycisk w prawym dolnym rogu; rozmowa
+  nie wymaga opuszczania listy filmów.
 - **Baza danych** — pliki JSON w repozytorium (`data/`), wersjonowane gitem:
   `repertoire.json` (aktualny repertuar), `letterboxd/<nick>.json` + `letterboxd/index.json`
   (profile), `history.json` (dzienne archiwum repertuaru), `films-history.json`
