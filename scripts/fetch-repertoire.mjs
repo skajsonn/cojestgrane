@@ -255,7 +255,8 @@ async function main() {
   if (TMDB_KEY) {
     for (const f of films.values()) {
       try {
-        f.tmdb = await tmdbEnrich(f, tmdbCache);
+        // tmdbEnrich przyjmuje surowy kształt CC (name/releaseYear)
+        f.tmdb = await tmdbEnrich({ id: f.id, name: f.title, releaseYear: f.year }, tmdbCache);
       } catch (err) {
         console.warn(`[tmdb] pominięto "${f.title}": ${err.message}`);
         f.tmdb = tmdbCache[f.id]?.tmdb ?? null;
