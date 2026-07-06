@@ -32,7 +32,12 @@ jobs:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: node scripts/fetch-repertoire.mjs
 
-      - name: Synchronizuj profil Letterboxd
+      - name: Kalendarz premier (TMDB)
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: node scripts/fetch-calendar.mjs
+
+      - name: Synchronizuj profile Letterboxd
         run: node scripts/sync-letterboxd.mjs
 
       - name: Zatwierdź zmienione dane

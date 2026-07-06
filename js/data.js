@@ -60,34 +60,42 @@ export function saveActiveAccounts(users) { localStorage.setItem(KEY_ACTIVE, JSO
 
 /* ── profil złączony z wielu kont ───────────────────────────────── */
 function mergeProfiles(profiles) {
+  // Wpisy per (konto, film) — kto obejrzał/chce obejrzeć ma znaczenie,
+  // więc NIE deduplikujemy między kontami (liczniki liczą unikalne filmy).
   const watched = [];
   const watchlist = [];
   const recent = [];
-  const seenW = new Set();
-  const seenWl = new Set();
 
   for (const p of profiles) {
     for (const f of p.watched ?? []) {
-      if (seenW.has(f.slug)) continue;
-      seenW.add(f.slug);
       watched.push({ ...f, user: p.user, norm: f.norm ?? normalizeTitle(f.title) });
     }
     for (const f of p.watchlist ?? []) {
-      if (seenWl.has(f.slug)) continue;
-      seenWl.add(f.slug);
       watchlist.push({ ...f, user: p.user, norm: f.norm ?? normalizeTitle(f.title) });
     }
     for (const r of p.recent ?? []) recent.push({ ...r, user: p.user });
   }
 
+  const groupBySlug = (list) => {
+    const map = new Map();
+    for (const e of list) {
+      if (!map.has(e.slug)) map.set(e.slug, []);
+      map.get(e.slug).push(e);
+    }
+    return map;
+  };
+
   return {
     accounts: profiles.map((p) => p.user),
-    counts: { watched: watched.length, watchlist: watchlist.length },
+    counts: {
+      watched: new Set(watched.map((w) => w.slug)).size,
+      watchlist: new Set(watchlist.map((w) => w.slug)).size,
+    },
     watched,
     watchlist,
     recent,
-    bySlugWatched: new Map(watched.map((w) => [w.slug, w])),
-    slugsWatchlist: new Set(watchlist.map((w) => w.slug)),
+    bySlugWatched: groupBySlug(watched),
+    bySlugWatchlist: groupBySlug(watchlist),
   };
 }
 
@@ -100,7 +108,7 @@ function buildTitleIndex(list) {
   return index;
 }
 
-function matchByTitle(film, index) {
+function matchAllByTitle(film, index) {
   const keys = new Set();
   if (film.originalTitle) keys.add(normalizeTitle(film.originalTitle));
   if (film.tmdb?.originalTitle) keys.add(normalizeTitle(film.tmdb.originalTitle));
@@ -108,22 +116,41 @@ function matchByTitle(film, index) {
   keys.add(normalizeTitle(film.title));
 
   const ccYear = parseInt(film.year, 10) || null;
+  const out = [];
   for (const key of keys) {
     for (const entry of index.get(key) ?? []) {
-      if (!ccYear || !entry.year || Math.abs(ccYear - entry.year) <= 1) return entry;
+      if (!ccYear || !entry.year || Math.abs(ccYear - entry.year) <= 1) out.push(entry);
     }
   }
-  return null;
+  return out;
 }
 
 export function annotate(repertoire, merged) {
   const watchedIdx = buildTitleIndex(merged.watched);
   const watchlistIdx = buildTitleIndex(merged.watchlist);
+
   for (const film of repertoire.films) {
-    film.lbWatched = (film.lbSlug && merged.bySlugWatched.get(film.lbSlug))
-      || matchByTitle(film, watchedIdx) || null;
-    film.lbWatchlisted = !film.lbWatched &&
-      ((film.lbSlug && merged.slugsWatchlist.has(film.lbSlug)) || !!matchByTitle(film, watchlistIdx));
+    const collect = (bySlug, idx) => {
+      const found = [
+        ...(film.lbSlug ? bySlug.get(film.lbSlug) ?? [] : []),
+        ...matchAllByTitle(film, idx),
+      ];
+      // jeden wpis na konto
+      const seen = new Set();
+      return found.filter((e) => !seen.has(e.user) && seen.add(e.user));
+    };
+
+    const watchedBy = collect(merged.bySlugWatched, watchedIdx);
+    const watchedUsers = new Set(watchedBy.map((e) => e.user));
+    // watchlista danej osoby liczy się, dopóki TA osoba nie obejrzała —
+    // to, że ktoś inny z paczki już widział, nie kasuje polecenia
+    const watchlistedBy = collect(merged.bySlugWatchlist, watchlistIdx)
+      .filter((e) => !watchedUsers.has(e.user));
+
+    film.lbWatchedBy = watchedBy;
+    film.lbWatchlistedBy = watchlistedBy;
+    film.lbWatched = watchedBy[0] ?? null;
+    film.lbWatchlisted = watchlistedBy[0] ?? null;
   }
 }
 

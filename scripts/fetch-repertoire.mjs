@@ -36,6 +36,13 @@ const GENRE_ATTRS = new Set([
   'mystery', 'romance', 'sci-fi', 'sport', 'thriller', 'war', 'western',
 ]);
 
+function pickBooking(...candidates) {
+  for (const c of candidates) {
+    if (typeof c === 'string' && c.startsWith('https://')) return c;
+  }
+  return null;
+}
+
 function classifyStatus(film, firstSeen) {
   const year = parseInt(film.releaseYear, 10);
   const nowYear = parseInt(TODAY.slice(0, 4), 10);
@@ -225,7 +232,9 @@ async function main() {
           formats: attrs.filter((a) => FORMAT_ATTRS.has(a) && a !== '2d'),
           lang: attrs.find((a) => LANG_ATTRS.has(a)) || null,
           auditorium: e.auditorium || null,
-          booking: typeof e.bookingLink === 'string' && e.bookingLink.startsWith('https://') ? e.bookingLink : null,
+          // booking-router idzie przez www.cinema-city.pl — tam żyje sesja
+          // zalogowanego użytkownika (karta Unlimited działa od razu).
+          booking: pickBooking(e.bookingRouterLaunchLink, e.bookingLink),
           soldOut: !!e.soldOut,
         };
         ((rec.showings[cinema.id] ??= {})[date] ??= []).push(show);

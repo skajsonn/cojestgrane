@@ -7,7 +7,6 @@ import {
 } from './data.js';
 import { readCache, cacheFresh, syncAccount } from './letterboxd-client.js';
 import { initRepertoire, rerenderGrid } from './ui.js';
-import { initAssistant, rebuildContext } from './assistant.js';
 import { initSettings, addAccountFlow } from './settings.js';
 import { initReco, refresh as refreshReco } from './reco.js';
 import { initPremieres, refresh as refreshPremieres } from './premieres.js';
@@ -23,22 +22,6 @@ function initNav() {
       $('view-repertoire').hidden = btn.dataset.view !== 'repertoire';
       $('view-premieres').hidden = btn.dataset.view !== 'premieres';
     });
-  });
-}
-
-function initChatPopup() {
-  const fab = $('chat-fab');
-  const panel = $('chat-panel');
-  const setOpen = (open) => {
-    panel.hidden = !open;
-    fab.classList.toggle('is-open', open);
-    fab.setAttribute('aria-expanded', String(open));
-    if (open) $('chat-input').focus();
-  };
-  fab.addEventListener('click', () => setOpen(panel.hidden));
-  $('chat-close').addEventListener('click', () => setOpen(false));
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !panel.hidden) setOpen(false);
   });
 }
 
@@ -59,7 +42,6 @@ async function profilesChanged(data) {
   rerenderGrid();
   refreshReco(data);
   refreshPremieres(data);
-  rebuildContext(data);
 }
 
 /* ── onboarding (pierwsze wejście) ──────────────────────────────── */
@@ -134,15 +116,13 @@ async function backgroundRefresh(data) {
 
 async function main() {
   initNav();
-  initChatPopup();
   initDialogs();
 
   try {
     const data = await loadAll();
     initRepertoire(data);
     initReco(data);
-    initPremieres(data);
-    initAssistant(data);
+    await initPremieres(data);
     initSettings(data, { profilesChanged: () => profilesChanged(data) });
     if (data.needsOnboarding) showOnboarding(data);
     else backgroundRefresh(data);

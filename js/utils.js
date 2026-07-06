@@ -48,6 +48,18 @@ export function todayIso() {
   return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Warsaw' }).format(new Date());
 }
 
+/** Aktualna godzina w Warszawie jako "HH:MM" (porównywalna leksykalnie). */
+export function nowWarsawHM() {
+  return new Intl.DateTimeFormat('pl-PL', {
+    timeZone: 'Europe/Warsaw', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+  }).format(new Date());
+}
+
+/** Czy seans o danej dacie/godzinie już się rozpoczął. */
+export function isPastShowing(dateIso, timeHM, today = todayIso(), now = nowWarsawHM()) {
+  return dateIso < today || (dateIso === today && timeHM <= now);
+}
+
 /**
  * Minimalny, bezpieczny renderer odpowiedzi asystenta:
  * najpierw pełny escaping, dopiero potem **pogrubienie**, *kursywa*,

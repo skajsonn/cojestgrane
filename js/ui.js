@@ -2,7 +2,7 @@
 // Wszystko liczone wyłącznie dla preferowanych kin (data.cinemas / data.cinemaSet).
 // Zasada: dane z JSON-ów nigdy nie trafiają do innerHTML — tylko textContent.
 
-import { el, dateInfo, todayIso, normalizeTitle } from './utils.js';
+import { el, dateInfo, todayIso, normalizeTitle, isPastShowing } from './utils.js';
 import { fmtLabel, genreLabel, langLabel, STATUS_INFO } from './labels.js';
 import { showingsForDay, filmHasFormat } from './data.js';
 
@@ -98,8 +98,9 @@ function visibleFilms() {
   const q = normalizeTitle(state.search);
   return state.data.repertoire.films.filter((film) => {
     if (state.status && film.status !== state.status) return false;
-    if (state.onlyWatchlist && !film.lbWatchlisted) return false;
-    if (state.hideWatched && film.lbWatched) return false;
+    if (state.onlyWatchlist && !film.lbWatchlistedBy?.length) return false;
+    // „ukryj obejrzane”: nie chowamy filmu, który ktoś z paczki wciąż chce zobaczyć
+    if (state.hideWatched && film.lbWatchedBy?.length && !film.lbWatchlistedBy?.length) return false;
     if (!filmHasFormat(film, state.format)) return false;
     if (q && !normalizeTitle(film.title).includes(q) &&
         !(film.originalTitle && normalizeTitle(film.originalTitle).includes(q))) return false;
@@ -151,12 +152,20 @@ function badgeEls(film) {
   const st = STATUS_INFO[film.status];
   if (st) nodes.push(el('span', `badge ${st.cls}`, st.label));
 
+  const multi = state.data.merged.accounts.length > 1;
   const marks = el('div', 'user-marks');
   if (film.lbWatched) {
+    const who = multi ? `@${film.lbWatched.user}` : 'obejrzane';
     const rating = film.lbWatched.rating10 ? ` ${film.lbWatched.rating10}/10` : '';
-    marks.append(el('span', 'mark mark-watched', `✓ obejrzane${rating}`));
-  } else if (film.lbWatchlisted) {
-    marks.append(el('span', 'mark mark-watchlist', '☆ watchlista'));
+    const mark = el('span', 'mark mark-watched', `✓ ${who}${rating}`);
+    mark.title = film.lbWatchedBy.map((e) => `@${e.user}${e.rating10 ? ` ${e.rating10}/10` : ''}`).join(', ');
+    marks.append(mark);
+  }
+  if (film.lbWatchlisted) {
+    const mark = el('span', 'mark mark-watchlist',
+      multi ? `☆ @${film.lbWatchlisted.user}${film.lbWatchlistedBy.length > 1 ? ` +${film.lbWatchlistedBy.length - 1}` : ''}` : '☆ watchlista');
+    mark.title = 'Na watchliście: ' + film.lbWatchlistedBy.map((e) => '@' + e.user).join(', ');
+    marks.append(mark);
   }
   if (marks.childElementCount) nodes.push(marks);
   return nodes;
@@ -194,11 +203,12 @@ function filmCard(film) {
     const cinema = state.data.cinemas.find((c) => c.id === cinemaId);
     row.append(el('span', 'tc-name', cinema?.short ?? cinemaId));
     for (const s of shows.slice(0, 7)) {
+      const past = isPastShowing(state.day, s.time);
       const pill = el('span',
-        'time-pill' + (s.formats.length ? ' is-format' : '') + (s.soldOut ? ' is-soldout' : ''),
+        'time-pill' + (s.formats.length ? ' is-format' : '') + (s.soldOut ? ' is-soldout' : '') + (past ? ' is-past' : ''),
         s.time);
       const extra = [...s.formats.map(fmtLabel), langLabel(s.lang)].filter(Boolean).join(', ');
-      if (extra) pill.title = extra;
+      pill.title = past ? 'Seans już się rozpoczął' : extra;
       row.append(pill);
     }
     if (shows.length > 7) row.append(el('span', 'no-times', `+${shows.length - 7}`));
@@ -276,13 +286,15 @@ export function openFilmDialog(film) {
       const timesCol = el('div', 'sched-times');
       for (const s of byDate[date]) {
         const label = [...s.formats.map(fmtLabel), langLabel(s.lang)].filter(Boolean).join(' · ');
+        const past = isPastShowing(date, s.time);
         let pill;
-        if (s.booking && !s.soldOut) {
+        if (s.booking && !s.soldOut && !past) {
           pill = extLink(s.booking, s.time, 'time-pill' + (s.formats.length ? ' is-format' : ''));
           pill.title = `Kup bilet${label ? ` — ${label}` : ''}`;
         } else {
-          pill = el('span', 'time-pill' + (s.soldOut ? ' is-soldout' : ''), s.time);
-          if (s.soldOut) pill.title = 'Wyprzedane';
+          pill = el('span', 'time-pill' + (s.soldOut ? ' is-soldout' : '') + (past ? ' is-past' : ''), s.time);
+          if (past) pill.title = 'Seans już się rozpoczął';
+          else if (s.soldOut) pill.title = 'Wyprzedane';
         }
         if (label) pill.append(el('span', 'pill-sub', label));
         timesCol.append(pill);
