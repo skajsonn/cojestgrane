@@ -189,6 +189,35 @@ async function lbLookup(film, cache) {
   return entry;
 }
 
+/**
+ * Średnia ocena społeczności Letterboxd (0.5–5) ze strony filmu (JSON-LD).
+ * Odświeżana co 3 dni; brak oceny (mało głosów / przedpremiera) = null.
+ */
+async function lbRating(entry) {
+  if (!entry.slug) return entry;
+  if (entry.ratingAt && daysBetween(entry.ratingAt, TODAY) < 3) return entry;
+  try {
+    const html = await fetchTextViaCurl(`https://letterboxd.com/film/${entry.slug}/`, { userAgent: BROWSER_UA });
+    const m = html.match(/"aggregateRating"[\s\S]{0,400}?"ratingValue":\s*([\d.]+)[\s\S]{0,200}?"ratingCount":\s*(\d+)/) ||
+              html.match(/"ratingCount":\s*(\d+)[\s\S]{0,400}?"ratingValue":\s*([\d.]+)/);
+    if (m) {
+      const [value, count] = m.length === 3 && Number(m[1]) <= 5
+        ? [Number(m[1]), Number(m[2])]
+        : [Number(m[2]), Number(m[1])];
+      entry.rating = Math.round(value * 100) / 100;
+      entry.ratingCount = count;
+    } else {
+      entry.rating = null;
+      entry.ratingCount = 0;
+    }
+    entry.ratingAt = TODAY;
+  } catch (err) {
+    console.warn(`[lb-rating] ${entry.slug}: ${err.message}`);
+  }
+  await sleep(300);
+  return entry;
+}
+
 // ---------------------------------------------------------------- main
 async function main() {
   console.log(`[repertuar] ${TODAY} → ${UNTIL}, kina: ${CONFIG.cinemas.map((c) => c.name).join(', ')}`);
@@ -232,9 +261,9 @@ async function main() {
           formats: attrs.filter((a) => FORMAT_ATTRS.has(a) && a !== '2d'),
           lang: attrs.find((a) => LANG_ATTRS.has(a)) || null,
           auditorium: e.auditorium || null,
-          // booking-router idzie przez www.cinema-city.pl — tam żyje sesja
-          // zalogowanego użytkownika (karta Unlimited działa od razu).
-          booking: pickBooking(e.bookingRouterLaunchLink, e.bookingLink),
+          // Bezpośredni link do systemu biletowego. Celowo NIE booking-router:
+          // ten potrafi przekierować na tickets.dev.* (zablokowane Cloudflare).
+          booking: pickBooking(e.bookingLink, e.compositeBookingLink?.obsoleteBookingUrl),
           soldOut: !!e.soldOut,
         };
         ((rec.showings[cinema.id] ??= {})[date] ??= []).push(show);
@@ -281,14 +310,19 @@ async function main() {
   const lbMapPath = `${ROOT}/data/lb-map.json`;
   const lbMap = (await readJsonIfExists(lbMapPath, {})) || {};
   let mapped = 0;
+  let rated = 0;
   for (const f of films.values()) {
     const entry = await lbLookup({ id: f.id, name: f.title, releaseYear: f.year }, lbMap);
+    await lbRating(entry);
     f.lbSlug = entry.slug;
     f.lbTitle = entry.slug ? entry.title : null;
+    f.lbRating = entry.rating ?? null;
+    f.lbRatingCount = entry.ratingCount ?? 0;
     if (entry.slug) mapped++;
+    if (entry.rating) rated++;
   }
   await writeJson(lbMapPath, lbMap);
-  console.log(`[lb-map] dopasowano ${mapped}/${films.size} filmów do Letterboxd`);
+  console.log(`[lb-map] dopasowano ${mapped}/${films.size} filmów, ocen Letterboxd: ${rated}`);
 
   const out = {
     generatedAt: new Date().toISOString(),

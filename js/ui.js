@@ -250,7 +250,11 @@ export function openFilmDialog(film) {
   if (film.year) meta.append(el('span', null, film.year));
   if (film.length) meta.append(el('span', null, `${film.length} min`));
   if (film.genres.length) meta.append(el('span', null, film.genres.map(genreLabel).join(' · ')));
-  if (film.tmdb?.voteAverage) meta.append(el('span', 'tmdb-score', `★ ${film.tmdb.voteAverage.toFixed(1)} TMDB`));
+  if (film.lbRating) {
+    const score = el('span', 'tmdb-score', `★ ${film.lbRating.toFixed(2)} Letterboxd`);
+    score.title = `Średnia społeczności Letterboxd (${film.lbRatingCount.toLocaleString('pl-PL')} ocen)`;
+    meta.append(score);
+  }
   info.append(meta);
 
   if (film.releaseDate) info.append(el('p', 'card-meta', `Premiera: ${film.releaseDate}`));

@@ -7,6 +7,7 @@ import {
   getActiveAccounts, saveActiveAccounts,
 } from './data.js';
 import { syncAccount, dropCache, USER_RE } from './letterboxd-client.js';
+import { getApiKey, setApiKey, clearApiKey, looksLikeKey, testKey } from './gemini.js';
 
 const $ = (id) => document.getElementById(id);
 let onProfilesChanged = null; // callback z app.js
@@ -19,12 +20,40 @@ export function initSettings(data, { profilesChanged } = {}) {
   $('btn-settings').addEventListener('click', () => {
     renderCinemas(data);
     renderAccounts(data);
+    $('set-api-key').value = getApiKey() ?? '';
     refreshDataInfo(data);
     dialog.showModal();
   });
 
   $('set-add-account').addEventListener('click', () => {
     addAccountFlow($('set-new-nick'), $('set-sync-status'), data);
+  });
+
+  $('btn-test-key').addEventListener('click', async () => {
+    const key = $('set-api-key').value.trim();
+    const status = $('key-status');
+    if (!looksLikeKey(key)) {
+      status.textContent = 'To nie wygląda na klucz API (format: AIza… lub AQ.…).';
+      return;
+    }
+    setApiKey(key);
+    status.textContent = 'Sprawdzam klucz…';
+    try {
+      await testKey(key);
+      status.textContent = 'Klucz działa — rekonesans AI pojawi się w „Warto iść” za chwilę.';
+      localStorage.removeItem('kk_reco_ai'); // wymuś świeży rekonesans
+      await onProfilesChanged?.();
+    } catch (err) {
+      status.textContent = `Klucz zapisany, ale test nie przeszedł (${err.message}).`;
+    }
+  });
+
+  $('btn-forget-key').addEventListener('click', async () => {
+    clearApiKey();
+    localStorage.removeItem('kk_reco_ai');
+    $('set-api-key').value = '';
+    $('key-status').textContent = 'Klucz usunięty z tej przeglądarki.';
+    await onProfilesChanged?.();
   });
 }
 

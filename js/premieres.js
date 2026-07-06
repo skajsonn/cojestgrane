@@ -6,7 +6,6 @@ import { el, dateInfo, todayIso, normalizeTitle } from './utils.js';
 import { genreLabel } from './labels.js';
 import { openFilmDialog } from './ui.js';
 
-const CREAM_TMDB = 6.8;      // „dobre oceny” (dla filmów już ocenianych)
 const CREAM_POPULARITY = 8;  // „hit” (skala popularity TMDB po 2024 jest mała — Diuna ~9)
 
 const MONTHS = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec',
@@ -106,7 +105,8 @@ function matchProfile(e) {
 
 function isCream(e) {
   return !!e.watchlisted || !!e.watched || !!e.cc ||
-    (e.voteAverage ?? 0) >= CREAM_TMDB || (e.popularity ?? 0) >= CREAM_POPULARITY;
+    (e.popularity ?? 0) >= CREAM_POPULARITY ||
+    (e.cc?.lbRating ?? 0) >= 3.5;
 }
 
 /* ── nawigacja miesięcy ─────────────────────────────────────────── */
@@ -232,8 +232,10 @@ function premRow(e) {
   if (e.watchlisted) title.append(el('span', 'badge-inline badge-wl', '☆ watchlista'));
   if (e.watched) title.append(el('span', 'badge-inline badge-new', '✓ obejrzane'));
   if (e.cc) title.append(el('span', 'badge-inline badge-premiere', '🎟 bilety w CC'));
-  if ((e.voteAverage ?? 0) >= CREAM_TMDB && (e.voteCount ?? 0) >= 30) {
-    title.append(el('span', 'badge-inline badge-retro', `★ ${e.voteAverage.toFixed(1)}`));
+  if (e.cc?.lbRating) {
+    const b = el('span', 'badge-inline badge-retro', `★ ${e.cc.lbRating.toFixed(2)}`);
+    b.title = 'średnia Letterboxd';
+    title.append(b);
   }
   info.append(title);
 
@@ -282,7 +284,6 @@ function openEntry(e) {
   if (e.originalTitle) info.append(el('p', 'orig-title', e.originalTitle));
   const meta = el('div', 'hero-meta');
   if (e.genres?.length) meta.append(el('span', null, e.genres.join(' · ')));
-  if (e.voteAverage) meta.append(el('span', 'tmdb-score', `★ ${e.voteAverage.toFixed(1)} TMDB`));
   info.append(meta);
   info.append(el('p', 'card-meta', `Premiera w Polsce: ${e.date}`));
   if (e.watchlisted) {

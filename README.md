@@ -53,11 +53,17 @@ co już obejrzałeś, co masz na watchliście i jaki masz gust.
   i tytuł oryginalny (cache w `data/lb-map.json`, bez żadnego klucza). Dzięki temu
   oznaczenia „✓ obejrzane” / „☆ watchlista” i filtr „ukryj obejrzane” działają
   po identyfikatorze, nie po kruchym porównywaniu tytułów.
-- **Rekomendacje „Warto iść”** — pionowa lista na górze strony z uzasadnieniem
-  dla każdego filmu. Bez klucza Gemini: lokalny ranking (watchlista > premiery >
-  oceny TMDB > formaty premium). Z kluczem: rekomendacje układa AI na tym samym
-  kontekście co asystent, z cache'em w przeglądarce (jedno zapytanie na
-  dzień/aktualizację danych).
+- **Oceny z Letterboxd, nie z TMDB** — średnia społeczności Letterboxd (0.5–5)
+  jest pobierana codziennie ze stron filmów (po slugu z mapowania) i to ona
+  jest pokazywana w UI. TMDB służy tylko do metadanych (opisy, tytuły
+  oryginalne, plakaty zapowiedzi).
+- **Rekomendacje „Warto iść”** — pionowa lista bez limitu: najpierw WSZYSTKIE
+  nieobejrzane filmy z watchlist aktywnych kont (także przedsprzedaż; obejrzenie
+  przez inną osobę z paczki nie kasuje polecenia — dodaje adnotację), potem
+  „rekonesans”: z darmowym kluczem Gemini AI raz dziennie dobiera filmy spoza
+  watchlist pod gusty profili (oceny + recenzje z Letterboxd; model
+  gemini-2.5-flash z fallbackiem na flash-lite przy limitach); bez klucza —
+  najlepiej oceniane na Letterboxd filmy z repertuaru.
 - **Kalendarz premier** — zakładka „Premiery”: oś czasu nadchodzących premier
   (w oknie przedsprzedaży Cinema City), z filtrem „śmietanka” (watchlista +
   dobrze oceniane w TMDB).
