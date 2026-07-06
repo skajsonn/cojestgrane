@@ -1,0 +1,147 @@
+// Wspólne narzędzia dla skryptów pobierania danych.
+// Zero zależności npm — tylko wbudowane API Node 20+.
+
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { dirname } from 'node:path';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+
+const execFileP = promisify(execFile);
+
+export const UA =
+  'CoJestGrane/1.0 (cojestgrane.me; osobisty agregator repertuaru; GitHub Actions)';
+
+export function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+/**
+ * Pobiera URL z timeoutem i ponowieniami. Rzuca po wyczerpaniu prób.
+ */
+export async function fetchWithRetry(url, { retries = 2, timeoutMs = 25000, headers = {} } = {}) {
+  let lastErr;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    try {
+      const res = await fetch(url, {
+        signal: ctrl.signal,
+        headers: { 'User-Agent': UA, Accept: 'application/json, text/html;q=0.9, */*;q=0.8', ...headers },
+        redirect: 'follow',
+      });
+      clearTimeout(timer);
+      if (res.status === 429 || res.status >= 500) {
+        lastErr = new Error(`HTTP ${res.status} dla ${url}`);
+        await sleep(1500 * (attempt + 1));
+        continue;
+      }
+      return res;
+    } catch (err) {
+      clearTimeout(timer);
+      lastErr = err;
+      await sleep(1000 * (attempt + 1));
+    }
+  }
+  throw lastErr;
+}
+
+export async function fetchJson(url, opts) {
+  const res = await fetchWithRetry(url, opts);
+  if (!res.ok) throw new Error(`HTTP ${res.status} dla ${url}`);
+  return res.json();
+}
+
+export async function fetchText(url, opts) {
+  const res = await fetchWithRetry(url, opts);
+  if (!res.ok) throw new Error(`HTTP ${res.status} dla ${url}`);
+  return res.text();
+}
+
+/**
+ * Pobiera stronę przez systemowy curl (execFile — bez shella, argumenty
+ * przekazywane bezpośrednio). Cloudflare blokuje fetch Node'a po
+ * fingerprincie TLS, a curl przepuszcza — potrzebne dla letterboxd.com.
+ */
+export async function fetchTextViaCurl(url, { retries = 2, timeoutSec = 25, userAgent } = {}) {
+  const u = new URL(url); // walidacja — odrzuca śmieci zanim trafią do curla
+  if (u.protocol !== 'https:') throw new Error(`Dozwolone tylko https: ${url}`);
+  let lastErr;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const { stdout } = await execFileP(
+        'curl',
+        [
+          '--silent', '--show-error', '--fail-with-body', '--location',
+          '--max-time', String(timeoutSec),
+          '--user-agent', userAgent || UA,
+          '--write-out', '\n%{http_code}',
+          u.toString(),
+        ],
+        { maxBuffer: 32 * 1024 * 1024, windowsHide: true },
+      );
+      const idx = stdout.lastIndexOf('\n');
+      const status = Number(stdout.slice(idx + 1).trim());
+      const body = stdout.slice(0, idx);
+      if (status >= 200 && status < 300) return body;
+      lastErr = new Error(`HTTP ${status} dla ${url}`);
+      if (status === 404 || status === 403) throw lastErr; // nie ponawiamy — to nie jest chwilowe
+    } catch (err) {
+      lastErr = err;
+      if (/HTTP 40[34]/.test(String(err.message))) throw err;
+    }
+    await sleep(1500 * (attempt + 1));
+  }
+  throw lastErr;
+}
+
+export async function readJsonIfExists(path, fallback = null) {
+  try {
+    return JSON.parse(await readFile(path, 'utf8'));
+  } catch {
+    return fallback;
+  }
+}
+
+export async function writeJson(path, data) {
+  await mkdir(dirname(path), { recursive: true });
+  await writeFile(path, JSON.stringify(data, null, 1) + '\n', 'utf8');
+}
+
+/** Dekoduje najczęstsze encje HTML (wystarczające dla tytułów filmów). */
+export function decodeEntities(s) {
+  return String(s)
+    .replace(/&#0*39;|&#x27;|&apos;/gi, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&nbsp;/g, ' ');
+}
+
+/** Normalizacja tytułu do dopasowywania (bez diakrytyków, interpunkcji, wielkości liter). */
+export function normalizeTitle(s) {
+  return String(s)
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/ł/g, 'l')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+/** Data lokalna (Europe/Warsaw) w formacie YYYY-MM-DD. */
+export function warsawToday() {
+  const fmt = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Warsaw' });
+  return fmt.format(new Date());
+}
+
+export function addDays(isoDate, days) {
+  const d = new Date(isoDate + 'T12:00:00Z');
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
+export function daysBetween(isoA, isoB) {
+  return Math.round((new Date(isoB + 'T12:00:00Z') - new Date(isoA + 'T12:00:00Z')) / 86400000);
+}

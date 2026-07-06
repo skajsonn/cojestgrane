@@ -1,0 +1,12 @@
+# system
+Thumbs.db
+.DS_Store
+
+# edytory
+.vscode/
+.idea/
+
+# nigdy nie commitujemy sekretów
+*.key
+.env
+.env.*
