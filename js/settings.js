@@ -102,8 +102,9 @@ function refreshModelSelect(models) {
  */
 async function saveAndTestKey() {
   const key = $('set-api-key').value.trim();
-  if (!/^[A-Za-z0-9_-]{20,80}$/.test(key)) {
-    setKeyStatus('To nie wygląda na klucz API (oczekiwany format: AIza…).', 'bad');
+  // stary format: AIza… (39 znaków), nowy: AQ.… (z kropką)
+  if (!/^[A-Za-z0-9._-]{20,120}$/.test(key)) {
+    setKeyStatus('To nie wygląda na klucz API (oczekiwany format: AIza… lub AQ.…).', 'bad');
     return;
   }
   localStorage.setItem(KEY_API, key);
