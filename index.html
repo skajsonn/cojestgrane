@@ -95,6 +95,11 @@
       <h2 class="section-title">Kalendarz premier</h2>
       <label class="chk"><input type="checkbox" id="prem-cream" checked> Tylko śmietanka (watchlisty + hity)</label>
     </div>
+    <div class="retro-block" id="retro-block" hidden>
+      <h3 class="retro-title">🎞 Klasyka na dużym ekranie</h3>
+      <div class="prem-films" id="retro-films"></div>
+    </div>
+
     <div class="cal-nav">
       <button type="button" class="btn btn-ghost btn-small" id="cal-prev" aria-label="Poprzedni miesiąc">‹</button>
       <h3 id="cal-title"></h3>
@@ -154,14 +159,14 @@
     </div>
     <p class="hint" id="set-sync-status"></p>
 
-    <h3>Rekonesans AI (opcjonalnie)</h3>
+    <h3>Rekonesans AI</h3>
     <p class="hint">
-      Z darmowym kluczem Gemini (aistudio.google.com → „Get API key”) sekcja
-      „Warto iść” raz dziennie dostaje rekonesans AI: filmy spoza watchlist
-      dobrane pod gusty aktywnych profili. Bez klucza pokazujemy ranking
-      wg ocen Letterboxd. Klucz zostaje wyłącznie w tej przeglądarce.
+      Strona ma wbudowany klucz Gemini — rekonesans w „Warto iść” działa
+      od razu, bez konfiguracji. Jeśli chcesz używać własnego klucza
+      (osobne limity), wklej go tutaj: nadpisze wbudowany i zostanie
+      wyłącznie w tej przeglądarce.
     </p>
-    <label class="field">Klucz API Gemini
+    <label class="field">Własny klucz API Gemini (opcjonalnie)
       <input type="password" id="set-api-key" autocomplete="off" spellcheck="false" placeholder="AIza… lub AQ.…">
     </label>
     <div class="btn-row">

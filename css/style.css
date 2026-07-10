@@ -173,6 +173,17 @@ main { flex: 1; width: min(1200px, 100% - 32px); margin: 0 auto; padding: 22px 0
 .prem-title { font-family: var(--font-display); font-size: 16.5px; margin: 0 0 2px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .prem-sub { color: var(--muted); font-size: 12px; }
 
+/* ── klasyka na ekranach ───────────────────────────────────────── */
+.retro-block {
+  background: linear-gradient(120deg, rgba(166,120,232,.10), var(--card) 60%);
+  border: 1px solid rgba(166,120,232,.35); border-radius: var(--r);
+  padding: 14px 16px; margin: 4px 0 20px;
+}
+.retro-title {
+  font-family: var(--font-display); font-size: 15px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--violet); margin: 0 0 10px;
+}
+
 /* ── kalendarz: siatka miesiąca ────────────────────────────────── */
 .cal-nav { display: flex; align-items: center; gap: 14px; margin: 4px 0 10px; }
 .cal-nav h3 {

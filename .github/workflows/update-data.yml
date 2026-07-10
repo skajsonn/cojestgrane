@@ -2,9 +2,10 @@ name: Aktualizacja danych
 
 on:
   schedule:
-    # 03:45 UTC = 05:45 czasu polskiego (lato) / 04:45 (zima).
-    # Cinema City publikuje zmiany repertuaru nad ranem.
-    - cron: "45 3 * * *"
+    # Co 6 godzin — watchlisty/oceny na Letterboxd zmieniają się w ciągu dnia,
+    # a CC potrafi dorzucić seanse (np. klasykę) po południu.
+    # 03:45 UTC = 05:45 czasu polskiego (lato).
+    - cron: "45 3,9,15,21 * * *"
   workflow_dispatch: {}
 
 permissions:

@@ -293,8 +293,13 @@ export function openFilmDialog(film) {
         const past = isPastShowing(date, s.time);
         let pill;
         if (s.booking && !s.soldOut && !past) {
-          pill = extLink(s.booking, s.time, 'time-pill' + (s.formats.length ? ' is-format' : ''));
-          pill.title = `Kup bilet${label ? ` — ${label}` : ''}`;
+          // Deep-link quickbook na stronę filmu w cinema-city.pl (z datą
+          // i kinem) — kupujesz w swojej zalogowanej sesji (karta Unlimited).
+          const target = film.link
+            ? `${film.link}#/buy-tickets-by-film?in-cinema=${encodeURIComponent(cinema.id)}&at=${date}&for-movie=${encodeURIComponent(film.id)}&view-mode=list`
+            : s.booking;
+          pill = extLink(target, s.time, 'time-pill' + (s.formats.length ? ' is-format' : ''));
+          pill.title = `Kup bilet na cinema-city.pl (Twoje konto/Unlimited)${label ? ` — ${label}` : ''}`;
         } else {
           pill = el('span', 'time-pill' + (s.soldOut ? ' is-soldout' : '') + (past ? ' is-past' : ''), s.time);
           if (past) pill.title = 'Seans już się rozpoczął';

@@ -6,8 +6,14 @@ const KEY_API = 'kk_gemini_key';
 // zapytań dziennych — ratuje, gdy dzienny limit flasha jest wyczerpany).
 const MODELS = ['gemini-2.5-flash', 'gemini-2.5-flash-lite'];
 
+// Wbudowany klucz strony (rekonesans działa dla każdego bez konfiguracji).
+// Klucz jest jawny z założenia — MUSI mieć w Google Cloud Console ograniczenie
+// „Websites: https://cojestgrane.me/*”, wtedy poza tą domeną jest bezużyteczny.
+// Własny klucz w Ustawieniach ma pierwszeństwo.
+const SITE_KEY = '';
+
 export function getApiKey() {
-  return (localStorage.getItem(KEY_API) ?? '').trim() || null;
+  return (localStorage.getItem(KEY_API) ?? '').trim() || SITE_KEY || null;
 }
 export function setApiKey(key) {
   localStorage.setItem(KEY_API, key);

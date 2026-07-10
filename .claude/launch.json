@@ -4,7 +4,7 @@
     {
       "name": "kinomaniak",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8123"],
+      "runtimeArgs": ["scripts/dev-server.py", "8123"],
       "port": 8123
     }
   ]

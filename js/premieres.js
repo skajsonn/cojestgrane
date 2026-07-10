@@ -31,12 +31,57 @@ export async function initPremieres(loadedData) {
   $('cal-prev').addEventListener('click', () => shiftMonth(-1));
   $('cal-next').addEventListener('click', () => shiftMonth(1));
   render();
+  renderRetro();
 }
 
 export function refresh(loadedData) {
   data = loadedData;
   for (const e of entries) matchProfile(e); // watchlisty mogły się zmienić
   render();
+  renderRetro();
+}
+
+/* ── klasyka (retro) grana lub w przedsprzedaży ─────────────────── */
+function renderRetro() {
+  const block = $('retro-block');
+  const box = $('retro-films');
+  box.replaceChildren();
+
+  const retro = data.repertoire.films
+    .filter((f) => f.status === 'retro')
+    .filter((f) => Object.keys(f.showings).some((cid) => data.cinemaSet.has(cid)))
+    .sort((a, b) => (a.releaseDate ?? '').localeCompare(b.releaseDate ?? ''));
+
+  block.hidden = retro.length === 0;
+  for (const f of retro) {
+    const e = {
+      key: 'retro:' + f.id,
+      title: f.title,
+      originalTitle: f.originalTitle,
+      date: f.releaseDate,
+      poster: f.poster ?? f.tmdb?.poster,
+      genres: f.genres.map(genreLabel),
+      cc: f,
+      watchlisted: f.lbWatchlisted,
+      watched: f.lbWatched,
+    };
+    box.append(premRow(e));
+  }
+}
+
+/** Zakres dat seansów filmu w preferowanych kinach: "24.07–30.07". */
+function playRange(film) {
+  const dates = [];
+  for (const [cid, byDate] of Object.entries(film.showings)) {
+    if (!data.cinemaSet.has(cid)) continue;
+    dates.push(...Object.keys(byDate));
+  }
+  if (!dates.length) return null;
+  dates.sort();
+  const fmt = (d) => `${d.slice(8, 10)}.${d.slice(5, 7)}`;
+  const first = dates[0];
+  const last = dates[dates.length - 1];
+  return first === last ? `gra ${fmt(first)}` : `gra ${fmt(first)}–${fmt(last)}`;
 }
 
 /* ── scalanie źródeł: TMDB (globalne) + Cinema City + watchlisty ── */
@@ -231,6 +276,7 @@ function premRow(e) {
   const title = el('h4', 'prem-title', e.title);
   if (e.watchlisted) title.append(el('span', 'badge-inline badge-wl', '☆ watchlista'));
   if (e.watched) title.append(el('span', 'badge-inline badge-new', '✓ obejrzane'));
+  if (e.cc?.status === 'retro') title.append(el('span', 'badge-inline badge-retro', 'RETRO'));
   if (e.cc) title.append(el('span', 'badge-inline badge-premiere', '🎟 bilety w CC'));
   if (e.cc?.lbRating) {
     const b = el('span', 'badge-inline badge-retro', `★ ${e.cc.lbRating.toFixed(2)}`);
@@ -242,6 +288,10 @@ function premRow(e) {
   const subBits = [];
   if (e.originalTitle) subBits.push(e.originalTitle);
   if (e.genres?.length) subBits.push(e.genres.slice(0, 3).join(', '));
+  if (e.cc?.status === 'retro') {
+    const range = playRange(e.cc);
+    if (range) subBits.push(range);
+  }
   info.append(el('p', 'prem-sub', subBits.join('  ·  ')));
   row.append(info);
 
