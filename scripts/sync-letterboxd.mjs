@@ -138,7 +138,8 @@ async function main() {
   for (const user of USERS) {
     try {
       const data = await syncUser(user);
-      index.users.push({ user, counts: data.counts });
+      // syncedAt = kiedy NAPRAWDĘ pobrano dane (guard może zwrócić stare)
+      index.users.push({ user, counts: data.counts, syncedAt: data.generatedAt });
     } catch (err) {
       errors.push(`${user}: ${err.message}`);
       console.error(`[letterboxd] ${user}: BŁĄD — ${err.message}`);

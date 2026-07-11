@@ -115,11 +115,24 @@ function renderGrid() {
   const films = visibleFilms();
 
   const info = dateInfo(state.day, todayIso());
+  const toTue = daysToTuesday();
+  const tueTxt = toTue === 0 ? 'dziś' : toTue === 1 ? 'jutro' : `za ${toTue} dni`;
   $('grid-summary').textContent =
-    `${films.length} ${plural(films.length, 'film', 'filmy', 'filmów')} • ${info.dowFull} ${info.dayMonth}`;
+    `${films.length} ${plural(films.length, 'film', 'filmy', 'filmów')} • ${info.dowFull} ${info.dayMonth}` +
+    ` • nowy tydzień sprzedaży CC zwykle we wtorek (${tueTxt})`;
   $('empty-note').hidden = films.length > 0;
 
   for (const film of films) grid.append(filmCard(film));
+}
+
+function daysDiff(isoA, isoB) {
+  return Math.round((new Date(isoB + 'T12:00') - new Date(isoA + 'T12:00')) / 86400000);
+}
+
+/** Dni do najbliższego wtorku — wtedy CC zwykle otwiera nowy tydzień sprzedaży. */
+function daysToTuesday() {
+  const dow = new Date(todayIso() + 'T12:00').getDay(); // 0=nd … 2=wt
+  return (2 - dow + 7) % 7;
 }
 
 function plural(n, one, few, many) {
@@ -154,6 +167,11 @@ function badgeEls(film) {
 
   const multi = state.data.merged.accounts.length > 1;
   const marks = el('div', 'user-marks');
+  // bilety weszły do sprzedaży w ciągu ostatniej doby
+  const today = todayIso();
+  if (film.firstSeen && daysDiff(film.firstSeen, today) <= 1 && film.status !== 'premiere') {
+    marks.append(el('span', 'mark mark-fresh', '🆕 nowe bilety'));
+  }
   if (film.lbWatched) {
     const who = multi ? `@${film.lbWatched.user}` : 'obejrzane';
     const rating = film.lbWatched.rating10 ? ` ${film.lbWatched.rating10}/10` : '';
@@ -339,6 +357,12 @@ function renderFooter() {
   if (m.accounts.length) {
     parts.push(`Letterboxd (${m.accounts.map((u) => '@' + u).join(', ')}): ` +
       `${m.counts.watched} obejrzanych, ${m.counts.watchlist} na watchliście`);
+    // uczciwe ostrzeżenie, gdy profile są nieświeże (np. scraping blokowany)
+    const oldest = Math.min(...state.data.profiles.map((p) => Date.parse(p.generatedAt) || 0));
+    const hours = (Date.now() - oldest) / 3600e3;
+    if (hours > 26) {
+      parts.push(`⚠ profile Letterboxd nieodświeżone od ${Math.round(hours)} h`);
+    }
   }
   $('footer-meta').textContent = parts.join(' • ');
 }

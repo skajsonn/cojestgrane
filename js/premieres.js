@@ -6,7 +6,7 @@ import { el, dateInfo, todayIso, normalizeTitle } from './utils.js';
 import { genreLabel } from './labels.js';
 import { openFilmDialog } from './ui.js';
 
-const CREAM_POPULARITY = 8;  // „hit” (skala popularity TMDB po 2024 jest mała — Diuna ~9)
+const CREAM_TOP_PER_MONTH = 6; // „hit” = ścisła czołówka popularności danego miesiąca
 
 const MONTHS = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec',
   'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień'];
@@ -131,6 +131,21 @@ function buildEntries(calendar) {
 
   const list = [...out.values()].sort((a, b) => a.date.localeCompare(b.date));
   for (const e of list) matchProfile(e);
+
+  // „hit” = czołówka popularności swojego miesiąca (progi absolutne zawodzą,
+  // bo popularność TMDB rośnie dopiero przy premierze)
+  const byMonth = new Map();
+  for (const e of list) {
+    const mm = e.date.slice(0, 7);
+    if (!byMonth.has(mm)) byMonth.set(mm, []);
+    byMonth.get(mm).push(e);
+  }
+  for (const group of byMonth.values()) {
+    [...group]
+      .sort((a, b) => (b.popularity ?? 0) - (a.popularity ?? 0))
+      .slice(0, CREAM_TOP_PER_MONTH)
+      .forEach((e) => { e.monthTop = true; });
+  }
   return list;
 }
 
@@ -149,9 +164,7 @@ function matchProfile(e) {
 }
 
 function isCream(e) {
-  return !!e.watchlisted || !!e.watched || !!e.cc ||
-    (e.popularity ?? 0) >= CREAM_POPULARITY ||
-    (e.cc?.lbRating ?? 0) >= 3.5;
+  return !!e.watchlisted || !!e.watched || !!e.cc || !!e.monthTop;
 }
 
 /* ── nawigacja miesięcy ─────────────────────────────────────────── */
@@ -165,7 +178,10 @@ function shiftMonth(delta) {
 /* ── render ─────────────────────────────────────────────────────── */
 function render() {
   const cream = $('prem-cream').checked;
-  const inMonth = entries.filter((e) => e.date.startsWith(month));
+  const today = todayIso();
+  // minione premiery zostawiamy tylko, gdy film faktycznie gra w CC —
+  // reszta to szum (film wyszedł i nie trafił do naszych kin)
+  const inMonth = entries.filter((e) => e.date.startsWith(month) && (e.date >= today || e.cc));
   const visible = cream ? inMonth.filter(isCream) : inMonth;
 
   const [y, m] = month.split('-').map(Number);

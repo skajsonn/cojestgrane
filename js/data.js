@@ -205,6 +205,7 @@ export async function loadAll() {
   return {
     repertoire,
     merged,
+    profiles,       // surowe profile (generatedAt służy do ostrzeżenia o świeżości)
     cinemas,        // tylko preferowane (obiekty)
     cinemaSet,      // tylko preferowane (id)
     configUsers,
@@ -221,6 +222,7 @@ export async function recomputeProfiles(data) {
   const active = getActiveAccounts(known);
   const profiles = await loadProfiles(data.configUsers, active);
   data.merged = mergeProfiles(profiles);
+  data.profiles = profiles;
   data.browserUsers = getBrowserAccounts();
   data.activeAccounts = active;
   annotate(data.repertoire, data.merged);

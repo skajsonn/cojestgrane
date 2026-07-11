@@ -344,6 +344,7 @@ code { font-family: var(--font-mono); font-size: .9em; color: var(--gold-hi); ba
 }
 .mark-watched   { background: rgba(23, 46, 28, .92); color: #8fdb9d; border: 1px solid rgba(87,183,107,.5); }
 .mark-watchlist { background: rgba(20, 42, 46, .92); color: #7edce6; border: 1px solid rgba(82,197,212,.5); }
+.mark-fresh     { background: rgba(46, 38, 15, .92); color: var(--gold-hi); border: 1px solid rgba(212,169,64,.5); }
 
 .card-body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .card-title {

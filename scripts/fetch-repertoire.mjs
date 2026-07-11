@@ -96,14 +96,25 @@ const TMDB_GENRES = {
 };
 
 async function tmdbEnrich(film, cache) {
+  const year = parseInt(film.releaseYear, 10) || undefined;
+  const yearOk = (dateStr) => {
+    if (!year) return true;
+    const y = parseInt(String(dateStr ?? '').slice(0, 4), 10);
+    return Number.isFinite(y) && Math.abs(y - year) <= 1;
+  };
+
   const cached = cache[film.id];
   if (cached) {
-    // Trafienie trzymamy na stałe; pudło ponawiamy raz w tygodniu.
-    if (cached.tmdb || daysBetween(cached.fetchedAt, TODAY) < 7) return cached.tmdb;
+    // Trafienie trzymamy, o ile rok się zgadza (stare złe matche unieważniamy);
+    // pudło ponawiamy raz w tygodniu.
+    if (cached.tmdb && yearOk(cached.tmdb.releaseDate)) return cached.tmdb;
+    if (!cached.tmdb && daysBetween(cached.fetchedAt, TODAY) < 7) return null;
   }
-  const year = parseInt(film.releaseYear, 10) || undefined;
   let results = await tmdbSearch(film.name, year);
-  if (!results.length && year) results = await tmdbSearch(film.name, undefined);
+  if (!results.length && year) {
+    // retry bez filtra roku, ale wyniki nadal muszą mieścić się w ±1 roku
+    results = (await tmdbSearch(film.name, undefined)).filter((r) => yearOk(r.release_date));
+  }
   await sleep(120);
 
   const norm = normalizeTitle(film.name);

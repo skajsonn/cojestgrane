@@ -57,15 +57,29 @@ export async function fetchText(url, opts) {
   return res.text();
 }
 
+/** Strona-wyzwanie Cloudflare zamiast właściwej treści. */
+export function isChallenge(text) {
+  return /<title>\s*Just a moment|cf-browser-verification|cf-challenge/i.test(text ?? '');
+}
+
+const CORS_PROXIES = [
+  (u) => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
+  (u) => `https://corsproxy.io/?url=${encodeURIComponent(u)}`,
+];
+
 /**
  * Pobiera stronę przez systemowy curl (execFile — bez shella, argumenty
  * przekazywane bezpośrednio). Cloudflare blokuje fetch Node'a po
  * fingerprincie TLS, a curl przepuszcza — potrzebne dla letterboxd.com.
+ * Gdy curl dostaje 403/challenge (np. IP runnerów GitHub Actions są
+ * blokowane), próbujemy jeszcze przez publiczne proxy (inne IP źródłowe).
  */
 export async function fetchTextViaCurl(url, { retries = 2, timeoutSec = 25, userAgent } = {}) {
   const u = new URL(url); // walidacja — odrzuca śmieci zanim trafią do curla
   if (u.protocol !== 'https:') throw new Error(`Dozwolone tylko https: ${url}`);
   let lastErr;
+  let blocked = false;
+
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       const { stdout } = await execFileP(
@@ -82,14 +96,34 @@ export async function fetchTextViaCurl(url, { retries = 2, timeoutSec = 25, user
       const idx = stdout.lastIndexOf('\n');
       const status = Number(stdout.slice(idx + 1).trim());
       const body = stdout.slice(0, idx);
-      if (status >= 200 && status < 300) return body;
-      lastErr = new Error(`HTTP ${status} dla ${url}`);
-      if (status === 404 || status === 403) throw lastErr; // nie ponawiamy — to nie jest chwilowe
+      if (status >= 200 && status < 300 && !isChallenge(body)) return body;
+      lastErr = new Error(`HTTP ${status}${isChallenge(body) ? ' (challenge)' : ''} dla ${url}`);
+      if (status === 404) throw lastErr;              // nie istnieje — nie ponawiamy
+      if (status === 403 || isChallenge(body)) { blocked = true; break; } // od razu do proxy
     } catch (err) {
       lastErr = err;
-      if (/HTTP 40[34]/.test(String(err.message))) throw err;
+      if (/HTTP 404/.test(String(err.message))) throw err;
     }
     await sleep(1500 * (attempt + 1));
+  }
+
+  // Fallback przez proxy CORS — pomaga, gdy nasze IP jest blokowane.
+  if (blocked || lastErr) {
+    for (let round = 0; round < 2; round++) {
+      for (const wrap of CORS_PROXIES) {
+        try {
+          const res = await fetch(wrap(u.toString()), { redirect: 'follow' });
+          if (res.ok) {
+            const text = await res.text();
+            if (text && text.length > 200 && !isChallenge(text)) return text;
+          }
+          lastErr = new Error(`proxy HTTP ${res.status} dla ${url}`);
+        } catch (err) {
+          lastErr = err;
+        }
+      }
+      await sleep(1200 * (round + 1));
+    }
   }
   throw lastErr;
 }
