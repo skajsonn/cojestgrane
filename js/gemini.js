@@ -1,19 +1,20 @@
-// Minimalny klient Gemini — używany WYŁĄCZNIE do dziennego rekonesansu
-// rekomendacji (bez czatu). Klucz żyje tylko w localStorage tej przeglądarki.
+// Klient rekonesansu AI. Dwa tryby:
+//  1) wbudowany asystent strony — żądania idą przez nasz Cloudflare Worker
+//     (klucz Gemini siedzi w sekrecie Workera, nigdy w tym repo; Worker
+//     przyjmuje wyłącznie żądania z cojestgrane.me),
+//  2) własny klucz użytkownika z Ustawień (localStorage) — bezpośrednio
+//     do API Google, z pominięciem proxy.
 
 const KEY_API = 'kk_gemini_key';
 // Kolejność prób: flash (lepszy) → flash-lite (osobna, większa pula darmowych
 // zapytań dziennych — ratuje, gdy dzienny limit flasha jest wyczerpany).
 const MODELS = ['gemini-2.5-flash', 'gemini-2.5-flash-lite'];
 
-// Wbudowany klucz strony (rekonesans działa dla każdego bez konfiguracji).
-// Klucz jest jawny z założenia — MUSI mieć w Google Cloud Console ograniczenie
-// „Websites: https://cojestgrane.me/*”, wtedy poza tą domeną jest bezużyteczny.
-// Własny klucz w Ustawieniach ma pierwszeństwo.
-const SITE_KEY = '';
+// Adres naszego Workera (cloudflare/worker.js). Pusty = tryb proxy wyłączony.
+const PROXY_URL = '';
 
 export function getApiKey() {
-  return (localStorage.getItem(KEY_API) ?? '').trim() || SITE_KEY || null;
+  return (localStorage.getItem(KEY_API) ?? '').trim() || null;
 }
 export function setApiKey(key) {
   localStorage.setItem(KEY_API, key);
@@ -21,8 +22,9 @@ export function setApiKey(key) {
 export function clearApiKey() {
   localStorage.removeItem(KEY_API);
 }
+/** Czy rekonesans ma czym działać (własny klucz albo proxy strony). */
 export function hasApiKey() {
-  return !!getApiKey();
+  return !!(getApiKey() || PROXY_URL);
 }
 
 /** Walidacja formatu klucza (stary AIza…, nowy AQ.… z kropką). */
@@ -41,8 +43,27 @@ export async function testKey(key) {
 /** Jedno wywołanie generateContent (JSON-owe odpowiedzi dla rekomendacji). */
 export async function generate({ system, user, json = true, maxTokens = 4000 }) {
   const key = getApiKey();
-  if (!key) throw new Error('brak klucza');
+  if (key) return generateDirect(key, { system, user, json, maxTokens });
+  if (PROXY_URL) return generateViaProxy({ system, user, json, maxTokens });
+  throw new Error('brak klucza');
+}
 
+async function generateViaProxy({ system, user, json, maxTokens }) {
+  const res = await fetch(PROXY_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ system, user, json, maxTokens }),
+  });
+  const data = await res.json().catch(() => null);
+  if (!res.ok || !data?.text) {
+    const err = new Error(data?.error ?? `HTTP ${res.status}`);
+    err.status = res.status;
+    throw err;
+  }
+  return data.text;
+}
+
+async function generateDirect(key, { system, user, json, maxTokens }) {
   let lastErr;
   for (const model of MODELS) {
     const res = await fetch(
