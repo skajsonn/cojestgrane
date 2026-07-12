@@ -7,7 +7,8 @@
 // + data/letterboxd/index.json. Zero zależności npm.
 
 import {
-  fetchTextViaCurl, readJsonIfExists, writeJson, sleep, decodeEntities, normalizeTitle,
+  fetchTextViaCurl, fetchTextViaProxy, readJsonIfExists, writeJson, sleep,
+  decodeEntities, normalizeTitle,
 } from './util.mjs';
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
@@ -52,9 +53,25 @@ function parseGrid(html, { withRatings }) {
 
 async function scrapeGrid(base, path, { withRatings }) {
   const all = [];
+  let viaProxy = false;
   for (let page = 1; page <= MAX_PAGES; page++) {
-    const html = await fetchTextViaCurl(`${base}/${path}/page/${page}/`, { userAgent: BROWSER_UA });
-    const items = parseGrid(html, { withRatings });
+    const url = `${base}/${path}/page/${page}/`;
+    let html = viaProxy
+      ? await fetchTextViaProxy(url)
+      : await fetchTextViaCurl(url, { userAgent: BROWSER_UA });
+    let items = parseGrid(html, { withRatings });
+
+    // Pułapka z runnerów GitHub Actions: Letterboxd potrafi zwrócić 200
+    // z okrojoną stroną BEZ siatki (to nie challenge, więc curl "się udaje").
+    // Pusta pierwsza strona = podejrzane → wymuszamy pobranie przez proxy.
+    if (items.length === 0 && page === 1 && !viaProxy) {
+      console.warn(`[letterboxd] ${path}/1: 0 pozycji z bezpośredniego pobrania ` +
+        `(len=${html.length}, tytuł=${html.match(/<title>([^<]*)/)?.[1]?.slice(0, 60) ?? '?'}) — próbuję przez proxy`);
+      viaProxy = true;
+      html = await fetchTextViaProxy(url);
+      items = parseGrid(html, { withRatings });
+    }
+
     if (items.length === 0) break;
     all.push(...items);
     await sleep(400); // grzeczne tempo

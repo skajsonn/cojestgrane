@@ -65,7 +65,31 @@ export function isChallenge(text) {
 const CORS_PROXIES = [
   (u) => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
   (u) => `https://corsproxy.io/?url=${encodeURIComponent(u)}`,
+  (u) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(u)}`,
 ];
+
+/** Pobranie wyłącznie przez proxy (gdy bezpośrednia droga daje podejrzane odpowiedzi). */
+export async function fetchTextViaProxy(url, { rounds = 3 } = {}) {
+  const u = new URL(url);
+  if (u.protocol !== 'https:') throw new Error(`Dozwolone tylko https: ${url}`);
+  let lastErr = new Error('proxy niedostępne');
+  for (let round = 0; round < rounds; round++) {
+    for (const wrap of CORS_PROXIES) {
+      try {
+        const res = await fetch(wrap(u.toString()), { redirect: 'follow' });
+        if (res.ok) {
+          const text = await res.text();
+          if (text && text.length > 200 && !isChallenge(text)) return text;
+        }
+        lastErr = new Error(`proxy HTTP ${res.status} dla ${url}`);
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+    await sleep(1200 * (round + 1));
+  }
+  throw lastErr;
+}
 
 /**
  * Pobiera stronę przez systemowy curl (execFile — bez shella, argumenty
@@ -108,24 +132,7 @@ export async function fetchTextViaCurl(url, { retries = 2, timeoutSec = 25, user
   }
 
   // Fallback przez proxy CORS — pomaga, gdy nasze IP jest blokowane.
-  if (blocked || lastErr) {
-    for (let round = 0; round < 2; round++) {
-      for (const wrap of CORS_PROXIES) {
-        try {
-          const res = await fetch(wrap(u.toString()), { redirect: 'follow' });
-          if (res.ok) {
-            const text = await res.text();
-            if (text && text.length > 200 && !isChallenge(text)) return text;
-          }
-          lastErr = new Error(`proxy HTTP ${res.status} dla ${url}`);
-        } catch (err) {
-          lastErr = err;
-        }
-      }
-      await sleep(1200 * (round + 1));
-    }
-  }
-  throw lastErr;
+  return fetchTextViaProxy(url, { rounds: 2 });
 }
 
 export async function readJsonIfExists(path, fallback = null) {
