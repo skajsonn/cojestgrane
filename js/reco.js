@@ -200,9 +200,9 @@ ${tastes}`;
 }
 
 function buildPrompt() {
-  return `Zrób rekonesans repertuaru: wybierz od 3 do ${MAX_AI} filmów, które NIE są na żadnej watchliście i NIE zostały przez nikogo obejrzane, a najbardziej pasują do powyższych gustów — ciekawe, warte kina, także mniej oczywiste odkrycia. ` +
-    `KRYTERIA JAKOŚCI: nie polecaj filmów słabo przyjętych — jeśli film ma średnią Letterboxd poniżej 3.2 albo ledwie garść ocen i nic go nie broni, pomiń go. Lepiej zwrócić 3 mocne propozycje niż dopychać słabe. ` +
-    `Pomiń przedpremiery bez seansów. Zwróć WYŁĄCZNIE tablicę JSON: ` +
+  return `Zrób rekonesans repertuaru: wybierz od 2 do ${MAX_AI} filmów, które NIE są na żadnej watchliście i NIE zostały przez nikogo obejrzane, a najbardziej pasują do powyższych gustów — ciekawe, warte kina. ` +
+    `TWARDE KRYTERIA JAKOŚCI: polecaj WYŁĄCZNIE filmy ze średnią Letterboxd co najmniej 3.2 i realną liczbą ocen — filmy bez oceny Letterboxd albo z garstką ocen POMIŃ bez wyjątków. ` +
+    `Lepiej zwrócić 2 mocne propozycje niż dopychać słabe. Pomiń przedpremiery bez seansów. Zwróć WYŁĄCZNIE tablicę JSON: ` +
     `[{"title": dokładny tytuł z repertuaru, "why": 2–3 zdania po polsku, dlaczego ten film do nich pasuje — odwołaj się do konkretnych ocen/recenzji/upodobań}]. Bez markdownu.`;
 }
 
@@ -213,13 +213,9 @@ function sanitizeAi(parsed) {
     .map((it) => ({ title: it.title.slice(0, 120), why: typeof it.why === 'string' ? it.why.slice(0, 500) : '' }))
     .map((it) => ({ ...it, film: findFilm(it.title) }))
     .filter((it) => it.film && !it.film.lbWatchedBy?.length && !it.film.lbWatchlistedBy?.length)
-    // twarda podłoga jakości: znany film ze słabą średnią odpada, nawet gdy AI go przemyci
-    .filter((it) => {
-      const r = it.film.lbRating;
-      const n = it.film.lbRatingCount ?? 0;
-      if (r != null && r < 3.2 && n >= 300) return false;
-      return true;
-    })
+    // twarda podłoga jakości: do rekomendacji AI wchodzą tylko filmy
+    // z wiarygodną, dobrą średnią Letterboxd — crap i no-name'y odpadają
+    .filter((it) => (it.film.lbRating ?? 0) >= 3.2 && (it.film.lbRatingCount ?? 0) >= 500)
     .slice(0, MAX_AI);
 }
 

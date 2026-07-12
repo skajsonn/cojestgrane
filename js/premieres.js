@@ -6,7 +6,8 @@ import { el, dateInfo, todayIso, normalizeTitle } from './utils.js';
 import { genreLabel } from './labels.js';
 import { openFilmDialog } from './ui.js';
 
-const CREAM_TOP_PER_MONTH = 6; // „hit” = ścisła czołówka popularności danego miesiąca
+const CREAM_TOP_PER_MONTH = 6; // „hit” = ścisła czołówka popularności danego miesiąca…
+const CREAM_MIN_POPULARITY = 6; // …ale czołówka chudego miesiąca też musi coś ważyć
 
 const MONTHS = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec',
   'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień'];
@@ -144,6 +145,7 @@ function buildEntries(calendar) {
     [...group]
       .sort((a, b) => (b.popularity ?? 0) - (a.popularity ?? 0))
       .slice(0, CREAM_TOP_PER_MONTH)
+      .filter((e) => (e.popularity ?? 0) >= CREAM_MIN_POPULARITY)
       .forEach((e) => { e.monthTop = true; });
   }
   return list;
