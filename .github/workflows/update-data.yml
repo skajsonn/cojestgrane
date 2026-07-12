@@ -33,9 +33,10 @@ jobs:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: node scripts/fetch-repertoire.mjs
 
-      - name: Kalendarz premier (TMDB)
+      - name: Kalendarz premier (TMDB + kuracja AI)
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/fetch-calendar.mjs
 
       - name: Synchronizuj profile Letterboxd

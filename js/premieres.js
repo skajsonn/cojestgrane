@@ -97,6 +97,7 @@ function buildEntries(calendar) {
     const cc = ccByTmdb.get(c.tmdbId) ?? null;
     out.set(c.tmdbId, {
       key: String(c.tmdbId),
+      notable: c.notable, // werdykt AI-kuratora (true/false/undefined gdy brak kuracji)
       title: cc?.title ?? c.title,
       originalTitle: c.originalTitle,
       date: cc?.releaseDate ?? c.date, // dokładna polska data z CC, gdy znana
@@ -166,7 +167,10 @@ function matchProfile(e) {
 }
 
 function isCream(e) {
-  return !!e.watchlisted || !!e.watched || !!e.cc || !!e.monthTop;
+  if (e.watchlisted || e.watched || e.cc) return true;
+  // werdykt AI-kuratora ma pierwszeństwo; heurystyka popularności to fallback
+  if (e.notable !== undefined) return !!e.notable;
+  return !!e.monthTop;
 }
 
 /* ── nawigacja miesięcy ─────────────────────────────────────────── */

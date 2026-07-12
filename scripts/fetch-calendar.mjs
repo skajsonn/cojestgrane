@@ -8,6 +8,7 @@ import { fetchJson, readJsonIfExists, writeJson, sleep, warsawToday } from './ut
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 const TMDB_KEY = (process.env.TMDB_API_KEY || '').trim();
+const GEMINI_KEY = (process.env.GEMINI_API_KEY || '').trim();
 const PAGES = 8; // 8 × 20 = do 160 najpopularniejszych premier roku
 
 const TMDB_GENRES = {
@@ -87,13 +88,82 @@ async function main() {
     throw new Error(`TMDB zwróciło tylko ${films.size} filmów — przerywam bez zapisu.`);
   }
 
+  const list = [...films.values()].sort((a, b) => a.date.localeCompare(b.date));
+  await markNotable(list, year);
+
   const out = {
     generatedAt: new Date().toISOString(),
     year: Number(year),
-    films: [...films.values()].sort((a, b) => a.date.localeCompare(b.date)),
+    films: list,
   };
   await writeJson(`${ROOT}/data/calendar.json`, out);
-  console.log(`[kalendarz] OK: ${out.films.length} premier ${year} (region PL).`);
+  const notable = list.filter((f) => f.notable).length;
+  console.log(`[kalendarz] OK: ${list.length} premier ${year} (region PL)` +
+    (GEMINI_KEY ? `, wyróżnionych przez AI: ${notable}` : ', bez kuracji AI (brak GEMINI_API_KEY)'));
+}
+
+/**
+ * AI-kurator: globalna popularność TMDB nie odróżnia dużej polskiej premiery
+ * (Lalka, pop ~2) od no-name'a (pop ~3), więc listę ocenia Gemini w roli
+ * polskiego krytyka. Ustawia film.notable = true/false; bez klucza — nic.
+ */
+async function markNotable(films, year) {
+  if (!GEMINI_KEY) return;
+  const lines = films.map((f) =>
+    `${f.title}${f.originalTitle ? ` / ${f.originalTitle}` : ''} (${f.date}; ${f.genres.join(',') || '?'})`).join('\n');
+  const user =
+    `Z poniższej listy premier kinowych ${year} w Polsce wybierz ŚCISŁĄ ELITĘ — od 25 do 45 tytułów na cały rok ` +
+    `(średnio 2–4 na miesiąc), które kinoman naprawdę nie powinien przegapić: blockbustery i głośne hity, ` +
+    `duże polskie premiery (wielkie adaptacje, filmy znanych reżyserów, głośne biografie), uznane kino festiwalowe ` +
+    `i kultowych twórców. To jest selekcja, nie przegląd: ZDECYDOWANA WIĘKSZOŚĆ listy ma ODPAŚĆ — każde małe ` +
+    `no-name'owe produkcje, tanie horrory, komedie romantyczne bez rozgłosu, kino familijne niższej półki, ` +
+    `dokumenty niszowe. W razie wątpliwości POMIŃ. ` +
+    `Zwróć WYŁĄCZNIE tablicę JSON polskich tytułów, dokładnie jak na liście (część przed „ / ”): ["Tytuł", ...]\n\nLISTA:\n${lines}`;
+
+  const attempts = ['gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.5-flash-lite', 'gemini-2.5-flash-lite'];
+  for (const model of attempts) {
+    try {
+      const res = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-goog-api-key': GEMINI_KEY },
+          body: JSON.stringify({
+            system_instruction: { parts: [{ text: 'Jesteś polskim krytykiem filmowym i kuratorem repertuaru kinowego. Odpowiadasz wyłącznie JSON-em.' }] },
+            contents: [{ role: 'user', parts: [{ text: user }] }],
+            generationConfig: {
+              temperature: 0.3,
+              maxOutputTokens: 4000,
+              thinkingConfig: { thinkingBudget: 0 },
+              responseMimeType: 'application/json',
+            },
+          }),
+        },
+      );
+      if (!res.ok) {
+        // 429 = limit (próbujemy lżejszy model), 5xx = chwilowe — ponawiamy
+        if (res.status === 429 || res.status >= 500) {
+          console.warn(`[kalendarz] kuracja AI (${model}): HTTP ${res.status} — ponawiam`);
+          await sleep(20000); // 5xx = przeciążenie Google, krótkie odstępy nie pomagają
+          continue;
+        }
+        throw new Error(`HTTP ${res.status}`);
+      }
+      const data = await res.json();
+      const text = data?.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ?? '';
+      const picked = JSON.parse(text);
+      if (!Array.isArray(picked)) throw new Error('odpowiedź nie jest tablicą');
+      if (picked.length > 60 || picked.length < 10) {
+        // model zignorował budżet selekcji — werdykt niewiarygodny
+        throw new Error(`podejrzana liczba wyróżnień: ${picked.length}`);
+      }
+      const set = new Set(picked.map((t) => String(t).trim().toLowerCase()));
+      for (const f of films) f.notable = set.has(f.title.trim().toLowerCase());
+      return;
+    } catch (err) {
+      console.warn(`[kalendarz] kuracja AI (${model}) nieudana: ${err.message}`);
+    }
+  }
 }
 
 main().catch((err) => {
