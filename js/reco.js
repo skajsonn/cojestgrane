@@ -248,8 +248,7 @@ function render() {
   $('reco-note').textContent = [
     wl.length ? `${wl.length} z watchlist` : 'nic z watchlist nie gra',
     second.length
-      ? (ai ? `✨ ${second.length} od AI wg Waszych gustów` : `${second.length} najlepiej ocenianych na Letterboxd` +
-          (hasApiKey() ? '' : ' (klucz Gemini w ⚙ włączy rekonesans AI pod Wasze gusty)'))
+      ? (ai ? `✨ ${second.length} od AI wg Waszych gustów` : `${second.length} najlepiej ocenianych na Letterboxd`)
       : null,
   ].filter(Boolean).join(' + ') + ' — w Twoich kinach.';
 

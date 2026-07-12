@@ -9,7 +9,7 @@
     style-src 'self' https://fonts.googleapis.com;
     font-src https://fonts.gstatic.com;
     img-src 'self' https://www.cinema-city.pl https://image.tmdb.org https://a.ltrbxd.com data:;
-    connect-src 'self' https://generativelanguage.googleapis.com https://*.workers.dev https://api.allorigins.win https://corsproxy.io;
+    connect-src 'self' https://cojestgrane-ai.yflsiemano.workers.dev https://api.allorigins.win https://corsproxy.io;
     base-uri 'none';
     object-src 'none';
     form-action 'none';
@@ -158,22 +158,6 @@
       <button type="button" class="btn btn-ghost" id="set-add-account">Dodaj konto</button>
     </div>
     <p class="hint" id="set-sync-status"></p>
-
-    <h3>Rekonesans AI</h3>
-    <p class="hint">
-      Rekonesans w „Warto iść” korzysta z wbudowanego asystenta strony
-      (bez konfiguracji). Jeśli chcesz używać własnego klucza Gemini
-      z osobnymi limitami (aistudio.google.com → „Get API key”), wklej go
-      tutaj: ma pierwszeństwo i zostaje wyłącznie w tej przeglądarce.
-    </p>
-    <label class="field">Własny klucz API Gemini (opcjonalnie)
-      <input type="password" id="set-api-key" autocomplete="off" spellcheck="false" placeholder="AIza… lub AQ.…">
-    </label>
-    <div class="btn-row">
-      <button type="button" class="btn" id="btn-test-key">Zapisz i przetestuj</button>
-      <button type="button" class="btn btn-ghost" id="btn-forget-key">Usuń klucz</button>
-    </div>
-    <p class="hint" id="key-status"></p>
 
     <h3>Źródła danych</h3>
     <p class="hint" id="data-info"></p>
