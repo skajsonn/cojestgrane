@@ -357,12 +357,18 @@ function renderFooter() {
   if (m.accounts.length) {
     parts.push(`Letterboxd (${m.accounts.map((u) => '@' + u).join(', ')}): ` +
       `${m.counts.watched} obejrzanych, ${m.counts.watchlist} na watchliście`);
-    // uczciwe ostrzeżenie, gdy profile są nieświeże (np. scraping blokowany)
-    const oldest = Math.min(...state.data.profiles.map((p) => Date.parse(p.generatedAt) || 0));
-    const hours = (Date.now() - oldest) / 3600e3;
-    if (hours > 26) {
-      parts.push(`⚠ profile Letterboxd nieodświeżone od ${Math.round(hours)} h`);
+    // uczciwe ostrzeżenie per konto, gdy profil jest nieświeży
+    const stale = [];
+    for (const p of state.data.profiles) {
+      const t = Date.parse(p.generatedAt);
+      if (!Number.isFinite(t)) continue;
+      const hours = (Date.now() - t) / 3600e3;
+      if (hours > 26) {
+        stale.push(`@${p.user} od ${Math.round(hours)} h` +
+          (p.source === 'browser' ? ' (konto dodane w przeglądarce — odśwież lub usuń w ⚙)' : ''));
+      }
     }
+    if (stale.length) parts.push(`⚠ nieodświeżone: ${stale.join(', ')}`);
   }
   $('footer-meta').textContent = parts.join(' • ');
 }

@@ -120,14 +120,14 @@ async function syncUser(user) {
     if (previous?.watched?.length) {
       // Scraping bywa blokowany — nie nadpisujemy dobrych danych, zostawiamy stare.
       console.warn(`[letterboxd] ${user}: pobieranie nieudane (${err.message}) — zachowuję poprzednie dane.`);
-      return previous;
+      return { data: previous, stale: true, reason: err.message.slice(0, 160) };
     }
     throw err;
   }
 
   if (watched.length === 0 && previous?.watched?.length) {
     console.warn(`[letterboxd] ${user}: 0 obejrzanych mimo wcześniejszych danych — zachowuję poprzednie.`);
-    return previous;
+    return { data: previous, stale: true, reason: '0 obejrzanych w odpowiedzi' };
   }
 
   // Klucze do dopasowywania z repertuarem po tytule (fallback, gdy brak sluga).
@@ -146,7 +146,7 @@ async function syncUser(user) {
   };
   await writeJson(outPath, data);
   console.log(`[letterboxd] ${user}: obejrzane ${watched.length}, watchlista ${watchlist.length}, RSS ${recent.length}`);
-  return data;
+  return { data };
 }
 
 async function main() {
@@ -154,9 +154,15 @@ async function main() {
   const errors = [];
   for (const user of USERS) {
     try {
-      const data = await syncUser(user);
-      // syncedAt = kiedy NAPRAWDĘ pobrano dane (guard może zwrócić stare)
-      index.users.push({ user, counts: data.counts, syncedAt: data.generatedAt });
+      const { data, stale, reason } = await syncUser(user);
+      // syncedAt = kiedy NAPRAWDĘ pobrano dane (guard może zwrócić stare);
+      // stale/reason to telemetria — diagnozowalna prosto z wdrożonego pliku
+      index.users.push({
+        user,
+        counts: data.counts,
+        syncedAt: data.generatedAt,
+        ...(stale ? { stale: true, reason } : {}),
+      });
     } catch (err) {
       errors.push(`${user}: ${err.message}`);
       console.error(`[letterboxd] ${user}: BŁĄD — ${err.message}`);

@@ -40,6 +40,11 @@ jobs:
         run: node scripts/fetch-calendar.mjs
 
       - name: Synchronizuj profile Letterboxd
+        env:
+          # prywatne proxy na Cloudflare Workerze — IP runnerów jest blokowane
+          # przez Cloudflare Letterboxda, publiczne proxy bywają zawodne
+          LB_PROXY_URL: https://cojestgrane-ai.yflsiemano.workers.dev/lb
+          LB_PROXY_TOKEN: ${{ secrets.LB_PROXY_TOKEN }}
         run: node scripts/sync-letterboxd.mjs
 
       - name: Zatwierdź zmienione dane

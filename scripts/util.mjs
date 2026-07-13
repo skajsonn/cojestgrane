@@ -72,6 +72,10 @@ const CORS_PROXIES = [
 export async function fetchTextViaProxy(url, { rounds = 3 } = {}) {
   const u = new URL(url);
   if (u.protocol !== 'https:') throw new Error(`Dozwolone tylko https: ${url}`);
+  if (u.hostname === 'letterboxd.com') {
+    const viaWorker = await fetchViaWorker(u.toString());
+    if (viaWorker) return viaWorker;
+  }
   let lastErr = new Error('proxy niedostępne');
   for (let round = 0; round < rounds; round++) {
     for (const wrap of CORS_PROXIES) {
@@ -92,15 +96,45 @@ export async function fetchTextViaProxy(url, { rounds = 3 } = {}) {
 }
 
 /**
+ * Prywatne proxy na Cloudflare Workerze (endpoint /lb) — najpewniejsza droga
+ * do letterboxd.com z GitHub Actions. Wymaga env: LB_PROXY_URL + LB_PROXY_TOKEN.
+ */
+async function fetchViaWorker(url) {
+  const proxy = (process.env.LB_PROXY_URL || '').trim();
+  const token = (process.env.LB_PROXY_TOKEN || '').trim();
+  if (!proxy || !token) return null;
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const res = await fetch(proxy, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Sync-Token': token },
+        body: JSON.stringify({ url }),
+      });
+      if (res.ok) {
+        const text = await res.text();
+        if (text && text.length > 200 && !isChallenge(text)) return text;
+      }
+    } catch { /* spróbujemy jeszcze raz / innymi drogami */ }
+    await sleep(1000);
+  }
+  return null;
+}
+
+/**
  * Pobiera stronę przez systemowy curl (execFile — bez shella, argumenty
  * przekazywane bezpośrednio). Cloudflare blokuje fetch Node'a po
  * fingerprincie TLS, a curl przepuszcza — potrzebne dla letterboxd.com.
- * Gdy curl dostaje 403/challenge (np. IP runnerów GitHub Actions są
- * blokowane), próbujemy jeszcze przez publiczne proxy (inne IP źródłowe).
+ * Kolejność dla letterboxd.com: prywatny Worker (jeśli skonfigurowany) →
+ * curl → publiczne proxy; IP runnerów GitHub Actions bywa blokowane.
  */
 export async function fetchTextViaCurl(url, { retries = 2, timeoutSec = 25, userAgent } = {}) {
   const u = new URL(url); // walidacja — odrzuca śmieci zanim trafią do curla
   if (u.protocol !== 'https:') throw new Error(`Dozwolone tylko https: ${url}`);
+
+  if (u.hostname === 'letterboxd.com') {
+    const viaWorker = await fetchViaWorker(u.toString());
+    if (viaWorker) return viaWorker;
+  }
   let lastErr;
   let blocked = false;
 
