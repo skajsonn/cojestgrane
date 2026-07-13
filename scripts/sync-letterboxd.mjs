@@ -95,6 +95,7 @@ function parseRss(xml) {
     out.push({
       title: decodeEntities(title),
       year: Number(tag('letterboxd:filmYear')) || null,
+      slug: tag('link')?.match(/\/film\/([a-z0-9-]+)\//)?.[1] ?? null,
       rating10: tag('letterboxd:memberRating') ? Math.round(parseFloat(tag('letterboxd:memberRating')) * 2) : null,
       watchedDate: tag('letterboxd:watchedDate'),
       rewatch: tag('letterboxd:rewatch') === 'Yes',
@@ -112,22 +113,28 @@ async function syncUser(user) {
   const previous = await readJsonIfExists(outPath);
 
   let watched, watchlist, recent;
+  let scrapeError = null;
   try {
+    if (process.env.LB_FORCE_DELTA) throw new Error('wymuszony tryb delta (test)');
     watched = await scrapeGrid(base, 'films', { withRatings: true });
     watchlist = await scrapeGrid(base, 'watchlist', { withRatings: false });
+    if (watched.length === 0 && previous?.watched?.length) {
+      throw new Error('0 obejrzanych w odpowiedzi');
+    }
     recent = parseRss(await fetchTextViaCurl(`${base}/rss/`, { userAgent: BROWSER_UA }));
   } catch (err) {
-    if (previous?.watched?.length) {
-      // Scraping bywa blokowany — nie nadpisujemy dobrych danych, zostawiamy stare.
-      console.warn(`[letterboxd] ${user}: pobieranie nieudane (${err.message}) — zachowuję poprzednie dane.`);
-      return { data: previous, stale: true, reason: err.message.slice(0, 160) };
-    }
-    throw err;
-  }
-
-  if (watched.length === 0 && previous?.watched?.length) {
-    console.warn(`[letterboxd] ${user}: 0 obejrzanych mimo wcześniejszych danych — zachowuję poprzednie.`);
-    return { data: previous, stale: true, reason: '0 obejrzanych w odpowiedzi' };
+    scrapeError = err.message.slice(0, 160);
+    if (!previous?.watched?.length) throw err;
+    // Pełny scraping zablokowany — tryb przyrostowy: kanał RSS (przechodzi
+    // przez anty-bota) nanosi na poprzednie dane nowe obejrzenia/oceny
+    // i zdejmuje je z watchlisty. Dodania do watchlisty poczekają na
+    // najbliższy udany pełny scraping.
+    console.warn(`[letterboxd] ${user}: pełny scraping nieudany (${scrapeError}) — nanoszę różnice z RSS.`);
+    const rss = parseRss(await fetchTextViaCurl(`${base}/rss/`, { userAgent: BROWSER_UA }));
+    const data = applyRssDelta(previous, rss);
+    await writeJson(outPath, data);
+    console.log(`[letterboxd] ${user}: delta OK — obejrzane ${data.counts.watched}, watchlista ${data.counts.watchlist}`);
+    return { data, mode: 'delta', reason: scrapeError };
   }
 
   // Klucze do dopasowywania z repertuarem po tytule (fallback, gdy brak sluga).
@@ -137,6 +144,7 @@ async function syncUser(user) {
 
   const data = {
     generatedAt: new Date().toISOString(),
+    fullSyncAt: new Date().toISOString(),
     user,
     profileUrl: `${base}/`,
     counts: { watched: watched.length, watchlist: watchlist.length },
@@ -146,7 +154,48 @@ async function syncUser(user) {
   };
   await writeJson(outPath, data);
   console.log(`[letterboxd] ${user}: obejrzane ${watched.length}, watchlista ${watchlist.length}, RSS ${recent.length}`);
-  return { data };
+  return { data, mode: 'full' };
+}
+
+/** Nanosi aktywność z RSS na poprzedni profil (nowe seanse, oceny, zdjęcia z watchlisty). */
+function applyRssDelta(previous, rss) {
+  const watched = [...(previous.watched ?? [])];
+  const bySlug = new Map(watched.map((w, i) => [w.slug, i]));
+  let added = 0;
+  let updated = 0;
+
+  for (const r of rss) {
+    if (!r.slug || !r.watchedDate) continue; // wpisy list itp. pomijamy
+    const idx = bySlug.get(r.slug);
+    if (idx === undefined) {
+      watched.push({
+        slug: r.slug, title: r.title, year: r.year,
+        rating10: r.rating10 ?? null, norm: normalizeTitle(r.title),
+      });
+      bySlug.set(r.slug, watched.length - 1);
+      added++;
+    } else if (r.rating10 != null && watched[idx].rating10 !== r.rating10) {
+      watched[idx].rating10 = r.rating10;
+      updated++;
+    }
+  }
+
+  // obejrzane znika z watchlisty (Letterboxd robi to samo po zalogowaniu seansu)
+  const watchedSlugs = new Set(watched.map((w) => w.slug));
+  const watchlist = (previous.watchlist ?? []).filter((w) => !watchedSlugs.has(w.slug));
+
+  console.log(`[letterboxd] delta: +${added} obejrzanych, ${updated} zmian ocen, ` +
+    `watchlista ${previous.watchlist?.length ?? 0} → ${watchlist.length}`);
+
+  return {
+    ...previous,
+    generatedAt: new Date().toISOString(),
+    fullSyncAt: previous.fullSyncAt ?? previous.generatedAt,
+    counts: { watched: watched.length, watchlist: watchlist.length },
+    watched,
+    watchlist,
+    recent: rss,
+  };
 }
 
 async function main() {
@@ -154,14 +203,16 @@ async function main() {
   const errors = [];
   for (const user of USERS) {
     try {
-      const { data, stale, reason } = await syncUser(user);
-      // syncedAt = kiedy NAPRAWDĘ pobrano dane (guard może zwrócić stare);
-      // stale/reason to telemetria — diagnozowalna prosto z wdrożonego pliku
+      const { data, mode, reason } = await syncUser(user);
+      // telemetria diagnozowalna wprost z wdrożonego pliku:
+      // mode 'full' = pełny scraping, 'delta' = tylko przyrost z RSS
       index.users.push({
         user,
         counts: data.counts,
         syncedAt: data.generatedAt,
-        ...(stale ? { stale: true, reason } : {}),
+        fullSyncAt: data.fullSyncAt ?? null,
+        mode,
+        ...(reason ? { reason } : {}),
       });
     } catch (err) {
       errors.push(`${user}: ${err.message}`);

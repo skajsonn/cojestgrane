@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-07-12T15:14:50.684Z",
+ "generatedAt": "2026-07-13T20:24:55.277Z",
+ "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 217,
+  "watched": 218,
   "watchlist": 60
  },
  "watched": [
@@ -757,18 +758,18 @@
    "norm": "dallas buyers club"
   },
   {
-   "slug": "12-years-a-slave",
-   "title": "12 Years a Slave",
-   "year": 2013,
-   "rating10": 7,
-   "norm": "12 years a slave"
-  },
-  {
    "slug": "prisoners",
    "title": "Prisoners",
    "year": 2013,
    "rating10": 9,
    "norm": "prisoners"
+  },
+  {
+   "slug": "12-years-a-slave",
+   "title": "12 Years a Slave",
+   "year": 2013,
+   "rating10": 7,
+   "norm": "12 years a slave"
   },
   {
    "slug": "about-time",
@@ -1252,6 +1253,13 @@
    "year": 1999,
    "rating10": 7,
    "norm": "dogma"
+  },
+  {
+   "slug": "the-virgin-suicides",
+   "title": "The Virgin Suicides",
+   "year": 1999,
+   "rating10": 7,
+   "norm": "the virgin suicides"
   },
   {
    "slug": "payback-straight-up",
@@ -1893,6 +1901,7 @@
   {
    "title": "Better Call Saul Presents: Slippin' Jimmy",
    "year": 2022,
+   "slug": "better-call-saul-presents-slippin-jimmy",
    "rating10": 9,
    "watchedDate": "2022-12-14",
    "rewatch": false,
@@ -1902,6 +1911,7 @@
   {
    "title": "The End of the F***ing World",
    "year": null,
+   "slug": "the-end-of-the-fing-world",
    "rating10": 6,
    "watchedDate": "2022-12-15",
    "rewatch": false,
@@ -1911,6 +1921,7 @@
   {
    "title": "The Last of Us",
    "year": 2022,
+   "slug": "the-last-of-us-2022",
    "rating10": 8,
    "watchedDate": "2023-03-14",
    "rewatch": false,
@@ -1920,6 +1931,7 @@
   {
    "title": "Skepta: Top Boy",
    "year": 2015,
+   "slug": "skepta-top-boy",
    "rating10": 9,
    "watchedDate": "2024-03-25",
    "rewatch": false,
@@ -1929,6 +1941,7 @@
   {
    "title": "Skepta: Top Boy",
    "year": 2015,
+   "slug": "skepta-top-boy",
    "rating10": 8,
    "watchedDate": "2024-04-19",
    "rewatch": false,
@@ -1938,6 +1951,7 @@
   {
    "title": "Fallout",
    "year": 2023,
+   "slug": "fallout-2023",
    "rating10": 9,
    "watchedDate": "2024-04-22",
    "rewatch": false,
@@ -1947,6 +1961,7 @@
   {
    "title": "Peaky Blinders: The Immortal Man",
    "year": 2026,
+   "slug": "peaky-blinders-the-immortal-man",
    "rating10": 10,
    "watchedDate": "2024-09-14",
    "rewatch": false,
@@ -1956,6 +1971,7 @@
   {
    "title": "Mr. McMahon",
    "year": 2024,
+   "slug": "mr-mcmahon",
    "rating10": 7,
    "watchedDate": "2024-10-11",
    "rewatch": false,
@@ -1965,6 +1981,7 @@
   {
    "title": "The Penguin",
    "year": 2024,
+   "slug": "the-penguin-2024",
    "rating10": 9,
    "watchedDate": "2024-11-19",
    "rewatch": false,
@@ -1974,6 +1991,7 @@
   {
    "title": "jeen-yuhs: A Kanye Trilogy",
    "year": 2022,
+   "slug": "jeen-yuhs-a-kanye-trilogy",
    "rating10": 10,
    "watchedDate": "2025-03-17",
    "rewatch": false,
@@ -1983,6 +2001,7 @@
   {
    "title": "American Manhunt: Osama bin Laden",
    "year": 2025,
+   "slug": "american-manhunt-osama-bin-laden-2025-1",
    "rating10": 8,
    "watchedDate": "2025-05-19",
    "rewatch": false,
@@ -1992,6 +2011,7 @@
   {
    "title": "Sherlock: Case of Evil",
    "year": 2002,
+   "slug": "sherlock-case-of-evil",
    "rating10": 10,
    "watchedDate": "2025-06-27",
    "rewatch": false,
@@ -2001,6 +2021,7 @@
   {
    "title": "Blinded by the Lights",
    "year": 2018,
+   "slug": "blinded-by-the-lights",
    "rating10": 7,
    "watchedDate": "2025-09-11",
    "rewatch": false,
@@ -2010,6 +2031,7 @@
   {
    "title": "The Cutting Edge: Going for the Gold",
    "year": 2006,
+   "slug": "the-cutting-edge-going-for-the-gold",
    "rating10": 6,
    "watchedDate": "2024-09-08",
    "rewatch": false,
@@ -2019,6 +2041,7 @@
   {
    "title": "Ocean's Eight",
    "year": 2018,
+   "slug": "oceans-eight",
    "rating10": 6,
    "watchedDate": "2024-09-11",
    "rewatch": false,
@@ -2028,6 +2051,7 @@
   {
    "title": "BlacKkKlansman",
    "year": 2018,
+   "slug": "blackkklansman",
    "rating10": 8,
    "watchedDate": "2024-09-12",
    "rewatch": false,
@@ -2037,6 +2061,7 @@
   {
    "title": "Joker: Folie à Deux",
    "year": 2024,
+   "slug": "joker-folie-a-deux",
    "rating10": 7,
    "watchedDate": "2024-10-11",
    "rewatch": false,
@@ -2046,6 +2071,7 @@
   {
    "title": "Beetlejuice Beetlejuice",
    "year": 2024,
+   "slug": "beetlejuice-beetlejuice",
    "rating10": 7,
    "watchedDate": "2024-10-27",
    "rewatch": false,
@@ -2055,6 +2081,7 @@
   {
    "title": "The Substance",
    "year": 2024,
+   "slug": "the-substance",
    "rating10": 10,
    "watchedDate": "2024-11-01",
    "rewatch": false,
@@ -2064,6 +2091,7 @@
   {
    "title": "Gladiator",
    "year": 2000,
+   "slug": "gladiator-2000",
    "rating10": 9,
    "watchedDate": "2024-11-20",
    "rewatch": false,
@@ -2073,6 +2101,7 @@
   {
    "title": "Gladiator II",
    "year": 2024,
+   "slug": "gladiator-ii",
    "rating10": 8,
    "watchedDate": "2024-11-21",
    "rewatch": false,
@@ -2082,6 +2111,7 @@
   {
    "title": "White Men Can't Jump",
    "year": 1992,
+   "slug": "white-men-cant-jump",
    "rating10": 8,
    "watchedDate": "2025-02-02",
    "rewatch": false,
@@ -2091,6 +2121,7 @@
   {
    "title": "Anora",
    "year": 2024,
+   "slug": "anora",
    "rating10": 8,
    "watchedDate": "2025-03-04",
    "rewatch": false,
@@ -2100,6 +2131,7 @@
   {
    "title": "A Minecraft Movie",
    "year": 2025,
+   "slug": "a-minecraft-movie",
    "rating10": 7,
    "watchedDate": "2025-04-17",
    "rewatch": false,
@@ -2109,6 +2141,7 @@
   {
    "title": "Lone Survivor",
    "year": 2013,
+   "slug": "lone-survivor",
    "rating10": 9,
    "watchedDate": "2025-06-15",
    "rewatch": false,
@@ -2118,6 +2151,7 @@
   {
    "title": "The Shawshank Redemption",
    "year": 1994,
+   "slug": "the-shawshank-redemption",
    "rating10": 10,
    "watchedDate": "2025-06-24",
    "rewatch": false,
@@ -2127,6 +2161,7 @@
   {
    "title": "The Godfather",
    "year": 1972,
+   "slug": "the-godfather",
    "rating10": 9,
    "watchedDate": "2025-06-28",
    "rewatch": false,
@@ -2136,6 +2171,7 @@
   {
    "title": "F1",
    "year": 2025,
+   "slug": "f1",
    "rating10": 9,
    "watchedDate": "2025-07-02",
    "rewatch": false,
@@ -2145,6 +2181,7 @@
   {
    "title": "Black Hawk Down",
    "year": 2001,
+   "slug": "black-hawk-down",
    "rating10": 9,
    "watchedDate": "2025-07-20",
    "rewatch": false,
@@ -2154,6 +2191,7 @@
   {
    "title": "Soccer Poker",
    "year": 1989,
+   "slug": "soccer-poker",
    "rating10": 8,
    "watchedDate": "2025-08-18",
    "rewatch": false,
@@ -2163,6 +2201,7 @@
   {
    "title": "The Polar Express",
    "year": 2004,
+   "slug": "the-polar-express",
    "rating10": 7,
    "watchedDate": "2025-12-24",
    "rewatch": false,
@@ -2172,6 +2211,7 @@
   {
    "title": "The Holdovers",
    "year": 2023,
+   "slug": "the-holdovers",
    "rating10": 8,
    "watchedDate": "2025-12-25",
    "rewatch": false,
@@ -2181,6 +2221,7 @@
   {
    "title": "Now You See Me: Now You Don't",
    "year": 2025,
+   "slug": "now-you-see-me-now-you-dont-2025",
    "rating10": 7,
    "watchedDate": "2025-12-27",
    "rewatch": false,
@@ -2190,6 +2231,7 @@
   {
    "title": "Warfare",
    "year": 2025,
+   "slug": "warfare",
    "rating10": 7,
    "watchedDate": "2026-02-19",
    "rewatch": false,
@@ -2199,6 +2241,7 @@
   {
    "title": "Project Hail Mary",
    "year": 2026,
+   "slug": "project-hail-mary",
    "rating10": 9,
    "watchedDate": "2026-07-04",
    "rewatch": false,
@@ -2208,6 +2251,7 @@
   {
    "title": "Lupin",
    "year": 2021,
+   "slug": "lupin-2021-1",
    "rating10": 8,
    "watchedDate": "2022-12-15",
    "rewatch": false,
@@ -2217,6 +2261,7 @@
   {
    "title": "The Queen's Gambit",
    "year": 2020,
+   "slug": "the-queens-gambit",
    "rating10": 7,
    "watchedDate": "2022-12-15",
    "rewatch": false,
@@ -2226,6 +2271,7 @@
   {
    "title": "Trailer Park Boys",
    "year": 1999,
+   "slug": "trailer-park-boys",
    "rating10": 9,
    "watchedDate": "2022-12-15",
    "rewatch": false,
@@ -2235,6 +2281,7 @@
   {
    "title": "Wednesday",
    "year": 2023,
+   "slug": "wednesday-2023",
    "rating10": 8,
    "watchedDate": "2023-07-16",
    "rewatch": false,
@@ -2244,6 +2291,7 @@
   {
    "title": "Dear Child",
    "year": 2023,
+   "slug": "dear-child-2023",
    "rating10": 8,
    "watchedDate": "2023-09-30",
    "rewatch": false,
@@ -2253,6 +2301,7 @@
   {
    "title": "Beckham",
    "year": 2023,
+   "slug": "beckham",
    "rating10": 8,
    "watchedDate": "2023-11-04",
    "rewatch": false,
@@ -2262,6 +2311,7 @@
   {
    "title": "Cyberpunk: Edgerunners",
    "year": 2022,
+   "slug": "cyberpunk-edgerunners",
    "rating10": 10,
    "watchedDate": "2024-01-04",
    "rewatch": false,
@@ -2271,6 +2321,7 @@
   {
    "title": "BLUE LOCK",
    "year": 2022,
+   "slug": "blue-lock",
    "rating10": 8,
    "watchedDate": "2024-01-24",
    "rewatch": false,
@@ -2280,6 +2331,7 @@
   {
    "title": "Together: Treble Winners",
    "year": 2024,
+   "slug": "together-treble-winners",
    "rating10": 7,
    "watchedDate": "2024-05-23",
    "rewatch": false,
@@ -2289,6 +2341,7 @@
   {
    "title": "Gran Torino",
    "year": 2008,
+   "slug": "gran-torino",
    "rating10": 9,
    "watchedDate": "2022-07-20",
    "rewatch": false,
@@ -2298,6 +2351,7 @@
   {
    "title": "Rocky",
    "year": 1976,
+   "slug": "rocky",
    "rating10": 8,
    "watchedDate": "2022-07-28",
    "rewatch": false,
@@ -2307,6 +2361,7 @@
   {
    "title": "Barbarian",
    "year": 2022,
+   "slug": "barbarian-2022",
    "rating10": 6,
    "watchedDate": "2022-11-02",
    "rewatch": false,
@@ -2316,6 +2371,7 @@
   {
    "title": "Zoolander 2",
    "year": 2016,
+   "slug": "zoolander-2",
    "rating10": 8,
    "watchedDate": "2022-12-19",
    "rewatch": false,
@@ -2325,6 +2381,7 @@
   {
    "title": "The Silence of the Lambs",
    "year": 1991,
+   "slug": "the-silence-of-the-lambs",
    "rating10": 8,
    "watchedDate": "2023-01-07",
    "rewatch": false,
@@ -2334,6 +2391,7 @@
   {
    "title": "The Boondock Saints",
    "year": 1999,
+   "slug": "the-boondock-saints",
    "rating10": 9,
    "watchedDate": "2023-02-19",
    "rewatch": false,
