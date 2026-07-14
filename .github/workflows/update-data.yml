@@ -18,7 +18,9 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # margines: fetch fail-fastuje przy blokadzie, ale kalendarz (kuracja AI)
+    # i sync bywają wolniejsze; 25 min chroni przed anulowaniem na 5xx Google
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 

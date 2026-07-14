@@ -80,7 +80,7 @@ export async function fetchTextViaProxy(url, { rounds = 3 } = {}) {
   for (let round = 0; round < rounds; round++) {
     for (const wrap of CORS_PROXIES) {
       try {
-        const res = await fetch(wrap(u.toString()), { redirect: 'follow' });
+        const res = await fetch(wrap(u.toString()), { redirect: 'follow', signal: AbortSignal.timeout(20000) });
         if (res.ok) {
           const text = await res.text();
           if (text && text.length > 200 && !isChallenge(text)) return text;
@@ -90,37 +90,100 @@ export async function fetchTextViaProxy(url, { rounds = 3 } = {}) {
         lastErr = err;
       }
     }
-    await sleep(1200 * (round + 1));
+    if (round < rounds - 1) await sleep(1200 * (round + 1));
   }
   throw lastErr;
 }
 
+// Bezpiecznik: gdy źródło za Cloudflare blokuje runner, nie wolno mielić
+// wszystkich dróg przy każdym z ~90 zapytań (to przekracza limit czasu joba
+// i GitHub anuluje run). Po kilku pełnych niepowodzeniach host jest
+// oznaczany jako zablokowany i kolejne zapytania padają natychmiast.
+const blockedHosts = new Set();
+const hostFails = new Map();
+const hostRoute = new Map(); // host -> nazwa drogi, która ostatnio zadziałała
+const HOST_FAIL_LIMIT = 3;
+
+/** Pojedynczy curl bez ponawiania i bez proxy-storm (ograniczony w czasie). */
+async function curlOnce(url, userAgent, timeoutSec = 12) {
+  try {
+    const { stdout } = await execFileP(
+      'curl',
+      [
+        '--silent', '--show-error', '--fail-with-body', '--location',
+        '--max-time', String(timeoutSec),
+        '--user-agent', userAgent || UA,
+        '--write-out', '\n%{http_code}',
+        url,
+      ],
+      { maxBuffer: 32 * 1024 * 1024, windowsHide: true },
+    );
+    const idx = stdout.lastIndexOf('\n');
+    const status = Number(stdout.slice(idx + 1).trim());
+    const body = stdout.slice(0, idx);
+    if (status >= 200 && status < 300 && !isChallenge(body)) return body;
+  } catch { /* następna droga */ }
+  return null;
+}
+
 /**
  * Odporne pobranie JSON dla źródeł za Cloudflare (Cinema City, Letterboxd),
- * które potrafią challenge'ować IP serwerów GitHub Actions:
- * Node fetch → prywatny Worker → curl (inny odcisk TLS) → publiczne proxy.
- * Z „domowych" IP zwykle wystarcza pierwszy krok.
+ * które challenge'ują IP serwerów GitHub Actions. Kolejność dróg:
+ *  - CI (Worker skonfigurowany): Worker → Node fetch → curl → proxy
+ *    (Node-direct to właśnie ta droga, którą Cloudflare blokuje najczęściej),
+ *  - lokalnie (brak env Workera): Node fetch → curl → proxy.
+ * Każda droga jest jednostrzałowa i ograniczona czasowo; po HOST_FAIL_LIMIT
+ * pełnych niepowodzeniach host jest pomijany do końca uruchomienia.
  */
 export async function fetchJsonResilient(url, { headers = {} } = {}) {
+  const host = new URL(url).hostname;
+  if (blockedHosts.has(host)) {
+    throw new Error(`${host}: pominięty (oznaczony jako zablokowany w tym uruchomieniu)`);
+  }
   const ua = headers['User-Agent'] || headers['user-agent'];
+  const workerOn = !!(process.env.LB_PROXY_URL || '').trim() && !!(process.env.LB_PROXY_TOKEN || '').trim();
 
-  // 1) bezpośrednio przez Node fetch (najszybsze)
-  try {
-    const res = await fetchWithRetry(url, { headers, retries: 1 });
-    if (res.ok) {
-      const text = await res.text();
-      if (!isChallenge(text)) return JSON.parse(text);
+  const nodeDirect = async () => {
+    const res = await fetchWithRetry(url, { headers, retries: 0, timeoutMs: 12000 });
+    if (!res.ok) return null;
+    const text = await res.text();
+    return isChallenge(text) ? null : text;
+  };
+
+  // nazwane drogi — kolejność zależy od środowiska; „node" bywa blokowany
+  // pierwszy, więc na CI z Workerem stawiamy Worker na czele
+  const named = {
+    worker: () => fetchViaWorker(url),
+    node: nodeDirect,
+    curl: () => curlOnce(url, ua),
+    proxy: () => fetchTextViaProxy(url, { rounds: 1 }).catch(() => null),
+  };
+  let order = workerOn ? ['worker', 'node', 'curl', 'proxy'] : ['node', 'curl', 'worker', 'proxy'];
+
+  // droga, która ostatnio zadziałała dla tego hosta, idzie pierwsza —
+  // oszczędza 12 s marnowane co zapytanie na blokowanym Node-fetchu
+  const winner = hostRoute.get(host);
+  if (winner) order = [winner, ...order.filter((r) => r !== winner)];
+
+  for (const name of order) {
+    let text = null;
+    try { text = await named[name](); } catch { /* następna droga */ }
+    if (text) {
+      try {
+        const parsed = JSON.parse(text);
+        hostRoute.set(host, name);
+        return parsed;
+      } catch { /* nie-JSON, następna droga */ }
     }
-  } catch { /* próbujemy dalej */ }
-
-  // 2) prywatny Worker (wyjście sieciowe inne niż runner)
-  const viaWorker = await fetchViaWorker(new URL(url).toString());
-  if (viaWorker) {
-    try { return JSON.parse(viaWorker); } catch { /* dalej */ }
   }
 
-  // 3) curl → 4) publiczne proxy (fetchTextViaCurl ma oba fallbacki)
-  return JSON.parse(await fetchTextViaCurl(url, { userAgent: ua }));
+  const n = (hostFails.get(host) || 0) + 1;
+  hostFails.set(host, n);
+  if (n >= HOST_FAIL_LIMIT) {
+    blockedHosts.add(host);
+    console.warn(`[fetch] ${host}: ${n} nieudanych pobrań — pomijam resztę tego uruchomienia (fail-fast).`);
+  }
+  throw new Error(`Wszystkie drogi pobrania zawiodły dla ${url}`);
 }
 
 /**
@@ -138,13 +201,15 @@ async function fetchViaWorker(url) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'X-Sync-Token': token },
         body: JSON.stringify({ url }),
+        signal: AbortSignal.timeout(25000),
       });
       if (res.ok) {
         const text = await res.text();
         if (text && text.length > 200 && !isChallenge(text)) return text;
       }
+      if (res.status === 400 || res.status === 403) return null; // host niedozwolony/zły token — nie ponawiamy
     } catch { /* spróbujemy jeszcze raz / innymi drogami */ }
-    await sleep(1000);
+    if (attempt === 0) await sleep(1000);
   }
   return null;
 }
