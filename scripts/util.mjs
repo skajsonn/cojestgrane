@@ -96,8 +96,37 @@ export async function fetchTextViaProxy(url, { rounds = 3 } = {}) {
 }
 
 /**
+ * Odporne pobranie JSON dla źródeł za Cloudflare (Cinema City, Letterboxd),
+ * które potrafią challenge'ować IP serwerów GitHub Actions:
+ * Node fetch → prywatny Worker → curl (inny odcisk TLS) → publiczne proxy.
+ * Z „domowych" IP zwykle wystarcza pierwszy krok.
+ */
+export async function fetchJsonResilient(url, { headers = {} } = {}) {
+  const ua = headers['User-Agent'] || headers['user-agent'];
+
+  // 1) bezpośrednio przez Node fetch (najszybsze)
+  try {
+    const res = await fetchWithRetry(url, { headers, retries: 1 });
+    if (res.ok) {
+      const text = await res.text();
+      if (!isChallenge(text)) return JSON.parse(text);
+    }
+  } catch { /* próbujemy dalej */ }
+
+  // 2) prywatny Worker (wyjście sieciowe inne niż runner)
+  const viaWorker = await fetchViaWorker(new URL(url).toString());
+  if (viaWorker) {
+    try { return JSON.parse(viaWorker); } catch { /* dalej */ }
+  }
+
+  // 3) curl → 4) publiczne proxy (fetchTextViaCurl ma oba fallbacki)
+  return JSON.parse(await fetchTextViaCurl(url, { userAgent: ua }));
+}
+
+/**
  * Prywatne proxy na Cloudflare Workerze (endpoint /lb) — najpewniejsza droga
- * do letterboxd.com z GitHub Actions. Wymaga env: LB_PROXY_URL + LB_PROXY_TOKEN.
+ * do źródeł za Cloudflare z GitHub Actions. Wymaga env: LB_PROXY_URL +
+ * LB_PROXY_TOKEN; Worker sam waliduje dozwolone hosty.
  */
 async function fetchViaWorker(url) {
   const proxy = (process.env.LB_PROXY_URL || '').trim();

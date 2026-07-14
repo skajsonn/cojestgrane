@@ -6,7 +6,7 @@
 // Uruchamiane codziennie przez GitHub Actions. Zero zależności npm.
 
 import {
-  fetchJson, fetchTextViaCurl, readJsonIfExists, writeJson, sleep,
+  fetchJson, fetchJsonResilient, fetchTextViaCurl, readJsonIfExists, writeJson, sleep,
   warsawToday, addDays, daysBetween, normalizeTitle, decodeEntities,
 } from './util.mjs';
 
@@ -62,7 +62,9 @@ function classifyStatus(film, firstSeen) {
 
 async function ccDates(cinemaId) {
   const url = `${CC_BASE}/dates/in-cinema/${cinemaId}/until/${UNTIL}?attr=&lang=pl_PL`;
-  const json = await fetchJson(url, { headers: CC_HEADERS });
+  // fetchJsonResilient: Cinema City bywa za Cloudflare i challenge'uje IP
+  // runnerów (Node→Worker→curl→proxy)
+  const json = await fetchJsonResilient(url, { headers: CC_HEADERS });
   const dates = json?.body?.dates;
   if (!Array.isArray(dates)) throw new Error(`Nieoczekiwany format odpowiedzi dates dla kina ${cinemaId}`);
   return dates.filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d));
@@ -70,7 +72,7 @@ async function ccDates(cinemaId) {
 
 async function ccFilmEvents(cinemaId, date) {
   const url = `${CC_BASE}/film-events/in-cinema/${cinemaId}/at-date/${date}?attr=&lang=pl_PL`;
-  const json = await fetchJson(url, { headers: CC_HEADERS });
+  const json = await fetchJsonResilient(url, { headers: CC_HEADERS });
   const body = json?.body;
   if (!body || !Array.isArray(body.films) || !Array.isArray(body.events)) {
     throw new Error(`Nieoczekiwany format film-events dla kina ${cinemaId} / ${date}`);
@@ -235,12 +237,29 @@ async function main() {
 
   const films = new Map(); // filmId -> rekord filmu
   let totalEvents = 0;
+  const failedCinemas = [];
 
   for (const cinema of CONFIG.cinemas) {
-    const dates = await ccDates(cinema.id);
+    let dates;
+    try {
+      dates = await ccDates(cinema.id);
+    } catch (err) {
+      // Kino niedostępne na żadnej z dróg — zapamiętujemy i nie nadpisujemy
+      // repertuaru częściowymi danymi (guard niżej zostawia kompletny stary plik).
+      console.warn(`[repertuar] ${cinema.name}: pominięte — ${err.message}`);
+      failedCinemas.push(cinema.name);
+      continue;
+    }
     console.log(`[repertuar] ${cinema.name}: ${dates.length} dni z seansami`);
     for (const date of dates) {
-      const body = await ccFilmEvents(cinema.id, date);
+      let body;
+      try {
+        body = await ccFilmEvents(cinema.id, date);
+      } catch (err) {
+        console.warn(`[repertuar] ${cinema.name} ${date}: pominięty dzień — ${err.message}`);
+        if (!failedCinemas.includes(cinema.name)) failedCinemas.push(cinema.name);
+        continue;
+      }
       for (const f of body.films) {
         if (!f?.id || !f?.name) continue;
         if (!films.has(f.id)) {
@@ -288,6 +307,11 @@ async function main() {
   if (films.size === 0 || totalEvents === 0) {
     // Nie nadpisujemy dobrych danych pustymi — lepiej przerwać z błędem.
     throw new Error('API zwróciło 0 filmów/seansów — przerywam bez zapisu.');
+  }
+  if (failedCinemas.length) {
+    // Częściowy snapshot pominąłby seanse padniętego kina — zostawiamy
+    // kompletny poprzedni repertuar, kolejny cron (za 6 h) ponowi.
+    throw new Error(`Niekompletne dane — nieosiągalne kina: ${failedCinemas.join(', ')}. Zostawiam poprzedni repertuar.`);
   }
 
   // Historia „pierwszego zauważenia” filmu (wykrywanie premier + archiwum).

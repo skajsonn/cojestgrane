@@ -26,28 +26,39 @@ jobs:
         with:
           node-version: 22
 
+      # Każde źródło jest niezależne (continue-on-error): przejściowa blokada
+      # Cloudflare na jednym z nich nie może wykasować aktualizacji z pozostałych
+      # ani zablokować commita. Nieświeżość widać w stopce strony.
       - name: Pobierz repertuar Cinema City (+ TMDB)
+        id: repertoire
+        continue-on-error: true
         env:
-          # Opcjonalny sekret — bez niego plakaty i tak działają (z Cinema City),
-          # TMDB dodaje tytuły oryginalne, opisy i oceny.
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          # Worker jako droga awaryjna, gdy Cloudflare CC challenge'uje runner
+          LB_PROXY_URL: https://cojestgrane-ai.yflsiemano.workers.dev/lb
+          LB_PROXY_TOKEN: ${{ secrets.LB_PROXY_TOKEN }}
         run: node scripts/fetch-repertoire.mjs
 
       - name: Kalendarz premier (TMDB + kuracja AI)
+        id: calendar
+        continue-on-error: true
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/fetch-calendar.mjs
 
       - name: Synchronizuj profile Letterboxd
+        id: letterboxd
+        continue-on-error: true
         env:
-          # prywatne proxy na Cloudflare Workerze — IP runnerów jest blokowane
-          # przez Cloudflare Letterboxda, publiczne proxy bywają zawodne
+          # prywatne proxy na Cloudflare Workerze — IP runnerów bywa blokowane
+          # przez Cloudflare Letterboxda, publiczne proxy są zawodne
           LB_PROXY_URL: https://cojestgrane-ai.yflsiemano.workers.dev/lb
           LB_PROXY_TOKEN: ${{ secrets.LB_PROXY_TOKEN }}
         run: node scripts/sync-letterboxd.mjs
 
       - name: Zatwierdź zmienione dane
+        if: always()
         run: |
           git config user.name "kinomaniak-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -57,4 +68,19 @@ jobs:
           else
             git commit -m "dane: aktualizacja repertuaru i profilu $(date -u +%F)"
             git push
+          fi
+
+      - name: Podsumowanie źródeł
+        if: always()
+        run: |
+          echo "Repertuar:  ${{ steps.repertoire.outcome }}"
+          echo "Kalendarz:  ${{ steps.calendar.outcome }}"
+          echo "Letterboxd: ${{ steps.letterboxd.outcome }}"
+          # Job pada tylko gdy WSZYSTKIE źródła zawiodły (realna awaria,
+          # nie przejściowy Cloudflare) — wtedy warto dostać powiadomienie.
+          if [ "${{ steps.repertoire.outcome }}" != "success" ] && \
+             [ "${{ steps.calendar.outcome }}" != "success" ] && \
+             [ "${{ steps.letterboxd.outcome }}" != "success" ]; then
+            echo "::error::Wszystkie źródła danych zawiodły."
+            exit 1
           fi

@@ -1,13 +1,19 @@
 // Cloudflare Worker dla cojestgrane.me — dwa zadania:
 //  1. POST /      — proxy rekonesansu AI (Gemini); klucz w sekrecie
 //     GEMINI_API_KEY, przyjmuje wyłącznie żądania z dozwolonych originów.
-//  2. POST /lb    — pobieranie stron letterboxd.com dla GitHub Actions
-//     (Cloudflare Letterboxda blokuje IP runnerów); dostęp wyłącznie
-//     z nagłówkiem X-Sync-Token równym sekretowi SYNC_TOKEN.
+//  2. POST /lb    — pobieranie stron letterboxd.com i cinema-city.pl dla
+//     GitHub Actions (Cloudflare tych serwisów bywa challenge'uje IP
+//     runnerów); dostęp wyłącznie z nagłówkiem X-Sync-Token == SYNC_TOKEN.
 //
 // Sekrety Workera (Settings → Variables and Secrets):
 //   GEMINI_API_KEY — klucz Gemini z AI Studio
 //   SYNC_TOKEN     — losowy token współdzielony z sekretem repo LB_PROXY_TOKEN
+
+// Hosty, które Worker może pobierać w imieniu synchronizacji.
+const FETCH_ALLOWED_HOSTS = new Set([
+  'letterboxd.com',
+  'www.cinema-city.pl',
+]);
 
 const ALLOWED_ORIGINS = [
   'https://cojestgrane.me',
@@ -54,8 +60,8 @@ async function handleLetterboxd(request, env) {
   } catch {
     return json({ error: 'nieprawidłowy url' }, plain, 400);
   }
-  if (target.protocol !== 'https:' || target.hostname !== 'letterboxd.com') {
-    return json({ error: 'dozwolone tylko https://letterboxd.com/…' }, plain, 400);
+  if (target.protocol !== 'https:' || !FETCH_ALLOWED_HOSTS.has(target.hostname)) {
+    return json({ error: `dozwolone tylko https://{${[...FETCH_ALLOWED_HOSTS].join(', ')}}/…` }, plain, 400);
   }
 
   const res = await fetch(target.toString(), {
