@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-07-14T22:44:26.257Z",
+ "generatedAt": "2026-07-15T06:02:07.864Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 722,
+  "watched": 723,
   "watchlist": 506
  },
  "watched": [
@@ -5061,6 +5061,13 @@
    "year": 2014,
    "rating10": 9,
    "norm": "jojo s bizarre adventure stardust crusaders"
+  },
+  {
+   "slug": "cemetery-man",
+   "title": "Cemetery Man",
+   "year": 1994,
+   "rating10": 6,
+   "norm": "cemetery man"
   }
  ],
  "watchlist": [
@@ -8103,6 +8110,16 @@
  ],
  "recent": [
   {
+   "title": "Cemetery Man",
+   "year": 1994,
+   "slug": "cemetery-man",
+   "rating10": 6,
+   "watchedDate": "2026-07-15",
+   "rewatch": false,
+   "tmdbId": 21588,
+   "review": null
+  },
+  {
    "title": "JoJo's Bizarre Adventure: Stardust Crusaders",
    "year": 2014,
    "slug": "jojos-bizarre-adventure-stardust-crusaders",
@@ -8590,16 +8607,6 @@
    "watchedDate": "2025-07-11",
    "rewatch": false,
    "tmdbId": 541671,
-   "review": null
-  },
-  {
-   "title": "Mune: Guardian of the Moon",
-   "year": 2014,
-   "slug": "mune-guardian-of-the-moon",
-   "rating10": 7,
-   "watchedDate": "2025-07-10",
-   "rewatch": false,
-   "tmdbId": 323661,
    "review": null
   }
  ]
