@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-07-17T16:45:39.651Z",
- "today": "2026-07-17",
+ "generatedAt": "2026-07-17T22:37:06.837Z",
+ "today": "2026-07-18",
  "cinemas": [
   {
    "id": "1065",
@@ -34,6 +34,54 @@
   }
  ],
  "films": [
+  {
+   "id": "8294o2r",
+   "title": "Andre Rieu. Niech żyje Maastricht!",
+   "year": "2026",
+   "releaseDate": "2026-08-21",
+   "length": 170,
+   "poster": "https://www.cinema-city.pl/xmedia-cw/repo/feats/posters/8294O2R.jpg",
+   "trailer": "https://www.youtube.com/watch?v=XuA9e2znk8o",
+   "link": "https://www.cinema-city.pl/filmy/andre-rieu-niech-zyje-maastricht/8294o2r",
+   "genres": [],
+   "formats": [
+    "2d"
+   ],
+   "showings": {
+    "1065": {
+     "2026-08-22": [
+      {
+       "time": "15:00",
+       "formats": [],
+       "lang": "subbed",
+       "auditorium": "Sala 7",
+       "booking": "https://tickets.cinema-city.pl/api/order/1525998?lang=pl",
+       "soldOut": false
+      }
+     ]
+    },
+    "1075": {
+     "2026-08-22": [
+      {
+       "time": "15:00",
+       "formats": [],
+       "lang": "subbed",
+       "auditorium": "Sala 4",
+       "booking": "https://tickets.cinema-city.pl/api/order/1526036?lang=pl",
+       "soldOut": false
+      }
+     ]
+    }
+   },
+   "tmdb": null,
+   "lbSlug": null,
+   "lbTitle": null,
+   "lbRating": null,
+   "lbRatingCount": 0,
+   "originalTitle": null,
+   "firstSeen": "2026-07-18",
+   "status": "upcoming"
+  },
   {
    "id": "8213s2r",
    "title": "Audiencja - National Theatre Live 2026",
@@ -121,32 +169,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "18:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1578266?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1578268?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1579007?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "16:00",
@@ -353,24 +375,6 @@
      ]
     },
     "1069": {
-     "2026-07-17": [
-      {
-       "time": "19:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570152?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570154?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "13:30",
@@ -577,24 +581,6 @@
      ]
     },
     "1075": {
-     "2026-07-17": [
-      {
-       "time": "19:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1571424?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1571430?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "19:20",
@@ -705,24 +691,6 @@
      ]
     },
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "18:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1569299?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1569303?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:30",
@@ -929,16 +897,6 @@
      ]
     },
     "1089": {
-     "2026-07-17": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568792?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "21:30",
@@ -1020,7 +978,7 @@
    "lbSlug": "backrooms-2026",
    "lbTitle": "Backrooms",
    "lbRating": 3.37,
-   "lbRatingCount": 2132963,
+   "lbRatingCount": 2219933,
    "originalTitle": "Backrooms",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -1220,7 +1178,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-07-05",
-   "status": "new"
+   "status": "regular"
   },
   {
    "id": "7795s2r",
@@ -1240,24 +1198,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "19:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1579097?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1579103?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "19:40",
@@ -1386,7 +1326,7 @@
    "lbSlug": "the-devil-wears-prada-2",
    "lbTitle": "The Devil Wears Prada 2",
    "lbRating": 3.18,
-   "lbRatingCount": 1193470,
+   "lbRatingCount": 1205234,
    "originalTitle": "The Devil Wears Prada 2",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -1410,16 +1350,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "19:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1578840?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "19:20",
@@ -1482,16 +1412,6 @@
      ]
     },
     "1069": {
-     "2026-07-17": [
-      {
-       "time": "21:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570545?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "21:10",
@@ -1554,16 +1474,6 @@
      ]
     },
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "21:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568719?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "21:10",
@@ -1626,16 +1536,6 @@
      ]
     },
     "1089": {
-     "2026-07-17": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1569628?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "21:40",
@@ -1716,7 +1616,7 @@
    "lbSlug": "disclosure-day",
    "lbTitle": "Disclosure Day",
    "lbRating": 3.11,
-   "lbRatingCount": 779029,
+   "lbRatingCount": 791484,
    "originalTitle": "Disclosure Day",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -1875,7 +1775,7 @@
    "lbSlug": "ghost-in-the-shell",
    "lbTitle": "Ghost in the Shell",
    "lbRating": 4.09,
-   "lbRatingCount": 452007,
+   "lbRatingCount": 453370,
    "originalTitle": null,
    "firstSeen": "2026-07-05",
    "status": "retro"
@@ -1900,16 +1800,6 @@
    ],
    "showings": {
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "20:45",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568886?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "20:45",
@@ -1991,7 +1881,7 @@
    "lbSlug": "star-wars-the-mandalorian-and-grogu",
    "lbTitle": "Star Wars: The Mandalorian and Grogu",
    "lbRating": 3.11,
-   "lbRatingCount": 451396,
+   "lbRatingCount": 453452,
    "originalTitle": "The Mandalorian and Grogu",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -2073,24 +1963,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1575957?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1575960?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "11:30",
@@ -2345,24 +2217,6 @@
      ]
     },
     "1069": {
-     "2026-07-17": [
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568762?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568764?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "16:30",
@@ -2521,24 +2375,6 @@
      ]
     },
     "1075": {
-     "2026-07-17": [
-      {
-       "time": "19:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570967?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570968?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "13:20",
@@ -2745,24 +2581,6 @@
      ]
     },
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "20:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568791?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568824?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:00",
@@ -3057,24 +2875,6 @@
      ]
     },
     "1089": {
-     "2026-07-17": [
-      {
-       "time": "19:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1571661?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1571663?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "19:40",
@@ -3202,11 +3002,11 @@
    },
    "lbSlug": "evil-dead-burn",
    "lbTitle": "Evil Dead Burn",
-   "lbRating": 3.45,
-   "lbRatingCount": 138268,
+   "lbRating": 3.41,
+   "lbRatingCount": 183366,
    "originalTitle": "Evil Dead Burn",
    "firstSeen": "2026-07-05",
-   "status": "premiere"
+   "status": "new"
   },
   {
    "id": "7785s2r",
@@ -3226,16 +3026,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1574814?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "20:50",
@@ -3298,16 +3088,6 @@
      ]
     },
     "1069": {
-     "2026-07-17": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568775?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "22:00",
@@ -3432,16 +3212,6 @@
      ]
     },
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1569201?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "22:00",
@@ -3521,8 +3291,8 @@
    },
    "lbSlug": "michael-2026",
    "lbTitle": "Michael",
-   "lbRating": 3.6,
-   "lbRatingCount": 1589742,
+   "lbRating": 3.61,
+   "lbRatingCount": 1604540,
    "originalTitle": null,
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -3545,16 +3315,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "19:30",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1578217?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:10",
@@ -4001,24 +3761,6 @@
      ]
     },
     "1069": {
-     "2026-07-17": [
-      {
-       "time": "19:10",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570379?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:50",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568867?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:00",
@@ -4513,16 +4255,6 @@
      ]
     },
     "1075": {
-     "2026-07-17": [
-      {
-       "time": "19:30",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1571830?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:40",
@@ -4777,16 +4509,6 @@
      ]
     },
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "18:40",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568871?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:00",
@@ -5612,7 +5334,7 @@
    "lbSlug": "minions-monsters-2026",
    "lbTitle": "Minions & Monsters",
    "lbRating": 3.29,
-   "lbRatingCount": 248579,
+   "lbRatingCount": 281896,
    "originalTitle": "Minions & Monsters",
    "firstSeen": "2026-07-05",
    "status": "new"
@@ -5926,16 +5648,6 @@
      ]
     },
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "19:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1569236?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "19:30",
@@ -6037,24 +5749,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "18:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1579168?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1579169?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "18:50",
@@ -6165,16 +5859,6 @@
      ]
     },
     "1069": {
-     "2026-07-17": [
-      {
-       "time": "18:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570772?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "18:40",
@@ -6237,16 +5921,6 @@
      ]
     },
     "1075": {
-     "2026-07-17": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1571685?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "21:30",
@@ -6309,24 +5983,6 @@
      ]
     },
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "19:15",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1569662?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1569664?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "14:40",
@@ -6485,16 +6141,6 @@
      ]
     },
     "1089": {
-     "2026-07-17": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570544?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "20:50",
@@ -6574,8 +6220,8 @@
    },
    "lbSlug": "obsession-2025",
    "lbTitle": "Obsession",
-   "lbRating": 4.13,
-   "lbRatingCount": 3194679,
+   "lbRating": 4.12,
+   "lbRatingCount": 3311444,
    "originalTitle": "Obsession",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -6600,44 +6246,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1511829?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:15",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1511803?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:45",
-       "formats": [
-        "imax"
-       ],
-       "lang": "subbed",
-       "auditorium": "Imax",
-       "booking": "https://tickets.cinema-city.pl/api/order/1511865?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1575237?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:00",
@@ -7680,34 +7288,6 @@
      ]
     },
     "1069": {
-     "2026-07-17": [
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1511685?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "20:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570966?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:15",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1511682?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:00",
@@ -8202,32 +7782,6 @@
      ]
     },
     "1075": {
-     "2026-07-17": [
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1511931?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "20:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1572325?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:15",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1511939?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:00",
@@ -8626,36 +8180,6 @@
      ]
     },
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "19:30",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1511337?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "20:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568606?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:45",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1511342?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:30",
@@ -9232,34 +8756,6 @@
      ]
     },
     "1089": {
-     "2026-07-17": [
-      {
-       "time": "19:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1511678?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "20:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570919?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:45",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1511675?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:30",
@@ -9724,8 +9220,8 @@
    },
    "lbSlug": "the-odyssey-2026",
    "lbTitle": "The Odyssey",
-   "lbRating": null,
-   "lbRatingCount": 0,
+   "lbRating": 4.33,
+   "lbRatingCount": 339376,
    "originalTitle": "The Odyssey",
    "firstSeen": "2026-07-05",
    "status": "premiere"
@@ -9748,16 +9244,6 @@
    ],
    "showings": {
     "1069": {
-     "2026-07-17": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570462?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "18:00",
@@ -9973,8 +9459,8 @@
    },
    "lbSlug": "fatherland-2026",
    "lbTitle": "Fatherland",
-   "lbRating": 3.59,
-   "lbRatingCount": 8425,
+   "lbRating": 3.6,
+   "lbRatingCount": 8662,
    "originalTitle": "Fatherland",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -10182,7 +9668,7 @@
    "lbSlug": "the-death-of-robin-hood",
    "lbTitle": "The Death of Robin Hood",
    "lbRating": 3.06,
-   "lbRatingCount": 41062,
+   "lbRatingCount": 41920,
    "originalTitle": "The Death of Robin Hood",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -10223,6 +9709,24 @@
        "booking": "https://tickets.cinema-city.pl/api/order/1567252?lang=pl",
        "soldOut": false
       }
+     ],
+     "2026-08-22": [
+      {
+       "time": "17:00",
+       "formats": [],
+       "lang": "dubbed",
+       "auditorium": "Sala 6",
+       "booking": "https://tickets.cinema-city.pl/api/order/1567255?lang=pl",
+       "soldOut": false
+      },
+      {
+       "time": "19:10",
+       "formats": [],
+       "lang": "dubbed",
+       "auditorium": "Sala 6",
+       "booking": "https://tickets.cinema-city.pl/api/order/1567257?lang=pl",
+       "soldOut": false
+      }
      ]
     },
     "1069": {
@@ -10243,6 +9747,24 @@
        "booking": "https://tickets.cinema-city.pl/api/order/1567241?lang=pl",
        "soldOut": false
       }
+     ],
+     "2026-08-22": [
+      {
+       "time": "16:00",
+       "formats": [],
+       "lang": "dubbed",
+       "auditorium": "Sala 2",
+       "booking": "https://tickets.cinema-city.pl/api/order/1567244?lang=pl",
+       "soldOut": false
+      },
+      {
+       "time": "18:10",
+       "formats": [],
+       "lang": "dubbed",
+       "auditorium": "Sala 2",
+       "booking": "https://tickets.cinema-city.pl/api/order/1567246?lang=pl",
+       "soldOut": false
+      }
      ]
     },
     "1075": {
@@ -10253,6 +9775,16 @@
        "lang": "dubbed",
        "auditorium": "Sala 1",
        "booking": "https://tickets.cinema-city.pl/api/order/1567362?lang=pl",
+       "soldOut": false
+      }
+     ],
+     "2026-08-22": [
+      {
+       "time": "16:00",
+       "formats": [],
+       "lang": "dubbed",
+       "auditorium": "Sala 1",
+       "booking": "https://tickets.cinema-city.pl/api/order/1567363?lang=pl",
        "soldOut": false
       }
      ]
@@ -10275,6 +9807,24 @@
        "booking": "https://tickets.cinema-city.pl/api/order/1567472?lang=pl",
        "soldOut": false
       }
+     ],
+     "2026-08-22": [
+      {
+       "time": "16:00",
+       "formats": [],
+       "lang": "dubbed",
+       "auditorium": "Sala 4",
+       "booking": "https://tickets.cinema-city.pl/api/order/1567473?lang=pl",
+       "soldOut": false
+      },
+      {
+       "time": "18:10",
+       "formats": [],
+       "lang": "dubbed",
+       "auditorium": "Sala 4",
+       "booking": "https://tickets.cinema-city.pl/api/order/1567475?lang=pl",
+       "soldOut": false
+      }
      ]
     },
     "1089": {
@@ -10285,6 +9835,16 @@
        "lang": "dubbed",
        "auditorium": "Sala 2",
        "booking": "https://tickets.cinema-city.pl/api/order/1567279?lang=pl",
+       "soldOut": false
+      }
+     ],
+     "2026-08-22": [
+      {
+       "time": "17:00",
+       "formats": [],
+       "lang": "dubbed",
+       "auditorium": "Sala 2",
+       "booking": "https://tickets.cinema-city.pl/api/order/1567282?lang=pl",
        "soldOut": false
       }
      ]
@@ -12581,16 +12141,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1578461?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "22:30",
@@ -12643,16 +12193,6 @@
      ]
     },
     "1069": {
-     "2026-07-17": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570384?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:10",
@@ -12763,16 +12303,6 @@
      ]
     },
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568589?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "17:20",
@@ -12900,7 +12430,7 @@
    "lbSlug": "scary-movie-2026",
    "lbTitle": "Scary Movie",
    "lbRating": 2.42,
-   "lbRatingCount": 410573,
+   "lbRatingCount": 415028,
    "originalTitle": "Scary Movie",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -13117,7 +12647,7 @@
    "lbSlug": "the-super-mario-galaxy-movie",
    "lbTitle": "The Super Mario Galaxy Movie",
    "lbRating": 2.89,
-   "lbRatingCount": 710209,
+   "lbRatingCount": 712915,
    "originalTitle": "The Super Mario Galaxy Movie",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -13141,16 +12671,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1578836?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:00",
@@ -13357,16 +12877,6 @@
      ]
     },
     "1075": {
-     "2026-07-17": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1571860?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "21:40",
@@ -13438,10 +12948,10 @@
    "lbSlug": "supergirl-2026",
    "lbTitle": "Supergirl",
    "lbRating": 3.07,
-   "lbRatingCount": 523227,
+   "lbRatingCount": 541215,
    "originalTitle": null,
    "firstSeen": "2026-07-05",
-   "status": "new"
+   "status": "regular"
   },
   {
    "id": "8279s2r",
@@ -13602,11 +13112,11 @@
    },
    "lbSlug": "life-is-life-2025",
    "lbTitle": "Life Is Life",
-   "lbRating": 3.12,
-   "lbRatingCount": 5563,
+   "lbRating": 3.14,
+   "lbRatingCount": 5604,
    "originalTitle": "La vita va così",
    "firstSeen": "2026-07-05",
-   "status": "new"
+   "status": "regular"
   },
   {
    "id": "7784d2r",
@@ -14486,24 +13996,6 @@
      ]
     },
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "18:50",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568492?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568493?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:00",
@@ -14942,16 +14434,6 @@
      ]
     },
     "1089": {
-     "2026-07-17": [
-      {
-       "time": "19:15",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1569624?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "11:00",
@@ -15321,8 +14803,8 @@
    },
    "lbSlug": "toy-story-5",
    "lbTitle": "Toy Story 5",
-   "lbRating": 3.72,
-   "lbRatingCount": 712371,
+   "lbRating": 3.71,
+   "lbRatingCount": 747729,
    "originalTitle": null,
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -15345,24 +14827,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1578981?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "20:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1573803?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:00",
@@ -16103,16 +15567,6 @@
      ]
     },
     "1075": {
-     "2026-07-17": [
-      {
-       "time": "18:50",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1571677?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:20",
@@ -16327,24 +15781,6 @@
      ]
     },
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "18:30",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568669?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:20",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568570?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:30",
@@ -16743,16 +16179,6 @@
      ]
     },
     "1089": {
-     "2026-07-17": [
-      {
-       "time": "18:50",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568783?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "10:30",
@@ -17122,11 +16548,11 @@
    },
    "lbSlug": "moana",
    "lbTitle": "Moana",
-   "lbRating": 3.25,
-   "lbRatingCount": 43417,
+   "lbRating": 3.16,
+   "lbRatingCount": 59167,
    "originalTitle": "Moana",
    "firstSeen": "2026-07-05",
-   "status": "premiere"
+   "status": "new"
   },
   {
    "id": "8283s2r",
@@ -17276,7 +16702,7 @@
    "lbSlug": "the-north",
    "lbTitle": "The North",
    "lbRating": 3.26,
-   "lbRatingCount": 3234,
+   "lbRatingCount": 3284,
    "originalTitle": "The North",
    "firstSeen": "2026-07-05",
    "status": "new"
@@ -17843,7 +17269,22 @@
      ]
     }
    },
-   "tmdb": null,
+   "tmdb": {
+    "id": 1729596,
+    "originalTitle": "Zakładnicy w szkole",
+    "title": "Zakładnicy w szkole",
+    "overview": "Uczniowie liceum zostają wzięci jako zakładnicy przez grupę uzbrojonych napastników. Część bohaterów zostaje przeniesiona do równoległej rzeczywistości - odkrytej przez zaginionego naukowca - w której każdy wybór może mieć nieodwracalne konsekwencje. Aby wrócić do domu i ocalić swoich bliskich, będą musieli zmierzyć się z własnymi lękami, zdradą i zdobyć się na poświęcenie, od którego może zależeć los wszystkich. Bo czasami nauka wymaga poświęceń… prawda?",
+    "voteAverage": 0,
+    "voteCount": 0,
+    "releaseDate": "2026-07-24",
+    "genres": [
+     "kryminał",
+     "przygodowy",
+     "sci-fi"
+    ],
+    "poster": "https://image.tmdb.org/t/p/w500/qB3S9T8h17qhdQ7XVzNBslyD6XF.jpg",
+    "backdrop": null
+   },
    "lbSlug": null,
    "lbTitle": null,
    "lbRating": null,
@@ -17909,24 +17350,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "19:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1578143?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1578145?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "11:00",
@@ -18133,16 +17556,6 @@
      ]
     },
     "1069": {
-     "2026-07-17": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1569196?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "15:50",
@@ -18301,16 +17714,6 @@
      ]
     },
     "1075": {
-     "2026-07-17": [
-      {
-       "time": "21:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1570586?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "14:30",
@@ -18469,40 +17872,6 @@
      ]
     },
     "1079": {
-     "2026-07-17": [
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568532?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568765?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568563?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1568769?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "11:30",
@@ -18829,16 +18198,6 @@
      ]
     },
     "1089": {
-     "2026-07-17": [
-      {
-       "time": "20:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1571435?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "18:10",
@@ -18966,8 +18325,8 @@
    },
    "lbSlug": "the-invite-2026",
    "lbTitle": "The Invite",
-   "lbRating": 4.13,
-   "lbRatingCount": 190509,
+   "lbRating": 4.12,
+   "lbRatingCount": 247190,
    "originalTitle": "The Invite",
    "firstSeen": "2026-07-05",
    "status": "new"
@@ -18989,16 +18348,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-07-17": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1578220?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-07-18": [
       {
        "time": "21:40",
@@ -19078,8 +18427,8 @@
    },
    "lbSlug": "in-the-grey-2026",
    "lbTitle": "In the Grey",
-   "lbRating": 2.8,
-   "lbRatingCount": 60156,
+   "lbRating": 2.81,
+   "lbRatingCount": 61037,
    "originalTitle": "In the Grey",
    "firstSeen": "2026-07-05",
    "status": "regular"

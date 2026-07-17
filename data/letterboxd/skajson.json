@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-07-17T16:47:15.963Z",
+ "generatedAt": "2026-07-17T22:38:40.805Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 218,
-  "watchlist": 56
+  "watched": 219,
+  "watchlist": 55
  },
  "watched": [
   {
@@ -1533,6 +1533,13 @@
    "year": null,
    "rating10": 6,
    "norm": "the end of the f ing world"
+  },
+  {
+   "slug": "the-odyssey-2026",
+   "title": "The Odyssey",
+   "year": 2026,
+   "rating10": 9,
+   "norm": "the odyssey"
   }
  ],
  "watchlist": [
@@ -1691,12 +1698,6 @@
    "title": "Supergirl",
    "year": 2026,
    "norm": "supergirl"
-  },
-  {
-   "slug": "the-odyssey-2026",
-   "title": "The Odyssey",
-   "year": 2026,
-   "norm": "the odyssey"
   },
   {
    "slug": "spider-man-brand-new-day",
@@ -1874,6 +1875,26 @@
   }
  ],
  "recent": [
+  {
+   "title": "Obsession",
+   "year": 2025,
+   "slug": "obsession-2025",
+   "rating10": 7,
+   "watchedDate": "2026-07-17",
+   "rewatch": false,
+   "tmdbId": 1339713,
+   "review": null
+  },
+  {
+   "title": "The Odyssey",
+   "year": 2026,
+   "slug": "the-odyssey-2026",
+   "rating10": 9,
+   "watchedDate": "2026-07-17",
+   "rewatch": false,
+   "tmdbId": 1368337,
+   "review": null
+  },
   {
    "title": "Better Call Saul Presents: Slippin' Jimmy",
    "year": 2022,
@@ -2352,26 +2373,6 @@
    "watchedDate": "2022-12-19",
    "rewatch": false,
    "tmdbId": 329833,
-   "review": null
-  },
-  {
-   "title": "The Silence of the Lambs",
-   "year": 1991,
-   "slug": "the-silence-of-the-lambs",
-   "rating10": 8,
-   "watchedDate": "2023-01-07",
-   "rewatch": false,
-   "tmdbId": 274,
-   "review": null
-  },
-  {
-   "title": "The Boondock Saints",
-   "year": 1999,
-   "slug": "the-boondock-saints",
-   "rating10": 9,
-   "watchedDate": "2023-02-19",
-   "rewatch": false,
-   "tmdbId": 8374,
    "review": null
   }
  ]
