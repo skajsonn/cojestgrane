@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-07-20T17:13:09.464Z",
+ "generatedAt": "2026-07-20T22:59:17.306Z",
  "fullSyncAt": "2026-07-13T20:25:32.221Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 506,
-  "watchlist": 127
+  "watched": 507,
+  "watchlist": 126
  },
  "watched": [
   {
@@ -3549,6 +3549,13 @@
    "year": 1971,
    "rating10": 3,
    "norm": "a clockwork orange"
+  },
+  {
+   "slug": "the-odyssey-2026",
+   "title": "The Odyssey",
+   "year": 2026,
+   "rating10": 9,
+   "norm": "the odyssey"
   }
  ],
  "watchlist": [
@@ -3605,12 +3612,6 @@
    "title": "Children of Men",
    "year": 2006,
    "norm": "children of men"
-  },
-  {
-   "slug": "the-odyssey-2026",
-   "title": "The Odyssey",
-   "year": 2026,
-   "norm": "the odyssey"
   },
   {
    "slug": "werwulf",
@@ -4317,6 +4318,16 @@
  ],
  "recent": [
   {
+   "title": "The Odyssey",
+   "year": 2026,
+   "slug": "the-odyssey-2026",
+   "rating10": 9,
+   "watchedDate": "2026-07-17",
+   "rewatch": false,
+   "tmdbId": 1368337,
+   "review": null
+  },
+  {
    "title": "Obsession",
    "year": 2025,
    "slug": "obsession-2025",
@@ -4804,16 +4815,6 @@
    "watchedDate": "2025-04-13",
    "rewatch": false,
    "tmdbId": 950387,
-   "review": null
-  },
-  {
-   "title": "Mickey 17",
-   "year": 2025,
-   "slug": "mickey-17",
-   "rating10": 6,
-   "watchedDate": "2025-04-11",
-   "rewatch": false,
-   "tmdbId": 696506,
    "review": null
   }
  ]
