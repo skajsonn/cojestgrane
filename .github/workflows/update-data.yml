@@ -64,13 +64,31 @@ jobs:
         run: |
           git config user.name "kinomaniak-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/
-          if git diff --cached --quiet; then
-            echo "Brak zmian w danych."
-          else
-            git commit -m "dane: aktualizacja repertuaru i profilu $(date -u +%F)"
-            git push
-          fi
+
+          # Run startuje na commicie z chwili wyzwolenia, więc opóźniony cron
+          # (albo drugi run odpalony minutę później) commitowałby na nieaktualnej
+          # historii → push odrzucony jako non-fast-forward. Dlatego przed
+          # commitem przenosimy HEAD na najnowszy origin/main; wygenerowane
+          # pliki zostają nietknięte w katalogu roboczym (--soft).
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --soft FETCH_HEAD
+            git add data/
+            if git diff --cached --quiet; then
+              echo "Brak zmian w danych."
+              exit 0
+            fi
+            git commit --quiet -m "dane: aktualizacja repertuaru i profilu $(date -u +%F)"
+            if git push --quiet origin HEAD:main; then
+              echo "Wypchnięto dane (próba $attempt)."
+              exit 0
+            fi
+            echo "Push odrzucony — inny run zdążył wypchnąć. Ponawiam ($attempt/3)."
+            git reset --soft HEAD~1   # cofamy commit, dane zostają w katalogu
+            sleep 5
+          done
+          echo "::error::Nie udało się wypchnąć danych po 3 próbach."
+          exit 1
 
       - name: Podsumowanie źródeł
         if: always()
