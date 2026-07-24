@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-07-24T17:13:19.668Z",
+ "generatedAt": "2026-07-24T22:50:41.493Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 219,
+  "watched": 220,
   "watchlist": 55
  },
  "watched": [
@@ -1540,6 +1540,13 @@
    "year": 2026,
    "rating10": 9,
    "norm": "the odyssey"
+  },
+  {
+   "slug": "requiem-for-a-dream",
+   "title": "Requiem for a Dream",
+   "year": 2000,
+   "rating10": 8,
+   "norm": "requiem for a dream"
   }
  ],
  "watchlist": [
@@ -1875,6 +1882,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Requiem for a Dream",
+   "year": 2000,
+   "slug": "requiem-for-a-dream",
+   "rating10": 8,
+   "watchedDate": "2026-07-24",
+   "rewatch": false,
+   "tmdbId": 641,
+   "review": null
+  },
   {
    "title": "Obsession",
    "year": 2025,
@@ -2363,16 +2380,6 @@
    "watchedDate": "2022-11-02",
    "rewatch": false,
    "tmdbId": 913290,
-   "review": null
-  },
-  {
-   "title": "Zoolander 2",
-   "year": 2016,
-   "slug": "zoolander-2",
-   "rating10": 8,
-   "watchedDate": "2022-12-19",
-   "rewatch": false,
-   "tmdbId": 329833,
    "review": null
   }
  ]
