@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-07-28T17:32:24.166Z",
+ "generatedAt": "2026-07-28T22:50:39.145Z",
  "fullSyncAt": "2026-07-13T20:25:32.221Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 507,
+  "watched": 508,
   "watchlist": 126
  },
  "watched": [
@@ -3050,7 +3050,7 @@
    "slug": "x-men-the-last-stand",
    "title": "X-Men: The Last Stand",
    "year": 2006,
-   "rating10": null,
+   "rating10": 5,
    "norm": "x men the last stand"
   },
   {
@@ -3556,6 +3556,13 @@
    "year": 2026,
    "rating10": 9,
    "norm": "the odyssey"
+  },
+  {
+   "slug": "x2",
+   "title": "X2",
+   "year": 2003,
+   "rating10": 7,
+   "norm": "x2"
   }
  ],
  "watchlist": [
@@ -4318,6 +4325,26 @@
  ],
  "recent": [
   {
+   "title": "X2",
+   "year": 2003,
+   "slug": "x2",
+   "rating10": 7,
+   "watchedDate": "2026-07-28",
+   "rewatch": false,
+   "tmdbId": 36658,
+   "review": null
+  },
+  {
+   "title": "X-Men: The Last Stand",
+   "year": 2006,
+   "slug": "x-men-the-last-stand",
+   "rating10": 5,
+   "watchedDate": "2026-07-28",
+   "rewatch": true,
+   "tmdbId": 36668,
+   "review": null
+  },
+  {
    "title": "The Odyssey",
    "year": 2026,
    "slug": "the-odyssey-2026",
@@ -4795,26 +4822,6 @@
    "watchedDate": "2025-05-01",
    "rewatch": false,
    "tmdbId": 986056,
-   "review": null
-  },
-  {
-   "title": "Sinners",
-   "year": 2025,
-   "slug": "sinners-2025",
-   "rating10": 9,
-   "watchedDate": "2025-04-18",
-   "rewatch": false,
-   "tmdbId": 1233413,
-   "review": null
-  },
-  {
-   "title": "A Minecraft Movie",
-   "year": 2025,
-   "slug": "a-minecraft-movie",
-   "rating10": 7,
-   "watchedDate": "2025-04-13",
-   "rewatch": false,
-   "tmdbId": 950387,
    "review": null
   }
  ]
