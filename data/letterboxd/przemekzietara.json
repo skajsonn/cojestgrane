@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-07-29T17:01:53.646Z",
+ "generatedAt": "2026-07-29T22:48:26.764Z",
  "fullSyncAt": "2026-07-13T20:25:32.221Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 508,
+  "watched": 509,
   "watchlist": 126
  },
  "watched": [
@@ -3563,6 +3563,13 @@
    "year": 2003,
    "rating10": 7,
    "norm": "x2"
+  },
+  {
+   "slug": "spider-man-brand-new-day",
+   "title": "Spider-Man: Brand New Day",
+   "year": 2026,
+   "rating10": 8,
+   "norm": "spider man brand new day"
   }
  ],
  "watchlist": [
@@ -4325,6 +4332,16 @@
  ],
  "recent": [
   {
+   "title": "Spider-Man: Brand New Day",
+   "year": 2026,
+   "slug": "spider-man-brand-new-day",
+   "rating10": 8,
+   "watchedDate": "2026-07-29",
+   "rewatch": false,
+   "tmdbId": 969681,
+   "review": null
+  },
+  {
    "title": "X2",
    "year": 2003,
    "slug": "x2",
@@ -4812,16 +4829,6 @@
    "watchedDate": "2025-05-28",
    "rewatch": false,
    "tmdbId": 956,
-   "review": null
-  },
-  {
-   "title": "Thunderbolts*",
-   "year": 2025,
-   "slug": "thunderbolts",
-   "rating10": 7,
-   "watchedDate": "2025-05-01",
-   "rewatch": false,
-   "tmdbId": 986056,
    "review": null
   }
  ]

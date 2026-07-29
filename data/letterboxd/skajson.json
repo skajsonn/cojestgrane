@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-07-29T16:59:21.362Z",
+ "generatedAt": "2026-07-29T22:45:49.099Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 220,
-  "watchlist": 55
+  "watched": 221,
+  "watchlist": 54
  },
  "watched": [
   {
@@ -1547,6 +1547,13 @@
    "year": 2000,
    "rating10": 8,
    "norm": "requiem for a dream"
+  },
+  {
+   "slug": "spider-man-brand-new-day",
+   "title": "Spider-Man: Brand New Day",
+   "year": 2026,
+   "rating10": 8,
+   "norm": "spider man brand new day"
   }
  ],
  "watchlist": [
@@ -1705,12 +1712,6 @@
    "title": "Supergirl",
    "year": 2026,
    "norm": "supergirl"
-  },
-  {
-   "slug": "spider-man-brand-new-day",
-   "title": "Spider-Man: Brand New Day",
-   "year": 2026,
-   "norm": "spider man brand new day"
   },
   {
    "slug": "the-doll-2026",
@@ -1882,6 +1883,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Spider-Man: Brand New Day",
+   "year": 2026,
+   "slug": "spider-man-brand-new-day",
+   "rating10": 8,
+   "watchedDate": "2026-07-29",
+   "rewatch": false,
+   "tmdbId": 969681,
+   "review": null
+  },
   {
    "title": "Requiem for a Dream",
    "year": 2000,
@@ -2370,16 +2381,6 @@
    "watchedDate": "2022-11-02",
    "rewatch": false,
    "tmdbId": 913290,
-   "review": null
-  },
-  {
-   "title": "Zoolander 2",
-   "year": 2016,
-   "slug": "zoolander-2",
-   "rating10": 8,
-   "watchedDate": "2022-12-19",
-   "rewatch": false,
-   "tmdbId": 329833,
    "review": null
   }
  ]
