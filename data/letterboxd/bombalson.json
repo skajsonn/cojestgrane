@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-07-31T17:17:05.236Z",
+ "generatedAt": "2026-07-31T22:44:43.061Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 731,
+  "watched": 732,
   "watchlist": 504
  },
  "watched": [
@@ -5124,6 +5124,13 @@
    "year": 1988,
    "rating10": 7,
    "norm": "the vanishing"
+  },
+  {
+   "slug": "spider-man-brand-new-day",
+   "title": "Spider-Man: Brand New Day",
+   "year": 2026,
+   "rating10": 8,
+   "norm": "spider man brand new day"
   }
  ],
  "watchlist": [
@@ -8154,6 +8161,16 @@
  ],
  "recent": [
   {
+   "title": "Spider-Man: Brand New Day",
+   "year": 2026,
+   "slug": "spider-man-brand-new-day",
+   "rating10": 8,
+   "watchedDate": "2026-07-31",
+   "rewatch": false,
+   "tmdbId": 969681,
+   "review": null
+  },
+  {
    "title": "The Vanishing",
    "year": 1988,
    "slug": "the-vanishing",
@@ -8641,16 +8658,6 @@
    "watchedDate": "2025-07-23",
    "rewatch": false,
    "tmdbId": 270413,
-   "review": null
-  },
-  {
-   "title": "Chime",
-   "year": 2024,
-   "slug": "chime",
-   "rating10": 6,
-   "watchedDate": "2025-07-21",
-   "rewatch": false,
-   "tmdbId": 1219556,
    "review": null
   }
  ]
