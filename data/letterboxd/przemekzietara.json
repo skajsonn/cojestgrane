@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-02T16:38:40.338Z",
+ "generatedAt": "2026-08-02T22:44:22.422Z",
  "fullSyncAt": "2026-07-13T20:25:32.221Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 509,
+  "watched": 513,
   "watchlist": 126
  },
  "watched": [
@@ -3570,6 +3570,34 @@
    "year": 2026,
    "rating10": 8,
    "norm": "spider man brand new day"
+  },
+  {
+   "slug": "secret-invasion",
+   "title": "Secret Invasion",
+   "year": 2023,
+   "rating10": 5,
+   "norm": "secret invasion"
+  },
+  {
+   "slug": "she-hulk-attorney-at-law",
+   "title": "She-Hulk: Attorney at Law",
+   "year": 2022,
+   "rating10": 2,
+   "norm": "she hulk attorney at law"
+  },
+  {
+   "slug": "moon-knight-2022",
+   "title": "Moon Knight",
+   "year": 2022,
+   "rating10": 8,
+   "norm": "moon knight"
+  },
+  {
+   "slug": "hawkeye-2021",
+   "title": "Hawkeye",
+   "year": 2021,
+   "rating10": null,
+   "norm": "hawkeye"
   }
  ],
  "watchlist": [
@@ -4332,6 +4360,46 @@
  ],
  "recent": [
   {
+   "title": "Secret Invasion",
+   "year": 2023,
+   "slug": "secret-invasion",
+   "rating10": 5,
+   "watchedDate": "2023-02-10",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
+   "title": "She-Hulk: Attorney at Law",
+   "year": 2022,
+   "slug": "she-hulk-attorney-at-law",
+   "rating10": 2,
+   "watchedDate": "2022-02-02",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
+   "title": "Moon Knight",
+   "year": 2022,
+   "slug": "moon-knight-2022",
+   "rating10": 8,
+   "watchedDate": "2022-12-28",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
+   "title": "Hawkeye",
+   "year": 2021,
+   "slug": "hawkeye-2021",
+   "rating10": null,
+   "watchedDate": "2021-12-24",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
    "title": "Spider-Man: Homecoming",
    "year": 2017,
    "slug": "spider-man-homecoming",
@@ -4789,46 +4857,6 @@
    "watchedDate": "2025-06-11",
    "rewatch": false,
    "tmdbId": 13855,
-   "review": null
-  },
-  {
-   "title": "Mission: Impossible – The Final Reckoning",
-   "year": 2025,
-   "slug": "mission-impossible-the-final-reckoning",
-   "rating10": 8,
-   "watchedDate": "2025-06-08",
-   "rewatch": false,
-   "tmdbId": 575265,
-   "review": null
-  },
-  {
-   "title": "Uncle Truther",
-   "year": 2025,
-   "slug": "uncle-truther",
-   "rating10": 7,
-   "watchedDate": "2025-06-04",
-   "rewatch": false,
-   "tmdbId": 1326693,
-   "review": null
-  },
-  {
-   "title": "Until Dawn",
-   "year": 2025,
-   "slug": "until-dawn-2025",
-   "rating10": 3,
-   "watchedDate": "2025-05-29",
-   "rewatch": false,
-   "tmdbId": 1232546,
-   "review": null
-  },
-  {
-   "title": "Graduation Heist",
-   "year": 2025,
-   "slug": "graduation-heist",
-   "rating10": 4,
-   "watchedDate": "2025-05-29",
-   "rewatch": false,
-   "tmdbId": 1327145,
    "review": null
   }
  ]
