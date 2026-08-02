@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-01T22:38:04.863Z",
+ "generatedAt": "2026-08-02T06:23:03.519Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 732,
+  "watched": 733,
   "watchlist": 504
  },
  "watched": [
@@ -5131,6 +5131,13 @@
    "year": 2026,
    "rating10": 8,
    "norm": "spider man brand new day"
+  },
+  {
+   "slug": "spider-man-homecoming",
+   "title": "Spider-Man: Homecoming",
+   "year": 2017,
+   "rating10": 7,
+   "norm": "spider man homecoming"
   }
  ],
  "watchlist": [
@@ -8161,6 +8168,16 @@
  ],
  "recent": [
   {
+   "title": "Spider-Man: Homecoming",
+   "year": 2017,
+   "slug": "spider-man-homecoming",
+   "rating10": 7,
+   "watchedDate": "2026-08-02",
+   "rewatch": false,
+   "tmdbId": 315635,
+   "review": null
+  },
+  {
    "title": "Spider-Man: Brand New Day",
    "year": 2026,
    "slug": "spider-man-brand-new-day",
@@ -8648,16 +8665,6 @@
    "watchedDate": "2025-07-24",
    "rewatch": false,
    "tmdbId": 27276,
-   "review": null
-  },
-  {
-   "title": "One Piece: Strong World Episode 0",
-   "year": 2010,
-   "slug": "one-piece-strong-world-episode-0",
-   "rating10": 8,
-   "watchedDate": "2025-07-23",
-   "rewatch": false,
-   "tmdbId": 270413,
    "review": null
   }
  ]
