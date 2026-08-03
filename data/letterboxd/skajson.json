@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-03T17:30:33.626Z",
+ "generatedAt": "2026-08-03T22:53:51.200Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 222,
+  "watched": 223,
   "watchlist": 54
  },
  "watched": [
@@ -1561,6 +1561,13 @@
    "year": 2008,
    "rating10": 7,
    "norm": "iron man"
+  },
+  {
+   "slug": "apocalypse-now",
+   "title": "Apocalypse Now",
+   "year": 1979,
+   "rating10": 8,
+   "norm": "apocalypse now"
   }
  ],
  "watchlist": [
@@ -1890,6 +1897,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Apocalypse Now",
+   "year": 1979,
+   "slug": "apocalypse-now",
+   "rating10": 8,
+   "watchedDate": "2026-08-03",
+   "rewatch": false,
+   "tmdbId": 28,
+   "review": null
+  },
   {
    "title": "Iron Man",
    "year": 2008,
@@ -2378,16 +2395,6 @@
    "watchedDate": "2022-07-20",
    "rewatch": false,
    "tmdbId": 13223,
-   "review": null
-  },
-  {
-   "title": "Rocky",
-   "year": 1976,
-   "slug": "rocky",
-   "rating10": 8,
-   "watchedDate": "2022-07-28",
-   "rewatch": false,
-   "tmdbId": 1366,
    "review": null
   }
  ]
