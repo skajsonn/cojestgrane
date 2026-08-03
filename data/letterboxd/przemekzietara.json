@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-02T22:44:22.422Z",
+ "generatedAt": "2026-08-03T06:49:11.239Z",
  "fullSyncAt": "2026-07-13T20:25:32.221Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 513,
+  "watched": 515,
   "watchlist": 126
  },
  "watched": [
@@ -3598,6 +3598,20 @@
    "year": 2021,
    "rating10": null,
    "norm": "hawkeye"
+  },
+  {
+   "slug": "marvel-zombies",
+   "title": "Marvel Zombies",
+   "year": 2025,
+   "rating10": 7,
+   "norm": "marvel zombies"
+  },
+  {
+   "slug": "the-falcon-and-the-winter-soldier",
+   "title": "The Falcon and the Winter Soldier",
+   "year": 2021,
+   "rating10": 7,
+   "norm": "the falcon and the winter soldier"
   }
  ],
  "watchlist": [
@@ -4360,6 +4374,36 @@
  ],
  "recent": [
   {
+   "title": "Iron Man",
+   "year": 2008,
+   "slug": "iron-man-2008",
+   "rating10": 8,
+   "watchedDate": "2026-08-03",
+   "rewatch": true,
+   "tmdbId": 1726,
+   "review": null
+  },
+  {
+   "title": "Marvel Zombies",
+   "year": 2025,
+   "slug": "marvel-zombies",
+   "rating10": 7,
+   "watchedDate": "2025-09-12",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
+   "title": "The Falcon and the Winter Soldier",
+   "year": 2021,
+   "slug": "the-falcon-and-the-winter-soldier",
+   "rating10": 7,
+   "watchedDate": "2022-12-23",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
    "title": "Secret Invasion",
    "year": 2023,
    "slug": "secret-invasion",
@@ -4827,36 +4871,6 @@
    "watchedDate": "2025-06-29",
    "rewatch": false,
    "tmdbId": 911430,
-   "review": null
-  },
-  {
-   "title": "Quebonafide: Północ, Południe",
-   "year": 2025,
-   "slug": "quebonafide-polnoc-poludnie",
-   "rating10": null,
-   "watchedDate": "2025-06-26",
-   "rewatch": false,
-   "tmdbId": 1504442,
-   "review": null
-  },
-  {
-   "title": "jeen-yuhs: A Kanye Trilogy",
-   "year": 2022,
-   "slug": "jeen-yuhs-a-kanye-trilogy",
-   "rating10": 10,
-   "watchedDate": null,
-   "rewatch": false,
-   "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "The Chaser",
-   "year": 2008,
-   "slug": "the-chaser",
-   "rating10": 8,
-   "watchedDate": "2025-06-11",
-   "rewatch": false,
-   "tmdbId": 13855,
    "review": null
   }
  ]
