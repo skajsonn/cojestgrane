@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-03T22:54:36.384Z",
+ "generatedAt": "2026-08-04T06:17:31.210Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 733,
+  "watched": 734,
   "watchlist": 504
  },
  "watched": [
@@ -5138,6 +5138,13 @@
    "year": 2017,
    "rating10": 7,
    "norm": "spider man homecoming"
+  },
+  {
+   "slug": "iron-man-2",
+   "title": "Iron Man 2",
+   "year": 2010,
+   "rating10": 6,
+   "norm": "iron man 2"
   }
  ],
  "watchlist": [
@@ -8168,6 +8175,16 @@
  ],
  "recent": [
   {
+   "title": "Iron Man 2",
+   "year": 2010,
+   "slug": "iron-man-2",
+   "rating10": 6,
+   "watchedDate": "2026-08-04",
+   "rewatch": false,
+   "tmdbId": 10138,
+   "review": null
+  },
+  {
    "title": "Iron Man",
    "year": 2008,
    "slug": "iron-man-2008",
@@ -8655,16 +8672,6 @@
    "watchedDate": "2025-07-29",
    "rewatch": false,
    "tmdbId": 1230393,
-   "review": null
-  },
-  {
-   "title": "Blow",
-   "year": 2001,
-   "slug": "blow",
-   "rating10": 7,
-   "watchedDate": "2025-07-25",
-   "rewatch": false,
-   "tmdbId": 4133,
    "review": null
   }
  ]
