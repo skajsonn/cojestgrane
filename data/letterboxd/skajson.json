@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-04T22:47:59.783Z",
+ "generatedAt": "2026-08-05T06:13:15.082Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 223,
+  "watched": 224,
   "watchlist": 54
  },
  "watched": [
@@ -1568,6 +1568,13 @@
    "year": 1979,
    "rating10": 8,
    "norm": "apocalypse now"
+  },
+  {
+   "slug": "captain-america-the-first-avenger",
+   "title": "Captain America: The First Avenger",
+   "year": 2011,
+   "rating10": 8,
+   "norm": "captain america the first avenger"
   }
  ],
  "watchlist": [
@@ -1897,6 +1904,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Captain America: The First Avenger",
+   "year": 2011,
+   "slug": "captain-america-the-first-avenger",
+   "rating10": 8,
+   "watchedDate": "2026-08-05",
+   "rewatch": false,
+   "tmdbId": 1771,
+   "review": null
+  },
   {
    "title": "Apocalypse Now",
    "year": 1979,
@@ -2385,16 +2402,6 @@
    "watchedDate": "2024-05-23",
    "rewatch": false,
    "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "Gran Torino",
-   "year": 2008,
-   "slug": "gran-torino",
-   "rating10": 9,
-   "watchedDate": "2022-07-20",
-   "rewatch": false,
-   "tmdbId": 13223,
    "review": null
   }
  ]
