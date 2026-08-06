@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-05T22:45:35.890Z",
+ "generatedAt": "2026-08-06T06:16:29.082Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 224,
+  "watched": 225,
   "watchlist": 54
  },
  "watched": [
@@ -1575,6 +1575,13 @@
    "year": 2011,
    "rating10": 8,
    "norm": "captain america the first avenger"
+  },
+  {
+   "slug": "thor",
+   "title": "Thor",
+   "year": 2011,
+   "rating10": 7,
+   "norm": "thor"
   }
  ],
  "watchlist": [
@@ -1904,6 +1911,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Thor",
+   "year": 2011,
+   "slug": "thor",
+   "rating10": 7,
+   "watchedDate": "2026-08-06",
+   "rewatch": false,
+   "tmdbId": 10195,
+   "review": null
+  },
   {
    "title": "Captain America: The First Avenger",
    "year": 2011,
@@ -2390,16 +2407,6 @@
    "slug": "blue-lock",
    "rating10": 8,
    "watchedDate": "2024-01-24",
-   "rewatch": false,
-   "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "Together: Treble Winners",
-   "year": 2024,
-   "slug": "together-treble-winners",
-   "rating10": 7,
-   "watchedDate": "2024-05-23",
    "rewatch": false,
    "tmdbId": null,
    "review": null
