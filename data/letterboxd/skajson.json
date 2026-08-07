@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-06T11:52:43.751Z",
+ "generatedAt": "2026-08-07T01:18:52.314Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 225,
+  "watched": 227,
   "watchlist": 54
  },
  "watched": [
@@ -1582,6 +1582,20 @@
    "year": 2011,
    "rating10": 7,
    "norm": "thor"
+  },
+  {
+   "slug": "the-avengers-2012",
+   "title": "The Avengers",
+   "year": 2012,
+   "rating10": 8,
+   "norm": "the avengers"
+  },
+  {
+   "slug": "iron-man-2",
+   "title": "Iron Man 2",
+   "year": 2010,
+   "rating10": 8,
+   "norm": "iron man 2"
   }
  ],
  "watchlist": [
@@ -1911,6 +1925,26 @@
   }
  ],
  "recent": [
+  {
+   "title": "The Avengers",
+   "year": 2012,
+   "slug": "the-avengers-2012",
+   "rating10": 8,
+   "watchedDate": "2026-08-07",
+   "rewatch": false,
+   "tmdbId": 24428,
+   "review": null
+  },
+  {
+   "title": "Iron Man 2",
+   "year": 2010,
+   "slug": "iron-man-2",
+   "rating10": 8,
+   "watchedDate": "2026-08-06",
+   "rewatch": false,
+   "tmdbId": 10138,
+   "review": null
+  },
   {
    "title": "Thor",
    "year": 2011,
@@ -2387,26 +2421,6 @@
    "slug": "beckham",
    "rating10": 8,
    "watchedDate": "2023-11-04",
-   "rewatch": false,
-   "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "Cyberpunk: Edgerunners",
-   "year": 2022,
-   "slug": "cyberpunk-edgerunners",
-   "rating10": 10,
-   "watchedDate": "2024-01-04",
-   "rewatch": false,
-   "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "BLUE LOCK",
-   "year": 2022,
-   "slug": "blue-lock",
-   "rating10": 8,
-   "watchedDate": "2024-01-24",
    "rewatch": false,
    "tmdbId": null,
    "review": null

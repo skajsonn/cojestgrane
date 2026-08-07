@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-08-06T11:53:22.828Z",
+ "generatedAt": "2026-08-07T01:19:19.367Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 736,
-  "watchlist": 504
+  "watched": 739,
+  "watchlist": 502
  },
  "watched": [
   {
@@ -5159,6 +5159,27 @@
    "year": 2011,
    "rating10": 5,
    "norm": "thor"
+  },
+  {
+   "slug": "the-avengers-2012",
+   "title": "The Avengers",
+   "year": 2012,
+   "rating10": 7,
+   "norm": "the avengers"
+  },
+  {
+   "slug": "batman-ninja-vs-yakuza-league",
+   "title": "Batman Ninja vs. Yakuza League",
+   "year": 2025,
+   "rating10": 7,
+   "norm": "batman ninja vs yakuza league"
+  },
+  {
+   "slug": "the-fifth-element",
+   "title": "The Fifth Element",
+   "year": 1997,
+   "rating10": 8,
+   "norm": "the fifth element"
   }
  ],
  "watchlist": [
@@ -5631,12 +5652,6 @@
    "norm": "all about lily chou chou"
   },
   {
-   "slug": "batman-ninja-vs-yakuza-league",
-   "title": "Batman Ninja vs. Yakuza League",
-   "year": 2025,
-   "norm": "batman ninja vs yakuza league"
-  },
-  {
    "slug": "another-2012-1",
    "title": "Another",
    "year": 2012,
@@ -5683,12 +5698,6 @@
    "title": "X",
    "year": 2001,
    "norm": "x"
-  },
-  {
-   "slug": "the-fifth-element",
-   "title": "The Fifth Element",
-   "year": 1997,
-   "norm": "the fifth element"
   },
   {
    "slug": "run-lola-run",
@@ -8189,6 +8198,36 @@
  ],
  "recent": [
   {
+   "title": "The Avengers",
+   "year": 2012,
+   "slug": "the-avengers-2012",
+   "rating10": 7,
+   "watchedDate": "2026-08-07",
+   "rewatch": false,
+   "tmdbId": 24428,
+   "review": null
+  },
+  {
+   "title": "Batman Ninja vs. Yakuza League",
+   "year": 2025,
+   "slug": "batman-ninja-vs-yakuza-league",
+   "rating10": 7,
+   "watchedDate": "2026-08-06",
+   "rewatch": false,
+   "tmdbId": 1297763,
+   "review": null
+  },
+  {
+   "title": "The Fifth Element",
+   "year": 1997,
+   "slug": "the-fifth-element",
+   "rating10": 8,
+   "watchedDate": "2026-08-06",
+   "rewatch": false,
+   "tmdbId": 18,
+   "review": null
+  },
+  {
    "title": "Thor",
    "year": 2011,
    "slug": "thor",
@@ -8656,36 +8695,6 @@
    "watchedDate": "2025-08-28",
    "rewatch": false,
    "tmdbId": 10497,
-   "review": null
-  },
-  {
-   "title": "War of the Worlds",
-   "year": 2025,
-   "slug": "war-of-the-worlds-2025",
-   "rating10": 2,
-   "watchedDate": "2025-08-27",
-   "rewatch": false,
-   "tmdbId": 755898,
-   "review": null
-  },
-  {
-   "title": "Mission: Impossible – The Final Reckoning",
-   "year": 2025,
-   "slug": "mission-impossible-the-final-reckoning",
-   "rating10": 6,
-   "watchedDate": "2025-08-24",
-   "rewatch": false,
-   "tmdbId": 575265,
-   "review": null
-  },
-  {
-   "title": "KPop Demon Hunters",
-   "year": 2025,
-   "slug": "kpop-demon-hunters",
-   "rating10": 7,
-   "watchedDate": "2025-08-03",
-   "rewatch": false,
-   "tmdbId": 803796,
    "review": null
   }
  ]
