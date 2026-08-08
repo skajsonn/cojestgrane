@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-07T22:21:57.130Z",
+ "generatedAt": "2026-08-08T04:40:25.149Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 739,
+  "watched": 740,
   "watchlist": 502
  },
  "watched": [
@@ -5180,6 +5180,13 @@
    "year": 1997,
    "rating10": 8,
    "norm": "the fifth element"
+  },
+  {
+   "slug": "iron-man-3",
+   "title": "Iron Man 3",
+   "year": 2013,
+   "rating10": 7,
+   "norm": "iron man 3"
   }
  ],
  "watchlist": [
@@ -8198,6 +8205,16 @@
  ],
  "recent": [
   {
+   "title": "Iron Man 3",
+   "year": 2013,
+   "slug": "iron-man-3",
+   "rating10": 7,
+   "watchedDate": "2026-08-08",
+   "rewatch": false,
+   "tmdbId": 68721,
+   "review": null
+  },
+  {
    "title": "The Avengers",
    "year": 2012,
    "slug": "the-avengers-2012",
@@ -8685,16 +8702,6 @@
    "watchedDate": "2025-09-13",
    "rewatch": false,
    "tmdbId": 1078605,
-   "review": null
-  },
-  {
-   "title": "Bitter Moon",
-   "year": 1992,
-   "slug": "bitter-moon",
-   "rating10": 9,
-   "watchedDate": "2025-08-28",
-   "rewatch": false,
-   "tmdbId": 10497,
    "review": null
   }
  ]
