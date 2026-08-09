@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-08-08T22:01:47.249Z",
- "today": "2026-08-08",
+ "generatedAt": "2026-08-09T04:51:18.428Z",
+ "today": "2026-08-09",
  "cinemas": [
   {
    "id": "1065",
@@ -137,6 +137,16 @@
        "booking": "https://tickets.cinema-city.pl/api/order/1526028?lang=pl",
        "soldOut": false
       }
+     ],
+     "2026-09-13": [
+      {
+       "time": "15:00",
+       "formats": [],
+       "lang": "subbed",
+       "auditorium": "Sala 7",
+       "booking": "https://tickets.cinema-city.pl/api/order/1526031?lang=pl",
+       "soldOut": false
+      }
      ]
     },
     "1075": {
@@ -177,6 +187,16 @@
        "lang": "subbed",
        "auditorium": "Sala 4",
        "booking": "https://tickets.cinema-city.pl/api/order/1526072?lang=pl",
+       "soldOut": false
+      }
+     ],
+     "2026-09-13": [
+      {
+       "time": "15:00",
+       "formats": [],
+       "lang": "subbed",
+       "auditorium": "Sala 4",
+       "booking": "https://tickets.cinema-city.pl/api/order/1526091?lang=pl",
        "soldOut": false
       }
      ]

@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-08T22:02:48.751Z",
+ "generatedAt": "2026-08-09T04:52:31.377Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 740,
+  "watched": 742,
   "watchlist": 502
  },
  "watched": [
@@ -5187,6 +5187,20 @@
    "year": 2013,
    "rating10": 7,
    "norm": "iron man 3"
+  },
+  {
+   "slug": "talking-heads",
+   "title": "Talking Heads",
+   "year": 1980,
+   "rating10": 10,
+   "norm": "talking heads"
+  },
+  {
+   "slug": "mrs-twardowska",
+   "title": "Mrs. Twardowska",
+   "year": 1955,
+   "rating10": 7,
+   "norm": "mrs twardowska"
   }
  ],
  "watchlist": [
@@ -8205,6 +8219,26 @@
  ],
  "recent": [
   {
+   "title": "Talking Heads",
+   "year": 1980,
+   "slug": "talking-heads",
+   "rating10": 10,
+   "watchedDate": "2026-08-09",
+   "rewatch": false,
+   "tmdbId": 49098,
+   "review": null
+  },
+  {
+   "title": "Mrs. Twardowska",
+   "year": 1955,
+   "slug": "mrs-twardowska",
+   "rating10": 7,
+   "watchedDate": "2026-08-09",
+   "rewatch": false,
+   "tmdbId": 894211,
+   "review": null
+  },
+  {
    "title": "Iron Man 3",
    "year": 2013,
    "slug": "iron-man-3",
@@ -8682,26 +8716,6 @@
    "watchedDate": "2025-10-29",
    "rewatch": false,
    "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "Jujutsu Kaisen 0",
-   "year": 2021,
-   "slug": "jujutsu-kaisen-0",
-   "rating10": 8,
-   "watchedDate": "2025-10-26",
-   "rewatch": false,
-   "tmdbId": 810693,
-   "review": null
-  },
-  {
-   "title": "Weapons",
-   "year": 2025,
-   "slug": "weapons-2025",
-   "rating10": 9,
-   "watchedDate": "2025-09-13",
-   "rewatch": false,
-   "tmdbId": 1078605,
    "review": null
   }
  ]
