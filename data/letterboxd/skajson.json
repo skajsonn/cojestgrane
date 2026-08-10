@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-09T22:17:45.393Z",
+ "generatedAt": "2026-08-10T05:11:37.578Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 228,
+  "watched": 229,
   "watchlist": 54
  },
  "watched": [
@@ -1603,6 +1603,13 @@
    "year": 2013,
    "rating10": 7,
    "norm": "iron man 3"
+  },
+  {
+   "slug": "thor-the-dark-world",
+   "title": "Thor: The Dark World",
+   "year": 2013,
+   "rating10": 6,
+   "norm": "thor the dark world"
   }
  ],
  "watchlist": [
@@ -1932,6 +1939,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Thor: The Dark World",
+   "year": 2013,
+   "slug": "thor-the-dark-world",
+   "rating10": 6,
+   "watchedDate": "2026-08-10",
+   "rewatch": false,
+   "tmdbId": 76338,
+   "review": null
+  },
   {
    "title": "Iron Man 3",
    "year": 2013,
@@ -2420,16 +2437,6 @@
    "watchedDate": "2023-07-16",
    "rewatch": false,
    "tmdbId": 960709,
-   "review": null
-  },
-  {
-   "title": "Dear Child",
-   "year": 2023,
-   "slug": "dear-child-2023",
-   "rating10": 8,
-   "watchedDate": "2023-09-30",
-   "rewatch": false,
-   "tmdbId": null,
    "review": null
   }
  ]
