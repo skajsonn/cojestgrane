@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-10T22:31:56.821Z",
+ "generatedAt": "2026-08-11T04:55:11.976Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 229,
+  "watched": 230,
   "watchlist": 54
  },
  "watched": [
@@ -1610,6 +1610,13 @@
    "year": 2013,
    "rating10": 6,
    "norm": "thor the dark world"
+  },
+  {
+   "slug": "captain-america-the-winter-soldier",
+   "title": "Captain America: The Winter Soldier",
+   "year": 2014,
+   "rating10": 7,
+   "norm": "captain america the winter soldier"
   }
  ],
  "watchlist": [
@@ -1939,6 +1946,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Captain America: The Winter Soldier",
+   "year": 2014,
+   "slug": "captain-america-the-winter-soldier",
+   "rating10": 7,
+   "watchedDate": "2026-08-11",
+   "rewatch": false,
+   "tmdbId": 100402,
+   "review": null
+  },
   {
    "title": "Thor: The Dark World",
    "year": 2013,
@@ -2427,16 +2444,6 @@
    "watchedDate": "2022-12-15",
    "rewatch": false,
    "tmdbId": 38674,
-   "review": null
-  },
-  {
-   "title": "Wednesday",
-   "year": 2023,
-   "slug": "wednesday-2023",
-   "rating10": 8,
-   "watchedDate": "2023-07-16",
-   "rewatch": false,
-   "tmdbId": 960709,
    "review": null
   }
  ]

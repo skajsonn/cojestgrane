@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-10T22:33:06.323Z",
+ "generatedAt": "2026-08-11T04:56:07.803Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 743,
+  "watched": 744,
   "watchlist": 502
  },
  "watched": [
@@ -5208,6 +5208,13 @@
    "year": 2013,
    "rating10": 4,
    "norm": "thor the dark world"
+  },
+  {
+   "slug": "captain-america-the-winter-soldier",
+   "title": "Captain America: The Winter Soldier",
+   "year": 2014,
+   "rating10": 7,
+   "norm": "captain america the winter soldier"
   }
  ],
  "watchlist": [
@@ -8226,6 +8233,16 @@
  ],
  "recent": [
   {
+   "title": "Captain America: The Winter Soldier",
+   "year": 2014,
+   "slug": "captain-america-the-winter-soldier",
+   "rating10": 7,
+   "watchedDate": "2026-08-11",
+   "rewatch": false,
+   "tmdbId": 100402,
+   "review": null
+  },
+  {
    "title": "Thor: The Dark World",
    "year": 2013,
    "slug": "thor-the-dark-world",
@@ -8713,16 +8730,6 @@
    "watchedDate": "2025-11-13",
    "rewatch": false,
    "tmdbId": 1062722,
-   "review": null
-  },
-  {
-   "title": "Dororo",
-   "year": 2019,
-   "slug": "dororo-2019",
-   "rating10": 9,
-   "watchedDate": "2025-11-01",
-   "rewatch": false,
-   "tmdbId": null,
    "review": null
   }
  ]
