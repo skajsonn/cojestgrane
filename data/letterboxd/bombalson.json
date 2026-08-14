@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-13T16:35:35.231Z",
+ "generatedAt": "2026-08-14T05:21:44.400Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 749,
+  "watched": 750,
   "watchlist": 502
  },
  "watched": [
@@ -5250,6 +5250,13 @@
    "year": 2015,
    "rating10": 6,
    "norm": "avengers age of ultron"
+  },
+  {
+   "slug": "ant-man",
+   "title": "Ant-Man",
+   "year": 2015,
+   "rating10": 7,
+   "norm": "ant man"
   }
  ],
  "watchlist": [
@@ -8268,6 +8275,16 @@
  ],
  "recent": [
   {
+   "title": "Ant-Man",
+   "year": 2015,
+   "slug": "ant-man",
+   "rating10": 7,
+   "watchedDate": "2026-08-14",
+   "rewatch": false,
+   "tmdbId": 102899,
+   "review": null
+  },
+  {
    "title": "Avengers: Age of Ultron",
    "year": 2015,
    "slug": "avengers-age-of-ultron",
@@ -8755,16 +8772,6 @@
    "watchedDate": "2026-01-08",
    "rewatch": false,
    "tmdbId": 8327,
-   "review": null
-  },
-  {
-   "title": "Wake Up Dead Man",
-   "year": 2025,
-   "slug": "wake-up-dead-man",
-   "rating10": 8,
-   "watchedDate": "2025-12-31",
-   "rewatch": false,
-   "tmdbId": 812583,
    "review": null
   }
  ]
