@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-14T10:42:29.174Z",
+ "generatedAt": "2026-08-14T16:34:45.214Z",
  "fullSyncAt": "2026-07-13T20:25:32.221Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 515,
+  "watched": 516,
   "watchlist": 126
  },
  "watched": [
@@ -3612,6 +3612,13 @@
    "year": 2021,
    "rating10": 7,
    "norm": "the falcon and the winter soldier"
+  },
+  {
+   "slug": "the-end-of-oak-street",
+   "title": "The End of Oak Street",
+   "year": 2026,
+   "rating10": 6,
+   "norm": "the end of oak street"
   }
  ],
  "watchlist": [
@@ -4374,6 +4381,16 @@
  ],
  "recent": [
   {
+   "title": "The End of Oak Street",
+   "year": 2026,
+   "slug": "the-end-of-oak-street",
+   "rating10": 6,
+   "watchedDate": "2026-08-14",
+   "rewatch": false,
+   "tmdbId": 1101383,
+   "review": null
+  },
+  {
    "title": "Avengers: Age of Ultron",
    "year": 2015,
    "slug": "avengers-age-of-ultron",
@@ -4861,16 +4878,6 @@
    "watchedDate": "2025-09-02",
    "rewatch": true,
    "tmdbId": 674,
-   "review": null
-  },
-  {
-   "title": "Harry Potter and the Philosopher's Stone",
-   "year": 2001,
-   "slug": "harry-potter-and-the-philosophers-stone",
-   "rating10": 7,
-   "watchedDate": "2025-09-01",
-   "rewatch": true,
-   "tmdbId": 671,
    "review": null
   }
  ]
