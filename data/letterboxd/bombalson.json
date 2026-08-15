@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-08-15T15:59:06.197Z",
+ "generatedAt": "2026-08-15T21:59:19.771Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 750,
-  "watchlist": 502
+  "watched": 751,
+  "watchlist": 501
  },
  "watched": [
   {
@@ -5257,6 +5257,13 @@
    "year": 2015,
    "rating10": 7,
    "norm": "ant man"
+  },
+  {
+   "slug": "odwrocona-gora-albo-film-pod-strasznym-tytulem",
+   "title": "Odwrócona góra albo film pod strasznym tytułem",
+   "year": 2000,
+   "rating10": 10,
+   "norm": "odwrocona gora albo film pod strasznym tytulem"
   }
  ],
  "watchlist": [
@@ -5703,12 +5710,6 @@
    "title": "The Debt",
    "year": 1999,
    "norm": "the debt"
-  },
-  {
-   "slug": "odwrocona-gora-albo-film-pod-strasznym-tytulem",
-   "title": "Odwrócona góra albo film pod strasznym tytułem",
-   "year": 2000,
-   "norm": "odwrocona gora albo film pod strasznym tytulem"
   },
   {
    "slug": "we-need-to-talk-about-kevin",
@@ -8275,6 +8276,16 @@
  ],
  "recent": [
   {
+   "title": "Odwrócona góra albo film pod strasznym tytułem",
+   "year": 2000,
+   "slug": "odwrocona-gora-albo-film-pod-strasznym-tytulem",
+   "rating10": 10,
+   "watchedDate": "2026-08-15",
+   "rewatch": false,
+   "tmdbId": 854119,
+   "review": null
+  },
+  {
    "title": "Ant-Man",
    "year": 2015,
    "slug": "ant-man",
@@ -8762,16 +8773,6 @@
    "watchedDate": "2026-02-20",
    "rewatch": false,
    "tmdbId": 41428,
-   "review": null
-  },
-  {
-   "title": "The Holy Mountain",
-   "year": 1973,
-   "slug": "the-holy-mountain",
-   "rating10": 8,
-   "watchedDate": "2026-01-08",
-   "rewatch": false,
-   "tmdbId": 8327,
    "review": null
   }
  ]
