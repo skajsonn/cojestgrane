@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-14T22:01:52.242Z",
+ "generatedAt": "2026-08-15T04:16:12.079Z",
  "fullSyncAt": "2026-07-13T20:25:32.221Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 516,
+  "watched": 517,
   "watchlist": 126
  },
  "watched": [
@@ -3619,6 +3619,13 @@
    "year": 2026,
    "rating10": 6,
    "norm": "the end of oak street"
+  },
+  {
+   "slug": "it-follows",
+   "title": "It Follows",
+   "year": 2014,
+   "rating10": 8,
+   "norm": "it follows"
   }
  ],
  "watchlist": [
@@ -4381,6 +4388,16 @@
  ],
  "recent": [
   {
+   "title": "It Follows",
+   "year": 2014,
+   "slug": "it-follows",
+   "rating10": 8,
+   "watchedDate": "2026-08-15",
+   "rewatch": false,
+   "tmdbId": 270303,
+   "review": null
+  },
+  {
    "title": "The End of Oak Street",
    "year": 2026,
    "slug": "the-end-of-oak-street",
@@ -4868,16 +4885,6 @@
    "watchedDate": "2025-09-03",
    "rewatch": true,
    "tmdbId": 767,
-   "review": null
-  },
-  {
-   "title": "Harry Potter and the Goblet of Fire",
-   "year": 2005,
-   "slug": "harry-potter-and-the-goblet-of-fire",
-   "rating10": 7,
-   "watchedDate": "2025-09-02",
-   "rewatch": true,
-   "tmdbId": 674,
    "review": null
   }
  ]
