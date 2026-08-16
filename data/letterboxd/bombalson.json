@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-08-15T21:59:19.771Z",
+ "generatedAt": "2026-08-16T04:23:25.622Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 751,
-  "watchlist": 501
+  "watched": 752,
+  "watchlist": 500
  },
  "watched": [
   {
@@ -5264,6 +5264,13 @@
    "year": 2000,
    "rating10": 10,
    "norm": "odwrocona gora albo film pod strasznym tytulem"
+  },
+  {
+   "slug": "tenet",
+   "title": "Tenet",
+   "year": 2020,
+   "rating10": 9,
+   "norm": "tenet"
   }
  ],
  "watchlist": [
@@ -7776,12 +7783,6 @@
    "norm": "insomnia"
   },
   {
-   "slug": "tenet",
-   "title": "Tenet",
-   "year": 2020,
-   "norm": "tenet"
-  },
-  {
    "slug": "southpaw-2015",
    "title": "Southpaw",
    "year": 2015,
@@ -8276,6 +8277,16 @@
  ],
  "recent": [
   {
+   "title": "Tenet",
+   "year": 2020,
+   "slug": "tenet",
+   "rating10": 9,
+   "watchedDate": "2026-08-16",
+   "rewatch": false,
+   "tmdbId": 577922,
+   "review": null
+  },
+  {
    "title": "Odwrócona góra albo film pod strasznym tytułem",
    "year": 2000,
    "slug": "odwrocona-gora-albo-film-pod-strasznym-tytulem",
@@ -8763,16 +8774,6 @@
    "watchedDate": "2026-02-21",
    "rewatch": false,
    "tmdbId": 1272837,
-   "review": null
-  },
-  {
-   "title": "Tetsuo: The Iron Man",
-   "year": 1989,
-   "slug": "tetsuo-the-iron-man",
-   "rating10": 7,
-   "watchedDate": "2026-02-20",
-   "rewatch": false,
-   "tmdbId": 41428,
    "review": null
   }
  ]

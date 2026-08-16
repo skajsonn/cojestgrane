@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-08-15T22:00:49.188Z",
+ "generatedAt": "2026-08-16T04:24:51.956Z",
  "fullSyncAt": "2026-07-13T20:25:32.221Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 517,
-  "watchlist": 126
+  "watched": 518,
+  "watchlist": 125
  },
  "watched": [
   {
@@ -3626,6 +3626,13 @@
    "year": 2014,
    "rating10": 8,
    "norm": "it follows"
+  },
+  {
+   "slug": "tenet",
+   "title": "Tenet",
+   "year": 2020,
+   "rating10": 8,
+   "norm": "tenet"
   }
  ],
  "watchlist": [
@@ -4326,12 +4333,6 @@
    "norm": "our ladies"
   },
   {
-   "slug": "tenet",
-   "title": "Tenet",
-   "year": 2020,
-   "norm": "tenet"
-  },
-  {
    "slug": "blackkklansman",
    "title": "BlacKkKlansman",
    "year": 2018,
@@ -4387,6 +4388,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Tenet",
+   "year": 2020,
+   "slug": "tenet",
+   "rating10": 8,
+   "watchedDate": "2026-08-16",
+   "rewatch": false,
+   "tmdbId": 577922,
+   "review": null
+  },
   {
    "title": "It Follows",
    "year": 2014,
@@ -4875,16 +4886,6 @@
    "watchedDate": "2025-09-08",
    "rewatch": false,
    "tmdbId": 126889,
-   "review": null
-  },
-  {
-   "title": "Harry Potter and the Half-Blood Prince",
-   "year": 2009,
-   "slug": "harry-potter-and-the-half-blood-prince",
-   "rating10": 8,
-   "watchedDate": "2025-09-03",
-   "rewatch": true,
-   "tmdbId": 767,
    "review": null
   }
  ]
