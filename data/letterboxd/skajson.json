@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-16T21:56:09.339Z",
+ "generatedAt": "2026-08-17T04:30:26.463Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 231,
+  "watched": 232,
   "watchlist": 54
  },
  "watched": [
@@ -1624,6 +1624,13 @@
    "year": 2015,
    "rating10": 6,
    "norm": "avengers age of ultron"
+  },
+  {
+   "slug": "captain-america-civil-war",
+   "title": "Captain America: Civil War",
+   "year": 2016,
+   "rating10": 8,
+   "norm": "captain america civil war"
   }
  ],
  "watchlist": [
@@ -1953,6 +1960,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Captain America: Civil War",
+   "year": 2016,
+   "slug": "captain-america-civil-war",
+   "rating10": 8,
+   "watchedDate": "2026-08-16",
+   "rewatch": false,
+   "tmdbId": 271110,
+   "review": null
+  },
   {
    "title": "Avengers: Age of Ultron",
    "year": 2015,
@@ -2438,16 +2455,6 @@
    "year": 2021,
    "slug": "lupin-2021-1",
    "rating10": 8,
-   "watchedDate": "2022-12-15",
-   "rewatch": false,
-   "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "The Queen's Gambit",
-   "year": 2020,
-   "slug": "the-queens-gambit",
-   "rating10": 7,
    "watchedDate": "2022-12-15",
    "rewatch": false,
    "tmdbId": null,

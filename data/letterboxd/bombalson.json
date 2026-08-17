@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-16T21:57:38.093Z",
+ "generatedAt": "2026-08-17T04:31:55.655Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 752,
+  "watched": 753,
   "watchlist": 500
  },
  "watched": [
@@ -5271,6 +5271,13 @@
    "year": 2020,
    "rating10": 9,
    "norm": "tenet"
+  },
+  {
+   "slug": "captain-america-civil-war",
+   "title": "Captain America: Civil War",
+   "year": 2016,
+   "rating10": 7,
+   "norm": "captain america civil war"
   }
  ],
  "watchlist": [
@@ -8277,6 +8284,16 @@
  ],
  "recent": [
   {
+   "title": "Captain America: Civil War",
+   "year": 2016,
+   "slug": "captain-america-civil-war",
+   "rating10": 7,
+   "watchedDate": "2026-08-17",
+   "rewatch": false,
+   "tmdbId": 271110,
+   "review": null
+  },
+  {
    "title": "Tenet",
    "year": 2020,
    "slug": "tenet",
@@ -8764,16 +8781,6 @@
    "watchedDate": "2026-02-22",
    "rewatch": false,
    "tmdbId": 37736,
-   "review": null
-  },
-  {
-   "title": "28 Years Later: The Bone Temple",
-   "year": 2026,
-   "slug": "28-years-later-the-bone-temple",
-   "rating10": 8,
-   "watchedDate": "2026-02-21",
-   "rewatch": false,
-   "tmdbId": 1272837,
    "review": null
   }
  ]
