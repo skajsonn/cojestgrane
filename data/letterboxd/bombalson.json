@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-17T22:02:18.240Z",
+ "generatedAt": "2026-08-18T04:27:06.649Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 753,
+  "watched": 754,
   "watchlist": 500
  },
  "watched": [
@@ -5278,6 +5278,13 @@
    "year": 2016,
    "rating10": 7,
    "norm": "captain america civil war"
+  },
+  {
+   "slug": "doctor-strange-2016",
+   "title": "Doctor Strange",
+   "year": 2016,
+   "rating10": 8,
+   "norm": "doctor strange"
   }
  ],
  "watchlist": [
@@ -8284,6 +8291,16 @@
  ],
  "recent": [
   {
+   "title": "Doctor Strange",
+   "year": 2016,
+   "slug": "doctor-strange-2016",
+   "rating10": 8,
+   "watchedDate": "2026-08-17",
+   "rewatch": false,
+   "tmdbId": 284052,
+   "review": null
+  },
+  {
    "title": "Captain America: Civil War",
    "year": 2016,
    "slug": "captain-america-civil-war",
@@ -8771,16 +8788,6 @@
    "watchedDate": "2026-03-04",
    "rewatch": false,
    "tmdbId": 858024,
-   "review": null
-  },
-  {
-   "title": "Take Out",
-   "year": 2004,
-   "slug": "take-out-2004",
-   "rating10": 7,
-   "watchedDate": "2026-02-22",
-   "rewatch": false,
-   "tmdbId": 37736,
    "review": null
   }
  ]
