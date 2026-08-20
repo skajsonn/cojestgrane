@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-20T16:08:01.498Z",
+ "generatedAt": "2026-08-20T22:01:37.350Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 234,
+  "watched": 235,
   "watchlist": 54
  },
  "watched": [
@@ -1645,6 +1645,13 @@
    "year": 2017,
    "rating10": 8,
    "norm": "thor ragnarok"
+  },
+  {
+   "slug": "spider-man-homecoming",
+   "title": "Spider-Man: Homecoming",
+   "year": 2017,
+   "rating10": 8,
+   "norm": "spider man homecoming"
   }
  ],
  "watchlist": [
@@ -1974,6 +1981,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Spider-Man: Homecoming",
+   "year": 2017,
+   "slug": "spider-man-homecoming",
+   "rating10": 8,
+   "watchedDate": "2026-08-20",
+   "rewatch": false,
+   "tmdbId": 315635,
+   "review": null
+  },
   {
    "title": "Thor: Ragnarok",
    "year": 2017,
@@ -2462,16 +2479,6 @@
    "watchedDate": "2025-12-27",
    "rewatch": false,
    "tmdbId": 425274,
-   "review": null
-  },
-  {
-   "title": "Warfare",
-   "year": 2025,
-   "slug": "warfare",
-   "rating10": 7,
-   "watchedDate": "2026-02-19",
-   "rewatch": false,
-   "tmdbId": 1241436,
    "review": null
   }
  ]

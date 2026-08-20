@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-20T16:09:30.606Z",
+ "generatedAt": "2026-08-20T22:02:50.305Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 754,
+  "watched": 755,
   "watchlist": 500
  },
  "watched": [
@@ -5285,6 +5285,13 @@
    "year": 2016,
    "rating10": 8,
    "norm": "doctor strange"
+  },
+  {
+   "slug": "onimusha",
+   "title": "Onimusha",
+   "year": 2023,
+   "rating10": 7,
+   "norm": "onimusha"
   }
  ],
  "watchlist": [
@@ -8291,6 +8298,16 @@
  ],
  "recent": [
   {
+   "title": "Onimusha",
+   "year": 2023,
+   "slug": "onimusha",
+   "rating10": 7,
+   "watchedDate": "2026-08-20",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
    "title": "Thor: Ragnarok",
    "year": 2017,
    "slug": "thor-ragnarok",
@@ -8778,16 +8795,6 @@
    "watchedDate": "2026-04-02",
    "rewatch": false,
    "tmdbId": 38985,
-   "review": null
-  },
-  {
-   "title": "Sentimental Value",
-   "year": 2025,
-   "slug": "sentimental-value-2025",
-   "rating10": 8,
-   "watchedDate": "2026-03-25",
-   "rewatch": false,
-   "tmdbId": 1124566,
    "review": null
   }
  ]
