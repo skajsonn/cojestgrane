@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-20T22:01:37.350Z",
+ "generatedAt": "2026-08-21T22:22:13.998Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 235,
+  "watched": 236,
   "watchlist": 54
  },
  "watched": [
@@ -1652,6 +1652,13 @@
    "year": 2017,
    "rating10": 8,
    "norm": "spider man homecoming"
+  },
+  {
+   "slug": "black-panther",
+   "title": "Black Panther",
+   "year": 2018,
+   "rating10": 6,
+   "norm": "black panther"
   }
  ],
  "watchlist": [
@@ -1981,6 +1988,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Black Panther",
+   "year": 2018,
+   "slug": "black-panther",
+   "rating10": 6,
+   "watchedDate": "2026-08-20",
+   "rewatch": false,
+   "tmdbId": 284054,
+   "review": null
+  },
   {
    "title": "Spider-Man: Homecoming",
    "year": 2017,
@@ -2469,16 +2486,6 @@
    "watchedDate": "2025-12-25",
    "rewatch": false,
    "tmdbId": 840430,
-   "review": null
-  },
-  {
-   "title": "Now You See Me: Now You Don't",
-   "year": 2025,
-   "slug": "now-you-see-me-now-you-dont-2025",
-   "rating10": 7,
-   "watchedDate": "2025-12-27",
-   "rewatch": false,
-   "tmdbId": 425274,
    "review": null
   }
  ]
