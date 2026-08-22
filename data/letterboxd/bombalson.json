@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-08-20T22:02:50.305Z",
+ "generatedAt": "2026-08-22T04:22:06.403Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 755,
-  "watchlist": 500
+  "watched": 757,
+  "watchlist": 499
  },
  "watched": [
   {
@@ -5292,6 +5292,20 @@
    "year": 2023,
    "rating10": 7,
    "norm": "onimusha"
+  },
+  {
+   "slug": "blue-spring",
+   "title": "Blue Spring",
+   "year": 2001,
+   "rating10": 10,
+   "norm": "blue spring"
+  },
+  {
+   "slug": "black-panther",
+   "title": "Black Panther",
+   "year": 2018,
+   "rating10": 7,
+   "norm": "black panther"
   }
  ],
  "watchlist": [
@@ -5504,12 +5518,6 @@
    "title": "Caught Stealing",
    "year": 2025,
    "norm": "caught stealing"
-  },
-  {
-   "slug": "blue-spring",
-   "title": "Blue Spring",
-   "year": 2001,
-   "norm": "blue spring"
   },
   {
    "slug": "crying-freeman-1988",
@@ -8298,6 +8306,26 @@
  ],
  "recent": [
   {
+   "title": "Blue Spring",
+   "year": 2001,
+   "slug": "blue-spring",
+   "rating10": 10,
+   "watchedDate": "2026-08-22",
+   "rewatch": false,
+   "tmdbId": 33333,
+   "review": null
+  },
+  {
+   "title": "Black Panther",
+   "year": 2018,
+   "slug": "black-panther",
+   "rating10": 7,
+   "watchedDate": "2026-08-21",
+   "rewatch": false,
+   "tmdbId": 284054,
+   "review": null
+  },
+  {
    "title": "Onimusha",
    "year": 2023,
    "slug": "onimusha",
@@ -8775,26 +8803,6 @@
    "watchedDate": "2026-04-13",
    "rewatch": false,
    "tmdbId": 1241983,
-   "review": null
-  },
-  {
-   "title": "The Good, the Bad and the Ugly",
-   "year": 1966,
-   "slug": "the-good-the-bad-and-the-ugly",
-   "rating10": 9,
-   "watchedDate": "2026-04-12",
-   "rewatch": false,
-   "tmdbId": 429,
-   "review": null
-  },
-  {
-   "title": "Sorcerer",
-   "year": 1977,
-   "slug": "sorcerer",
-   "rating10": 9,
-   "watchedDate": "2026-04-02",
-   "rewatch": false,
-   "tmdbId": 38985,
    "review": null
   }
  ]
