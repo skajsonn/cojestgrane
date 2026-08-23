@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-08-22T21:57:44.991Z",
+ "generatedAt": "2026-08-23T04:23:01.433Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 236,
-  "watchlist": 54
+  "watched": 237,
+  "watchlist": 53
  },
  "watched": [
   {
@@ -1659,6 +1659,13 @@
    "year": 2018,
    "rating10": 6,
    "norm": "black panther"
+  },
+  {
+   "slug": "the-invite-2026",
+   "title": "The Invite",
+   "year": 2026,
+   "rating10": 6,
+   "norm": "the invite"
   }
  ],
  "watchlist": [
@@ -1787,12 +1794,6 @@
    "title": "One Battle After Another",
    "year": 2025,
    "norm": "one battle after another"
-  },
-  {
-   "slug": "the-invite-2026",
-   "title": "The Invite",
-   "year": 2026,
-   "norm": "the invite"
   },
   {
    "slug": "the-sheep-detectives",
@@ -1988,6 +1989,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "The Invite",
+   "year": 2026,
+   "slug": "the-invite-2026",
+   "rating10": 6,
+   "watchedDate": "2026-08-22",
+   "rewatch": false,
+   "tmdbId": 950028,
+   "review": null
+  },
   {
    "title": "Black Panther",
    "year": 2018,
@@ -2476,16 +2487,6 @@
    "watchedDate": "2025-12-24",
    "rewatch": false,
    "tmdbId": 5255,
-   "review": null
-  },
-  {
-   "title": "The Holdovers",
-   "year": 2023,
-   "slug": "the-holdovers",
-   "rating10": 8,
-   "watchedDate": "2025-12-25",
-   "rewatch": false,
-   "tmdbId": 840430,
    "review": null
   }
  ]
