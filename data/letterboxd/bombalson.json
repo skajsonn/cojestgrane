@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-23T21:58:41.569Z",
+ "generatedAt": "2026-08-24T04:32:37.605Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 759,
+  "watched": 760,
   "watchlist": 499
  },
  "watched": [
@@ -5320,6 +5320,13 @@
    "year": 2026,
    "rating10": 10,
    "norm": "the invite"
+  },
+  {
+   "slug": "avengers-infinity-war",
+   "title": "Avengers: Infinity War",
+   "year": 2018,
+   "rating10": 8,
+   "norm": "avengers infinity war"
   }
  ],
  "watchlist": [
@@ -8320,6 +8327,16 @@
  ],
  "recent": [
   {
+   "title": "Avengers: Infinity War",
+   "year": 2018,
+   "slug": "avengers-infinity-war",
+   "rating10": 8,
+   "watchedDate": "2026-08-24",
+   "rewatch": false,
+   "tmdbId": 299536,
+   "review": null
+  },
+  {
    "title": "The Invite",
    "year": 2026,
    "slug": "the-invite-2026",
@@ -8807,16 +8824,6 @@
    "watchedDate": "2026-05-10",
    "rewatch": false,
    "tmdbId": 1327819,
-   "review": null
-  },
-  {
-   "title": "Project Hail Mary",
-   "year": 2026,
-   "slug": "project-hail-mary",
-   "rating10": 8,
-   "watchedDate": "2026-05-09",
-   "rewatch": false,
-   "tmdbId": 687163,
    "review": null
   }
  ]
