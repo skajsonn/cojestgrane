@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-24T22:01:22.248Z",
+ "generatedAt": "2026-08-25T04:42:21.714Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 760,
+  "watched": 761,
   "watchlist": 499
  },
  "watched": [
@@ -5327,6 +5327,13 @@
    "year": 2018,
    "rating10": 8,
    "norm": "avengers infinity war"
+  },
+  {
+   "slug": "ant-man-and-the-wasp",
+   "title": "Ant-Man and the Wasp",
+   "year": 2018,
+   "rating10": 6,
+   "norm": "ant man and the wasp"
   }
  ],
  "watchlist": [
@@ -8327,6 +8334,16 @@
  ],
  "recent": [
   {
+   "title": "Ant-Man and the Wasp",
+   "year": 2018,
+   "slug": "ant-man-and-the-wasp",
+   "rating10": 6,
+   "watchedDate": "2026-08-25",
+   "rewatch": false,
+   "tmdbId": 363088,
+   "review": null
+  },
+  {
    "title": "Avengers: Infinity War",
    "year": 2018,
    "slug": "avengers-infinity-war",
@@ -8814,16 +8831,6 @@
    "watchedDate": "2026-06-04",
    "rewatch": false,
    "tmdbId": 639988,
-   "review": null
-  },
-  {
-   "title": "Hoppers",
-   "year": 2026,
-   "slug": "hoppers",
-   "rating10": 7,
-   "watchedDate": "2026-05-10",
-   "rewatch": false,
-   "tmdbId": 1327819,
    "review": null
   }
  ]

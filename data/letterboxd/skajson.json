@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-24T21:59:57.961Z",
+ "generatedAt": "2026-08-25T04:40:59.319Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 238,
+  "watched": 239,
   "watchlist": 53
  },
  "watched": [
@@ -1673,6 +1673,13 @@
    "year": 2018,
    "rating10": 9,
    "norm": "avengers infinity war"
+  },
+  {
+   "slug": "ant-man-and-the-wasp",
+   "title": "Ant-Man and the Wasp",
+   "year": 2018,
+   "rating10": 6,
+   "norm": "ant man and the wasp"
   }
  ],
  "watchlist": [
@@ -1996,6 +2003,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Ant-Man and the Wasp",
+   "year": 2018,
+   "slug": "ant-man-and-the-wasp",
+   "rating10": 6,
+   "watchedDate": "2026-08-25",
+   "rewatch": false,
+   "tmdbId": 363088,
+   "review": null
+  },
   {
    "title": "Avengers: Infinity War",
    "year": 2018,
@@ -2484,16 +2501,6 @@
    "watchedDate": "2025-07-20",
    "rewatch": false,
    "tmdbId": 855,
-   "review": null
-  },
-  {
-   "title": "Soccer Poker",
-   "year": 1989,
-   "slug": "soccer-poker",
-   "rating10": 8,
-   "watchedDate": "2025-08-18",
-   "rewatch": false,
-   "tmdbId": 36399,
    "review": null
   }
  ]
