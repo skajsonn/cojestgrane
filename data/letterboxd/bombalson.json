@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-25T22:01:49.069Z",
+ "generatedAt": "2026-08-26T10:22:37.695Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 761,
+  "watched": 762,
   "watchlist": 499
  },
  "watched": [
@@ -5334,6 +5334,13 @@
    "year": 2018,
    "rating10": 6,
    "norm": "ant man and the wasp"
+  },
+  {
+   "slug": "captain-marvel",
+   "title": "Captain Marvel",
+   "year": 2019,
+   "rating10": 4,
+   "norm": "captain marvel"
   }
  ],
  "watchlist": [
@@ -8334,6 +8341,16 @@
  ],
  "recent": [
   {
+   "title": "Captain Marvel",
+   "year": 2019,
+   "slug": "captain-marvel",
+   "rating10": 4,
+   "watchedDate": "2026-08-26",
+   "rewatch": false,
+   "tmdbId": 299537,
+   "review": null
+  },
+  {
    "title": "Ant-Man and the Wasp",
    "year": 2018,
    "slug": "ant-man-and-the-wasp",
@@ -8821,16 +8838,6 @@
    "watchedDate": "2026-06-13",
    "rewatch": false,
    "tmdbId": 1226863,
-   "review": null
-  },
-  {
-   "title": "No Other Choice",
-   "year": 2025,
-   "slug": "no-other-choice-2025",
-   "rating10": 9,
-   "watchedDate": "2026-06-04",
-   "rewatch": false,
-   "tmdbId": 639988,
    "review": null
   }
  ]

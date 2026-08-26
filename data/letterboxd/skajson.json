@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-25T22:00:54.587Z",
+ "generatedAt": "2026-08-26T10:21:08.508Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 239,
+  "watched": 240,
   "watchlist": 53
  },
  "watched": [
@@ -1680,6 +1680,13 @@
    "year": 2018,
    "rating10": 6,
    "norm": "ant man and the wasp"
+  },
+  {
+   "slug": "captain-marvel",
+   "title": "Captain Marvel",
+   "year": 2019,
+   "rating10": 6,
+   "norm": "captain marvel"
   }
  ],
  "watchlist": [
@@ -2003,6 +2010,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Captain Marvel",
+   "year": 2019,
+   "slug": "captain-marvel",
+   "rating10": 6,
+   "watchedDate": "2026-08-26",
+   "rewatch": false,
+   "tmdbId": 299537,
+   "review": null
+  },
   {
    "title": "Ant-Man and the Wasp",
    "year": 2018,
@@ -2491,16 +2508,6 @@
    "watchedDate": "2025-07-02",
    "rewatch": false,
    "tmdbId": 911430,
-   "review": null
-  },
-  {
-   "title": "Black Hawk Down",
-   "year": 2001,
-   "slug": "black-hawk-down",
-   "rating10": 9,
-   "watchedDate": "2025-07-20",
-   "rewatch": false,
-   "tmdbId": 855,
    "review": null
   }
  ]
