@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-26T16:43:28.193Z",
+ "generatedAt": "2026-08-27T01:11:53.971Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 762,
+  "watched": 763,
   "watchlist": 499
  },
  "watched": [
@@ -5341,6 +5341,13 @@
    "year": 2019,
    "rating10": 4,
    "norm": "captain marvel"
+  },
+  {
+   "slug": "avengers-endgame",
+   "title": "Avengers: Endgame",
+   "year": 2019,
+   "rating10": 8,
+   "norm": "avengers endgame"
   }
  ],
  "watchlist": [
@@ -8341,6 +8348,16 @@
  ],
  "recent": [
   {
+   "title": "Avengers: Endgame",
+   "year": 2019,
+   "slug": "avengers-endgame",
+   "rating10": 8,
+   "watchedDate": "2026-08-27",
+   "rewatch": false,
+   "tmdbId": 299534,
+   "review": null
+  },
+  {
    "title": "Captain Marvel",
    "year": 2019,
    "slug": "captain-marvel",
@@ -8828,16 +8845,6 @@
    "watchedDate": "2026-07-02",
    "rewatch": false,
    "tmdbId": 1301421,
-   "review": null
-  },
-  {
-   "title": "The Super Mario Galaxy Movie",
-   "year": 2026,
-   "slug": "the-super-mario-galaxy-movie",
-   "rating10": 6,
-   "watchedDate": "2026-06-13",
-   "rewatch": false,
-   "tmdbId": 1226863,
    "review": null
   }
  ]

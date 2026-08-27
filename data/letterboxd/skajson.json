@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-26T16:41:59.128Z",
+ "generatedAt": "2026-08-27T01:10:24.664Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 240,
+  "watched": 241,
   "watchlist": 53
  },
  "watched": [
@@ -1687,6 +1687,13 @@
    "year": 2019,
    "rating10": 6,
    "norm": "captain marvel"
+  },
+  {
+   "slug": "avengers-endgame",
+   "title": "Avengers: Endgame",
+   "year": 2019,
+   "rating10": 10,
+   "norm": "avengers endgame"
   }
  ],
  "watchlist": [
@@ -2010,6 +2017,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Avengers: Endgame",
+   "year": 2019,
+   "slug": "avengers-endgame",
+   "rating10": 10,
+   "watchedDate": "2026-08-26",
+   "rewatch": false,
+   "tmdbId": 299534,
+   "review": null
+  },
   {
    "title": "Captain Marvel",
    "year": 2019,
@@ -2498,16 +2515,6 @@
    "watchedDate": "2025-06-28",
    "rewatch": false,
    "tmdbId": 238,
-   "review": null
-  },
-  {
-   "title": "F1",
-   "year": 2025,
-   "slug": "f1",
-   "rating10": 9,
-   "watchedDate": "2025-07-02",
-   "rewatch": false,
-   "tmdbId": 911430,
    "review": null
   }
  ]
