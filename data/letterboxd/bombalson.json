@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-27T14:50:24.117Z",
+ "generatedAt": "2026-08-29T00:29:52.125Z",
  "fullSyncAt": "2026-07-13T20:25:19.878Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 763,
+  "watched": 765,
   "watchlist": 499
  },
  "watched": [
@@ -5348,6 +5348,20 @@
    "year": 2019,
    "rating10": 8,
    "norm": "avengers endgame"
+  },
+  {
+   "slug": "black-widow-2021",
+   "title": "Black Widow",
+   "year": 2021,
+   "rating10": 2,
+   "norm": "black widow"
+  },
+  {
+   "slug": "spider-man-far-from-home",
+   "title": "Spider-Man: Far From Home",
+   "year": 2019,
+   "rating10": 7,
+   "norm": "spider man far from home"
   }
  ],
  "watchlist": [
@@ -8348,6 +8362,26 @@
  ],
  "recent": [
   {
+   "title": "Black Widow",
+   "year": 2021,
+   "slug": "black-widow-2021",
+   "rating10": 2,
+   "watchedDate": "2026-08-29",
+   "rewatch": false,
+   "tmdbId": 497698,
+   "review": null
+  },
+  {
+   "title": "Spider-Man: Far From Home",
+   "year": 2019,
+   "slug": "spider-man-far-from-home",
+   "rating10": 7,
+   "watchedDate": "2026-08-28",
+   "rewatch": false,
+   "tmdbId": 429617,
+   "review": null
+  },
+  {
    "title": "Avengers: Endgame",
    "year": 2019,
    "slug": "avengers-endgame",
@@ -8498,7 +8532,7 @@
    "review": null
   },
   {
-   "title": "Odwrócona góra albo film pod strasznym tytułem",
+   "title": "Odwrócona Góra albo Film Pod Strasznym Tytułem",
    "year": 2000,
    "slug": "odwrocona-gora-albo-film-pod-strasznym-tytulem",
    "rating10": 10,
@@ -8825,26 +8859,6 @@
    "watchedDate": "2026-07-09",
    "rewatch": false,
    "tmdbId": 1377457,
-   "review": null
-  },
-  {
-   "title": "One Piece Heroines",
-   "year": 2026,
-   "slug": "one-piece-heroines",
-   "rating10": 8,
-   "watchedDate": "2026-07-06",
-   "rewatch": false,
-   "tmdbId": 1659389,
-   "review": null
-  },
-  {
-   "title": "The Sheep Detectives",
-   "year": 2026,
-   "slug": "the-sheep-detectives",
-   "rating10": 8,
-   "watchedDate": "2026-07-02",
-   "rewatch": false,
-   "tmdbId": 1301421,
    "review": null
   }
  ]

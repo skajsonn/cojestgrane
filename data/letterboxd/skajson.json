@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-27T14:49:13.375Z",
+ "generatedAt": "2026-08-29T00:28:44.503Z",
  "fullSyncAt": "2026-07-13T20:24:55.277Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 241,
+  "watched": 243,
   "watchlist": 53
  },
  "watched": [
@@ -1694,6 +1694,20 @@
    "year": 2019,
    "rating10": 10,
    "norm": "avengers endgame"
+  },
+  {
+   "slug": "black-widow-2021",
+   "title": "Black Widow",
+   "year": 2021,
+   "rating10": 6,
+   "norm": "black widow"
+  },
+  {
+   "slug": "spider-man-far-from-home",
+   "title": "Spider-Man: Far From Home",
+   "year": 2019,
+   "rating10": 7,
+   "norm": "spider man far from home"
   }
  ],
  "watchlist": [
@@ -2017,6 +2031,26 @@
   }
  ],
  "recent": [
+  {
+   "title": "Black Widow",
+   "year": 2021,
+   "slug": "black-widow-2021",
+   "rating10": 6,
+   "watchedDate": "2026-08-29",
+   "rewatch": false,
+   "tmdbId": 497698,
+   "review": null
+  },
+  {
+   "title": "Spider-Man: Far From Home",
+   "year": 2019,
+   "slug": "spider-man-far-from-home",
+   "rating10": 7,
+   "watchedDate": "2026-08-27",
+   "rewatch": false,
+   "tmdbId": 429617,
+   "review": null
+  },
   {
    "title": "Avengers: Endgame",
    "year": 2019,
@@ -2495,26 +2529,6 @@
    "watchedDate": "2025-06-15",
    "rewatch": false,
    "tmdbId": 193756,
-   "review": null
-  },
-  {
-   "title": "The Shawshank Redemption",
-   "year": 1994,
-   "slug": "the-shawshank-redemption",
-   "rating10": 10,
-   "watchedDate": "2025-06-24",
-   "rewatch": false,
-   "tmdbId": 278,
-   "review": null
-  },
-  {
-   "title": "The Godfather",
-   "year": 1972,
-   "slug": "the-godfather",
-   "rating10": 9,
-   "watchedDate": "2025-06-28",
-   "rewatch": false,
-   "tmdbId": 238,
    "review": null
   }
  ]
