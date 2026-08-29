@@ -1,7 +1,22 @@
 {
- "generatedAt": "2026-08-29T10:26:37.465Z",
+ "generatedAt": "2026-08-29T18:51:30.497Z",
  "year": 2026,
  "films": [
+  {
+   "tmdbId": 1744193,
+   "title": "Pani Doktor",
+   "originalTitle": null,
+   "date": "1974-01-01",
+   "poster": null,
+   "popularity": 1.4,
+   "voteAverage": 0,
+   "voteCount": 0,
+   "genres": [
+    "dokumentalny"
+   ],
+   "overview": null,
+   "notable": false
+  },
   {
    "tmdbId": 402,
    "title": "Nagi instynkt",
@@ -58,13 +73,13 @@
    "poster": "https://image.tmdb.org/t/p/w342/dBrHjS0OyjuYX09EqVxGTzVe2LV.jpg",
    "popularity": 37.2,
    "voteAverage": 7.3,
-   "voteCount": 2943,
+   "voteCount": 2947,
    "genres": [
     "tajemnica",
     "thriller"
    ],
    "overview": "Milli ma za sobą niełatwą przeszłość, więc to czego dziś szuka, to spokojna przystań z dala od zgiełku i potencjalnych kłopotów. Chętnie więc zatrudnia się jako pomoc domowa w wielkim domu bogatego małżeństwa Winchesterów. Sprząta, gotuje, odbiera ze szkoły córkę swych pracodawców, a wolne chwile spędza samotnie w mały",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 991494,
@@ -74,14 +89,14 @@
    "poster": "https://image.tmdb.org/t/p/w342/7HVZKGGmiAxoiCzOKzqD7DYwdx8.jpg",
    "popularity": 19.7,
    "voteAverage": 6.8,
-   "voteCount": 343,
+   "voteCount": 344,
    "genres": [
     "przygodowy",
     "animacja",
     "komedia"
    ],
    "overview": "Zdesperowany, aby zostać wielkim, SpongeBob wyrusza, aby udowodnić swoją odwagę Panu Krabsowi, podążając za Latającym Holendrem - tajemniczym piratem-duchem - podczas przygody, która zabierze go w najgłębsze głębiny morskie, gdzie żadna gąbka nie dotarła wcześniej.",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1266798,
@@ -91,14 +106,14 @@
    "poster": "https://image.tmdb.org/t/p/w342/pBKRADvTZHZeYDYurZqOL3bL3T9.jpg",
    "popularity": 9,
    "voteAverage": 6.1,
-   "voteCount": 342,
+   "voteCount": 343,
    "genres": [
     "thriller",
     "sci-fi",
     "akcja"
    ],
    "overview": "W niedalekiej przyszłości Paryż został podzielony na trzy strefy, rozdzielające klasy społeczne, gdzie sztuczna inteligencja ALMA zrewolucjonizowała pracę policji. Dopóki jej wynalazca nie zostaje zamordowany, Salia i Zem, dwaj policjanci będący całkowitymi przeciwieństwami, są zmuszeni do współpracy, by poprowadzić śl",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1127625,
@@ -191,7 +206,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/hfnb97ev3zf7SQPOTWhzXJaNACC.jpg",
    "popularity": 19.1,
    "voteAverage": 7.1,
-   "voteCount": 1664,
+   "voteCount": 1666,
    "genres": [
     "horror",
     "thriller",
@@ -307,7 +322,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/vbeyOZm2bvBXcbgPD3v6o94epPX.jpg",
    "popularity": 15,
    "voteAverage": 7.7,
-   "voteCount": 1567,
+   "voteCount": 1568,
    "genres": [
     "dramat",
     "romans"
@@ -357,7 +372,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/8eB0wNCJ3lZV7zmoPl5YH4pl43X.jpg",
    "popularity": 5.5,
    "voteAverage": 7.4,
-   "voteCount": 1609,
+   "voteCount": 1610,
    "genres": [
     "romans",
     "przygodowy",
@@ -416,23 +431,6 @@
    "notable": false
   },
   {
-   "tmdbId": 1198994,
-   "title": "Pomocy",
-   "originalTitle": "Send Help",
-   "date": "2026-01-30",
-   "poster": "https://image.tmdb.org/t/p/w342/jXamPkznkOOrZ5dBuUFgkdIIoXL.jpg",
-   "popularity": 24.1,
-   "voteAverage": 7,
-   "voteCount": 2225,
-   "genres": [
-    "horror",
-    "thriller",
-    "komedia"
-   ],
-   "overview": "Po katastrofie lotniczej Linda i Bradley zostają uwięzieni na bezludnej wyspie, gdzie muszą walczyć o przetrwanie w surowych warunkach. Szybko okazuje się, że największym zagrożeniem nie jest dzika przyroda, lecz ich własne lęki, frustracje i narastające konflikty między sobą.",
-   "notable": false
-  },
-  {
    "tmdbId": 1317288,
    "title": "Wielki Marty",
    "originalTitle": "Marty Supreme",
@@ -440,12 +438,29 @@
    "poster": "https://image.tmdb.org/t/p/w342/owy4NDDpDL0akInVTYjS8RFBDrY.jpg",
    "popularity": 25,
    "voteAverage": 7.4,
-   "voteCount": 2128,
+   "voteCount": 2129,
    "genres": [
     "dramat",
     "thriller"
    ],
    "overview": "Marty chce być gwiazdą. Nagnie więc wszystkie reguły, wejdzie w sojusze z ludźmi, od których powinien trzymać się z daleka, gotów będzie uwieść każdą kobietę, byleby tylko zrealizować swoje marzenie o wielkości.",
+   "notable": false
+  },
+  {
+   "tmdbId": 1198994,
+   "title": "Pomocy",
+   "originalTitle": "Send Help",
+   "date": "2026-01-30",
+   "poster": "https://image.tmdb.org/t/p/w342/jXamPkznkOOrZ5dBuUFgkdIIoXL.jpg",
+   "popularity": 24.1,
+   "voteAverage": 7,
+   "voteCount": 2226,
+   "genres": [
+    "horror",
+    "thriller",
+    "komedia"
+   ],
+   "overview": "Po katastrofie lotniczej Linda i Bradley zostają uwięzieni na bezludnej wyspie, gdzie muszą walczyć o przetrwanie w surowych warunkach. Szybko okazuje się, że największym zagrożeniem nie jest dzika przyroda, lecz ich własne lęki, frustracje i narastające konflikty między sobą.",
    "notable": false
   },
   {
@@ -456,7 +471,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/rKleYiEj4pFqxedTRWfujLooi84.jpg",
    "popularity": 15.4,
    "voteAverage": 6.5,
-   "voteCount": 853,
+   "voteCount": 856,
    "genres": [
     "horror",
     "thriller"
@@ -527,23 +542,6 @@
     "komedia"
    ],
    "overview": "Wysoce zaraźliwy i nieustannie mutujący mikroorganizm został zamrożony i zamknięty w ściśle strzeżonym laboratorium wojskowym wiele dekad temu. Najniższy poziom, w którym zabezpieczono śmiercionośnego intruza starannie zapieczętowano, nikt nie miał do niego dostępu od lat. Obecnie obiekt zostaje sprzedany i zamieniony ",
-   "notable": true
-  },
-  {
-   "tmdbId": 1277884,
-   "title": "Przepis na szczęście",
-   "originalTitle": "Partir un jour",
-   "date": "2026-02-06",
-   "poster": "https://image.tmdb.org/t/p/w342/rdF8sxTAoxk2U5DOJdYB0Dxv7se.jpg",
-   "popularity": 2.5,
-   "voteAverage": 6.2,
-   "voteCount": 224,
-   "genres": [
-    "dramat",
-    "komedia",
-    "muzyczny"
-   ],
-   "overview": "Cécile przygotowuje się do otwarcia własnej restauracji dla smakoszy i zrealizowania swojego marzenia. Niestety, po ataku serca ojca musi jak najszybciej wrócić do rodzinnej wioski. Z dala od zgiełku paryskiego życia, przypadkiem spotyka na nowo swoją dziecięcą miłość; jej wspomnienia powracają, a pewność siebie zaczyn",
    "notable": false
   },
   {
@@ -564,6 +562,23 @@
    "notable": false
   },
   {
+   "tmdbId": 1277884,
+   "title": "Przepis na szczęście",
+   "originalTitle": "Partir un jour",
+   "date": "2026-02-06",
+   "poster": "https://image.tmdb.org/t/p/w342/rdF8sxTAoxk2U5DOJdYB0Dxv7se.jpg",
+   "popularity": 2.5,
+   "voteAverage": 6.2,
+   "voteCount": 224,
+   "genres": [
+    "dramat",
+    "komedia",
+    "muzyczny"
+   ],
+   "overview": "Cécile przygotowuje się do otwarcia własnej restauracji dla smakoszy i zrealizowania swojego marzenia. Niestety, po ataku serca ojca musi jak najszybciej wrócić do rodzinnej wioski. Z dala od zgiełku paryskiego życia, przypadkiem spotyka na nowo swoją dziecięcą miłość; jej wspomnienia powracają, a pewność siebie zaczyn",
+   "notable": false
+  },
+  {
    "tmdbId": 1290821,
    "title": "Samotnik",
    "originalTitle": "Shelter",
@@ -571,14 +586,14 @@
    "poster": "https://image.tmdb.org/t/p/w342/qFyyVWSPG6mtGLIGVKpYXQpgmSS.jpg",
    "popularity": 59.2,
    "voteAverage": 7.8,
-   "voteCount": 1782,
+   "voteCount": 1785,
    "genres": [
     "akcja",
     "kryminał",
     "thriller"
    ],
    "overview": "Mężczyzna żyjący na dobrowolnym wygnaniu na odległej wyspie ratuje młodą dziewczynę ze sztormu, co wywołuje lawinę wydarzeń, które zmuszają go do wyjścia z odosobnienia, by chronić ją przed wrogami z jego przeszłości.",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1333141,
@@ -588,7 +603,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/urpsTNXkEDiyosDMiae1EdgKFBQ.jpg",
    "popularity": 47.6,
    "voteAverage": 4,
-   "voteCount": 154,
+   "voteCount": 156,
    "genres": [
     "animacja",
     "komedia",
@@ -605,7 +620,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/jjrl3S03IYneESg8O5eMJBBmO70.jpg",
    "popularity": 37.2,
    "voteAverage": 8.1,
-   "voteCount": 1036,
+   "voteCount": 1037,
    "genres": [
     "animacja",
     "komedia",
@@ -622,23 +637,23 @@
    "poster": "https://image.tmdb.org/t/p/w342/tVvpFIoteRHNnoZMhdnwIVwJpCA.jpg",
    "popularity": 29,
    "voteAverage": 7,
-   "voteCount": 1308,
+   "voteCount": 1310,
    "genres": [
     "kryminał",
     "thriller"
    ],
    "overview": "Historia trzech nieznajomych, którzy znajdują się w punkcie zwrotnym swojego życia, a ich drogi krzyżują się, gdy ekscytujący i ryzykowny napad na wielomilionową sumę kusi ich obietnicą zmiany życia. W miarę jak stawka rośnie, bohaterowie są zmuszeni zmierzyć się z konsekwencjami swoich wyborów i uświadomić sobie, że n",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1316092,
-   "title": "Wichrowe wzgórza",
-   "originalTitle": "\"Wuthering Heights\"",
+   "title": "“Wichrowe Wzgórza”",
+   "originalTitle": "“Wuthering Heights”",
    "date": "2026-02-13",
    "poster": "https://image.tmdb.org/t/p/w342/7TBO4qM8dDl3PkR6zRzKWOXBKW7.jpg",
    "popularity": 27.1,
    "voteAverage": 6.7,
-   "voteCount": 1302,
+   "voteCount": 1305,
    "genres": [
     "romans",
     "dramat"
@@ -654,7 +669,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/532YF8e9pvEjHVF7h3AOhoygRMG.jpg",
    "popularity": 15.5,
    "voteAverage": 6.3,
-   "voteCount": 666,
+   "voteCount": 667,
    "genres": [
     "horror",
     "tajemnica"
@@ -769,7 +784,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/qr4AR51yUxV90OrJWfCP79WlVJE.jpg",
    "popularity": 24.6,
    "voteAverage": 6.2,
-   "voteCount": 1244,
+   "voteCount": 1247,
    "genres": [
     "horror",
     "tajemnica",
@@ -851,7 +866,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/mhjbVeMb3nEw4H2VWakU62BRhsu.jpg",
    "popularity": 5.7,
    "voteAverage": 7.4,
-   "voteCount": 860,
+   "voteCount": 861,
    "genres": [
     "thriller",
     "tajemnica"
@@ -867,13 +882,30 @@
    "poster": "https://image.tmdb.org/t/p/w342/21O1zUHuxMoQQin78P14B8VYEbK.jpg",
    "popularity": 49.6,
    "voteAverage": 8.2,
-   "voteCount": 2255,
+   "voteCount": 2257,
    "genres": [
     "przygodowy",
     "animacja",
     "komedia"
    ],
    "overview": "A gdybyśmy tak mogli rozmawiać ze zwierzętami i rozumieli, co mówią? Nowy film Disneya i Pixara \"Hopnięci\" opowiada historię naukowców, którzy wynaleźli hopnozę - technologię przeszczepiania ludzkiej świadomości zwierzętopodobnym robotom w celu poznania świata prawdziwych zwierząt! Główna bohaterka, Mabel, wielka miłoś",
+   "notable": false
+  },
+  {
+   "tmdbId": 1381027,
+   "title": "Dobry chłopiec",
+   "originalTitle": "Good Boy",
+   "date": "2026-03-06",
+   "poster": "https://image.tmdb.org/t/p/w342/A5IyZ7UvyhpQGnNuZF7pyFH2OXx.jpg",
+   "popularity": 18.3,
+   "voteAverage": 7.3,
+   "voteCount": 250,
+   "genres": [
+    "thriller",
+    "dramat",
+    "tajemnica"
+   ],
+   "overview": "Dziewiętnastoletni Tommy lubi swoje beztroskie, pełne używek i lekkomyślnej przemocy życie. Pewnej nocy zostaje porwany przez nieznajomego, Chrisa. Budząc się w piwnicy położonego na uboczu domu, chłopak trafia w sam środek dysfunkcyjnej rodzinnej dynamiki. Chris i jego tajemnicza żona Kathryn próbują uczynić z niego „",
    "notable": false
   },
   {
@@ -893,23 +925,6 @@
    "notable": false
   },
   {
-   "tmdbId": 1381027,
-   "title": "Dobry chłopiec",
-   "originalTitle": "Good Boy",
-   "date": "2026-03-06",
-   "poster": "https://image.tmdb.org/t/p/w342/A5IyZ7UvyhpQGnNuZF7pyFH2OXx.jpg",
-   "popularity": 18.3,
-   "voteAverage": 7.3,
-   "voteCount": 248,
-   "genres": [
-    "thriller",
-    "dramat",
-    "tajemnica"
-   ],
-   "overview": "Dziewiętnastoletni Tommy lubi swoje beztroskie, pełne używek i lekkomyślnej przemocy życie. Pewnej nocy zostaje porwany przez nieznajomego, Chrisa. Budząc się w piwnicy położonego na uboczu domu, chłopak trafia w sam środek dysfunkcyjnej rodzinnej dynamiki. Chris i jego tajemnicza żona Kathryn próbują uczynić z niego „",
-   "notable": true
-  },
-  {
    "tmdbId": 1484486,
    "title": "Za duży na bajki 3",
    "originalTitle": null,
@@ -924,7 +939,7 @@
     "komedia"
    ],
    "overview": "Waldek ma dość – w domu chaos, w sieci drama, a jego gamingowy team się sypie. W emocjach robi coś głupiego – pisze złośliwy komentarz… i nieświadomie uruchamia lawinę hejtu, która uderza w jedną z najbliższych mu osób – Delfinę. Przygnieciony ciężarem własnego błędu, Waldi nie potrafi przyznać się ani Staszkowi, ani r",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1275785,
@@ -1016,7 +1031,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/sQWgdoo3qM6dMLdpfXD804XZhwY.jpg",
    "popularity": 104.5,
    "voteAverage": 8.6,
-   "voteCount": 7395,
+   "voteCount": 7404,
    "genres": [
     "sci-fi",
     "przygodowy"
@@ -1032,7 +1047,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/dHYVlDU6wUpe1Mgx4TThVm9UnZq.jpg",
    "popularity": 26.5,
    "voteAverage": 7.1,
-   "voteCount": 916,
+   "voteCount": 919,
    "genres": [
     "sci-fi",
     "akcja",
@@ -1140,7 +1155,7 @@
     "muzyczny"
    ],
    "overview": "Wygodne życie nastoletniego syna przywódcy yakuzy kończy się, gdy jego rodzice giną w zamachu. Trafia pod opiekę słynnego aktora, który dostrzega jego sceniczny talent. Rozpoczyna się katorżniczy trening i braterska rywalizacja z synem mentora w drodze na szczyt.",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1400381,
@@ -1213,14 +1228,14 @@
    "poster": "https://image.tmdb.org/t/p/w342/e3D2CQcSbpYq2zswNKbiTxwqD92.jpg",
    "popularity": 67.1,
    "voteAverage": 8.2,
-   "voteCount": 3557,
+   "voteCount": 3562,
    "genres": [
     "familijny",
     "komedia",
     "przygodowy"
    ],
    "overview": "Mario i Luigi spotykają i szybko zaprzyjaźniają się z Yoshim, po czym wyruszają wraz z Księżniczką Peach i Toadem na przygodę w kosmosie i całej galaktyce. Stają naprzeciwko syna Bowsera, Bowsera Juniora, i poznają Rosalinę.",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1325734,
@@ -1230,7 +1245,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/hLh6Ivz2Iyl0dr1QGN11GMiFYIh.jpg",
    "popularity": 33.1,
    "voteAverage": 6.9,
-   "voteCount": 1656,
+   "voteCount": 1663,
    "genres": [
     "romans",
     "komedia",
@@ -1247,7 +1262,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/qpilD5MI1jXJkh5nB0Uz9tQrymK.jpg",
    "popularity": 33,
    "voteAverage": 7.6,
-   "voteCount": 1553,
+   "voteCount": 1554,
    "genres": [
     "horror",
     "komedia"
@@ -1307,7 +1322,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/sc4SXfEaCr6GRzcZUrNdKXCcDEk.jpg",
    "popularity": 48.2,
    "voteAverage": 7.9,
-   "voteCount": 2581,
+   "voteCount": 2585,
    "genres": [
     "horror",
     "tajemnica"
@@ -1417,7 +1432,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/t13MdGCKRZvkmrFW2A7Vih3QjwD.jpg",
    "popularity": 23.2,
    "voteAverage": 7.3,
-   "voteCount": 522,
+   "voteCount": 525,
    "genres": [
     "akcja",
     "kryminał",
@@ -1466,7 +1481,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/mVQDcJ8fk5yNy5CoifIwoGX14po.jpg",
    "popularity": 68.9,
    "voteAverage": 7.1,
-   "voteCount": 2203,
+   "voteCount": 2210,
    "genres": [
     "komedia",
     "dramat"
@@ -1482,7 +1497,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/x6rHcQFiYcczLQPrmxXPAicm54E.jpg",
    "popularity": 24,
    "voteAverage": 6.9,
-   "voteCount": 788,
+   "voteCount": 797,
    "genres": [
     "horror"
    ],
@@ -1553,7 +1568,7 @@
     "sci-fi"
    ],
    "overview": "Kenji to nieśmiały moderator platformy OZ, wirtualnego świata przeplatającego się z codziennym życiem, który dostaje propozycję od pięknej i popularnej Natsuki, aby udawał jej chłopaka. Udając przed jej rodziną bogatego adoratora, Kenji odkrywa, że zbuntowane AI ukradło jego internetową tożsamość, a sam Kenji zostaje o",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1515899,
@@ -1595,7 +1610,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/yLMbHFNQ900b5M7kXujcJ5tkGrv.jpg",
    "popularity": 250.1,
    "voteAverage": 8.2,
-   "voteCount": 5114,
+   "voteCount": 5132,
    "genres": [
     "horror",
     "thriller"
@@ -1628,7 +1643,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/ftHUyDqg1LGQhcvj4mWKuXnXpZO.jpg",
    "popularity": 61.3,
    "voteAverage": 7.5,
-   "voteCount": 1391,
+   "voteCount": 1394,
    "genres": [
     "akcja",
     "przygodowy",
@@ -1645,7 +1660,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/w0VzFUvdSyvKpGnGRgEGul2y0IO.jpg",
    "popularity": 25.9,
    "voteAverage": 7.3,
-   "voteCount": 805,
+   "voteCount": 810,
    "genres": [
     "horror",
     "thriller"
@@ -1739,13 +1754,13 @@
    "poster": "https://image.tmdb.org/t/p/w342/hXht4M3cad5EIyusgTVzKKBueaS.jpg",
    "popularity": 41.7,
    "voteAverage": 7.6,
-   "voteCount": 818,
+   "voteCount": 820,
    "genres": [
     "akcja",
     "thriller"
    ],
    "overview": "Kiedy bezwzględny despota kradnie miliardową fortunę, tajny oddział elitarnych agentów, żyjących w globalnym cieniu, równie swobodnie posługujących się władzą i wpływami, co bronią automatyczną i materiałami wybuchowymi, zostaje wysłany, by ją odzyskać, w ramach misji, która dla każdego innego byłaby samobójcza. To, co",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1140521,
@@ -1822,7 +1837,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/A2zAxSDGABWQxAlxHBJHDSUAops.jpg",
    "popularity": 91.1,
    "voteAverage": 7.2,
-   "voteCount": 1979,
+   "voteCount": 1983,
    "genres": [
     "akcja",
     "fantasy",
@@ -1855,7 +1870,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/AsTNDKxTltcNuNjn9COdl9dz4OG.jpg",
    "popularity": 121.7,
    "voteAverage": 7.5,
-   "voteCount": 3063,
+   "voteCount": 3076,
    "genres": [
     "sci-fi",
     "thriller"
@@ -1931,7 +1946,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/1Yu8ILEVcUIVOPWJxGuPqgUdwD9.jpg",
    "popularity": 239.8,
    "voteAverage": 8.3,
-   "voteCount": 1739,
+   "voteCount": 1747,
    "genres": [
     "animacja",
     "familijny",
@@ -1948,14 +1963,14 @@
    "poster": "https://image.tmdb.org/t/p/w342/3E9KVlHelP6E0MGVvhV9Hp7yXEi.jpg",
    "popularity": 135.1,
    "voteAverage": 7.1,
-   "voteCount": 2999,
+   "voteCount": 3010,
    "genres": [
     "horror",
     "tajemnica",
     "sci-fi"
    ],
    "overview": "Clark natrafia w podziemiach swojego sklepu na przejście do niepokojącej, na pierwszy rzut oka pustej plątaniny niekończących się korytarzy. Kiedy opowiada o tym swojej terapeutce, kobieta uznaje, że mogą to być omamy zapowiadające pogorszenie jego stanu psychicznego. Sytuacja zmienia się, gdy Clark przestaje przychodz",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1284465,
@@ -2030,7 +2045,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/1QCWdqzTfh2x9UylVpspIU6QTuM.jpg",
    "popularity": 97.9,
    "voteAverage": 6.7,
-   "voteCount": 2089,
+   "voteCount": 2090,
    "genres": [
     "akcja",
     "przygodowy",
@@ -2038,21 +2053,6 @@
    ],
    "overview": "Kara Zor-El, znana jako Supergirl, łączy siły z nieoczywistym towarzyszem podczas międzygwiezdnej podróży pełnej zemsty i sprawiedliwości, gdy niespodziewany wróg uderza zbyt blisko domu.",
    "notable": true
-  },
-  {
-   "tmdbId": 1313211,
-   "title": "Koniec imprezy",
-   "originalTitle": "Classe moyenne",
-   "date": "2026-06-26",
-   "poster": "https://image.tmdb.org/t/p/w342/2TznRLhTEzMVS8JibDU5tKzTMkl.jpg",
-   "popularity": 1.8,
-   "voteAverage": 5.7,
-   "voteCount": 98,
-   "genres": [
-    "komedia"
-   ],
-   "overview": "Mehdi planuje spędzić spokojne lato w luksusowym domu swoich teściów. Jednak po przybyciu na miejsce wybucha konflikt między rodziną jego narzeczonej a parą opiekującą się willą. Ponieważ Mehdi wywodzi się ze skromnej rodziny, wierzy, że może poprowadzić negocjacje między obiema stronami i skłonić wszystkich do rozsądk",
-   "notable": false
   },
   {
    "tmdbId": 1277047,
@@ -2069,6 +2069,21 @@
     "fantasy"
    ],
    "overview": "Dziesięcioletni Omul razem z rodzicami, bratem Mikro i młodszą siostrą Kimi żyje w nadmorskim miasteczku Krimo. Pewnego dnia Omul z Kimi bawią się na plaży. Nagle pogoda diametralnie się zmienia i nad wyspę nadciąga ogromna fala, która porywa dzieci w ciemną otchłań. Pod wodą Omul widzi, jak tajemnicza istota Sadumea –",
+   "notable": false
+  },
+  {
+   "tmdbId": 1313211,
+   "title": "Koniec imprezy",
+   "originalTitle": "Classe moyenne",
+   "date": "2026-06-26",
+   "poster": "https://image.tmdb.org/t/p/w342/2TznRLhTEzMVS8JibDU5tKzTMkl.jpg",
+   "popularity": 1.8,
+   "voteAverage": 5.7,
+   "voteCount": 98,
+   "genres": [
+    "komedia"
+   ],
+   "overview": "Mehdi planuje spędzić spokojne lato w luksusowym domu swoich teściów. Jednak po przybyciu na miejsce wybucha konflikt między rodziną jego narzeczonej a parą opiekującą się willą. Ponieważ Mehdi wywodzi się ze skromnej rodziny, wierzy, że może poprowadzić negocjacje między obiema stronami i skłonić wszystkich do rozsądk",
    "notable": false
   },
   {
@@ -2109,8 +2124,8 @@
    "date": "2026-07-01",
    "poster": "https://image.tmdb.org/t/p/w342/sTQpzcwBXnYNRipgnhwL7EHHW74.jpg",
    "popularity": 178,
-   "voteAverage": 7.5,
-   "voteCount": 919,
+   "voteAverage": 7.6,
+   "voteCount": 922,
    "genres": [
     "przygodowy",
     "animacja",
@@ -2219,12 +2234,12 @@
    "poster": "https://image.tmdb.org/t/p/w342/4ogjMEVHP34IX01Q4eGxk67AjVD.jpg",
    "popularity": 107.7,
    "voteAverage": 7.8,
-   "voteCount": 1321,
+   "voteCount": 1330,
    "genres": [
     "horror"
    ],
    "overview": "Po śmierci męża kobieta szuka ukojenia u teściów w ich odosobnionym domu na pustkowiu. Spokój szybko zamienia się w koszmar, gdy kolejni członkowie rodziny, jeden po drugim, padają ofiarą mrocznej siły i przemieniają się w Deadites, opętanych przez demoniczne moce przywołane z księgi Necronomicon Ex-Mortis. W obliczu n",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1290424,
@@ -2266,14 +2281,14 @@
    "poster": "https://image.tmdb.org/t/p/w342/1g2v4Gg8kVe6P1p5Tz5IA69BPBN.jpg",
    "popularity": 586.1,
    "voteAverage": 8,
-   "voteCount": 3280,
+   "voteCount": 3292,
    "genres": [
     "przygodowy",
     "akcja",
     "fantasy"
    ],
    "overview": "Odyseusz, legendarny grecki król Itaki, po wojnie trojańskiej wyrusza w długą i niebezpieczną podróż do domu, opisując swoje spotkania z mitycznymi istotami, takimi jak cyklop Polifem, syreny i czarownica-bogini Circe.",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1473635,
@@ -2381,7 +2396,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/sp8BH41oNdYwIKQFswqluNYa3SM.jpg",
    "popularity": 1110.5,
    "voteAverage": 7.9,
-   "voteCount": 2242,
+   "voteCount": 2251,
    "genres": [
     "sci-fi",
     "akcja",
@@ -2546,7 +2561,7 @@
     "thriller"
    ],
    "overview": "Na uboczu prowincjonalnej Ameryki żyje charyzmatyczny outsider, muzyk i lokalny przedsiębiorca, który przewodzi nietuzinkowej społeczności. Gdy po latach do jego życia niespodziewanie wraca przybrana córka, mężczyzna dostrzega szansę na odbudowanie relacji i stworzenie prawdziwego rodzinnego biznesu. Ich wspólna przysz",
-   "notable": false
+   "notable": true
   },
   {
    "tmdbId": 1731683,
@@ -2601,13 +2616,29 @@
    "poster": "https://image.tmdb.org/t/p/w342/4tTrW9dXCByS5wt2pXVWb58zNjz.jpg",
    "popularity": 87.5,
    "voteAverage": 6.5,
-   "voteCount": 83,
+   "voteCount": 85,
    "genres": [
     "horror",
     "thriller"
    ],
    "overview": "Gemma, młoda matka wychowująca córkę w swoim rodzinnym domu, odkrywa, że potrafi przenikać do Mrocznego Wymiaru (The Further) oraz sprowadzać stamtąd stworzenia do świata rzeczywistego.",
    "notable": true
+  },
+  {
+   "tmdbId": 1266800,
+   "title": "Księga pustyni",
+   "originalTitle": "L'enfant du désert",
+   "date": "2026-08-21",
+   "poster": "https://image.tmdb.org/t/p/w342/wflWxdlQXwe4IATGA7bDzVMDNJw.jpg",
+   "popularity": 6.9,
+   "voteAverage": 7.6,
+   "voteCount": 25,
+   "genres": [
+    "przygodowy",
+    "familijny"
+   ],
+   "overview": "Dwunastoletnia Sun wyrusza na Saharę, by rozwikłać sekret starej legendy opowiadanej przez dziadka. Na miejscu poznaje prawdziwe losy chłopca, który w wieku dwóch lat zaginął podczas potężnej burzy piaskowej. Pozostawiony na pastwę pustyni, zostaje cudownie ocalony przez stadko strusi. Spędza z nimi następne dziesięć l",
+   "notable": false
   },
   {
    "tmdbId": 1254808,
@@ -2624,22 +2655,6 @@
     "historyczny"
    ],
    "overview": "Historia powstania i kręcenia filmu Jeana-Luca Godarda „Do utraty tchu”, w stylu i duchu, w jakim go Godard stworzył.",
-   "notable": false
-  },
-  {
-   "tmdbId": 1266800,
-   "title": "Księga pustyni",
-   "originalTitle": "L'enfant du désert",
-   "date": "2026-08-21",
-   "poster": "https://image.tmdb.org/t/p/w342/wflWxdlQXwe4IATGA7bDzVMDNJw.jpg",
-   "popularity": 6.9,
-   "voteAverage": 7.7,
-   "voteCount": 24,
-   "genres": [
-    "przygodowy",
-    "familijny"
-   ],
-   "overview": "Dwunastoletnia Sun wyrusza na Saharę, by rozwikłać sekret starej legendy opowiadanej przez dziadka. Na miejscu poznaje prawdziwe losy chłopca, który w wieku dwóch lat zaginął podczas potężnej burzy piaskowej. Pozostawiony na pastwę pustyni, zostaje cudownie ocalony przez stadko strusi. Spędza z nimi następne dziesięć l",
    "notable": false
   },
   {
@@ -2743,23 +2758,6 @@
    "notable": false
   },
   {
-   "tmdbId": 1240889,
-   "title": "Miłość, śmierć i dojrzewanie w Camp Miasma",
-   "originalTitle": "Teenage Sex and Death at Camp Miasma",
-   "date": "2026-09-04",
-   "poster": "https://image.tmdb.org/t/p/w342/jwbVm2KTB5KOLauXkmJAegzZnhg.jpg",
-   "popularity": 21.7,
-   "voteAverage": 6.8,
-   "voteCount": 73,
-   "genres": [
-    "komedia",
-    "horror",
-    "romans"
-   ],
-   "overview": null,
-   "notable": false
-  },
-  {
    "tmdbId": 1341138,
    "title": "Spa Weekend",
    "originalTitle": null,
@@ -2775,6 +2773,23 @@
    "notable": false
   },
   {
+   "tmdbId": 1240889,
+   "title": "Miłość, śmierć i dojrzewanie w Camp Miasma",
+   "originalTitle": "Teenage Sex and Death at Camp Miasma",
+   "date": "2026-09-04",
+   "poster": "https://image.tmdb.org/t/p/w342/jwbVm2KTB5KOLauXkmJAegzZnhg.jpg",
+   "popularity": 21.7,
+   "voteAverage": 6.8,
+   "voteCount": 74,
+   "genres": [
+    "komedia",
+    "horror",
+    "romans"
+   ],
+   "overview": null,
+   "notable": false
+  },
+  {
    "tmdbId": 1329016,
    "title": "Tony",
    "originalTitle": null,
@@ -2782,7 +2797,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/3WN0JWwRI7oGH7Ni2R6poVWej05.jpg",
    "popularity": 16.2,
    "voteAverage": 7.4,
-   "voteCount": 27,
+   "voteCount": 28,
    "genres": [
     "dramat",
     "komedia"
@@ -2819,7 +2834,7 @@
     "thriller"
    ],
    "overview": "Przyjaciółki Grace Caroline Currey i Virginia Gardner ponownie wcielają się w swoje role. Ich umiejętności wspinaczkowe i determinacja do przetrwania zostają wystawione na próbę w ryzykownych sytuacjach na szczycie pustej, 600-metrowej wieży radiowej.\r Przytłoczona śmiercią siostry Hunter, Jax (Slater) nawiązuje kontak",
-   "notable": false
+   "notable": true
   },
   {
    "tmdbId": 1318413,
@@ -2839,21 +2854,6 @@
    "notable": false
   },
   {
-   "tmdbId": 1596319,
-   "title": "Bez końca",
-   "originalTitle": null,
-   "date": "2026-09-11",
-   "poster": "https://image.tmdb.org/t/p/w342/bKSiglgwv5lCKsuXOZl5hq5pmZ6.jpg",
-   "popularity": 1.6,
-   "voteAverage": 0,
-   "voteCount": 0,
-   "genres": [
-    "dokumentalny"
-   ],
-   "overview": "Po zaginięciu nastoletniego syna Daniel przeszukuje głębiny Wisły, rozdarty między strachem przed śmiertelnym skokiem a nadzieją, że jego syn jednak żyje.",
-   "notable": false
-  },
-  {
    "tmdbId": 1731866,
    "title": "Mistyczka",
    "originalTitle": null,
@@ -2870,6 +2870,21 @@
    "notable": false
   },
   {
+   "tmdbId": 1596319,
+   "title": "Bez końca",
+   "originalTitle": null,
+   "date": "2026-09-11",
+   "poster": "https://image.tmdb.org/t/p/w342/bKSiglgwv5lCKsuXOZl5hq5pmZ6.jpg",
+   "popularity": 1.6,
+   "voteAverage": 0,
+   "voteCount": 0,
+   "genres": [
+    "dokumentalny"
+   ],
+   "overview": "Po zaginięciu nastoletniego syna Daniel przeszukuje głębiny Wisły, rozdarty między strachem przed śmiertelnym skokiem a nadzieją, że jego syn jednak żyje.",
+   "notable": false
+  },
+  {
    "tmdbId": 372058,
    "title": "Twoje imię.",
    "originalTitle": "君の名は。",
@@ -2877,7 +2892,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/tsnv8sUhfDKJvSovaux9mWHyVVq.jpg",
    "popularity": 26.6,
    "voteAverage": 8.5,
-   "voteCount": 12914,
+   "voteCount": 12916,
    "genres": [
     "animacja",
     "romans",
@@ -2901,7 +2916,7 @@
     "thriller"
    ],
    "overview": "Ichigo i jego przyjaciele poszukują złodziei ważnego dla Społeczności Dusz artefaktu, aby oczyścić z zarzutu zdrady kapitana Hitsugayę.",
-   "notable": false
+   "notable": true
   },
   {
    "tmdbId": 15575,
@@ -2918,7 +2933,7 @@
     "sci-fi"
    ],
    "overview": "Ichigo poznaje tajemniczą Shinigami, którą ochronia przed Ganryu i jego najemnikami.",
-   "notable": false
+   "notable": true
   },
   {
    "tmdbId": 1382513,
@@ -2983,7 +2998,7 @@
     "fantasy"
    ],
    "overview": "Wysłany do Społeczeństwa Dusz Ichigo zostaje zaatakowany przez Shinigami, którzy stracili wspomnienia z nim związane.",
-   "notable": false
+   "notable": true
   },
   {
    "tmdbId": 73245,
@@ -3000,7 +3015,7 @@
     "fantasy"
    ],
    "overview": "Ichigo wyrusza do Piekła, aby ocalić porwaną siostrę.",
-   "notable": false
+   "notable": true
   },
   {
    "tmdbId": 813418,
@@ -3050,23 +3065,6 @@
     "dokumentalny"
    ],
    "overview": "Po siedmioletniej przerwie, będącej następstwem bolesnej straty ukochanego członka zespołu, Chestera Benningtona, pozostali członkowie LINKIN PARK próbują odnaleźć swoją drogę naprzód. Wspólna historia i trwała przyjaźń, połączone ze świeżym spojrzeniem dwóch nowych członków zespołu, budzą na nowo twórczą energię i pro",
-   "notable": false
-  },
-  {
-   "tmdbId": 1321666,
-   "title": "Lalka",
-   "originalTitle": null,
-   "date": "2026-09-30",
-   "poster": "https://image.tmdb.org/t/p/w342/yQZtwuo1S2N4ixO92mPdL8O1kPD.jpg",
-   "popularity": 1.4,
-   "voteAverage": 0,
-   "voteCount": 0,
-   "genres": [
-    "romans",
-    "dramat",
-    "historyczny"
-   ],
-   "overview": "Nowa adaptacja powieści Bolesława Prusa o tym samym tytule.",
    "notable": true
   },
   {
@@ -3136,7 +3134,7 @@
    "title": "Street Fighter. Uliczny Wojownik",
    "originalTitle": "Street Fighter",
    "date": "2026-10-16",
-   "poster": "https://image.tmdb.org/t/p/w342/wOnoOeDcsLSo72ON1UC6c1VHKk1.jpg",
+   "poster": "https://image.tmdb.org/t/p/w342/oMnncMmgzAhIAJ8I1gv0dugguQv.jpg",
    "popularity": 6.8,
    "voteAverage": 0,
    "voteCount": 0,
@@ -3144,7 +3142,7 @@
     "akcja",
     "fantasy"
    ],
-   "overview": null,
+   "overview": "Akcja filmu rozgrywa się w 1993 roku. Skłóceni wojownicy Ryu (Andrew Koji) i Ken Masters (Noah Centineo) ponownie stają do walki, gdy tajemnicza Chun-Li (Callina Liang) rekrutuje ich do kolejnego turnieju World Warrior Tournament: brutalnej walki na pięści. Jednak za tą walką kryje się spisek, który zmusza ich do zmier",
    "notable": true
   },
   {
@@ -3160,7 +3158,7 @@
     "thriller"
    ],
    "overview": null,
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1480865,
@@ -3228,6 +3226,23 @@
    "notable": false
   },
   {
+   "tmdbId": 1058424,
+   "title": "Witajcie w Hope",
+   "originalTitle": "호프",
+   "date": "2026-10-30",
+   "poster": "https://image.tmdb.org/t/p/w342/ptqlN6mDIAqJjVA86J5eOoG82zc.jpg",
+   "popularity": 26.1,
+   "voteAverage": 8.2,
+   "voteCount": 24,
+   "genres": [
+    "sci-fi",
+    "tajemnica",
+    "akcja"
+   ],
+   "overview": "Na obrzeżach odległego miasta portowego dokonuje się tajemniczego odkrycia. Mieszkańcy desperacko walczą o przetrwanie z czymś, z czym nigdy wcześniej się nie zetknęli.",
+   "notable": true
+  },
+  {
    "tmdbId": 1720365,
    "title": "Egzamin '84",
    "originalTitle": null,
@@ -3258,7 +3273,7 @@
     "przygodowy"
    ],
    "overview": null,
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 891621,
@@ -3367,7 +3382,7 @@
    "poster": "https://image.tmdb.org/t/p/w342/tAdNzwyRIS3hD8aO9dXQP89GUv5.jpg",
    "popularity": 70,
    "voteAverage": 8,
-   "voteCount": 27,
+   "voteCount": 29,
    "genres": [
     "komedia",
     "przygodowy",
@@ -3472,7 +3487,7 @@
     "komedia"
    ],
    "overview": "Do kociołka napoju magicznego przez przypadek trafia eliksir młodości. W wyniku tej pomyłki mieszkańcy galijskiej wioski zamieniają się w dzieci. Asteriks i Obeliks ruszają w podróż, by znaleźć rozwiązanie problemu. Wędrowka zaprowadzi ich do królestwa Nubii.",
-   "notable": true
+   "notable": false
   },
   {
    "tmdbId": 1735307,
