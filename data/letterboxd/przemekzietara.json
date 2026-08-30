@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-29T23:40:24.006Z",
+ "generatedAt": "2026-08-30T09:32:43.353Z",
  "fullSyncAt": "2026-07-13T20:25:32.221Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 518,
+  "watched": 519,
   "watchlist": 125
  },
  "watched": [
@@ -3633,6 +3633,13 @@
    "year": 2020,
    "rating10": 8,
    "norm": "tenet"
+  },
+  {
+   "slug": "booksmart",
+   "title": "Booksmart",
+   "year": 2019,
+   "rating10": 6,
+   "norm": "booksmart"
   }
  ],
  "watchlist": [
@@ -4389,6 +4396,16 @@
  ],
  "recent": [
   {
+   "title": "Booksmart",
+   "year": 2019,
+   "slug": "booksmart",
+   "rating10": 6,
+   "watchedDate": "2026-08-30",
+   "rewatch": false,
+   "tmdbId": 505600,
+   "review": null
+  },
+  {
    "title": "Black Widow",
    "year": 2021,
    "slug": "black-widow-2021",
@@ -4876,16 +4893,6 @@
    "watchedDate": "2026-01-01",
    "rewatch": false,
    "tmdbId": 1567451,
-   "review": null
-  },
-  {
-   "title": "Five Nights at Freddy's 2",
-   "year": 2025,
-   "slug": "five-nights-at-freddys-2",
-   "rating10": 3,
-   "watchedDate": "2025-12-28",
-   "rewatch": false,
-   "tmdbId": 1228246,
    "review": null
   }
  ]
