@@ -176,6 +176,7 @@ async function lbLookup(film, cache) {
 
   const year = parseInt(film.releaseYear, 10) || null;
   let found = null;
+  let anySearchOk = false; // czy choc jedno zapytanie w ogole doszlo do serwera
   for (const q of queries) {
     // "/" i ":" w ścieżce wyszukiwarka odrzuca (HTTP 400) — zamieniamy na spacje
     const safeQ = q.replace(/[/\\:]+/g, ' ').replace(/\s+/g, ' ').trim();
@@ -183,6 +184,7 @@ async function lbLookup(film, cache) {
     let results = [];
     try {
       results = parseLbSearch(await fetchTextViaCurl(url, { userAgent: BROWSER_UA }));
+      anySearchOk = true;
     } catch (err) {
       console.warn(`[lb-map] wyszukiwanie "${q}" nieudane: ${err.message}`);
     }
@@ -194,6 +196,11 @@ async function lbLookup(film, cache) {
       results[0];
     if (found) break;
   }
+
+  // Gdy zadne zapytanie nie doszlo (blokada/siec), NIE zapisujemy "brak
+  // dopasowania" — inaczej jeden zablokowany run kasowalby powiazanie filmu
+  // na 7 dni. Zwracamy pustke bez cache'owania; sprobujemy w kolejnym runie.
+  if (!found && !anySearchOk) return { q: film.name, slug: null, transient: true };
 
   const entry = found
     ? { fetchedAt: TODAY, q: film.name, slug: found.slug, title: found.title, year: found.year }
@@ -346,7 +353,24 @@ async function main() {
   const lbMap = (await readJsonIfExists(lbMapPath, {})) || {};
   let mapped = 0;
   let rated = 0;
+  // Twardy budzet: wzbogacanie o Letterboxd to metadane OPCJONALNE i nigdy
+  // nie moze zjesc limitu czasu joba (wczesniej ~100 zapytan x ~100 s przy
+  // blokadzie => run anulowany). Po przekroczeniu korzystamy z cache'u.
+  const lbDeadline = Date.now() + 6 * 60 * 1000;
+  let lbSkipped = 0;
+
   for (const f of films.values()) {
+    if (Date.now() > lbDeadline) {
+      // po budzecie: tylko to, co juz jest w cache — zero zapytan sieciowych
+      const cached = lbMap[f.id];
+      f.lbSlug = cached?.slug ?? null;
+      f.lbTitle = cached?.slug ? cached.title : null;
+      f.lbRating = cached?.rating ?? null;
+      f.lbRatingCount = cached?.ratingCount ?? 0;
+      if (cached?.slug) mapped++;
+      lbSkipped++;
+      continue;
+    }
     const entry = await lbLookup({ id: f.id, name: f.title, releaseYear: f.year }, lbMap);
     await lbRating(entry);
     f.lbSlug = entry.slug;
@@ -357,7 +381,8 @@ async function main() {
     if (entry.rating) rated++;
   }
   await writeJson(lbMapPath, lbMap);
-  console.log(`[lb-map] dopasowano ${mapped}/${films.size} filmów, ocen Letterboxd: ${rated}`);
+  console.log(`[lb-map] dopasowano ${mapped}/${films.size} filmów, ocen Letterboxd: ${rated}` +
+    (lbSkipped ? `, pominięto po budżecie czasu: ${lbSkipped}` : ''));
 
   const out = {
     generatedAt: new Date().toISOString(),

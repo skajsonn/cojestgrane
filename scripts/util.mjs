@@ -104,6 +104,26 @@ const hostFails = new Map();
 const hostRoute = new Map(); // host -> nazwa drogi, która ostatnio zadziałała
 const HOST_FAIL_LIMIT = 3;
 
+/** Zlicza niepowodzenie hosta; po HOST_FAIL_LIMIT host jest pomijany do końca runu. */
+function noteHostFailure(host) {
+  const n = (hostFails.get(host) || 0) + 1;
+  hostFails.set(host, n);
+  if (n >= HOST_FAIL_LIMIT) {
+    blockedHosts.add(host);
+    console.warn(`[fetch] ${host}: ${n} nieudanych pobrań — pomijam resztę tego uruchomienia (fail-fast).`);
+  }
+}
+
+/** Udane pobranie kasuje licznik — pojedyncze czkawki nie mogą uzbierać się do blokady. */
+function noteHostSuccess(host) {
+  hostFails.delete(host);
+}
+
+/** Czy host został już uznany za niedostępny w tym uruchomieniu. */
+export function isHostBlocked(host) {
+  return blockedHosts.has(host);
+}
+
 /** Pojedynczy curl bez ponawiania i bez proxy-storm (ograniczony w czasie). */
 async function curlOnce(url, userAgent, timeoutSec = 12) {
   try {
@@ -172,17 +192,13 @@ export async function fetchJsonResilient(url, { headers = {} } = {}) {
       try {
         const parsed = JSON.parse(text);
         hostRoute.set(host, name);
+        noteHostSuccess(host);
         return parsed;
       } catch { /* nie-JSON, następna droga */ }
     }
   }
 
-  const n = (hostFails.get(host) || 0) + 1;
-  hostFails.set(host, n);
-  if (n >= HOST_FAIL_LIMIT) {
-    blockedHosts.add(host);
-    console.warn(`[fetch] ${host}: ${n} nieudanych pobrań — pomijam resztę tego uruchomienia (fail-fast).`);
-  }
+  noteHostFailure(host);
   throw new Error(`Wszystkie drogi pobrania zawiodły dla ${url}`);
 }
 
@@ -225,9 +241,16 @@ export async function fetchTextViaCurl(url, { retries = 2, timeoutSec = 25, user
   const u = new URL(url); // walidacja — odrzuca śmieci zanim trafią do curla
   if (u.protocol !== 'https:') throw new Error(`Dozwolone tylko https: ${url}`);
 
-  if (u.hostname === 'letterboxd.com') {
+  // Bezpiecznik: bez tego każde z ~100 zapytań do zablokowanego hosta mieliło
+  // worker → curl → 6 proxy (~100 s), co przekraczało limit czasu joba.
+  const host = u.hostname;
+  if (blockedHosts.has(host)) {
+    throw new Error(`${host}: pominięty (oznaczony jako zablokowany w tym uruchomieniu)`);
+  }
+
+  if (host === 'letterboxd.com') {
     const viaWorker = await fetchViaWorker(u.toString());
-    if (viaWorker) return viaWorker;
+    if (viaWorker) { noteHostSuccess(host); return viaWorker; }
   }
   let lastErr;
   let blocked = false;
@@ -248,7 +271,7 @@ export async function fetchTextViaCurl(url, { retries = 2, timeoutSec = 25, user
       const idx = stdout.lastIndexOf('\n');
       const status = Number(stdout.slice(idx + 1).trim());
       const body = stdout.slice(0, idx);
-      if (status >= 200 && status < 300 && !isChallenge(body)) return body;
+      if (status >= 200 && status < 300 && !isChallenge(body)) { noteHostSuccess(host); return body; }
       lastErr = new Error(`HTTP ${status}${isChallenge(body) ? ' (challenge)' : ''} dla ${url}`);
       if (status === 404) throw lastErr;              // nie istnieje — nie ponawiamy
       if (status === 403 || isChallenge(body)) { blocked = true; break; } // od razu do proxy
@@ -260,7 +283,14 @@ export async function fetchTextViaCurl(url, { retries = 2, timeoutSec = 25, user
   }
 
   // Fallback przez proxy CORS — pomaga, gdy nasze IP jest blokowane.
-  return fetchTextViaProxy(url, { rounds: 2 });
+  try {
+    const viaProxy = await fetchTextViaProxy(url, { rounds: 2 });
+    noteHostSuccess(host);
+    return viaProxy;
+  } catch (err) {
+    noteHostFailure(host);
+    throw err;
+  }
 }
 
 export async function readJsonIfExists(path, fallback = null) {

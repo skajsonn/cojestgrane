@@ -1,13 +1,27 @@
 {
- "generatedAt": "2026-08-31T21:08:57.376Z",
- "fullSyncAt": "2026-07-13T20:24:55.277Z",
+ "generatedAt": "2026-09-04T16:55:39.996Z",
+ "fullSyncAt": "2026-09-04T16:55:39.996Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
   "watched": 243,
-  "watchlist": 53
+  "watchlist": 61
  },
  "watched": [
+  {
+   "slug": "spider-man-brand-new-day",
+   "title": "Spider-Man: Brand New Day",
+   "year": 2026,
+   "rating10": 8,
+   "norm": "spider man brand new day"
+  },
+  {
+   "slug": "the-odyssey-2026",
+   "title": "The Odyssey",
+   "year": 2026,
+   "rating10": 9,
+   "norm": "the odyssey"
+  },
   {
    "slug": "project-hail-mary",
    "title": "Project Hail Mary",
@@ -21,6 +35,13 @@
    "year": 2026,
    "rating10": 10,
    "norm": "peaky blinders the immortal man"
+  },
+  {
+   "slug": "the-invite-2026",
+   "title": "The Invite",
+   "year": 2026,
+   "rating10": 6,
+   "norm": "the invite"
   },
   {
    "slug": "now-you-see-me-now-you-dont-2025",
@@ -443,6 +464,13 @@
    "norm": "free guy"
   },
   {
+   "slug": "black-widow-2021",
+   "title": "Black Widow",
+   "year": 2021,
+   "rating10": 6,
+   "norm": "black widow"
+  },
+  {
    "slug": "nobody-2021",
    "title": "Nobody",
    "year": 2021,
@@ -541,6 +569,13 @@
    "norm": "ford v ferrari"
   },
   {
+   "slug": "spider-man-far-from-home",
+   "title": "Spider-Man: Far From Home",
+   "year": 2019,
+   "rating10": 7,
+   "norm": "spider man far from home"
+  },
+  {
    "slug": "the-lighthouse-2019",
    "title": "The Lighthouse",
    "year": 2019,
@@ -548,11 +583,25 @@
    "norm": "the lighthouse"
   },
   {
+   "slug": "avengers-endgame",
+   "title": "Avengers: Endgame",
+   "year": 2019,
+   "rating10": 10,
+   "norm": "avengers endgame"
+  },
+  {
    "slug": "shazam",
    "title": "Shazam!",
    "year": 2019,
    "rating10": 6,
    "norm": "shazam"
+  },
+  {
+   "slug": "captain-marvel",
+   "title": "Captain Marvel",
+   "year": 2019,
+   "rating10": 6,
+   "norm": "captain marvel"
   },
   {
    "slug": "the-mule-2018",
@@ -583,6 +632,13 @@
    "norm": "blinded by the lights"
   },
   {
+   "slug": "ant-man-and-the-wasp",
+   "title": "Ant-Man and the Wasp",
+   "year": 2018,
+   "rating10": 6,
+   "norm": "ant man and the wasp"
+  },
+  {
    "slug": "oceans-eight",
    "title": "Ocean's Eight",
    "year": 2018,
@@ -597,6 +653,20 @@
    "norm": "blackkklansman"
   },
   {
+   "slug": "avengers-infinity-war",
+   "title": "Avengers: Infinity War",
+   "year": 2018,
+   "rating10": 9,
+   "norm": "avengers infinity war"
+  },
+  {
+   "slug": "black-panther",
+   "title": "Black Panther",
+   "year": 2018,
+   "rating10": 6,
+   "norm": "black panther"
+  },
+  {
    "slug": "blade-runner-2049",
    "title": "Blade Runner 2049",
    "year": 2017,
@@ -604,11 +674,25 @@
    "norm": "blade runner 2049"
   },
   {
+   "slug": "thor-ragnarok",
+   "title": "Thor: Ragnarok",
+   "year": 2017,
+   "rating10": 8,
+   "norm": "thor ragnarok"
+  },
+  {
    "slug": "three-billboards-outside-ebbing-missouri",
    "title": "Three Billboards Outside Ebbing, Missouri",
    "year": 2017,
    "rating10": 7,
    "norm": "three billboards outside ebbing missouri"
+  },
+  {
+   "slug": "spider-man-homecoming",
+   "title": "Spider-Man: Homecoming",
+   "year": 2017,
+   "rating10": 8,
+   "norm": "spider man homecoming"
   },
   {
    "slug": "wonder-woman-2017",
@@ -623,6 +707,13 @@
    "year": 2017,
    "rating10": 9,
    "norm": "guardians of the galaxy vol 2"
+  },
+  {
+   "slug": "doctor-strange-2016",
+   "title": "Doctor Strange",
+   "year": 2016,
+   "rating10": 7,
+   "norm": "doctor strange"
   },
   {
    "slug": "hacksaw-ridge",
@@ -660,6 +751,13 @@
    "norm": "the nice guys"
   },
   {
+   "slug": "captain-america-civil-war",
+   "title": "Captain America: Civil War",
+   "year": 2016,
+   "rating10": 8,
+   "norm": "captain america civil war"
+  },
+  {
    "slug": "zoolander-2",
    "title": "Zoolander 2",
    "year": 2016,
@@ -677,7 +775,7 @@
    "slug": "skepta-top-boy",
    "title": "Skepta: Top Boy",
    "year": 2015,
-   "rating10": 8,
+   "rating10": 9,
    "norm": "skepta top boy"
   },
   {
@@ -686,6 +784,20 @@
    "year": 2015,
    "rating10": 8,
    "norm": "straight outta compton"
+  },
+  {
+   "slug": "ant-man",
+   "title": "Ant-Man",
+   "year": 2015,
+   "rating10": 6,
+   "norm": "ant man"
+  },
+  {
+   "slug": "avengers-age-of-ultron",
+   "title": "Avengers: Age of Ultron",
+   "year": 2015,
+   "rating10": 6,
+   "norm": "avengers age of ultron"
   },
   {
    "slug": "ex-machina-2015",
@@ -730,6 +842,13 @@
    "norm": "22 jump street"
   },
   {
+   "slug": "captain-america-the-winter-soldier",
+   "title": "Captain America: The Winter Soldier",
+   "year": 2014,
+   "rating10": 7,
+   "norm": "captain america the winter soldier"
+  },
+  {
    "slug": "the-grand-budapest-hotel",
    "title": "The Grand Budapest Hotel",
    "year": 2014,
@@ -749,6 +868,13 @@
    "year": 2013,
    "rating10": 9,
    "norm": "lone survivor"
+  },
+  {
+   "slug": "thor-the-dark-world",
+   "title": "Thor: The Dark World",
+   "year": 2013,
+   "rating10": 6,
+   "norm": "thor the dark world"
   },
   {
    "slug": "dallas-buyers-club",
@@ -793,6 +919,13 @@
    "norm": "now you see me"
   },
   {
+   "slug": "iron-man-3",
+   "title": "Iron Man 3",
+   "year": 2013,
+   "rating10": 7,
+   "norm": "iron man 3"
+  },
+  {
    "slug": "django-unchained",
    "title": "Django Unchained",
    "year": 2012,
@@ -819,6 +952,13 @@
    "year": 2012,
    "rating10": 6,
    "norm": "the hunt"
+  },
+  {
+   "slug": "the-avengers-2012",
+   "title": "The Avengers",
+   "year": 2012,
+   "rating10": 8,
+   "norm": "the avengers"
   },
   {
    "slug": "21-jump-street",
@@ -856,11 +996,25 @@
    "norm": "50 50"
   },
   {
+   "slug": "captain-america-the-first-avenger",
+   "title": "Captain America: The First Avenger",
+   "year": 2011,
+   "rating10": 8,
+   "norm": "captain america the first avenger"
+  },
+  {
    "slug": "drive-2011",
    "title": "Drive",
    "year": 2011,
    "rating10": 8,
    "norm": "drive"
+  },
+  {
+   "slug": "thor",
+   "title": "Thor",
+   "year": 2011,
+   "rating10": 7,
+   "norm": "thor"
   },
   {
    "slug": "the-fighter-2010",
@@ -882,6 +1036,13 @@
    "year": 2010,
    "rating10": 9,
    "norm": "inception"
+  },
+  {
+   "slug": "iron-man-2",
+   "title": "Iron Man 2",
+   "year": 2010,
+   "rating10": 8,
+   "norm": "iron man 2"
   },
   {
    "slug": "shutter-island",
@@ -945,6 +1106,13 @@
    "year": 2008,
    "rating10": 8,
    "norm": "you don t mess with the zohan"
+  },
+  {
+   "slug": "iron-man-2008",
+   "title": "Iron Man",
+   "year": 2008,
+   "rating10": 7,
+   "norm": "iron man"
   },
   {
    "slug": "superbad",
@@ -1220,6 +1388,13 @@
    "norm": "memento"
   },
   {
+   "slug": "requiem-for-a-dream",
+   "title": "Requiem for a Dream",
+   "year": 2000,
+   "rating10": 8,
+   "norm": "requiem for a dream"
+  },
+  {
    "slug": "gladiator-2000",
    "title": "Gladiator",
    "year": 2000,
@@ -1493,6 +1668,13 @@
    "norm": "alien"
   },
   {
+   "slug": "apocalypse-now",
+   "title": "Apocalypse Now",
+   "year": 1979,
+   "rating10": 8,
+   "norm": "apocalypse now"
+  },
+  {
    "slug": "rocky",
    "title": "Rocky",
    "year": 1976,
@@ -1526,191 +1708,33 @@
    "year": 1971,
    "rating10": 7,
    "norm": "a clockwork orange"
-  },
-  {
-   "slug": "the-end-of-the-fing-world",
-   "title": "The End of the F***ing World",
-   "year": null,
-   "rating10": 6,
-   "norm": "the end of the f ing world"
-  },
-  {
-   "slug": "the-odyssey-2026",
-   "title": "The Odyssey",
-   "year": 2026,
-   "rating10": 9,
-   "norm": "the odyssey"
-  },
-  {
-   "slug": "requiem-for-a-dream",
-   "title": "Requiem for a Dream",
-   "year": 2000,
-   "rating10": 8,
-   "norm": "requiem for a dream"
-  },
-  {
-   "slug": "spider-man-brand-new-day",
-   "title": "Spider-Man: Brand New Day",
-   "year": 2026,
-   "rating10": 8,
-   "norm": "spider man brand new day"
-  },
-  {
-   "slug": "iron-man-2008",
-   "title": "Iron Man",
-   "year": 2008,
-   "rating10": 7,
-   "norm": "iron man"
-  },
-  {
-   "slug": "apocalypse-now",
-   "title": "Apocalypse Now",
-   "year": 1979,
-   "rating10": 8,
-   "norm": "apocalypse now"
-  },
-  {
-   "slug": "captain-america-the-first-avenger",
-   "title": "Captain America: The First Avenger",
-   "year": 2011,
-   "rating10": 8,
-   "norm": "captain america the first avenger"
-  },
-  {
-   "slug": "thor",
-   "title": "Thor",
-   "year": 2011,
-   "rating10": 7,
-   "norm": "thor"
-  },
-  {
-   "slug": "the-avengers-2012",
-   "title": "The Avengers",
-   "year": 2012,
-   "rating10": 8,
-   "norm": "the avengers"
-  },
-  {
-   "slug": "iron-man-2",
-   "title": "Iron Man 2",
-   "year": 2010,
-   "rating10": 8,
-   "norm": "iron man 2"
-  },
-  {
-   "slug": "iron-man-3",
-   "title": "Iron Man 3",
-   "year": 2013,
-   "rating10": 7,
-   "norm": "iron man 3"
-  },
-  {
-   "slug": "thor-the-dark-world",
-   "title": "Thor: The Dark World",
-   "year": 2013,
-   "rating10": 6,
-   "norm": "thor the dark world"
-  },
-  {
-   "slug": "captain-america-the-winter-soldier",
-   "title": "Captain America: The Winter Soldier",
-   "year": 2014,
-   "rating10": 7,
-   "norm": "captain america the winter soldier"
-  },
-  {
-   "slug": "avengers-age-of-ultron",
-   "title": "Avengers: Age of Ultron",
-   "year": 2015,
-   "rating10": 6,
-   "norm": "avengers age of ultron"
-  },
-  {
-   "slug": "captain-america-civil-war",
-   "title": "Captain America: Civil War",
-   "year": 2016,
-   "rating10": 8,
-   "norm": "captain america civil war"
-  },
-  {
-   "slug": "doctor-strange-2016",
-   "title": "Doctor Strange",
-   "year": 2016,
-   "rating10": 7,
-   "norm": "doctor strange"
-  },
-  {
-   "slug": "thor-ragnarok",
-   "title": "Thor: Ragnarok",
-   "year": 2017,
-   "rating10": 8,
-   "norm": "thor ragnarok"
-  },
-  {
-   "slug": "spider-man-homecoming",
-   "title": "Spider-Man: Homecoming",
-   "year": 2017,
-   "rating10": 8,
-   "norm": "spider man homecoming"
-  },
-  {
-   "slug": "black-panther",
-   "title": "Black Panther",
-   "year": 2018,
-   "rating10": 6,
-   "norm": "black panther"
-  },
-  {
-   "slug": "the-invite-2026",
-   "title": "The Invite",
-   "year": 2026,
-   "rating10": 6,
-   "norm": "the invite"
-  },
-  {
-   "slug": "avengers-infinity-war",
-   "title": "Avengers: Infinity War",
-   "year": 2018,
-   "rating10": 9,
-   "norm": "avengers infinity war"
-  },
-  {
-   "slug": "ant-man-and-the-wasp",
-   "title": "Ant-Man and the Wasp",
-   "year": 2018,
-   "rating10": 6,
-   "norm": "ant man and the wasp"
-  },
-  {
-   "slug": "captain-marvel",
-   "title": "Captain Marvel",
-   "year": 2019,
-   "rating10": 6,
-   "norm": "captain marvel"
-  },
-  {
-   "slug": "avengers-endgame",
-   "title": "Avengers: Endgame",
-   "year": 2019,
-   "rating10": 10,
-   "norm": "avengers endgame"
-  },
-  {
-   "slug": "black-widow-2021",
-   "title": "Black Widow",
-   "year": 2021,
-   "rating10": 6,
-   "norm": "black widow"
-  },
-  {
-   "slug": "spider-man-far-from-home",
-   "title": "Spider-Man: Far From Home",
-   "year": 2019,
-   "rating10": 7,
-   "norm": "spider man far from home"
   }
  ],
  "watchlist": [
+  {
+   "slug": "pressure-2026",
+   "title": "Pressure",
+   "year": 2026,
+   "norm": "pressure"
+  },
+  {
+   "slug": "sinners-2025",
+   "title": "Sinners",
+   "year": 2025,
+   "norm": "sinners"
+  },
+  {
+   "slug": "nuremberg-2025",
+   "title": "Nuremberg",
+   "year": 2025,
+   "norm": "nuremberg"
+  },
+  {
+   "slug": "the-red-sea-diving-resort",
+   "title": "The Red Sea Diving Resort",
+   "year": 2019,
+   "norm": "the red sea diving resort"
+  },
   {
    "slug": "paris-texas",
    "title": "Paris, Texas",
@@ -1892,6 +1916,12 @@
    "norm": "the secret life of walter mitty"
   },
   {
+   "slug": "the-shawshank-redemption",
+   "title": "The Shawshank Redemption",
+   "year": 1994,
+   "norm": "the shawshank redemption"
+  },
+  {
    "slug": "the-matrix",
    "title": "The Matrix",
    "year": 1999,
@@ -2010,6 +2040,24 @@
    "title": "How I Unleashed World War II, Part I: The Escape",
    "year": 1970,
    "norm": "how i unleashed world war ii part i the escape"
+  },
+  {
+   "slug": "gladiator-2000",
+   "title": "Gladiator",
+   "year": 2000,
+   "norm": "gladiator"
+  },
+  {
+   "slug": "oceans-eleven-2001",
+   "title": "Ocean's Eleven",
+   "year": 2001,
+   "norm": "ocean s eleven"
+  },
+  {
+   "slug": "the-godfather",
+   "title": "The Godfather",
+   "year": 1972,
+   "norm": "the godfather"
   },
   {
    "slug": "dog-day-afternoon",

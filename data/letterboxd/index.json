@@ -1,38 +1,36 @@
 {
- "generatedAt": "2026-08-31T21:07:27.396Z",
+ "generatedAt": "2026-09-04T16:55:31.726Z",
  "users": [
   {
    "user": "skajson",
    "counts": {
     "watched": 243,
-    "watchlist": 53
+    "watchlist": 61
    },
-   "syncedAt": "2026-08-31T21:08:57.376Z",
-   "fullSyncAt": "2026-07-13T20:24:55.277Z",
-   "mode": "delta",
-   "reason": "proxy HTTP 522 dla https://letterboxd.com/skajson/films/page/1/"
+   "syncedAt": "2026-09-04T16:55:39.996Z",
+   "fullSyncAt": "2026-09-04T16:55:39.996Z",
+   "mode": "full"
   },
   {
    "user": "bombalson",
    "counts": {
-    "watched": 765,
-    "watchlist": 499
+    "watched": 769,
+    "watchlist": 500
    },
-   "syncedAt": "2026-08-31T21:10:12.028Z",
+   "syncedAt": "2026-09-04T16:56:52.868Z",
    "fullSyncAt": "2026-07-13T20:25:19.878Z",
    "mode": "delta",
-   "reason": "proxy HTTP 522 dla https://letterboxd.com/bombalson/films/page/1/"
+   "reason": "proxy HTTP 503 dla https://letterboxd.com/bombalson/films/page/12/"
   },
   {
    "user": "przemekzietara",
    "counts": {
-    "watched": 519,
-    "watchlist": 125
+    "watched": 523,
+    "watchlist": 131
    },
-   "syncedAt": "2026-08-31T21:11:25.273Z",
-   "fullSyncAt": "2026-07-13T20:25:32.221Z",
-   "mode": "delta",
-   "reason": "proxy HTTP 522 dla https://letterboxd.com/przemekzietara/films/page/1/"
+   "syncedAt": "2026-09-04T16:57:20.388Z",
+   "fullSyncAt": "2026-09-04T16:57:20.388Z",
+   "mode": "full"
   }
  ]
 }
