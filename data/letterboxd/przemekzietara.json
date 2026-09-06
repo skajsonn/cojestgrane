@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-09-05T23:22:26.439Z",
+ "generatedAt": "2026-09-06T08:14:03.148Z",
  "fullSyncAt": "2026-09-04T16:57:20.388Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 524,
+  "watched": 525,
   "watchlist": 130
  },
  "watched": [
@@ -3675,6 +3675,13 @@
    "year": 2025,
    "rating10": 7,
    "norm": "sentimental value"
+  },
+  {
+   "slug": "rye-lane",
+   "title": "Rye Lane",
+   "year": 2023,
+   "rating10": 10,
+   "norm": "rye lane"
   }
  ],
  "watchlist": [
@@ -4461,6 +4468,16 @@
  ],
  "recent": [
   {
+   "title": "Rye Lane",
+   "year": 2023,
+   "slug": "rye-lane",
+   "rating10": 10,
+   "watchedDate": "2026-09-06",
+   "rewatch": false,
+   "tmdbId": 1049638,
+   "review": null
+  },
+  {
    "title": "Spider-Man: Brand New Day",
    "year": 2026,
    "slug": "spider-man-brand-new-day",
@@ -4948,16 +4965,6 @@
    "watchedDate": "2026-03-20",
    "rewatch": true,
    "tmdbId": 438631,
-   "review": null
-  },
-  {
-   "title": "Scream 7",
-   "year": 2026,
-   "slug": "scream-7",
-   "rating10": 5,
-   "watchedDate": "2026-03-07",
-   "rewatch": false,
-   "tmdbId": 1159559,
    "review": null
   }
  ]
