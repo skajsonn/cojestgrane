@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-09-08T19:06:41.278Z",
+ "generatedAt": "2026-09-08T23:47:30.625Z",
  "fullSyncAt": "2026-09-06T17:42:15.798Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 244,
-  "watchlist": 57
+  "watched": 245,
+  "watchlist": 56
  },
  "watched": [
   {
@@ -1715,6 +1715,13 @@
    "year": 2026,
    "rating10": 8,
    "norm": "pressure"
+  },
+  {
+   "slug": "wandavision",
+   "title": "WandaVision",
+   "year": 2021,
+   "rating10": 7,
+   "norm": "wandavision"
   }
  ],
  "watchlist": [
@@ -1995,12 +2002,6 @@
    "norm": "loki"
   },
   {
-   "slug": "wandavision",
-   "title": "WandaVision",
-   "year": 2021,
-   "norm": "wandavision"
-  },
-  {
    "slug": "once-upon-a-time-in-hollywood",
    "title": "Once Upon a Time... in Hollywood",
    "year": 2019,
@@ -2062,6 +2063,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "WandaVision",
+   "year": 2021,
+   "slug": "wandavision",
+   "rating10": 7,
+   "watchedDate": "2026-09-08",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
   {
    "title": "Pressure",
    "year": 2026,
@@ -2550,16 +2561,6 @@
    "watchedDate": "2025-03-04",
    "rewatch": false,
    "tmdbId": 1064213,
-   "review": null
-  },
-  {
-   "title": "A Minecraft Movie",
-   "year": 2025,
-   "slug": "a-minecraft-movie",
-   "rating10": 7,
-   "watchedDate": "2025-04-17",
-   "rewatch": false,
-   "tmdbId": 950387,
    "review": null
   }
  ]

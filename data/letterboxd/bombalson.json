@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-09-08T19:07:54.743Z",
+ "generatedAt": "2026-09-08T23:48:40.389Z",
  "fullSyncAt": "2026-09-06T17:42:32.818Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 775,
+  "watched": 776,
   "watchlist": 540
  },
  "watched": [
@@ -5432,6 +5432,13 @@
    "year": 1920,
    "rating10": 7,
    "norm": "the cabinet of dr caligari"
+  },
+  {
+   "slug": "wandavision",
+   "title": "WandaVision",
+   "year": 2021,
+   "rating10": 6,
+   "norm": "wandavision"
   }
  ],
  "watchlist": [
@@ -8678,6 +8685,16 @@
  ],
  "recent": [
   {
+   "title": "WandaVision",
+   "year": 2021,
+   "slug": "wandavision",
+   "rating10": 6,
+   "watchedDate": "2026-09-09",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
    "title": "I Am Groot: Groot's Sweet Treat",
    "year": 2023,
    "slug": "i-am-groot-groots-sweet-treat",
@@ -9165,16 +9182,6 @@
    "watchedDate": "2026-07-31",
    "rewatch": false,
    "tmdbId": 969681,
-   "review": null
-  },
-  {
-   "title": "The Vanishing",
-   "year": 1988,
-   "slug": "the-vanishing",
-   "rating10": 7,
-   "watchedDate": "2026-07-29",
-   "rewatch": false,
-   "tmdbId": 8740,
    "review": null
   }
  ]
