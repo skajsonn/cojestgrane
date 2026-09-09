@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-09-09T08:30:59.830Z",
+ "generatedAt": "2026-09-09T14:02:42.840Z",
  "fullSyncAt": "2026-09-06T17:42:32.818Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 776,
-  "watchlist": 540
+  "watched": 777,
+  "watchlist": 539
  },
  "watched": [
   {
@@ -5439,6 +5439,13 @@
    "year": 2021,
    "rating10": 6,
    "norm": "wandavision"
+  },
+  {
+   "slug": "soul-eater",
+   "title": "Soul Eater",
+   "year": 2008,
+   "rating10": 9,
+   "norm": "soul eater"
   }
  ],
  "watchlist": [
@@ -6149,12 +6156,6 @@
    "title": "Another",
    "year": 2012,
    "norm": "another"
-  },
-  {
-   "slug": "soul-eater",
-   "title": "Soul Eater",
-   "year": 2008,
-   "norm": "soul eater"
   },
   {
    "slug": "office-space",
@@ -8685,6 +8686,16 @@
  ],
  "recent": [
   {
+   "title": "Soul Eater",
+   "year": 2008,
+   "slug": "soul-eater",
+   "rating10": 9,
+   "watchedDate": "2026-09-09",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
    "title": "WandaVision",
    "year": 2021,
    "slug": "wandavision",
@@ -9172,16 +9183,6 @@
    "watchedDate": "2026-08-02",
    "rewatch": false,
    "tmdbId": 315635,
-   "review": null
-  },
-  {
-   "title": "Spider-Man: Brand New Day",
-   "year": 2026,
-   "slug": "spider-man-brand-new-day",
-   "rating10": 8,
-   "watchedDate": "2026-07-31",
-   "rewatch": false,
-   "tmdbId": 969681,
    "review": null
   }
  ]
