@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-09-10T18:45:58.650Z",
- "today": "2026-09-10",
+ "generatedAt": "2026-09-10T23:30:41.333Z",
+ "today": "2026-09-11",
  "cinemas": [
   {
    "id": "1065",
@@ -2171,7 +2171,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-04",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8190s3r",
@@ -2190,16 +2190,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-10": [
-      {
-       "time": "21:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1668897?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "18:40",
@@ -2400,16 +2390,6 @@
      ]
     },
     "1079": {
-     "2026-09-10": [
-      {
-       "time": "21:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1666370?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "12:10",
@@ -2482,16 +2462,6 @@
      ]
     },
     "1089": {
-     "2026-09-10": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1669556?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "15:40",
@@ -4514,7 +4484,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-08",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8295s2r",
@@ -4678,16 +4648,6 @@
      ]
     },
     "1079": {
-     "2026-09-10": [
-      {
-       "time": "22:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1668516?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "21:30",
@@ -4760,16 +4720,6 @@
      ]
     },
     "1089": {
-     "2026-09-10": [
-      {
-       "time": "21:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1669054?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "21:50",
@@ -5318,7 +5268,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-08",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8385s2r",
@@ -5395,31 +5345,10 @@
     "thriller"
    ],
    "formats": [
-    "2d",
-    "imax"
+    "2d"
    ],
    "showings": {
     "1065": {
-     "2026-09-10": [
-      {
-       "time": "20:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1665278?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:50",
-       "formats": [
-        "imax"
-       ],
-       "lang": "subbed",
-       "auditorium": "Imax",
-       "booking": "https://tickets.cinema-city.pl/api/order/1669321?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "13:40",
@@ -5548,16 +5477,6 @@
      ]
     },
     "1069": {
-     "2026-09-10": [
-      {
-       "time": "21:45",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1666125?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "21:00",
@@ -5702,16 +5621,6 @@
      ]
     },
     "1079": {
-     "2026-09-10": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1669256?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "11:00",
@@ -5952,16 +5861,6 @@
      ]
     },
     "1089": {
-     "2026-09-10": [
-      {
-       "time": "21:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1663772?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "13:00",
@@ -6059,58 +5958,6 @@
    "status": "new"
   },
   {
-   "id": "8317s2r",
-   "title": "Ice Cream Man",
-   "year": "2026",
-   "releaseDate": "2026-08-07",
-   "length": 106,
-   "poster": "https://www.cinema-city.pl/xmedia-cw/repo/feats/posters/8317S2R.jpg",
-   "trailer": "https://www.youtube.com/watch?v=B1JtwZoolo4",
-   "link": "https://www.cinema-city.pl/filmy/ice-cream-man/8317s2r",
-   "genres": [
-    "horror"
-   ],
-   "formats": [
-    "2d"
-   ],
-   "showings": {
-    "1065": {
-     "2026-09-10": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1677531?lang=pl",
-       "soldOut": false
-      }
-     ]
-    }
-   },
-   "tmdb": {
-    "id": 1477712,
-    "originalTitle": "Ice Cream Man",
-    "title": "Ice Cream Man",
-    "overview": null,
-    "voteAverage": 4.6,
-    "voteCount": 50,
-    "releaseDate": "2026-08-03",
-    "genres": [
-     "horror",
-     "komedia"
-    ],
-    "poster": "https://image.tmdb.org/t/p/w500/u0vWtpeFRgdRaDmpjF8ODrUFUB4.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w780/75pK9Dj1CheZFItgld9TVvb2P4x.jpg"
-   },
-   "lbSlug": "ice-cream-man-2026",
-   "lbTitle": "Ice Cream Man",
-   "lbRating": 1.39,
-   "lbRatingCount": 37792,
-   "originalTitle": null,
-   "firstSeen": "2026-09-04",
-   "status": "regular"
-  },
-  {
    "id": "8160s2r",
    "title": "Koniec ulicy Dębowej",
    "year": "2026",
@@ -6196,18 +6043,6 @@
        "lang": "subbed",
        "auditorium": "Sala 10",
        "booking": "https://tickets.cinema-city.pl/api/order/1687004?lang=pl",
-       "soldOut": false
-      }
-     ]
-    },
-    "1089": {
-     "2026-09-10": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1666814?lang=pl",
        "soldOut": false
       }
      ]
@@ -9708,7 +9543,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-08",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8452s2r",
@@ -9794,18 +9629,6 @@
        "lang": "subbed",
        "auditorium": "Sala 5",
        "booking": "https://tickets.cinema-city.pl/api/order/1683160?lang=pl",
-       "soldOut": false
-      }
-     ]
-    },
-    "1075": {
-     "2026-09-10": [
-      {
-       "time": "20:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1664548?lang=pl",
        "soldOut": false
       }
      ]
@@ -10568,7 +10391,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-08",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8183s2r",
@@ -10588,16 +10411,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-10": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1664795?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "20:50",
@@ -10694,16 +10507,6 @@
      ]
     },
     "1069": {
-     "2026-09-10": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1665614?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "20:40",
@@ -10776,16 +10579,6 @@
      ]
     },
     "1075": {
-     "2026-09-10": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1675463?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "21:10",
@@ -10858,16 +10651,6 @@
      ]
     },
     "1079": {
-     "2026-09-10": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1668825?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "19:20",
@@ -11157,16 +10940,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-10": [
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1665220?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "12:50",
@@ -11399,16 +11172,6 @@
      ]
     },
     "1069": {
-     "2026-09-10": [
-      {
-       "time": "20:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1665471?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "14:30",
@@ -11705,16 +11468,6 @@
      ]
     },
     "1079": {
-     "2026-09-10": [
-      {
-       "time": "22:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1670610?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "18:40",
@@ -13119,11 +12872,11 @@
    },
    "lbSlug": "pressure-2026",
    "lbTitle": "Pressure",
-   "lbRating": 3.52,
-   "lbRatingCount": 69726,
+   "lbRating": 3.53,
+   "lbRatingCount": 75678,
    "originalTitle": "Pressure",
    "firstSeen": "2026-09-04",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8425s2r",
@@ -13706,7 +13459,7 @@
    "lbRatingCount": 2873,
    "originalTitle": null,
    "firstSeen": "2026-09-04",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "7460s2r",
@@ -14077,16 +13830,6 @@
      ]
     },
     "1069": {
-     "2026-09-10": [
-      {
-       "time": "20:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1666718?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "13:50",
@@ -14303,16 +14046,6 @@
      ]
     },
     "1079": {
-     "2026-09-10": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1665457?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "09:30",
@@ -16908,7 +16641,7 @@
    "lbSlug": "the-twilight-saga-new-moon",
    "lbTitle": "The Twilight Saga: New Moon",
    "lbRating": 2.82,
-   "lbRatingCount": 1218567,
+   "lbRatingCount": 1220959,
    "originalTitle": "The Twilight Saga: New Moon",
    "firstSeen": "2026-09-07",
    "status": "retro"
@@ -17501,16 +17234,6 @@
      ]
     },
     "1069": {
-     "2026-09-10": [
-      {
-       "time": "21:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1667053?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "11:20",
@@ -17719,16 +17442,6 @@
      ]
     },
     "1079": {
-     "2026-09-10": [
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1665953?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "19:10",
@@ -17910,8 +17623,7 @@
    ],
    "formats": [
     "2d",
-    "3d",
-    "laser-barco"
+    "3d"
    ],
    "showings": {
     "1065": {
@@ -18313,18 +18025,6 @@
      ]
     },
     "1069": {
-     "2026-09-10": [
-      {
-       "time": "20:50",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1665026?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "14:10",
@@ -18581,16 +18281,6 @@
      ]
     },
     "1075": {
-     "2026-09-10": [
-      {
-       "time": "20:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1666656?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "12:50",
@@ -18719,26 +18409,6 @@
      ]
     },
     "1079": {
-     "2026-09-10": [
-      {
-       "time": "20:30",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1672448?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:00",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1671905?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "11:00",
@@ -19397,18 +19067,6 @@
        "soldOut": false
       }
      ]
-    },
-    "1079": {
-     "2026-09-10": [
-      {
-       "time": "22:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1668048?lang=pl",
-       "soldOut": false
-      }
-     ]
     }
    },
    "tmdb": {
@@ -19435,69 +19093,6 @@
    "status": "new"
   },
   {
-   "id": "8360s2r",
-   "title": "Terminator 2: Dzień sądu 35. Rocznica",
-   "year": "1991",
-   "releaseDate": "2026-08-28",
-   "length": 137,
-   "poster": "https://www.cinema-city.pl/xmedia-cw/repo/feats/posters/8360S2R.jpg",
-   "trailer": "https://www.youtube.com/watch?v=qGb936BaC78",
-   "link": "https://www.cinema-city.pl/filmy/terminator-2-dzien-sadu-35-rocznica/8360s2r",
-   "genres": [
-    "action",
-    "sci-fi"
-   ],
-   "formats": [
-    "2d"
-   ],
-   "showings": {
-    "1065": {
-     "2026-09-10": [
-      {
-       "time": "20:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1666752?lang=pl",
-       "soldOut": false
-      }
-     ]
-    },
-    "1075": {
-     "2026-09-10": [
-      {
-       "time": "20:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1664375?lang=pl",
-       "soldOut": false
-      }
-     ]
-    },
-    "1079": {
-     "2026-09-10": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1667182?lang=pl",
-       "soldOut": false
-      }
-     ]
-    }
-   },
-   "tmdb": null,
-   "lbSlug": "terminator-2-judgment-day",
-   "lbTitle": "Terminator 2: Judgment Day",
-   "lbRating": 4.3,
-   "lbRatingCount": 1081661,
-   "originalTitle": "Terminator 2: Judgment Day",
-   "firstSeen": "2026-09-04",
-   "status": "retro"
-  },
-  {
    "id": "8432s2r",
    "title": "Tony",
    "year": "2026",
@@ -19514,16 +19109,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-10": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1665250?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "18:20",
@@ -19852,16 +19437,6 @@
      ]
     },
     "1079": {
-     "2026-09-10": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1670744?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "15:00",
@@ -20078,16 +19653,6 @@
      ]
     },
     "1089": {
-     "2026-09-10": [
-      {
-       "time": "21:15",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1668748?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-11": [
       {
        "time": "14:00",
@@ -21576,7 +21141,7 @@
    "lbRatingCount": 2217,
    "originalTitle": "Practical Magic 2",
    "firstSeen": "2026-09-04",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "7784d2r",
@@ -21978,18 +21543,6 @@
     "2d"
    ],
    "showings": {
-    "1065": {
-     "2026-09-10": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1675746?lang=pl",
-       "soldOut": false
-      }
-     ]
-    },
     "1079": {
      "2026-09-12": [
       {
@@ -22313,58 +21866,6 @@
    "originalTitle": "The Wrong Girls",
    "firstSeen": "2026-09-04",
    "status": "new"
-  },
-  {
-   "id": "8200s2r",
-   "title": "Zaproszenie",
-   "year": "2026",
-   "releaseDate": "2026-07-03",
-   "length": 107,
-   "poster": "https://www.cinema-city.pl/xmedia-cw/repo/feats/posters/8200S2R.jpg",
-   "trailer": "https://www.youtube.com/watch?v=irrgVZHmi9Y",
-   "link": "https://www.cinema-city.pl/filmy/zaproszenie/8200s2r",
-   "genres": [
-    "comedy"
-   ],
-   "formats": [
-    "2d"
-   ],
-   "showings": {
-    "1065": {
-     "2026-09-10": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1675750?lang=pl",
-       "soldOut": false
-      }
-     ]
-    }
-   },
-   "tmdb": {
-    "id": 950028,
-    "originalTitle": "The Invite",
-    "title": "Zaproszenie.",
-    "overview": null,
-    "voteAverage": 7.8,
-    "voteCount": 11,
-    "releaseDate": "2026-06-25",
-    "genres": [
-     "dramat",
-     "komedia"
-    ],
-    "poster": "https://image.tmdb.org/t/p/w500/b7Dr8Chzse8VagexAporUu2RtLx.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w780/kLA1GqiOEyVgXxgNqLoCr7bYcqu.jpg"
-   },
-   "lbSlug": "the-invite-2026",
-   "lbTitle": "The Invite",
-   "lbRating": 3.98,
-   "lbRatingCount": 814075,
-   "originalTitle": "The Invite",
-   "firstSeen": "2026-07-05",
-   "status": "regular"
   },
   {
    "id": "8486s2r",

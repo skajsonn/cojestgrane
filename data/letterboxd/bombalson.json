@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-09-10T18:48:58.698Z",
+ "generatedAt": "2026-09-10T23:33:41.421Z",
  "fullSyncAt": "2026-09-06T17:42:32.818Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 777,
+  "watched": 778,
   "watchlist": 539
  },
  "watched": [
@@ -5446,6 +5446,13 @@
    "year": 2008,
    "rating10": 9,
    "norm": "soul eater"
+  },
+  {
+   "slug": "loki-2021",
+   "title": "Loki",
+   "year": 2021,
+   "rating10": 7,
+   "norm": "loki"
   }
  ],
  "watchlist": [
@@ -8686,6 +8693,16 @@
  ],
  "recent": [
   {
+   "title": "Loki",
+   "year": 2021,
+   "slug": "loki-2021",
+   "rating10": 7,
+   "watchedDate": "2026-09-11",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
    "title": "Soul Eater",
    "year": 2008,
    "slug": "soul-eater",
@@ -9173,16 +9190,6 @@
    "watchedDate": "2026-08-03",
    "rewatch": true,
    "tmdbId": 1726,
-   "review": null
-  },
-  {
-   "title": "Spider-Man: Homecoming",
-   "year": 2017,
-   "slug": "spider-man-homecoming",
-   "rating10": 7,
-   "watchedDate": "2026-08-02",
-   "rewatch": false,
-   "tmdbId": 315635,
    "review": null
   }
  ]
