@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-09T23:39:13.181Z",
+ "generatedAt": "2026-09-10T08:28:30.320Z",
  "today": "2026-09-10",
  "cinemas": [
   {
@@ -3190,16 +3190,6 @@
     "1079": {
      "2026-09-10": [
       {
-       "time": "10:00",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "dubbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1671889?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "15:30",
        "formats": [
         "laser-barco"
@@ -5703,63 +5693,6 @@
    "status": "upcoming"
   },
   {
-   "id": "8428d2r",
-   "title": "Flavia de Luce",
-   "year": "2026",
-   "releaseDate": "2026-08-14",
-   "length": 92,
-   "poster": "https://www.cinema-city.pl/xmedia-cw/repo/feats/posters/8428D2R.jpg",
-   "trailer": "https://www.youtube.com/watch?v=MZe3r8s-fm0",
-   "link": "https://www.cinema-city.pl/filmy/flavia-de-luce/8428d2r",
-   "genres": [
-    "adventure",
-    "comedy",
-    "crime",
-    "family"
-   ],
-   "formats": [
-    "2d"
-   ],
-   "showings": {
-    "1079": {
-     "2026-09-10": [
-      {
-       "time": "10:00",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1665922?lang=pl",
-       "soldOut": false
-      }
-     ]
-    }
-   },
-   "tmdb": {
-    "id": 1129104,
-    "originalTitle": "Flavia",
-    "title": "Flavia",
-    "overview": "Przygody 11-letniej Flavii de Luce, która jest zarówno detektywem-amatorem, jak i mistrzynią trucicielstwa. Kiedy odkrywa zwłoki w podupadającym brytyjskim dworze swojej rodziny, a jej ojciec zostaje oskarżony o morderstwo, Flavia rozpoczyna własne śledztwo, aby odkryć rodzinne sekrety i doprowadzić prawdziwego mordercę przed oblicze sprawiedliwości.",
-    "voteAverage": 5.7,
-    "voteCount": 8,
-    "releaseDate": "2026-04-12",
-    "genres": [
-     "familijny",
-     "przygodowy",
-     "tajemnica",
-     "komedia"
-    ],
-    "poster": "https://image.tmdb.org/t/p/w500/hw5JlE5gm2BSzBF4Sf4s54SeiiG.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w780/6t9nSqZpD1mlT9DLugyZNmC3SsQ.jpg"
-   },
-   "lbSlug": "flavia-2026",
-   "lbTitle": "Flavia",
-   "lbRating": 3.01,
-   "lbRatingCount": 1046,
-   "originalTitle": "Flavia",
-   "firstSeen": "2026-09-04",
-   "status": "regular"
-  },
-  {
    "id": "8385s2r",
    "title": "Gorzkie święta",
    "year": "2026",
@@ -7085,14 +7018,6 @@
     },
     "1079": {
      "2026-09-10": [
-      {
-       "time": "10:00",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1666340?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "12:10",
        "formats": [],
@@ -17178,14 +17103,6 @@
     "1079": {
      "2026-09-10": [
       {
-       "time": "10:00",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1670574?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "10:30",
        "formats": [],
        "lang": "dubbed",
@@ -24102,6 +24019,45 @@
    "originalTitle": "Moana",
    "firstSeen": "2026-07-05",
    "status": "regular"
+  },
+  {
+   "id": "7955d2r",
+   "title": "Vincent. Legenda oceanu",
+   "year": "2025",
+   "releaseDate": "2026-10-09",
+   "length": 91,
+   "poster": "https://www.cinema-city.pl/xmedia-cw/repo/feats/posters/7955D2R.jpg",
+   "trailer": "https://www.youtube.com/watch?v=KcmQ7e95dUo",
+   "link": "https://www.cinema-city.pl/filmy/vincent-legenda-oceanu/7955d2r",
+   "genres": [
+    "animation",
+    "family"
+   ],
+   "formats": [
+    "2d"
+   ],
+   "showings": {
+    "1079": {
+     "2026-09-13": [
+      {
+       "time": "16:00",
+       "formats": [],
+       "lang": "dubbed",
+       "auditorium": "Sala 11",
+       "booking": "https://tickets.cinema-city.pl/api/order/1690182?lang=pl",
+       "soldOut": false
+      }
+     ]
+    }
+   },
+   "tmdb": null,
+   "lbSlug": null,
+   "lbTitle": null,
+   "lbRating": null,
+   "lbRatingCount": 0,
+   "originalTitle": null,
+   "firstSeen": "2026-09-10",
+   "status": "upcoming"
   },
   {
    "id": "8430s2r",
