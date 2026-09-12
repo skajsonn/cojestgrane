@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-09-12T17:55:02.066Z",
- "today": "2026-09-12",
+ "generatedAt": "2026-09-12T23:25:28.535Z",
+ "today": "2026-09-13",
  "cinemas": [
   {
    "id": "1065",
@@ -53,18 +53,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "21:10",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": null,
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1648482?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "10:30",
@@ -487,18 +475,6 @@
      ]
     },
     "1069": {
-     "2026-09-12": [
-      {
-       "time": "21:10",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": null,
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1648408?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "10:30",
@@ -753,16 +729,6 @@
      ]
     },
     "1075": {
-     "2026-09-12": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1648570?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "11:00",
@@ -943,26 +909,6 @@
      ]
     },
     "1079": {
-     "2026-09-12": [
-      {
-       "time": "20:00",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1648732?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:40",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1648724?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "11:00",
@@ -1385,16 +1331,6 @@
      ]
     },
     "1089": {
-     "2026-09-12": [
-      {
-       "time": "21:10",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1648323?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "10:30",
@@ -1648,16 +1584,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "21:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1687792?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "18:40",
@@ -2049,6 +1975,16 @@
        "booking": "https://tickets.cinema-city.pl/api/order/1526034?lang=pl",
        "soldOut": false
       }
+     ],
+     "2026-10-18": [
+      {
+       "time": "15:00",
+       "formats": [],
+       "lang": "subbed",
+       "auditorium": "Sala 7",
+       "booking": "https://tickets.cinema-city.pl/api/order/1526035?lang=pl",
+       "soldOut": false
+      }
      ]
     },
     "1075": {
@@ -2081,6 +2017,16 @@
        "booking": "https://tickets.cinema-city.pl/api/order/1526092?lang=pl",
        "soldOut": false
       }
+     ],
+     "2026-10-18": [
+      {
+       "time": "15:00",
+       "formats": [],
+       "lang": "subbed",
+       "auditorium": "Sala 4",
+       "booking": "https://tickets.cinema-city.pl/api/order/1526093?lang=pl",
+       "soldOut": false
+      }
      ]
     }
    },
@@ -2088,7 +2034,7 @@
    "lbSlug": "one-battle-after-another",
    "lbTitle": "One Battle After Another",
    "lbRating": 4.12,
-   "lbRatingCount": 2848936,
+   "lbRatingCount": 2852692,
    "originalTitle": "One Battle After Another",
    "firstSeen": "2026-07-18",
    "status": "regular"
@@ -2112,16 +2058,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1690111?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "16:20",
@@ -2434,7 +2370,7 @@
    "lbSlug": "asterix-obelix-mission-cleopatra",
    "lbTitle": "Asterix & Obelix: Mission Cleopatra",
    "lbRating": 3.67,
-   "lbRatingCount": 161501,
+   "lbRatingCount": 161934,
    "originalTitle": "Astérix & Obélix : Mission Cléopâtre",
    "firstSeen": "2026-09-04",
    "status": "retro"
@@ -3568,16 +3504,6 @@
    ],
    "showings": {
     "1079": {
-     "2026-09-12": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1688330?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "20:50",
@@ -3722,16 +3648,6 @@
      ]
     },
     "1075": {
-     "2026-09-12": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1678867?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "21:50",
@@ -3784,16 +3700,6 @@
      ]
     },
     "1079": {
-     "2026-09-12": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1688743?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "21:30",
@@ -3846,16 +3752,6 @@
      ]
     },
     "1089": {
-     "2026-09-12": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1682533?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "21:50",
@@ -4317,7 +4213,7 @@
    "lbSlug": "bitter-christmas",
    "lbTitle": "Bitter Christmas",
    "lbRating": 3.16,
-   "lbRatingCount": 58234,
+   "lbRatingCount": 58760,
    "originalTitle": "Amarga Navidad",
    "firstSeen": "2026-09-04",
    "status": "new"
@@ -4339,16 +4235,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1683014?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "13:40",
@@ -4441,16 +4327,6 @@
      ]
     },
     "1069": {
-     "2026-09-12": [
-      {
-       "time": "21:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1685822?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "21:00",
@@ -4555,16 +4431,6 @@
      ]
     },
     "1079": {
-     "2026-09-12": [
-      {
-       "time": "22:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1686576?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "11:00",
@@ -4808,7 +4674,7 @@
    "lbSlug": "the-dog-stars",
    "lbTitle": "The Dog Stars",
    "lbRating": 2.84,
-   "lbRatingCount": 128934,
+   "lbRatingCount": 136773,
    "originalTitle": "The Dog Stars",
    "firstSeen": "2026-09-04",
    "status": "new"
@@ -4832,16 +4698,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "22:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1686985?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "22:00",
@@ -4913,7 +4769,7 @@
    "lbSlug": "the-end-of-oak-street",
    "lbTitle": "The End of Oak Street",
    "lbRating": 3.06,
-   "lbRatingCount": 465647,
+   "lbRatingCount": 472957,
    "originalTitle": "The End of Oak Street",
    "firstSeen": "2026-09-04",
    "status": "regular"
@@ -5112,7 +4968,7 @@
    "lbSlug": "the-desert-child",
    "lbTitle": "The Desert Child",
    "lbRating": 2.84,
-   "lbRatingCount": 1270,
+   "lbRatingCount": 1280,
    "originalTitle": "L'enfant du désert",
    "firstSeen": "2026-09-04",
    "status": "regular"
@@ -7934,16 +7790,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "20:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1683155?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "20:40",
@@ -8066,8 +7912,8 @@
    },
    "lbSlug": "teenage-sex-and-death-at-camp-miasma",
    "lbTitle": "Teenage Sex and Death at Camp Miasma",
-   "lbRating": 3.78,
-   "lbRatingCount": 273972,
+   "lbRating": 3.77,
+   "lbRatingCount": 282547,
    "originalTitle": "Teenage Sex and Death at Camp Miasma",
    "firstSeen": "2026-09-04",
    "status": "new"
@@ -8419,7 +8265,7 @@
    "lbSlug": "minions-monsters-2026",
    "lbTitle": "Minions & Monsters",
    "lbRating": 3.2,
-   "lbRatingCount": 500048,
+   "lbRatingCount": 503398,
    "originalTitle": "Minions & Monsters",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -8586,24 +8432,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1681932?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1690107?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "20:50",
@@ -8664,16 +8492,6 @@
      ]
     },
     "1069": {
-     "2026-09-12": [
-      {
-       "time": "20:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1683289?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "20:40",
@@ -8726,16 +8544,6 @@
      ]
     },
     "1075": {
-     "2026-09-12": [
-      {
-       "time": "21:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1679797?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "21:10",
@@ -8788,16 +8596,6 @@
      ]
     },
     "1079": {
-     "2026-09-12": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1687921?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "19:20",
@@ -8890,16 +8688,6 @@
      ]
     },
     "1089": {
-     "2026-09-12": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1683509?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "21:40",
@@ -8970,7 +8758,7 @@
    "lbSlug": "insidious-out-of-the-further",
    "lbTitle": "Insidious: Out of the Further",
    "lbRating": 2.72,
-   "lbRatingCount": 206749,
+   "lbRatingCount": 218932,
    "originalTitle": "Insidious: Out of the Further",
    "firstSeen": "2026-09-04",
    "status": "regular"
@@ -9041,24 +8829,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "19:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1685552?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:35",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1690113?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "10:30",
@@ -9215,16 +8985,6 @@
      ]
     },
     "1069": {
-     "2026-09-12": [
-      {
-       "time": "20:45",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1682457?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "14:30",
@@ -9357,16 +9117,6 @@
      ]
     },
     "1075": {
-     "2026-09-12": [
-      {
-       "time": "20:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1679270?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "18:50",
@@ -9443,16 +9193,6 @@
      ]
     },
     "1079": {
-     "2026-09-12": [
-      {
-       "time": "21:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1688528?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "18:40",
@@ -9545,16 +9285,6 @@
      ]
     },
     "1089": {
-     "2026-09-12": [
-      {
-       "time": "21:45",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1682826?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "19:20",
@@ -9663,8 +9393,8 @@
    },
    "lbSlug": "fall-2-deadpoint",
    "lbTitle": "Fall 2: Deadpoint",
-   "lbRating": 2.34,
-   "lbRatingCount": 13316,
+   "lbRating": 2.3,
+   "lbRatingCount": 18864,
    "originalTitle": "Fall 2: Deadpoint",
    "firstSeen": "2026-09-04",
    "status": "new"
@@ -9688,16 +9418,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1683722?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "14:20",
@@ -9870,16 +9590,6 @@
      ]
     },
     "1069": {
-     "2026-09-12": [
-      {
-       "time": "20:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1686359?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "13:20",
@@ -10052,16 +9762,6 @@
      ]
     },
     "1075": {
-     "2026-09-12": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1680015?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "14:30",
@@ -10194,16 +9894,6 @@
      ]
     },
     "1079": {
-     "2026-09-12": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1687561?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "14:50",
@@ -10376,16 +10066,6 @@
      ]
     },
     "1089": {
-     "2026-09-12": [
-      {
-       "time": "21:15",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1683115?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "16:30",
@@ -10968,8 +10648,8 @@
    },
    "lbSlug": "oasis-dont-look-back-in-anger",
    "lbTitle": "Oasis: Don't Look Back in Anger",
-   "lbRating": 3.9,
-   "lbRatingCount": 2873,
+   "lbRating": 4.31,
+   "lbRatingCount": 18613,
    "originalTitle": null,
    "firstSeen": "2026-09-04",
    "status": "premiere"
@@ -10993,26 +10673,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "20:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1683412?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:40",
-       "formats": [
-        "imax"
-       ],
-       "lang": "subbed",
-       "auditorium": "Imax",
-       "booking": "https://tickets.cinema-city.pl/api/order/1687947?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "10:20",
@@ -11259,16 +10919,6 @@
      ]
     },
     "1069": {
-     "2026-09-12": [
-      {
-       "time": "19:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1684215?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "13:50",
@@ -11429,16 +11079,6 @@
      ]
     },
     "1079": {
-     "2026-09-12": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1684280?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "10:40",
@@ -11681,8 +11321,8 @@
    },
    "lbSlug": "the-odyssey-2026",
    "lbTitle": "The Odyssey",
-   "lbRating": 4.36,
-   "lbRatingCount": 4229756,
+   "lbRating": 4.35,
+   "lbRatingCount": 4273513,
    "originalTitle": "The Odyssey",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -12260,7 +11900,7 @@
    "lbSlug": "paw-patrol-the-dino-movie",
    "lbTitle": "PAW Patrol: The Dino Movie",
    "lbRating": 2.86,
-   "lbRatingCount": 10592,
+   "lbRatingCount": 11073,
    "originalTitle": "PAW Patrol: The Dino Movie",
    "firstSeen": "2026-09-04",
    "status": "regular"
@@ -13987,16 +13627,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "19:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1687123?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "15:10",
@@ -14129,16 +13759,6 @@
      ]
     },
     "1069": {
-     "2026-09-12": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1682955?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "18:40",
@@ -14404,7 +14024,7 @@
    "lbSlug": "spa-weekend-2026",
    "lbTitle": "Spa Weekend",
    "lbRating": 2.43,
-   "lbRatingCount": 15114,
+   "lbRatingCount": 15570,
    "originalTitle": null,
    "firstSeen": "2026-09-04",
    "status": "new"
@@ -14428,16 +14048,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1687391?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "10:10",
@@ -14716,16 +14326,6 @@
      ]
     },
     "1069": {
-     "2026-09-12": [
-      {
-       "time": "20:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1684785?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "11:00",
@@ -14906,16 +14506,6 @@
      ]
     },
     "1075": {
-     "2026-09-12": [
-      {
-       "time": "19:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1678875?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "12:50",
@@ -15008,24 +14598,6 @@
      ]
     },
     "1079": {
-     "2026-09-12": [
-      {
-       "time": "20:30",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1684929?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1686828?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "11:00",
@@ -15278,16 +14850,6 @@
      ]
     },
     "1089": {
-     "2026-09-12": [
-      {
-       "time": "20:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1682563?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "12:20",
@@ -15479,7 +15041,7 @@
    "lbSlug": "spider-man-brand-new-day",
    "lbTitle": "Spider-Man: Brand New Day",
    "lbRating": 4.05,
-   "lbRatingCount": 4016835,
+   "lbRatingCount": 4067444,
    "originalTitle": "Spider-Man: Brand New Day",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -15606,16 +15168,6 @@
      ]
     },
     "1069": {
-     "2026-09-12": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1686112?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "12:00",
@@ -15748,16 +15300,6 @@
      ]
     },
     "1075": {
-     "2026-09-12": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1680210?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "20:50",
@@ -15810,24 +15352,6 @@
      ]
     },
     "1079": {
-     "2026-09-12": [
-      {
-       "time": "20:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1685897?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1685899?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "15:00",
@@ -15992,24 +15516,6 @@
      ]
     },
     "1089": {
-     "2026-09-12": [
-      {
-       "time": "19:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1683270?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1683301?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "14:00",
@@ -16119,8 +15625,8 @@
    },
    "lbSlug": "tony-2026",
    "lbTitle": "Tony",
-   "lbRating": 3.85,
-   "lbRatingCount": 242940,
+   "lbRating": 3.84,
+   "lbRatingCount": 251098,
    "originalTitle": null,
    "firstSeen": "2026-09-04",
    "status": "new"
@@ -16144,24 +15650,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-12": [
-      {
-       "time": "19:55",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1662380?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1687461?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "11:30",
@@ -16374,16 +15862,6 @@
      ]
     },
     "1069": {
-     "2026-09-12": [
-      {
-       "time": "20:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1662458?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "11:30",
@@ -16556,16 +16034,6 @@
      ]
     },
     "1075": {
-     "2026-09-12": [
-      {
-       "time": "20:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1662462?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "11:30",
@@ -16706,18 +16174,6 @@
      ]
     },
     "1079": {
-     "2026-09-12": [
-      {
-       "time": "20:30",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1662106?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "12:00",
@@ -16930,16 +16386,6 @@
      ]
     },
     "1089": {
-     "2026-09-12": [
-      {
-       "time": "20:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1662065?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-13": [
       {
        "time": "11:30",
@@ -17130,8 +16576,8 @@
    },
    "lbSlug": "practical-magic-2",
    "lbTitle": "Practical Magic 2",
-   "lbRating": 3.09,
-   "lbRatingCount": 2217,
+   "lbRating": 3.02,
+   "lbRatingCount": 32370,
    "originalTitle": "Practical Magic 2",
    "firstSeen": "2026-09-04",
    "status": "premiere"
@@ -17292,7 +16738,7 @@
    "lbSlug": "toy-story-5",
    "lbTitle": "Toy Story 5",
    "lbRating": 3.65,
-   "lbRatingCount": 1041997,
+   "lbRatingCount": 1047452,
    "originalTitle": null,
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -17704,8 +17150,8 @@
    },
    "lbSlug": "the-wrong-girls",
    "lbTitle": "The Wrong Girls",
-   "lbRating": 3.25,
-   "lbRatingCount": 23259,
+   "lbRating": 3.24,
+   "lbRatingCount": 24174,
    "originalTitle": "The Wrong Girls",
    "firstSeen": "2026-09-04",
    "status": "regular"
@@ -17808,7 +17254,7 @@
    "lbSlug": "twilight-2008",
    "lbTitle": "Twilight",
    "lbRating": 3.11,
-   "lbRatingCount": 2485272,
+   "lbRatingCount": 2492490,
    "originalTitle": "Twilight",
    "firstSeen": "2026-09-07",
    "status": "retro"
