@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-09-11T23:41:18.403Z",
+ "generatedAt": "2026-09-12T08:18:06.617Z",
  "fullSyncAt": "2026-09-06T17:42:32.818Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 778,
-  "watchlist": 539
+  "watched": 779,
+  "watchlist": 538
  },
  "watched": [
   {
@@ -5453,6 +5453,13 @@
    "year": 2021,
    "rating10": 7,
    "norm": "loki"
+  },
+  {
+   "slug": "the-war-of-the-worlds-next-century",
+   "title": "The War of the Worlds: Next Century",
+   "year": 1981,
+   "rating10": 8,
+   "norm": "the war of the worlds next century"
   }
  ],
  "watchlist": [
@@ -5479,12 +5486,6 @@
    "title": "Golem",
    "year": 1980,
    "norm": "golem"
-  },
-  {
-   "slug": "the-war-of-the-worlds-next-century",
-   "title": "The War of the Worlds: Next Century",
-   "year": 1981,
-   "norm": "the war of the worlds next century"
   },
   {
    "slug": "o-bi-o-ba-the-end-of-civilization",
@@ -8693,6 +8694,16 @@
  ],
  "recent": [
   {
+   "title": "The War of the Worlds: Next Century",
+   "year": 1981,
+   "slug": "the-war-of-the-worlds-next-century",
+   "rating10": 8,
+   "watchedDate": "2026-09-12",
+   "rewatch": false,
+   "tmdbId": 185354,
+   "review": null
+  },
+  {
    "title": "Loki",
    "year": 2021,
    "slug": "loki-2021",
@@ -9180,16 +9191,6 @@
    "watchedDate": "2026-08-04",
    "rewatch": false,
    "tmdbId": 10138,
-   "review": null
-  },
-  {
-   "title": "Iron Man",
-   "year": 2008,
-   "slug": "iron-man-2008",
-   "rating10": 8,
-   "watchedDate": "2026-08-03",
-   "rewatch": true,
-   "tmdbId": 1726,
    "review": null
   }
  ]
