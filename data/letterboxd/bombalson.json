@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-09-12T23:27:53.457Z",
+ "generatedAt": "2026-09-13T08:42:12.854Z",
  "fullSyncAt": "2026-09-06T17:42:32.818Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 779,
-  "watchlist": 538
+  "watched": 780,
+  "watchlist": 537
  },
  "watched": [
   {
@@ -5460,6 +5460,13 @@
    "year": 1981,
    "rating10": 8,
    "norm": "the war of the worlds next century"
+  },
+  {
+   "slug": "bones-and-all",
+   "title": "Bones and All",
+   "year": 2022,
+   "rating10": 9,
+   "norm": "bones and all"
   }
  ],
  "watchlist": [
@@ -5570,12 +5577,6 @@
    "title": "Waves",
    "year": 2019,
    "norm": "waves"
-  },
-  {
-   "slug": "bones-and-all",
-   "title": "Bones and All",
-   "year": 2022,
-   "norm": "bones and all"
   },
   {
    "slug": "the-red-shoes",
@@ -8694,6 +8695,16 @@
  ],
  "recent": [
   {
+   "title": "Bones and All",
+   "year": 2022,
+   "slug": "bones-and-all",
+   "rating10": 9,
+   "watchedDate": "2026-09-13",
+   "rewatch": false,
+   "tmdbId": 791177,
+   "review": null
+  },
+  {
    "title": "The War of the Worlds: Next Century",
    "year": 1981,
    "slug": "the-war-of-the-worlds-next-century",
@@ -9181,16 +9192,6 @@
    "watchedDate": "2026-08-05",
    "rewatch": false,
    "tmdbId": 1771,
-   "review": null
-  },
-  {
-   "title": "Iron Man 2",
-   "year": 2010,
-   "slug": "iron-man-2",
-   "rating10": 6,
-   "watchedDate": "2026-08-04",
-   "rewatch": false,
-   "tmdbId": 10138,
    "review": null
   }
  ]

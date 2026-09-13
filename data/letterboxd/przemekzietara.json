@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-09-12T23:29:23.054Z",
+ "generatedAt": "2026-09-13T08:43:41.682Z",
  "fullSyncAt": "2026-09-06T17:42:40.230Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 526,
+  "watched": 527,
   "watchlist": 131
  },
  "watched": [
@@ -3689,6 +3689,13 @@
    "year": 2026,
    "rating10": 7,
    "norm": "tony"
+  },
+  {
+   "slug": "bones-and-all",
+   "title": "Bones and All",
+   "year": 2022,
+   "rating10": 7,
+   "norm": "bones and all"
   }
  ],
  "watchlist": [
@@ -4481,6 +4488,16 @@
  ],
  "recent": [
   {
+   "title": "Bones and All",
+   "year": 2022,
+   "slug": "bones-and-all",
+   "rating10": 7,
+   "watchedDate": "2026-09-12",
+   "rewatch": false,
+   "tmdbId": 791177,
+   "review": null
+  },
+  {
    "title": "WandaVision",
    "year": 2021,
    "slug": "wandavision",
@@ -4968,16 +4985,6 @@
    "watchedDate": "2026-05-25",
    "rewatch": false,
    "tmdbId": 705861,
-   "review": null
-  },
-  {
-   "title": "BEEF",
-   "year": 2023,
-   "slug": "beef-2023",
-   "rating10": 9,
-   "watchedDate": "2026-04-18",
-   "rewatch": true,
-   "tmdbId": null,
    "review": null
   }
  ]
