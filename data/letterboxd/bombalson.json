@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-09-13T23:38:29.174Z",
+ "generatedAt": "2026-09-14T09:23:06.264Z",
  "fullSyncAt": "2026-09-06T17:42:32.818Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 780,
-  "watchlist": 537
+  "watched": 781,
+  "watchlist": 536
  },
  "watched": [
   {
@@ -5467,6 +5467,13 @@
    "year": 2022,
    "rating10": 9,
    "norm": "bones and all"
+  },
+  {
+   "slug": "angst",
+   "title": "Angst",
+   "year": 1983,
+   "rating10": 8,
+   "norm": "angst"
   }
  ],
  "watchlist": [
@@ -6057,12 +6064,6 @@
    "title": "Re-Animator",
    "year": 1985,
    "norm": "re animator"
-  },
-  {
-   "slug": "angst",
-   "title": "Angst",
-   "year": 1983,
-   "norm": "angst"
   },
   {
    "slug": "frankenhooker",
@@ -8695,6 +8696,16 @@
  ],
  "recent": [
   {
+   "title": "Angst",
+   "year": 1983,
+   "slug": "angst",
+   "rating10": 8,
+   "watchedDate": "2026-09-14",
+   "rewatch": false,
+   "tmdbId": 18912,
+   "review": null
+  },
+  {
    "title": "Bones and All",
    "year": 2022,
    "slug": "bones-and-all",
@@ -9182,16 +9193,6 @@
    "watchedDate": "2026-08-06",
    "rewatch": false,
    "tmdbId": 10195,
-   "review": null
-  },
-  {
-   "title": "Captain America: The First Avenger",
-   "year": 2011,
-   "slug": "captain-america-the-first-avenger",
-   "rating10": 7,
-   "watchedDate": "2026-08-05",
-   "rewatch": false,
-   "tmdbId": 1771,
    "review": null
   }
  ]
