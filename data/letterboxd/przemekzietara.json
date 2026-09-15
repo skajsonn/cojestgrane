@@ -1,13 +1,20 @@
 {
- "generatedAt": "2026-09-14T16:10:11.359Z",
- "fullSyncAt": "2026-09-06T17:42:40.230Z",
+ "generatedAt": "2026-09-15T00:04:33.695Z",
+ "fullSyncAt": "2026-09-15T00:04:33.695Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
   "watched": 527,
-  "watchlist": 131
+  "watchlist": 132
  },
  "watched": [
+  {
+   "slug": "tony-2026",
+   "title": "Tony",
+   "year": 2026,
+   "rating10": 7,
+   "norm": "tony"
+  },
   {
    "slug": "the-end-of-oak-street",
    "title": "The End of Oak Street",
@@ -919,6 +926,13 @@
    "norm": "the whale"
   },
   {
+   "slug": "bones-and-all",
+   "title": "Bones and All",
+   "year": 2022,
+   "rating10": 7,
+   "norm": "bones and all"
+  },
+  {
    "slug": "barbarian-2022",
    "title": "Barbarian",
    "year": 2022,
@@ -1251,7 +1265,7 @@
    "slug": "loki-2021",
    "title": "Loki",
    "year": 2021,
-   "rating10": 8,
+   "rating10": 9,
    "norm": "loki"
   },
   {
@@ -2501,18 +2515,18 @@
    "norm": "rush"
   },
   {
-   "slug": "12-years-a-slave",
-   "title": "12 Years a Slave",
-   "year": 2013,
-   "rating10": 6,
-   "norm": "12 years a slave"
-  },
-  {
    "slug": "prisoners",
    "title": "Prisoners",
    "year": 2013,
    "rating10": 10,
    "norm": "prisoners"
+  },
+  {
+   "slug": "12-years-a-slave",
+   "title": "12 Years a Slave",
+   "year": 2013,
+   "rating10": 6,
+   "norm": "12 years a slave"
   },
   {
    "slug": "about-time",
@@ -3682,23 +3696,15 @@
    "year": 1971,
    "rating10": 3,
    "norm": "a clockwork orange"
-  },
-  {
-   "slug": "tony-2026",
-   "title": "Tony",
-   "year": 2026,
-   "rating10": 7,
-   "norm": "tony"
-  },
-  {
-   "slug": "bones-and-all",
-   "title": "Bones and All",
-   "year": 2022,
-   "rating10": 7,
-   "norm": "bones and all"
   }
  ],
  "watchlist": [
+  {
+   "slug": "rap-world",
+   "title": "Rap World",
+   "year": 2024,
+   "norm": "rap world"
+  },
   {
    "slug": "boyhood",
    "title": "Boyhood",

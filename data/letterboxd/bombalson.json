@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-09-14T16:08:42.260Z",
- "fullSyncAt": "2026-09-06T17:42:32.818Z",
+ "generatedAt": "2026-09-15T00:04:25.674Z",
+ "fullSyncAt": "2026-09-15T00:04:25.674Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
   "watched": 781,
-  "watchlist": 536
+  "watchlist": 547
  },
  "watched": [
   {
@@ -737,6 +737,13 @@
    "norm": "the whale"
   },
   {
+   "slug": "bones-and-all",
+   "title": "Bones and All",
+   "year": 2022,
+   "rating10": 9,
+   "norm": "bones and all"
+  },
+  {
    "slug": "groot-takes-a-bath",
    "title": "Groot Takes a Bath",
    "year": 2022,
@@ -933,6 +940,13 @@
    "norm": "batman the long halloween part one"
   },
   {
+   "slug": "loki-2021",
+   "title": "Loki",
+   "year": 2021,
+   "rating10": 7,
+   "norm": "loki"
+  },
+  {
    "slug": "nobody-2021",
    "title": "Nobody",
    "year": 2021,
@@ -966,6 +980,13 @@
    "year": 2021,
    "rating10": 5,
    "norm": "coming 2 america"
+  },
+  {
+   "slug": "wandavision",
+   "title": "WandaVision",
+   "year": 2021,
+   "rating10": 6,
+   "norm": "wandavision"
   },
   {
    "slug": "lupin-2021-1",
@@ -3012,6 +3033,13 @@
    "norm": "iron man"
   },
   {
+   "slug": "soul-eater",
+   "title": "Soul Eater",
+   "year": 2008,
+   "rating10": 9,
+   "norm": "soul eater"
+  },
+  {
    "slug": "the-chaser",
    "title": "The Chaser",
    "year": 2008,
@@ -5042,6 +5070,13 @@
    "norm": "videodrome"
   },
   {
+   "slug": "angst",
+   "title": "Angst",
+   "year": 1983,
+   "rating10": 8,
+   "norm": "angst"
+  },
+  {
    "slug": "the-king-of-comedy",
    "title": "The King of Comedy",
    "year": 1982,
@@ -5068,6 +5103,13 @@
    "year": 1982,
    "rating10": 8,
    "norm": "rocky iii"
+  },
+  {
+   "slug": "the-war-of-the-worlds-next-century",
+   "title": "The War of the Worlds: Next Century",
+   "year": 1981,
+   "rating10": 8,
+   "norm": "the war of the worlds next century"
   },
   {
    "slug": "blow-out",
@@ -5432,51 +5474,75 @@
    "year": 1920,
    "rating10": 7,
    "norm": "the cabinet of dr caligari"
-  },
-  {
-   "slug": "wandavision",
-   "title": "WandaVision",
-   "year": 2021,
-   "rating10": 6,
-   "norm": "wandavision"
-  },
-  {
-   "slug": "soul-eater",
-   "title": "Soul Eater",
-   "year": 2008,
-   "rating10": 9,
-   "norm": "soul eater"
-  },
-  {
-   "slug": "loki-2021",
-   "title": "Loki",
-   "year": 2021,
-   "rating10": 7,
-   "norm": "loki"
-  },
-  {
-   "slug": "the-war-of-the-worlds-next-century",
-   "title": "The War of the Worlds: Next Century",
-   "year": 1981,
-   "rating10": 8,
-   "norm": "the war of the worlds next century"
-  },
-  {
-   "slug": "bones-and-all",
-   "title": "Bones and All",
-   "year": 2022,
-   "rating10": 9,
-   "norm": "bones and all"
-  },
-  {
-   "slug": "angst",
-   "title": "Angst",
-   "year": 1983,
-   "rating10": 8,
-   "norm": "angst"
   }
  ],
  "watchlist": [
+  {
+   "slug": "your-mother-your-mother-your-mother",
+   "title": "Your Mother Your Mother Your Mother",
+   "year": 2026,
+   "norm": "your mother your mother your mother"
+  },
+  {
+   "slug": "western-2017",
+   "title": "Western",
+   "year": 2017,
+   "norm": "western"
+  },
+  {
+   "slug": "love-pop",
+   "title": "Love & Pop",
+   "year": 1998,
+   "norm": "love pop"
+  },
+  {
+   "slug": "a-brighter-summer-day",
+   "title": "A Brighter Summer Day",
+   "year": 1991,
+   "norm": "a brighter summer day"
+  },
+  {
+   "slug": "digger-2026",
+   "title": "Digger",
+   "year": 2026,
+   "norm": "digger"
+  },
+  {
+   "slug": "the-debut-2026",
+   "title": "The Debut",
+   "year": 2026,
+   "norm": "the debut"
+  },
+  {
+   "slug": "throne-of-blood",
+   "title": "Throne of Blood",
+   "year": 1957,
+   "norm": "throne of blood"
+  },
+  {
+   "slug": "samurai-rebellion",
+   "title": "Samurai Rebellion",
+   "year": 1967,
+   "norm": "samurai rebellion"
+  },
+  {
+   "slug": "three-incestuous-sisters",
+   "title": "Three Incestuous Sisters",
+   "year": null,
+   "norm": "three incestuous sisters"
+  },
+  {
+   "slug": "maborosi",
+   "title": "Maborosi",
+   "year": 1995,
+   "norm": "maborosi"
+  },
+  {
+   "slug": "you-can-see-everything",
+   "title": "You Can See Everything",
+   "year": 2026,
+   "norm": "you can see everything"
+  },
   {
    "slug": "kramer-vs-kramer",
    "title": "Kramer vs. Kramer",
