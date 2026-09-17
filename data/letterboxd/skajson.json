@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-09-16T19:11:16.970Z",
+ "generatedAt": "2026-09-16T23:59:34.814Z",
  "fullSyncAt": "2026-09-15T19:16:40.237Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 245,
-  "watchlist": 58
+  "watched": 246,
+  "watchlist": 57
  },
  "watched": [
   {
@@ -1722,6 +1722,13 @@
    "year": 1971,
    "rating10": 7,
    "norm": "a clockwork orange"
+  },
+  {
+   "slug": "loki-2021",
+   "title": "Loki",
+   "year": 2021,
+   "rating10": 9,
+   "norm": "loki"
   }
  ],
  "watchlist": [
@@ -2008,12 +2015,6 @@
    "norm": "the boondock saints iii"
   },
   {
-   "slug": "loki-2021",
-   "title": "Loki",
-   "year": 2021,
-   "norm": "loki"
-  },
-  {
    "slug": "once-upon-a-time-in-hollywood",
    "title": "Once Upon a Time... in Hollywood",
    "year": 2019,
@@ -2075,6 +2076,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Loki",
+   "year": 2021,
+   "slug": "loki-2021",
+   "rating10": 9,
+   "watchedDate": "2026-09-16",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
   {
    "title": "WandaVision",
    "year": 2021,
@@ -2563,16 +2574,6 @@
    "watchedDate": "2025-02-02",
    "rewatch": false,
    "tmdbId": 10158,
-   "review": null
-  },
-  {
-   "title": "Anora",
-   "year": 2024,
-   "slug": "anora",
-   "rating10": 8,
-   "watchedDate": "2025-03-04",
-   "rewatch": false,
-   "tmdbId": 1064213,
    "review": null
   }
  ]
