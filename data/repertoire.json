@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-09-19T18:17:26.826Z",
- "today": "2026-09-19",
+ "generatedAt": "2026-09-19T23:36:22.334Z",
+ "today": "2026-09-20",
  "cinemas": [
   {
    "id": "1065",
@@ -53,16 +53,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "21:10",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1700124?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "10:20",
@@ -639,16 +629,6 @@
      ]
     },
     "1075": {
-     "2026-09-19": [
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1699815?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "10:40",
@@ -837,16 +817,6 @@
      ]
     },
     "1079": {
-     "2026-09-19": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1695646?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "11:00",
@@ -1059,16 +1029,6 @@
      ]
     },
     "1089": {
-     "2026-09-19": [
-      {
-       "time": "20:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1696492?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "11:10",
@@ -2736,6 +2696,66 @@
    "status": "upcoming"
   },
   {
+   "id": "8443s2r",
+   "title": "BTS WORLD TOUR 'ARIRANG' IN BUENOS AIRES: LIVE VIEWING",
+   "year": "2026",
+   "releaseDate": "2026-10-25",
+   "length": 195,
+   "poster": "https://www.cinema-city.pl/xmedia-cw/repo/feats/posters/8443S2R.jpg",
+   "trailer": null,
+   "link": "https://www.cinema-city.pl/filmy/bts-world-tour-arirang-in-buenos-aires-live-viewing/8443s2r",
+   "genres": [],
+   "formats": [
+    "2d",
+    "laser-barco"
+   ],
+   "showings": {
+    "1065": {
+     "2026-10-25": [
+      {
+       "time": "14:45",
+       "formats": [
+        "laser-barco"
+       ],
+       "lang": "subbed",
+       "auditorium": "Sala 1",
+       "booking": "https://tickets.cinema-city.pl/api/order/1691017?lang=pl",
+       "soldOut": false
+      },
+      {
+       "time": "18:30",
+       "formats": [
+        "laser-barco"
+       ],
+       "lang": "subbed",
+       "auditorium": "Sala 1",
+       "booking": "https://tickets.cinema-city.pl/api/order/1691018?lang=pl",
+       "soldOut": false
+      }
+     ]
+    }
+   },
+   "tmdb": {
+    "id": 1770237,
+    "originalTitle": "BTS WORLD TOUR 'ARIRANG' IN BUENOS AIRES: LIVE VIEWING",
+    "title": "BTS WORLD TOUR 'ARIRANG' IN BUENOS AIRES: LIVE VIEWING",
+    "overview": null,
+    "voteAverage": 0,
+    "voteCount": 0,
+    "releaseDate": "2026-10-31",
+    "genres": [],
+    "poster": "https://image.tmdb.org/t/p/w500/kK5wiFE800cMVIjsj2TTyLCQqZo.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w780/4gQEWmkkUQWnBqteqav8eWkdb2k.jpg"
+   },
+   "lbSlug": null,
+   "lbTitle": null,
+   "lbRating": null,
+   "lbRatingCount": 0,
+   "originalTitle": null,
+   "firstSeen": "2026-09-20",
+   "status": "upcoming"
+  },
+  {
    "id": "8543s2r",
    "title": "Casino Royale",
    "year": "2006",
@@ -3539,16 +3559,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1697361?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-21": [
       {
        "time": "20:50",
@@ -5994,16 +6004,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1699489?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "17:10",
@@ -6136,16 +6136,6 @@
      ]
     },
     "1069": {
-     "2026-09-19": [
-      {
-       "time": "21:00",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1699639?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "16:40",
@@ -6278,16 +6268,6 @@
      ]
     },
     "1075": {
-     "2026-09-19": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1699971?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "19:20",
@@ -6412,16 +6392,6 @@
      ]
     },
     "1079": {
-     "2026-09-19": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1694836?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "16:30",
@@ -6554,16 +6524,6 @@
      ]
     },
     "1089": {
-     "2026-09-19": [
-      {
-       "time": "20:10",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1698262?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "18:00",
@@ -7472,8 +7432,8 @@
    },
    "lbSlug": "marsupilami-2025",
    "lbTitle": "Marsupilami",
-   "lbRating": 2.67,
-   "lbRatingCount": 32274,
+   "lbRating": 2.68,
+   "lbRatingCount": 32377,
    "originalTitle": null,
    "firstSeen": "2026-09-08",
    "status": "new"
@@ -8048,16 +8008,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "20:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1696650?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "20:50",
@@ -8110,16 +8060,6 @@
      ]
     },
     "1069": {
-     "2026-09-19": [
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1698420?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "21:20",
@@ -8180,16 +8120,6 @@
      ]
     },
     "1075": {
-     "2026-09-19": [
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1700302?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "21:20",
@@ -8242,16 +8172,6 @@
      ]
     },
     "1079": {
-     "2026-09-19": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1697831?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "19:20",
@@ -8344,16 +8264,6 @@
      ]
     },
     "1089": {
-     "2026-09-19": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1697286?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "21:40",
@@ -8466,7 +8376,7 @@
    "lbRatingCount": 0,
    "originalTitle": "NCT 127 5TH TOUR ‘NEO CITY  SEOUL - THE REDLINE’ in CINEMAS",
    "firstSeen": "2026-09-04",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8423s2r",
@@ -8485,16 +8395,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1700814?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "21:20",
@@ -8579,16 +8479,6 @@
      ]
     },
     "1069": {
-     "2026-09-19": [
-      {
-       "time": "22:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1700652?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "16:50",
@@ -8933,16 +8823,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1699021?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "16:40",
@@ -9067,16 +8947,6 @@
      ]
     },
     "1069": {
-     "2026-09-19": [
-      {
-       "time": "21:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1695184?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "17:40",
@@ -9169,16 +9039,6 @@
      ]
     },
     "1075": {
-     "2026-09-19": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1699881?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "21:50",
@@ -9239,16 +9099,6 @@
      ]
     },
     "1079": {
-     "2026-09-19": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1696019?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "14:50",
@@ -9395,16 +9245,6 @@
      ]
     },
     "1089": {
-     "2026-09-19": [
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1695690?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "21:10",
@@ -9517,7 +9357,7 @@
    "lbSlug": "pressure-2026",
    "lbTitle": "Pressure",
    "lbRating": 3.54,
-   "lbRatingCount": 95500,
+   "lbRatingCount": 102713,
    "originalTitle": "Pressure",
    "firstSeen": "2026-09-04",
    "status": "new"
@@ -9631,16 +9471,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "20:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1700578?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "17:30",
@@ -9837,16 +9667,6 @@
      ]
     },
     "1079": {
-     "2026-09-19": [
-      {
-       "time": "20:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1698930?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "15:00",
@@ -9980,16 +9800,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "20:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1698458?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "10:20",
@@ -10202,16 +10012,6 @@
      ]
     },
     "1079": {
-     "2026-09-19": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1692383?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "10:40",
@@ -10507,24 +10307,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "20:10",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1697636?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1697566?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "17:50",
@@ -10617,16 +10399,6 @@
      ]
     },
     "1069": {
-     "2026-09-19": [
-      {
-       "time": "20:00",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1696374?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "20:00",
@@ -10679,16 +10451,6 @@
      ]
     },
     "1075": {
-     "2026-09-19": [
-      {
-       "time": "20:20",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1700068?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "20:20",
@@ -10741,16 +10503,6 @@
      ]
     },
     "1079": {
-     "2026-09-19": [
-      {
-       "time": "20:20",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1699753?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "20:20",
@@ -11832,28 +11584,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "21:15",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1677239?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:00",
-       "formats": [
-        "imax"
-       ],
-       "lang": "subbed",
-       "auditorium": "Imax",
-       "booking": "https://tickets.cinema-city.pl/api/order/1701156?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "10:00",
@@ -12386,16 +12116,6 @@
      ]
     },
     "1069": {
-     "2026-09-19": [
-      {
-       "time": "21:15",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1677540?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "12:15",
@@ -12608,16 +12328,6 @@
      ]
     },
     "1075": {
-     "2026-09-19": [
-      {
-       "time": "21:45",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1677225?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "10:30",
@@ -12806,18 +12516,6 @@
      ]
     },
     "1079": {
-     "2026-09-19": [
-      {
-       "time": "21:45",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1677195?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "10:30",
@@ -13130,16 +12828,6 @@
      ]
     },
     "1089": {
-     "2026-09-19": [
-      {
-       "time": "21:15",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1677120?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "12:15",
@@ -13672,16 +13360,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1704832?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "15:10",
@@ -13826,16 +13504,6 @@
      ]
     },
     "1079": {
-     "2026-09-19": [
-      {
-       "time": "21:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1699540?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "21:00",
@@ -13930,16 +13598,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1700614?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "10:10",
@@ -14178,16 +13836,6 @@
      ]
     },
     "1069": {
-     "2026-09-19": [
-      {
-       "time": "20:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1694798?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "11:40",
@@ -14404,26 +14052,6 @@
      ]
     },
     "1079": {
-     "2026-09-19": [
-      {
-       "time": "20:30",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "dubbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1693608?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1695288?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "11:00",
@@ -14700,16 +14328,6 @@
      ]
     },
     "1089": {
-     "2026-09-19": [
-      {
-       "time": "20:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1697683?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "14:00",
@@ -15792,16 +15410,6 @@
      ]
     },
     "1069": {
-     "2026-09-19": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1703949?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "15:10",
@@ -15946,24 +15554,6 @@
      ]
     },
     "1079": {
-     "2026-09-19": [
-      {
-       "time": "20:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1693251?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1693257?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "20:00",
@@ -16088,18 +15678,6 @@
      ]
     },
     "1089": {
-     "2026-09-19": [
-      {
-       "time": "21:30",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1694191?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "21:30",
@@ -16203,16 +15781,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-09-19": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1701010?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "10:40",
@@ -16465,16 +16033,6 @@
      ]
     },
     "1079": {
-     "2026-09-19": [
-      {
-       "time": "20:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1693016?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "12:00",
@@ -16655,16 +16213,6 @@
      ]
     },
     "1089": {
-     "2026-09-19": [
-      {
-       "time": "20:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1695138?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "15:10",
@@ -17313,16 +16861,6 @@
      ]
     },
     "1069": {
-     "2026-09-19": [
-      {
-       "time": "20:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1700069?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "20:10",
@@ -17413,16 +16951,6 @@
      ]
     },
     "1075": {
-     "2026-09-19": [
-      {
-       "time": "20:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1700409?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-09-20": [
       {
        "time": "20:40",
