@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-09-21T16:07:29.187Z",
+ "generatedAt": "2026-09-22T00:23:33.026Z",
  "fullSyncAt": "2026-09-15T19:16:40.237Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 248,
+  "watched": 249,
   "watchlist": 57
  },
  "watched": [
@@ -418,7 +418,7 @@
    "slug": "doctor-strange-in-the-multiverse-of-madness",
    "title": "Doctor Strange in the Multiverse of Madness",
    "year": 2022,
-   "rating10": 8,
+   "rating10": 7,
    "norm": "doctor strange in the multiverse of madness"
   },
   {
@@ -1743,6 +1743,13 @@
    "year": 2026,
    "rating10": 7,
    "norm": "resident evil"
+  },
+  {
+   "slug": "spider-man-no-way-home",
+   "title": "Spider-Man: No Way Home",
+   "year": 2021,
+   "rating10": 8,
+   "norm": "spider man no way home"
   }
  ],
  "watchlist": [
@@ -2090,6 +2097,26 @@
   }
  ],
  "recent": [
+  {
+   "title": "Doctor Strange in the Multiverse of Madness",
+   "year": 2022,
+   "slug": "doctor-strange-in-the-multiverse-of-madness",
+   "rating10": 7,
+   "watchedDate": "2026-09-21",
+   "rewatch": true,
+   "tmdbId": 453395,
+   "review": null
+  },
+  {
+   "title": "Spider-Man: No Way Home",
+   "year": 2021,
+   "slug": "spider-man-no-way-home",
+   "rating10": 8,
+   "watchedDate": "2026-09-21",
+   "rewatch": false,
+   "tmdbId": 634649,
+   "review": null
+  },
   {
    "title": "Resident Evil",
    "year": 2026,
@@ -2568,26 +2595,6 @@
    "watchedDate": "2024-10-27",
    "rewatch": false,
    "tmdbId": 917496,
-   "review": null
-  },
-  {
-   "title": "The Substance",
-   "year": 2024,
-   "slug": "the-substance",
-   "rating10": 10,
-   "watchedDate": "2024-11-01",
-   "rewatch": false,
-   "tmdbId": 933260,
-   "review": null
-  },
-  {
-   "title": "Gladiator",
-   "year": 2000,
-   "slug": "gladiator-2000",
-   "rating10": 9,
-   "watchedDate": "2024-11-20",
-   "rewatch": false,
-   "tmdbId": 98,
    "review": null
   }
  ]
