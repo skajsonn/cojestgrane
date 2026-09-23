@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-09-23T08:56:05.505Z",
+ "generatedAt": "2026-09-23T14:34:13.547Z",
  "fullSyncAt": "2026-09-15T19:16:58.321Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 784,
-  "watchlist": 547
+  "watched": 785,
+  "watchlist": 546
  },
  "watched": [
   {
@@ -5495,6 +5495,13 @@
    "year": 2022,
    "rating10": 6,
    "norm": "doctor strange in the multiverse of madness"
+  },
+  {
+   "slug": "afro-samurai",
+   "title": "Afro Samurai",
+   "year": 2007,
+   "rating10": 8,
+   "norm": "afro samurai"
   }
  ],
  "watchlist": [
@@ -6625,12 +6632,6 @@
    "title": "Ergo Proxy",
    "year": 2006,
    "norm": "ergo proxy"
-  },
-  {
-   "slug": "afro-samurai",
-   "title": "Afro Samurai",
-   "year": 2007,
-   "norm": "afro samurai"
   },
   {
    "slug": "basilisk-2005",
@@ -8783,6 +8784,16 @@
  ],
  "recent": [
   {
+   "title": "Afro Samurai",
+   "year": 2007,
+   "slug": "afro-samurai",
+   "rating10": 8,
+   "watchedDate": "2026-09-23",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
    "title": "Doctor Strange in the Multiverse of Madness",
    "year": 2022,
    "slug": "doctor-strange-in-the-multiverse-of-madness",
@@ -9270,16 +9281,6 @@
    "watchedDate": "2026-08-08",
    "rewatch": false,
    "tmdbId": 68721,
-   "review": null
-  },
-  {
-   "title": "The Avengers",
-   "year": 2012,
-   "slug": "the-avengers-2012",
-   "rating10": 7,
-   "watchedDate": "2026-08-07",
-   "rewatch": false,
-   "tmdbId": 24428,
    "review": null
   }
  ]
