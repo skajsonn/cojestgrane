@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-09-24T19:40:12.251Z",
+ "generatedAt": "2026-09-25T00:08:36.420Z",
  "fullSyncAt": "2026-09-15T19:17:06.136Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 527,
+  "watched": 528,
   "watchlist": 132
  },
  "watched": [
@@ -3696,6 +3696,13 @@
    "year": 1971,
    "rating10": 3,
    "norm": "a clockwork orange"
+  },
+  {
+   "slug": "game-night",
+   "title": "Game Night",
+   "year": 2018,
+   "rating10": 7,
+   "norm": "game night"
   }
  ],
  "watchlist": [
@@ -4494,6 +4501,16 @@
  ],
  "recent": [
   {
+   "title": "Game Night",
+   "year": 2018,
+   "slug": "game-night",
+   "rating10": 7,
+   "watchedDate": "2026-09-24",
+   "rewatch": false,
+   "tmdbId": 445571,
+   "review": null
+  },
+  {
    "title": "Doctor Strange in the Multiverse of Madness",
    "year": 2022,
    "slug": "doctor-strange-in-the-multiverse-of-madness",
@@ -4981,16 +4998,6 @@
    "watchedDate": "2026-07-17",
    "rewatch": false,
    "tmdbId": 1368337,
-   "review": null
-  },
-  {
-   "title": "Obsession",
-   "year": 2025,
-   "slug": "obsession-2025",
-   "rating10": 7,
-   "watchedDate": "2026-07-05",
-   "rewatch": false,
-   "tmdbId": 1339713,
    "review": null
   }
  ]

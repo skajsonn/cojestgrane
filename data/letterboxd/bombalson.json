@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-09-24T19:39:21.273Z",
+ "generatedAt": "2026-09-25T00:07:46.449Z",
  "fullSyncAt": "2026-09-15T19:16:58.321Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 785,
+  "watched": 786,
   "watchlist": 546
  },
  "watched": [
@@ -5502,6 +5502,13 @@
    "year": 2007,
    "rating10": 8,
    "norm": "afro samurai"
+  },
+  {
+   "slug": "harakiri",
+   "title": "Harakiri",
+   "year": 1962,
+   "rating10": 10,
+   "norm": "harakiri"
   }
  ],
  "watchlist": [
@@ -8784,6 +8791,16 @@
  ],
  "recent": [
   {
+   "title": "Harakiri",
+   "year": 1962,
+   "slug": "harakiri",
+   "rating10": 10,
+   "watchedDate": "2026-09-24",
+   "rewatch": false,
+   "tmdbId": 14537,
+   "review": null
+  },
+  {
    "title": "Afro Samurai",
    "year": 2007,
    "slug": "afro-samurai",
@@ -9271,16 +9288,6 @@
    "watchedDate": "2026-08-09",
    "rewatch": false,
    "tmdbId": 894211,
-   "review": null
-  },
-  {
-   "title": "Iron Man 3",
-   "year": 2013,
-   "slug": "iron-man-3",
-   "rating10": 7,
-   "watchedDate": "2026-08-08",
-   "rewatch": false,
-   "tmdbId": 68721,
    "review": null
   }
  ]
