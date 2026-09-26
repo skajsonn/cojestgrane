@@ -149,6 +149,13 @@ async function tmdbEnrich(film, cache) {
 const BROWSER_UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
 
+// Wersja schematu wpisów lb-map. Wpisy bez `v: LB_MAP_VERSION` powstały przed
+// walidacją tytułów (wtedy brano w ciemno results[0] — stąd np. koncert
+// André Rieu zmapowany na „One Battle After Another") i są sprawdzane ponownie.
+const LB_MAP_VERSION = 2;
+// Minimalne podobieństwo tytułu wyniku do tytułu z CC, żeby uznać trafienie.
+const LB_MIN_TITLE_SCORE = 0.75;
+
 function parseLbSearch(html) {
   const results = [];
   for (const block of html.split('<li class="search-result').slice(1)) {
@@ -156,30 +163,88 @@ function parseLbSearch(html) {
     const nameRaw = block.match(/data-item-name="([^"]+)"/)?.[1];
     if (!slug || !nameRaw) continue;
     const m = decodeEntities(nameRaw).match(/^(.*)\s\((\d{4})\)$/);
+    // Letterboxd pokazuje w wynikach tytuły alternatywne (m.in. polskie) —
+    // to po nich wyszukiwarka dopasowała zapytanie, więc po nich weryfikujemy.
+    const alt = block.match(/Alternative titles?:\s*([^<]+)/i)?.[1];
+    const orig = block.match(/Original title:\s*([^<]+)/i)?.[1];
     results.push({
       slug,
       title: m ? m[1] : decodeEntities(nameRaw),
       year: m ? Number(m[2]) : null,
+      altTitles: [
+        ...(alt ? decodeEntities(alt).split(/,\s*/) : []),
+        ...(orig ? [decodeEntities(orig)] : []),
+      ].map((t) => t.trim()).filter(Boolean),
     });
   }
   return results;
 }
 
+function titleTokens(s) {
+  return new Set(normalizeTitle(s).split(' ').filter((t) => t.length > 1));
+}
+
+/** Podobieństwo dwóch tytułów 0..1 (równość, zawieranie całych słów, wspólne słowa). */
+function titleScore(a, b) {
+  const na = normalizeTitle(a);
+  const nb = normalizeTitle(b);
+  if (!na || !nb) return 0;
+  if (na === nb) return 1;
+  const [short, long] = na.length <= nb.length ? [na, nb] : [nb, na];
+  // zawieranie całej frazy — tylko dla min. 2 słów („spider man calkiem nowy
+  // dzien" w wersji z dubbingiem), pojedyncze słowo („avengers") to za mało
+  if (short.includes(' ') && ` ${long} `.includes(` ${short} `)) return 0.9;
+  const A = titleTokens(a);
+  const B = titleTokens(b);
+  if (!A.size || !B.size) return 0;
+  let common = 0;
+  for (const t of A) if (B.has(t)) common++;
+  // względem dłuższego — inaczej jednowyrazowy tytuł zawsze dawałby 1.0
+  return common / Math.max(A.size, B.size);
+}
+
+/** Najlepsze dopasowanie któregokolwiek znanego tytułu filmu do wyniku wyszukiwania. */
+function bestTitleScore(knownTitles, result) {
+  let best = 0;
+  for (const q of knownTitles) {
+    for (const t of [result.title, ...result.altTitles]) best = Math.max(best, titleScore(q, t));
+  }
+  return best;
+}
+
 async function lbLookup(film, cache) {
   const cached = cache[film.id];
-  if (cached && (cached.slug || daysBetween(cached.fetchedAt, TODAY) < 7)) return cached;
+  if (cached && cached.v === LB_MAP_VERSION && (cached.slug || daysBetween(cached.fetchedAt, TODAY) < 7)) {
+    return cached;
+  }
 
-  const queries = [film.name];
-  // fallback: sam człon główny tytułu ("Backrooms. Bez wyjścia" → "Backrooms")
-  const stem = film.name.split(/[.:]/)[0].trim();
-  if (stem && stem !== film.name) queries.push(stem);
-
+  // Zapytania do wyszukiwarki: pełny tytuł, tytuł bez dopisków w nawiasach
+  // („Auta (re-release)" → „Auta") i sam człon główny („Backrooms. Bez wyjścia").
+  const cleaned = film.name.replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim();
+  const stem = cleaned.split(/[.:]/)[0].trim();
+  const queries = [...new Set([film.name, cleaned, stem].filter(Boolean))];
   const year = parseInt(film.releaseYear, 10) || null;
+  const yearConflict = (y) => !!(year && y && Math.abs(y - year) > 1);
+  // Tytuły, do których wynik może pasować częściowo: pełny polski z CC
+  // + oryginalny/PL z TMDB. Sam skrót („Avengers" z „Avengers: Koniec gry –
+  // wersja rozszerzona") musi pasować DOKŁADNIE — inaczej trafia w „The Avengers".
+  const knownTitles = [...new Set([film.name, cleaned, ...(film.extraTitles || [])].filter(Boolean))];
+  const stemNorm = stem !== cleaned ? normalizeTitle(stem) : null;
+  const scoreOf = (r) => {
+    const s = bestTitleScore(knownTitles, r);
+    if (s >= LB_MIN_TITLE_SCORE || !stemNorm) return s;
+    // skrót to słaby dowód — liczy się tylko przy potwierdzonym roku
+    // („Backrooms" 2026 = 2026 tak; „Avengers" bez roku w CC — nie)
+    const yearConfirmed = !!(year && r.year && Math.abs(r.year - year) <= 1);
+    return yearConfirmed && [r.title, ...r.altTitles].some((t) => normalizeTitle(t) === stemNorm) ? 1 : s;
+  };
+
+
   let found = null;
-  let anySearchOk = false; // czy choc jedno zapytanie w ogole doszlo do serwera
+  let anySearchOk = false; // czy choć jedno zapytanie w ogóle doszło do serwera
   for (const q of queries) {
     // "/" i ":" w ścieżce wyszukiwarka odrzuca (HTTP 400) — zamieniamy na spacje
-    const safeQ = q.replace(/[/\\:]+/g, ' ').replace(/\s+/g, ' ').trim();
+    const safeQ = q.replace(/[/\:]+/g, ' ').replace(/\s+/g, ' ').trim();
     const url = `https://letterboxd.com/s/search/films/${encodeURIComponent(safeQ)}/`;
     let results = [];
     try {
@@ -189,22 +254,37 @@ async function lbLookup(film, cache) {
       console.warn(`[lb-map] wyszukiwanie "${q}" nieudane: ${err.message}`);
     }
     await sleep(400);
-    if (!results.length) continue;
-    found =
-      (year && results.find((r) => r.year === year)) ||
-      (year && results.find((r) => r.year && Math.abs(r.year - year) <= 1)) ||
-      results[0];
-    if (found) break;
+
+    // Bez walidacji ŻADEN wynik nie przechodzi — pierwszy z brzegu wynik
+    // (albo śmieciowa strona od proxy) to fałszywe „obejrzane"/„na watchliście".
+    const valid = results
+      .filter((r) => !yearConflict(r.year))
+      .map((r) => ({ r, score: scoreOf(r), dy: year && r.year ? Math.abs(r.year - year) : 1 }))
+      .filter((x) => x.score >= LB_MIN_TITLE_SCORE)
+      .sort((a, b) => b.score - a.score || a.dy - b.dy);
+    if (valid.length) {
+      found = valid[0].r;
+      break;
+    }
+    if (results.length) {
+      console.warn(`[lb-map] "${q}": ${results.length} wyników, żaden nie pasuje tytułem/rokiem — pomijam`);
+    }
   }
 
-  // Gdy zadne zapytanie nie doszlo (blokada/siec), NIE zapisujemy "brak
-  // dopasowania" — inaczej jeden zablokowany run kasowalby powiazanie filmu
-  // na 7 dni. Zwracamy pustke bez cache'owania; sprobujemy w kolejnym runie.
-  if (!found && !anySearchOk) return { q: film.name, slug: null, transient: true };
+  if (!found && !anySearchOk) {
+    // Sieć padła: stare dopasowanie zostawiamy (lepsze niż nic), chyba że
+    // przeczy mu rok — do ponownej weryfikacji w kolejnym runie.
+    if (cached?.slug && !yearConflict(cached.year)) return cached;
+    return { q: film.name, slug: null, transient: true };
+  }
 
   const entry = found
-    ? { fetchedAt: TODAY, q: film.name, slug: found.slug, title: found.title, year: found.year }
-    : { fetchedAt: TODAY, q: film.name, slug: null };
+    ? { v: LB_MAP_VERSION, fetchedAt: TODAY, q: film.name, slug: found.slug, title: found.title, year: found.year }
+    : { v: LB_MAP_VERSION, fetchedAt: TODAY, q: film.name, slug: null };
+  // ten sam film co wcześniej — nie wyrzucamy świeżej oceny
+  if (found && cached?.slug === found.slug) {
+    for (const k of ['rating', 'ratingCount', 'ratingAt']) if (k in cached) entry[k] = cached[k];
+  }
   cache[film.id] = entry;
   return entry;
 }
@@ -371,7 +451,10 @@ async function main() {
       lbSkipped++;
       continue;
     }
-    const entry = await lbLookup({ id: f.id, name: f.title, releaseYear: f.year }, lbMap);
+    const entry = await lbLookup({
+      id: f.id, name: f.title, releaseYear: f.year,
+      extraTitles: [f.tmdb?.originalTitle, f.tmdb?.title],
+    }, lbMap);
     await lbRating(entry);
     f.lbSlug = entry.slug;
     f.lbTitle = entry.slug ? entry.title : null;
