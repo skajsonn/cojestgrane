@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-09-28T21:31:01.146Z",
+ "generatedAt": "2026-09-29T01:20:30.923Z",
  "fullSyncAt": "2026-09-15T19:16:58.321Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 788,
-  "watchlist": 545
+  "watched": 789,
+  "watchlist": 544
  },
  "watched": [
   {
@@ -5523,6 +5523,13 @@
    "year": 1988,
    "rating10": 10,
    "norm": "who framed roger rabbit"
+  },
+  {
+   "slug": "asteroid-city",
+   "title": "Asteroid City",
+   "year": 2023,
+   "rating10": 7,
+   "norm": "asteroid city"
   }
  ],
  "watchlist": [
@@ -8659,12 +8666,6 @@
    "norm": "gotti"
   },
   {
-   "slug": "asteroid-city",
-   "title": "Asteroid City",
-   "year": 2023,
-   "norm": "asteroid city"
-  },
-  {
    "slug": "bohemian-rhapsody",
    "title": "Bohemian Rhapsody",
    "year": 2018,
@@ -8798,6 +8799,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Asteroid City",
+   "year": 2023,
+   "slug": "asteroid-city",
+   "rating10": 7,
+   "watchedDate": "2026-09-28",
+   "rewatch": false,
+   "tmdbId": 747188,
+   "review": null
+  },
   {
    "title": "Who Framed Roger Rabbit",
    "year": 1988,
@@ -9286,16 +9297,6 @@
    "watchedDate": "2026-08-11",
    "rewatch": false,
    "tmdbId": 100402,
-   "review": null
-  },
-  {
-   "title": "Thor: The Dark World",
-   "year": 2013,
-   "slug": "thor-the-dark-world",
-   "rating10": 4,
-   "watchedDate": "2026-08-10",
-   "rewatch": false,
-   "tmdbId": 76338,
    "review": null
   }
  ]
