@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-10-01T20:36:10.454Z",
- "today": "2026-10-01",
+ "generatedAt": "2026-10-02T01:11:20.882Z",
+ "today": "2026-10-02",
  "cinemas": [
   {
    "id": "1065",
@@ -2773,7 +2773,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-22",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8453o2r",
@@ -6938,8 +6938,8 @@
    },
    "lbSlug": "linkin-park-unshatter",
    "lbTitle": "LINKIN PARK: UNSHATTER",
-   "lbRating": null,
-   "lbRatingCount": 0,
+   "lbRating": 4.23,
+   "lbRatingCount": 2532,
    "originalTitle": null,
    "firstSeen": "2026-09-04",
    "status": "premiere"
@@ -8429,8 +8429,8 @@
    },
    "lbSlug": "marsupilami-2025",
    "lbTitle": "Marsupilami",
-   "lbRating": 2.69,
-   "lbRatingCount": 32715,
+   "lbRating": 2.68,
+   "lbRatingCount": 32792,
    "originalTitle": null,
    "firstSeen": "2026-09-08",
    "status": "new"
@@ -9300,7 +9300,7 @@
    "lbSlug": "fall-2-deadpoint",
    "lbTitle": "Fall 2: Deadpoint",
    "lbRating": 2.25,
-   "lbRatingCount": 33156,
+   "lbRatingCount": 34378,
    "originalTitle": "Fall 2: Deadpoint",
    "firstSeen": "2026-09-04",
    "status": "regular"
@@ -9476,16 +9476,6 @@
      ]
     },
     "1079": {
-     "2026-10-01": [
-      {
-       "time": "22:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1714220?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-02": [
       {
        "time": "17:30",
@@ -9626,7 +9616,7 @@
    "lbSlug": "pressure-2026",
    "lbTitle": "Pressure",
    "lbRating": 3.54,
-   "lbRatingCount": 119554,
+   "lbRatingCount": 122617,
    "originalTitle": "Pressure",
    "firstSeen": "2026-09-04",
    "status": "new"
@@ -10028,7 +10018,7 @@
    "lbSlug": "the-odyssey-2026",
    "lbTitle": "The Odyssey",
    "lbRating": 4.35,
-   "lbRatingCount": 4466434,
+   "lbRatingCount": 4487638,
    "originalTitle": "The Odyssey",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -12517,7 +12507,7 @@
    "lbSlug": "untitled-resident-evil-reboot",
    "lbTitle": "Resident Evil",
    "lbRating": 3.78,
-   "lbRatingCount": 1032256,
+   "lbRatingCount": 1121425,
    "originalTitle": null,
    "firstSeen": "2026-09-04",
    "status": "new"
@@ -13554,7 +13544,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-29",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8572o2r",
@@ -16962,7 +16952,7 @@
    "lbRatingCount": 0,
    "originalTitle": "Verity",
    "firstSeen": "2026-09-29",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "7955d2r",
@@ -17831,16 +17821,6 @@
      ]
     },
     "1079": {
-     "2026-10-01": [
-      {
-       "time": "22:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1714813?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-02": [
       {
        "time": "11:50",
@@ -19483,7 +19463,7 @@
    "lbRatingCount": 0,
    "originalTitle": "Forgotten Island",
    "firstSeen": "2026-09-15",
-   "status": "upcoming"
+   "status": "premiere"
   }
  ]
 }
