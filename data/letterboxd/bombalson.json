@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-10-02T20:15:58.648Z",
+ "generatedAt": "2026-10-03T00:50:27.497Z",
  "fullSyncAt": "2026-09-15T19:16:58.321Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 789,
-  "watchlist": 544
+  "watched": 790,
+  "watchlist": 543
  },
  "watched": [
   {
@@ -5530,6 +5530,13 @@
    "year": 2023,
    "rating10": 7,
    "norm": "asteroid city"
+  },
+  {
+   "slug": "ran",
+   "title": "Ran",
+   "year": 1985,
+   "rating10": 6,
+   "norm": "ran"
   }
  ],
  "watchlist": [
@@ -6792,12 +6799,6 @@
    "title": "Seven Samurai",
    "year": 1954,
    "norm": "seven samurai"
-  },
-  {
-   "slug": "ran",
-   "title": "Ran",
-   "year": 1985,
-   "norm": "ran"
   },
   {
    "slug": "buffalo-66",
@@ -8800,6 +8801,16 @@
  ],
  "recent": [
   {
+   "title": "Ran",
+   "year": 1985,
+   "slug": "ran",
+   "rating10": 6,
+   "watchedDate": "2026-10-03",
+   "rewatch": false,
+   "tmdbId": 11645,
+   "review": null
+  },
+  {
    "title": "Asteroid City",
    "year": 2023,
    "slug": "asteroid-city",
@@ -9287,16 +9298,6 @@
    "watchedDate": "2026-08-11",
    "rewatch": false,
    "tmdbId": 1462932,
-   "review": null
-  },
-  {
-   "title": "Captain America: The Winter Soldier",
-   "year": 2014,
-   "slug": "captain-america-the-winter-soldier",
-   "rating10": 7,
-   "watchedDate": "2026-08-11",
-   "rewatch": false,
-   "tmdbId": 100402,
    "review": null
   }
  ]

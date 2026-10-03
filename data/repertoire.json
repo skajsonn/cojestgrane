@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-10-02T20:13:00.991Z",
- "today": "2026-10-02",
+ "generatedAt": "2026-10-03T00:48:39.823Z",
+ "today": "2026-10-03",
  "cinemas": [
   {
    "id": "1065",
@@ -720,7 +720,7 @@
    "lbRatingCount": 1663,
    "originalTitle": null,
    "firstSeen": "2026-09-04",
-   "status": "new"
+   "status": "regular"
   },
   {
    "id": "8494s2r",
@@ -1578,7 +1578,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-04",
-   "status": "premiere"
+   "status": "new"
   },
   {
    "id": "8443s2r",
@@ -2776,7 +2776,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-08",
-   "status": "new"
+   "status": "regular"
   },
   {
    "id": "8574o2r",
@@ -2977,16 +2977,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-02": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1729544?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-03": [
       {
        "time": "22:00",
@@ -6159,16 +6149,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-02": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1731226?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-03": [
       {
        "time": "18:30",
@@ -6923,7 +6903,7 @@
    "lbRatingCount": 0,
    "originalTitle": "La Fille dans les nuages",
    "firstSeen": "2026-09-22",
-   "status": "premiere"
+   "status": "new"
   },
   {
    "id": "8495o2r",
@@ -6955,16 +6935,6 @@
      ]
     },
     "1075": {
-     "2026-10-02": [
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1719921?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-03": [
       {
        "time": "14:15",
@@ -7035,16 +7005,6 @@
      ]
     },
     "1079": {
-     "2026-10-02": [
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1724678?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-03": [
       {
        "time": "22:30",
@@ -7581,7 +7541,7 @@
    "lbRatingCount": 32792,
    "originalTitle": null,
    "firstSeen": "2026-09-08",
-   "status": "new"
+   "status": "regular"
   },
   {
    "id": "8023d2r",
@@ -7927,7 +7887,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-08",
-   "status": "new"
+   "status": "regular"
   },
   {
    "id": "8183s2r",
@@ -7947,16 +7907,6 @@
    ],
    "showings": {
     "1069": {
-     "2026-10-02": [
-      {
-       "time": "22:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1724576?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-03": [
       {
        "time": "22:20",
@@ -7969,16 +7919,6 @@
      ]
     },
     "1075": {
-     "2026-10-02": [
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1721182?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-03": [
       {
        "time": "22:30",
@@ -8299,16 +8239,6 @@
      ]
     },
     "1089": {
-     "2026-10-02": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1723583?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-03": [
       {
        "time": "22:00",
@@ -8558,16 +8488,6 @@
      ]
     },
     "1079": {
-     "2026-10-02": [
-      {
-       "time": "22:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1726195?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-03": [
       {
        "time": "17:30",
@@ -8693,7 +8613,7 @@
    "lbRatingCount": 122617,
    "originalTitle": "Pressure",
    "firstSeen": "2026-09-04",
-   "status": "new"
+   "status": "regular"
   },
   {
    "id": "7460s2r",
@@ -10440,6 +10360,16 @@
        "booking": "https://tickets.cinema-city.pl/api/order/1704909?lang=pl",
        "soldOut": false
       }
+     ],
+     "2026-11-07": [
+      {
+       "time": "15:00",
+       "formats": [],
+       "lang": null,
+       "auditorium": "Sala 4",
+       "booking": "https://tickets.cinema-city.pl/api/order/1704911?lang=pl",
+       "soldOut": false
+      }
      ]
     },
     "1069": {
@@ -10452,6 +10382,16 @@
        "booking": "https://tickets.cinema-city.pl/api/order/1718995?lang=pl",
        "soldOut": false
       }
+     ],
+     "2026-11-07": [
+      {
+       "time": "15:00",
+       "formats": [],
+       "lang": null,
+       "auditorium": "Sala 3",
+       "booking": "https://tickets.cinema-city.pl/api/order/1718996?lang=pl",
+       "soldOut": false
+      }
      ]
     },
     "1075": {
@@ -10462,6 +10402,16 @@
        "lang": null,
        "auditorium": "Sala 4",
        "booking": "https://tickets.cinema-city.pl/api/order/1718997?lang=pl",
+       "soldOut": false
+      }
+     ],
+     "2026-11-07": [
+      {
+       "time": "15:00",
+       "formats": [],
+       "lang": null,
+       "auditorium": "Sala 4",
+       "booking": "https://tickets.cinema-city.pl/api/order/1718998?lang=pl",
        "soldOut": false
       }
      ]
@@ -10745,16 +10695,6 @@
      ]
     },
     "1069": {
-     "2026-10-02": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1725096?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-03": [
       {
        "time": "15:50",
@@ -10913,16 +10853,6 @@
      ]
     },
     "1075": {
-     "2026-10-02": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1722347?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-03": [
       {
        "time": "18:50",
@@ -11595,16 +11525,6 @@
      ]
     },
     "1069": {
-     "2026-10-02": [
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1723941?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-03": [
       {
        "time": "16:30",
@@ -11771,16 +11691,6 @@
      ]
     },
     "1075": {
-     "2026-10-02": [
-      {
-       "time": "22:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1722140?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-03": [
       {
        "time": "16:30",
@@ -14742,7 +14652,7 @@
    "lbRatingCount": 120990,
    "originalTitle": "Practical Magic 2",
    "firstSeen": "2026-09-04",
-   "status": "new"
+   "status": "regular"
   },
   {
    "id": "8244s2r",
@@ -17044,7 +16954,7 @@
    "lbRatingCount": 62759,
    "originalTitle": "Heart of the Beast",
    "firstSeen": "2026-09-15",
-   "status": "premiere"
+   "status": "new"
   },
   {
    "id": "8095d2r",
