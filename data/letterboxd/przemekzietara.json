@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-03T14:33:50.525Z",
+ "generatedAt": "2026-10-03T19:00:14.380Z",
  "fullSyncAt": "2026-09-15T19:17:06.136Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 528,
+  "watched": 529,
   "watchlist": 132
  },
  "watched": [
@@ -3703,6 +3703,13 @@
    "year": 2018,
    "rating10": 7,
    "norm": "game night"
+  },
+  {
+   "slug": "rolling-loud-the-movie",
+   "title": "Rolling Loud: The Movie",
+   "year": 2026,
+   "rating10": 8,
+   "norm": "rolling loud the movie"
   }
  ],
  "watchlist": [
@@ -4501,6 +4508,16 @@
  ],
  "recent": [
   {
+   "title": "Rolling Loud: The Movie",
+   "year": 2026,
+   "slug": "rolling-loud-the-movie",
+   "rating10": 8,
+   "watchedDate": "2026-10-03",
+   "rewatch": false,
+   "tmdbId": 1336166,
+   "review": null
+  },
+  {
    "title": "Ant-Man and the Wasp: Quantumania",
    "year": 2023,
    "slug": "ant-man-and-the-wasp-quantumania",
@@ -4988,16 +5005,6 @@
    "watchedDate": "2026-07-29",
    "rewatch": false,
    "tmdbId": 969681,
-   "review": null
-  },
-  {
-   "title": "X2",
-   "year": 2003,
-   "slug": "x2",
-   "rating10": 7,
-   "watchedDate": "2026-07-28",
-   "rewatch": false,
-   "tmdbId": 36658,
    "review": null
   }
  ]

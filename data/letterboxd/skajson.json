@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-03T14:31:12.495Z",
+ "generatedAt": "2026-10-03T18:58:08.261Z",
  "fullSyncAt": "2026-09-15T19:16:40.237Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 249,
+  "watched": 250,
   "watchlist": 57
  },
  "watched": [
@@ -1750,6 +1750,13 @@
    "year": 2021,
    "rating10": 8,
    "norm": "spider man no way home"
+  },
+  {
+   "slug": "the-doll-2026-1",
+   "title": "The Doll",
+   "year": 2026,
+   "rating10": 8,
+   "norm": "the doll"
   }
  ],
  "watchlist": [
@@ -2097,6 +2104,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "The Doll",
+   "year": 2026,
+   "slug": "the-doll-2026-1",
+   "rating10": 8,
+   "watchedDate": "2026-10-03",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
   {
    "title": "Ant-Man and the Wasp: Quantumania",
    "year": 2023,
@@ -2585,16 +2602,6 @@
    "watchedDate": "2024-09-11",
    "rewatch": false,
    "tmdbId": 402900,
-   "review": null
-  },
-  {
-   "title": "BlacKkKlansman",
-   "year": 2018,
-   "slug": "blackkklansman",
-   "rating10": 8,
-   "watchedDate": "2024-09-12",
-   "rewatch": false,
-   "tmdbId": 487558,
    "review": null
   }
  ]
