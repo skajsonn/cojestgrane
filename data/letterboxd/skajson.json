@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-10-04T10:10:14.355Z",
+ "generatedAt": "2026-10-04T18:56:17.886Z",
  "fullSyncAt": "2026-09-15T19:16:40.237Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 250,
-  "watchlist": 57
+  "watched": 251,
+  "watchlist": 56
  },
  "watched": [
   {
@@ -1757,6 +1757,13 @@
    "year": 2026,
    "rating10": 8,
    "norm": "the doll"
+  },
+  {
+   "slug": "the-doll-2026",
+   "title": "The Doll",
+   "year": 2026,
+   "rating10": 8,
+   "norm": "the doll"
   }
  ],
  "watchlist": [
@@ -1947,12 +1954,6 @@
    "norm": "supergirl"
   },
   {
-   "slug": "the-doll-2026",
-   "title": "The Doll",
-   "year": 2026,
-   "norm": "the doll"
-  },
-  {
    "slug": "a-man-called-otto",
    "title": "A Man Called Otto",
    "year": 2022,
@@ -2104,6 +2105,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "The Doll",
+   "year": 2026,
+   "slug": "the-doll-2026",
+   "rating10": 8,
+   "watchedDate": "2026-10-04",
+   "rewatch": false,
+   "tmdbId": 1321666,
+   "review": null
+  },
   {
    "title": "Black Panther: Wakanda Forever",
    "year": 2022,
@@ -2592,16 +2603,6 @@
    "watchedDate": "2025-09-11",
    "rewatch": false,
    "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "The Cutting Edge: Going for the Gold",
-   "year": 2006,
-   "slug": "the-cutting-edge-going-for-the-gold",
-   "rating10": 6,
-   "watchedDate": "2024-09-08",
-   "rewatch": false,
-   "tmdbId": 14872,
    "review": null
   }
  ]
