@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-08T20:58:52.775Z",
+ "generatedAt": "2026-10-09T01:36:51.722Z",
  "fullSyncAt": "2026-09-15T19:17:06.136Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 529,
+  "watched": 530,
   "watchlist": 132
  },
  "watched": [
@@ -3710,6 +3710,13 @@
    "year": 2026,
    "rating10": 8,
    "norm": "rolling loud the movie"
+  },
+  {
+   "slug": "princess-mononoke",
+   "title": "Princess Mononoke",
+   "year": 1997,
+   "rating10": 8,
+   "norm": "princess mononoke"
   }
  ],
  "watchlist": [
@@ -4508,6 +4515,16 @@
  ],
  "recent": [
   {
+   "title": "Princess Mononoke",
+   "year": 1997,
+   "slug": "princess-mononoke",
+   "rating10": 8,
+   "watchedDate": "2026-10-09",
+   "rewatch": false,
+   "tmdbId": 128,
+   "review": null
+  },
+  {
    "title": "Superman",
    "year": 2025,
    "slug": "superman-2025",
@@ -4993,16 +5010,6 @@
    "slug": "she-hulk-attorney-at-law",
    "rating10": 2,
    "watchedDate": "2022-02-02",
-   "rewatch": false,
-   "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "Moon Knight",
-   "year": 2022,
-   "slug": "moon-knight-2022",
-   "rating10": 8,
-   "watchedDate": "2022-12-28",
    "rewatch": false,
    "tmdbId": null,
    "review": null

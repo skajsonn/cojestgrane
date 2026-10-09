@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-08T20:57:37.422Z",
+ "generatedAt": "2026-10-09T01:35:28.235Z",
  "fullSyncAt": "2026-09-15T19:16:58.321Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 791,
+  "watched": 792,
   "watchlist": 543
  },
  "watched": [
@@ -5544,6 +5544,13 @@
    "year": 2025,
    "rating10": 8,
    "norm": "superman"
+  },
+  {
+   "slug": "princess-mononoke",
+   "title": "Princess Mononoke",
+   "year": 1997,
+   "rating10": 9,
+   "norm": "princess mononoke"
   }
  ],
  "watchlist": [
@@ -8808,6 +8815,16 @@
  ],
  "recent": [
   {
+   "title": "Princess Mononoke",
+   "year": 1997,
+   "slug": "princess-mononoke",
+   "rating10": 9,
+   "watchedDate": "2026-10-09",
+   "rewatch": false,
+   "tmdbId": 128,
+   "review": null
+  },
+  {
    "title": "Superman",
    "year": 2025,
    "slug": "superman-2025",
@@ -9295,16 +9312,6 @@
    "watchedDate": "2026-08-11",
    "rewatch": false,
    "tmdbId": 1547247,
-   "review": null
-  },
-  {
-   "title": "The Office",
-   "year": 1966,
-   "slug": "the-office",
-   "rating10": null,
-   "watchedDate": "2026-08-11",
-   "rewatch": false,
-   "tmdbId": 49097,
    "review": null
   }
  ]
