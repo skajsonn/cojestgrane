@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-10-10T19:36:29.620Z",
+ "generatedAt": "2026-10-11T00:33:37.404Z",
  "fullSyncAt": "2026-09-15T19:16:40.237Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 251,
-  "watchlist": 56
+  "watched": 252,
+  "watchlist": 55
  },
  "watched": [
   {
@@ -1764,6 +1764,13 @@
    "year": 2026,
    "rating10": 8,
    "norm": "the doll"
+  },
+  {
+   "slug": "primetime-2026",
+   "title": "Primetime",
+   "year": 2026,
+   "rating10": 6,
+   "norm": "primetime"
   }
  ],
  "watchlist": [
@@ -1772,12 +1779,6 @@
    "title": "The Sting",
    "year": 1973,
    "norm": "the sting"
-  },
-  {
-   "slug": "primetime-2026",
-   "title": "Primetime",
-   "year": 2026,
-   "norm": "primetime"
   },
   {
    "slug": "magazine-dreams",
@@ -2105,6 +2106,26 @@
   }
  ],
  "recent": [
+  {
+   "title": "Guardians of the Galaxy Vol. 3",
+   "year": 2023,
+   "slug": "guardians-of-the-galaxy-vol-3",
+   "rating10": 10,
+   "watchedDate": "2026-10-10",
+   "rewatch": true,
+   "tmdbId": 447365,
+   "review": null
+  },
+  {
+   "title": "Primetime",
+   "year": 2026,
+   "slug": "primetime-2026",
+   "rating10": 6,
+   "watchedDate": "2026-10-10",
+   "rewatch": false,
+   "tmdbId": 1375441,
+   "review": null
+  },
   {
    "title": "The Doll",
    "year": 2026,
@@ -2581,26 +2602,6 @@
    "slug": "american-manhunt-osama-bin-laden-2025-1",
    "rating10": 8,
    "watchedDate": "2025-05-19",
-   "rewatch": false,
-   "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "Sherlock: Case of Evil",
-   "year": 2002,
-   "slug": "sherlock-case-of-evil",
-   "rating10": 10,
-   "watchedDate": "2025-06-27",
-   "rewatch": false,
-   "tmdbId": 46561,
-   "review": null
-  },
-  {
-   "title": "Blinded by the Lights",
-   "year": 2018,
-   "slug": "blinded-by-the-lights",
-   "rating10": 7,
-   "watchedDate": "2025-09-11",
    "rewatch": false,
    "tmdbId": null,
    "review": null
