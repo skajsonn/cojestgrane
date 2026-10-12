@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-10-11T19:50:11.730Z",
- "today": "2026-10-11",
+ "generatedAt": "2026-10-12T00:51:43.605Z",
+ "today": "2026-10-12",
  "cinemas": [
   {
    "id": "1065",
@@ -404,7 +404,7 @@
    "lbRatingCount": 293,
    "originalTitle": null,
    "firstSeen": "2026-09-07",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8294o2r",
@@ -1603,26 +1603,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-11": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1736267?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "21:50",
-       "formats": [
-        "imax"
-       ],
-       "lang": "subbed",
-       "auditorium": "Imax",
-       "booking": "https://tickets.cinema-city.pl/api/order/1706362?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "12:20",
@@ -1965,16 +1945,6 @@
      ]
     },
     "1069": {
-     "2026-10-11": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1706147?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "11:45",
@@ -2177,16 +2147,6 @@
      ]
     },
     "1075": {
-     "2026-10-11": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1705723?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "13:20",
@@ -2325,16 +2285,6 @@
      ]
     },
     "1079": {
-     "2026-10-11": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1705330?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "10:30",
@@ -3534,16 +3484,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-11": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1735146?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "22:00",
@@ -4137,18 +4077,6 @@
      ]
     },
     "1069": {
-     "2026-10-11": [
-      {
-       "time": "21:30",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": null,
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1735060?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "09:00",
@@ -4527,16 +4455,6 @@
      ]
     },
     "1075": {
-     "2026-10-11": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1746444?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "11:00",
@@ -4787,18 +4705,6 @@
      ]
     },
     "1079": {
-     "2026-10-11": [
-      {
-       "time": "21:30",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1740473?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "11:00",
@@ -6181,8 +6087,8 @@
    },
    "lbSlug": "fall-2-deadpoint",
    "lbTitle": "Fall 2: Deadpoint",
-   "lbRating": 2.2,
-   "lbRatingCount": 43537,
+   "lbRating": 2.17,
+   "lbRatingCount": 50347,
    "originalTitle": "Fall 2: Deadpoint",
    "firstSeen": "2026-09-04",
    "status": "regular"
@@ -6500,7 +6406,7 @@
    "lbSlug": "the-odyssey-2026",
    "lbTitle": "The Odyssey",
    "lbRating": 4.34,
-   "lbRatingCount": 4538857,
+   "lbRatingCount": 4558108,
    "originalTitle": "The Odyssey",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -6607,16 +6513,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-11": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1706374?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "11:50",
@@ -6819,16 +6715,6 @@
      ]
     },
     "1069": {
-     "2026-10-11": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1706155?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "14:30",
@@ -7113,26 +6999,6 @@
      ]
     },
     "1079": {
-     "2026-10-11": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1743741?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "22:30",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1705351?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "10:00",
@@ -7455,16 +7321,6 @@
      ]
     },
     "1089": {
-     "2026-10-11": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1705477?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "13:50",
@@ -7976,16 +7832,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-11": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1746429?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "13:40",
@@ -8198,16 +8044,6 @@
      ]
     },
     "1075": {
-     "2026-10-11": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1734688?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-13": [
       {
        "time": "19:10",
@@ -8346,16 +8182,6 @@
      ]
     },
     "1089": {
-     "2026-10-11": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1743820?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "17:50",
@@ -8440,7 +8266,7 @@
    "lbSlug": "untitled-resident-evil-reboot",
    "lbTitle": "Resident Evil",
    "lbRating": 3.76,
-   "lbRatingCount": 1353977,
+   "lbRatingCount": 1428756,
    "originalTitle": null,
    "firstSeen": "2026-09-04",
    "status": "regular"
@@ -8546,16 +8372,6 @@
      ]
     },
     "1079": {
-     "2026-10-11": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1744074?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "22:00",
@@ -9250,8 +9066,8 @@
    },
    "lbSlug": "spider-man-brand-new-day",
    "lbTitle": "Spider-Man: Brand New Day",
-   "lbRating": 4.04,
-   "lbRatingCount": 4309977,
+   "lbRating": 4.03,
+   "lbRatingCount": 4448380,
    "originalTitle": "Spider-Man: Brand New Day",
    "firstSeen": "2026-07-05",
    "status": "regular"
@@ -9914,8 +9730,8 @@
    },
    "lbSlug": "tad-and-the-magic-lamp",
    "lbTitle": "Tad and The Magic Lamp",
-   "lbRating": 3.06,
-   "lbRatingCount": 2162,
+   "lbRating": 3.02,
+   "lbRatingCount": 2441,
    "originalTitle": "Tadeo Jones y La Lámpara Maravillosa",
    "firstSeen": "2026-09-15",
    "status": "regular"
@@ -10979,16 +10795,6 @@
      ]
     },
     "1079": {
-     "2026-10-11": [
-      {
-       "time": "22:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1742840?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "12:30",
@@ -11095,16 +10901,6 @@
      ]
     },
     "1089": {
-     "2026-10-11": [
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1744295?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "16:50",
@@ -11950,16 +11746,6 @@
      ]
     },
     "1079": {
-     "2026-10-11": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1741409?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "11:50",
@@ -12130,16 +11916,6 @@
      ]
     },
     "1089": {
-     "2026-10-11": [
-      {
-       "time": "22:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1742799?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-12": [
       {
        "time": "14:30",
