@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-14T19:50:02.826Z",
+ "generatedAt": "2026-10-15T00:14:58.775Z",
  "fullSyncAt": "2026-09-15T19:16:58.321Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 792,
+  "watched": 793,
   "watchlist": 543
  },
  "watched": [
@@ -5551,6 +5551,13 @@
    "year": 1997,
    "rating10": 9,
    "norm": "princess mononoke"
+  },
+  {
+   "slug": "the-iron-giant",
+   "title": "The Iron Giant",
+   "year": 1999,
+   "rating10": 9,
+   "norm": "the iron giant"
   }
  ],
  "watchlist": [
@@ -8815,6 +8822,16 @@
  ],
  "recent": [
   {
+   "title": "The Iron Giant",
+   "year": 1999,
+   "slug": "the-iron-giant",
+   "rating10": 9,
+   "watchedDate": "2026-10-15",
+   "rewatch": true,
+   "tmdbId": 10386,
+   "review": null
+  },
+  {
    "title": "Princess Mononoke",
    "year": 1997,
    "slug": "princess-mononoke",
@@ -9302,16 +9319,6 @@
    "watchedDate": "2026-08-11",
    "rewatch": false,
    "tmdbId": 596434,
-   "review": null
-  },
-  {
-   "title": "Blow",
-   "year": 1978,
-   "slug": "blow-1978",
-   "rating10": 8,
-   "watchedDate": "2026-08-11",
-   "rewatch": false,
-   "tmdbId": 1547247,
    "review": null
   }
  ]
