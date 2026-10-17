@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-17T13:17:13.954Z",
+ "generatedAt": "2026-10-17T18:01:15.870Z",
  "today": "2026-10-17",
  "cinemas": [
   {
@@ -193,58 +193,6 @@
    "status": "regular"
   },
   {
-   "id": "8494s2r",
-   "title": "Always Lalisa",
-   "year": "2026",
-   "releaseDate": "2026-10-12",
-   "length": 100,
-   "poster": "https://www.cinema-city.pl/xmedia-cw/repo/feats/posters/8494S2R.jpg",
-   "trailer": null,
-   "link": "https://www.cinema-city.pl/filmy/always-lalisa/8494s2r",
-   "genres": [
-    "documentary"
-   ],
-   "formats": [
-    "2d"
-   ],
-   "showings": {
-    "1065": {
-     "2026-10-17": [
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1677640?lang=pl",
-       "soldOut": false
-      }
-     ]
-    }
-   },
-   "tmdb": {
-    "id": 1489932,
-    "originalTitle": "Always Lalisa",
-    "title": "Always Lalisa",
-    "overview": null,
-    "voteAverage": 0,
-    "voteCount": 0,
-    "releaseDate": "2026-10-12",
-    "genres": [
-     "dokumentalny",
-     "muzyczny"
-    ],
-    "poster": "https://image.tmdb.org/t/p/w500/OqM61w87XqOO3SPZjHRxC75HGI.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w780/wJwTuwy1ZajIA6ivGjoe0Ee08XN.jpg"
-   },
-   "lbSlug": "always-lalisa",
-   "lbTitle": "Always Lalisa",
-   "lbRating": 3.98,
-   "lbRatingCount": 1835,
-   "originalTitle": null,
-   "firstSeen": "2026-09-07",
-   "status": "premiere"
-  },
-  {
    "id": "8294o2r",
    "title": "Andre Rieu. Niech żyje Maastricht!",
    "year": "2026",
@@ -351,24 +299,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-17": [
-      {
-       "time": "15:40",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1749513?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "16:50",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755859?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "10:30",
@@ -581,16 +511,6 @@
      ]
     },
     "1069": {
-     "2026-10-17": [
-      {
-       "time": "15:50",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1751940?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "10:10",
@@ -763,16 +683,6 @@
      ]
     },
     "1075": {
-     "2026-10-17": [
-      {
-       "time": "16:50",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1748987?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "10:00",
@@ -905,24 +815,6 @@
      ]
     },
     "1079": {
-     "2026-10-17": [
-      {
-       "time": "15:10",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755805?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "17:10",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755811?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "10:10",
@@ -2380,14 +2272,6 @@
     "1065": {
      "2026-10-17": [
       {
-       "time": "17:40",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755175?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "20:10",
        "formats": [],
        "lang": null,
@@ -2528,16 +2412,6 @@
      ]
     },
     "1069": {
-     "2026-10-17": [
-      {
-       "time": "18:00",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1751910?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "12:20",
@@ -2631,14 +2505,6 @@
     },
     "1075": {
      "2026-10-17": [
-      {
-       "time": "15:20",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1748705?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "20:30",
        "formats": [],
@@ -2741,14 +2607,6 @@
     },
     "1079": {
      "2026-10-17": [
-      {
-       "time": "17:40",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756844?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "20:10",
        "formats": [],
@@ -3086,14 +2944,6 @@
     "1065": {
      "2026-10-17": [
       {
-       "time": "15:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755965?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "20:20",
        "formats": [],
        "lang": "subbed",
@@ -3375,14 +3225,6 @@
     },
     "1079": {
      "2026-10-17": [
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756316?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "21:50",
        "formats": [],
@@ -3788,16 +3630,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-17": [
-      {
-       "time": "18:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756169?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "18:00",
@@ -3830,16 +3662,6 @@
      ]
     },
     "1089": {
-     "2026-10-17": [
-      {
-       "time": "16:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1749806?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "16:00",
@@ -5188,16 +5010,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-17": [
-      {
-       "time": "17:50",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1749615?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "17:50",
@@ -5292,16 +5104,6 @@
      ]
     },
     "1079": {
-     "2026-10-17": [
-      {
-       "time": "16:20",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756292?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "16:20",
@@ -5542,58 +5344,6 @@
    "showings": {
     "1065": {
      "2026-10-17": [
-      {
-       "time": "15:00",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755092?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "15:45",
-       "formats": [
-        "imax"
-       ],
-       "lang": null,
-       "auditorium": "Imax",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756961?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "16:00",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1750088?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "17:00",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": null,
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1748463?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "18:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755098?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1750094?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "20:30",
        "formats": [
@@ -6077,40 +5827,6 @@
     "1069": {
      "2026-10-17": [
       {
-       "time": "15:50",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1752042?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "16:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1751892?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "18:00",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": null,
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1750405?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:20",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1752048?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "20:00",
        "formats": [],
        "lang": null,
@@ -6591,22 +6307,6 @@
     "1075": {
      "2026-10-17": [
       {
-       "time": "16:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1748014?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "18:00",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1749987?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "20:00",
        "formats": [],
        "lang": null,
@@ -6924,38 +6624,6 @@
     },
     "1079": {
      "2026-10-17": [
-      {
-       "time": "15:10",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755496?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "16:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755930?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "18:00",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755360?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "18:40",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755502?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "20:00",
        "formats": [],
@@ -7387,40 +7055,6 @@
     "1089": {
      "2026-10-17": [
       {
-       "time": "15:15",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1748157?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "16:40",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1748361?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "17:30",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": null,
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1747847?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "18:45",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1748158?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "20:10",
        "formats": [],
        "lang": null,
@@ -7843,14 +7477,6 @@
    "showings": {
     "1079": {
      "2026-10-17": [
-      {
-       "time": "17:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756109?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "22:10",
        "formats": [],
@@ -9015,14 +8641,6 @@
     "1079": {
      "2026-10-17": [
       {
-       "time": "16:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1757458?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "21:10",
        "formats": [],
        "lang": "subbed",
@@ -9222,16 +8840,6 @@
      ]
     },
     "1079": {
-     "2026-10-17": [
-      {
-       "time": "15:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756310?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "15:20",
@@ -9409,16 +9017,6 @@
    ],
    "showings": {
     "1079": {
-     "2026-10-17": [
-      {
-       "time": "18:10",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756623?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "18:10",
@@ -9512,22 +9110,6 @@
    "showings": {
     "1065": {
      "2026-10-17": [
-      {
-       "time": "16:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1751377?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1751383?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "21:30",
        "formats": [],
@@ -9719,22 +9301,6 @@
     "1069": {
      "2026-10-17": [
       {
-       "time": "17:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1751922?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1751868?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "22:00",
        "formats": [],
        "lang": "subbed",
@@ -9917,14 +9483,6 @@
     "1075": {
      "2026-10-17": [
       {
-       "time": "16:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1750946?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "21:00",
        "formats": [],
        "lang": "subbed",
@@ -10026,22 +9584,6 @@
     },
     "1079": {
      "2026-10-17": [
-      {
-       "time": "17:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755264?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755270?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "22:20",
        "formats": [],
@@ -10185,14 +9727,6 @@
     "1089": {
      "2026-10-17": [
       {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1750118?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "22:20",
        "formats": [],
        "lang": "subbed",
@@ -10306,16 +9840,6 @@
      ]
     },
     "1079": {
-     "2026-10-17": [
-      {
-       "time": "15:10",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756103?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "15:10",
@@ -10743,16 +10267,6 @@
      ]
     },
     "1069": {
-     "2026-10-17": [
-      {
-       "time": "17:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1751952?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "17:50",
@@ -10806,14 +10320,6 @@
     },
     "1075": {
      "2026-10-17": [
-      {
-       "time": "18:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1750952?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "22:00",
        "formats": [],
@@ -10881,16 +10387,6 @@
      ]
     },
     "1079": {
-     "2026-10-17": [
-      {
-       "time": "18:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1757454?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "14:10",
@@ -11061,14 +10557,6 @@
     "1065": {
      "2026-10-17": [
       {
-       "time": "18:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756593?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "21:10",
        "formats": [],
        "lang": "subbed",
@@ -11171,14 +10659,6 @@
     "1069": {
      "2026-10-17": [
       {
-       "time": "15:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1751916?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "20:30",
        "formats": [],
        "lang": "subbed",
@@ -11279,16 +10759,6 @@
      ]
     },
     "1075": {
-     "2026-10-17": [
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1748989?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "13:00",
@@ -11382,14 +10852,6 @@
     },
     "1079": {
      "2026-10-17": [
-      {
-       "time": "18:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756274?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "21:40",
        "formats": [],
@@ -11531,16 +10993,6 @@
      ]
     },
     "1089": {
-     "2026-10-17": [
-      {
-       "time": "18:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1749811?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "13:10",
@@ -11938,16 +11390,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-17": [
-      {
-       "time": "16:50",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1748857?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "16:50",
@@ -12176,32 +11618,6 @@
    "showings": {
     "1065": {
      "2026-10-17": [
-      {
-       "time": "15:15",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1731606?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "18:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1731602?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:15",
-       "formats": [
-        "imax"
-       ],
-       "lang": "subbed",
-       "auditorium": "Imax",
-       "booking": "https://tickets.cinema-city.pl/api/order/1731596?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "20:45",
        "formats": [],
@@ -12505,22 +11921,6 @@
     "1069": {
      "2026-10-17": [
       {
-       "time": "16:15",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1731717?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1731715?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "21:50",
        "formats": [],
        "lang": "subbed",
@@ -12703,22 +12103,6 @@
     "1075": {
      "2026-10-17": [
       {
-       "time": "16:45",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1731572?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1731570?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "22:15",
        "formats": [],
        "lang": "subbed",
@@ -12860,22 +12244,6 @@
     },
     "1079": {
      "2026-10-17": [
-      {
-       "time": "16:15",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1731378?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1731374?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "21:45",
        "formats": [],
@@ -13057,24 +12425,6 @@
      ]
     },
     "1089": {
-     "2026-10-17": [
-      {
-       "time": "16:15",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1731380?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1731384?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "13:30",
@@ -13301,16 +12651,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-17": [
-      {
-       "time": "16:10",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756587?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "11:20",
@@ -14010,22 +13350,6 @@
     "1065": {
      "2026-10-17": [
       {
-       "time": "15:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1750473?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "18:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1750479?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "20:50",
        "formats": [],
        "lang": "subbed",
@@ -14247,22 +13571,6 @@
     },
     "1069": {
      "2026-10-17": [
-      {
-       "time": "16:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1752020?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "18:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1752026?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "21:00",
        "formats": [],
@@ -14486,22 +13794,6 @@
     "1075": {
      "2026-10-17": [
       {
-       "time": "16:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1750246?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "19:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1750252?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "21:40",
        "formats": [],
        "lang": "subbed",
@@ -14635,22 +13927,6 @@
     },
     "1079": {
      "2026-10-17": [
-      {
-       "time": "16:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755526?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "18:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755532?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "21:20",
        "formats": [],
@@ -14873,22 +14149,6 @@
     },
     "1089": {
      "2026-10-17": [
-      {
-       "time": "15:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1749409?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "18:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1749415?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "20:50",
        "formats": [],
@@ -15163,16 +14423,6 @@
      ]
     },
     "1069": {
-     "2026-10-17": [
-      {
-       "time": "18:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1752072?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "18:40",
@@ -15226,14 +14476,6 @@
     },
     "1075": {
      "2026-10-17": [
-      {
-       "time": "19:10",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1748414?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "21:50",
        "formats": [],
@@ -15337,14 +14579,6 @@
     "1079": {
      "2026-10-17": [
       {
-       "time": "19:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756115?lang=pl",
-       "soldOut": false
-      },
-      {
        "time": "22:10",
        "formats": [],
        "lang": "subbed",
@@ -15445,16 +14679,6 @@
      ]
     },
     "1089": {
-     "2026-10-17": [
-      {
-       "time": "16:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1750112?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "16:20",
@@ -15538,16 +14762,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-17": [
-      {
-       "time": "15:30",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755187?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "10:00",
@@ -15616,16 +14830,6 @@
      ]
     },
     "1069": {
-     "2026-10-17": [
-      {
-       "time": "16:30",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1752066?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "14:20",
@@ -15770,16 +14974,6 @@
      ]
     },
     "1079": {
-     "2026-10-17": [
-      {
-       "time": "16:00",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 13",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756617?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "11:20",
@@ -15990,16 +15184,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-17": [
-      {
-       "time": "17:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1751093?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "10:00",
@@ -16233,14 +15417,6 @@
     },
     "1079": {
      "2026-10-17": [
-      {
-       "time": "19:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1755817?lang=pl",
-       "soldOut": false
-      },
       {
        "time": "21:50",
        "formats": [],
@@ -16618,24 +15794,6 @@
      ]
     },
     "1069": {
-     "2026-10-17": [
-      {
-       "time": "15:10",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1751964?lang=pl",
-       "soldOut": false
-      },
-      {
-       "time": "17:40",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1751970?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "10:10",
@@ -16760,16 +15918,6 @@
      ]
     },
     "1075": {
-     "2026-10-17": [
-      {
-       "time": "17:50",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1748743?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "15:50",
@@ -16822,16 +15970,6 @@
      ]
     },
     "1079": {
-     "2026-10-17": [
-      {
-       "time": "15:00",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1756834?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "10:00",
@@ -16916,16 +16054,6 @@
      ]
     },
     "1089": {
-     "2026-10-17": [
-      {
-       "time": "17:20",
-       "formats": [],
-       "lang": "dubbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1748865?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-18": [
       {
        "time": "10:30",
