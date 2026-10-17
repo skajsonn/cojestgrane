@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-16T19:13:22.464Z",
+ "generatedAt": "2026-10-17T00:00:50.276Z",
  "fullSyncAt": "2026-09-15T19:17:06.136Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 530,
+  "watched": 531,
   "watchlist": 132
  },
  "watched": [
@@ -3717,6 +3717,13 @@
    "year": 1997,
    "rating10": 8,
    "norm": "princess mononoke"
+  },
+  {
+   "slug": "less-of-a-stranger",
+   "title": "Less of a Stranger",
+   "year": 2026,
+   "rating10": 6,
+   "norm": "less of a stranger"
   }
  ],
  "watchlist": [
@@ -4515,6 +4522,26 @@
  ],
  "recent": [
   {
+   "title": "Agatha All Along",
+   "year": 2024,
+   "slug": "agatha-all-along-2024",
+   "rating10": 8,
+   "watchedDate": "2026-10-16",
+   "rewatch": true,
+   "tmdbId": null,
+   "review": null
+  },
+  {
+   "title": "Less of a Stranger",
+   "year": 2026,
+   "slug": "less-of-a-stranger",
+   "rating10": 6,
+   "watchedDate": "2026-10-16",
+   "rewatch": false,
+   "tmdbId": 1620080,
+   "review": null
+  },
+  {
    "title": "Guardians of the Galaxy Vol. 3",
    "year": 2023,
    "slug": "guardians-of-the-galaxy-vol-3",
@@ -4990,26 +5017,6 @@
    "slug": "marvel-zombies",
    "rating10": 7,
    "watchedDate": "2025-09-12",
-   "rewatch": false,
-   "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "The Falcon and the Winter Soldier",
-   "year": 2021,
-   "slug": "the-falcon-and-the-winter-soldier",
-   "rating10": 7,
-   "watchedDate": "2022-12-23",
-   "rewatch": false,
-   "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "Secret Invasion",
-   "year": 2023,
-   "slug": "secret-invasion",
-   "rating10": 5,
-   "watchedDate": "2023-02-10",
    "rewatch": false,
    "tmdbId": null,
    "review": null

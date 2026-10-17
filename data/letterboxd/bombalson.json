@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-16T19:11:52.913Z",
+ "generatedAt": "2026-10-16T23:59:40.288Z",
  "fullSyncAt": "2026-09-15T19:16:58.321Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 793,
+  "watched": 794,
   "watchlist": 543
  },
  "watched": [
@@ -5558,6 +5558,13 @@
    "year": 1999,
    "rating10": 9,
    "norm": "the iron giant"
+  },
+  {
+   "slug": "agatha-all-along-2024",
+   "title": "Agatha All Along",
+   "year": 2024,
+   "rating10": 6,
+   "norm": "agatha all along"
   }
  ],
  "watchlist": [
@@ -8822,6 +8829,16 @@
  ],
  "recent": [
   {
+   "title": "Agatha All Along",
+   "year": 2024,
+   "slug": "agatha-all-along-2024",
+   "rating10": 6,
+   "watchedDate": "2026-10-16",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
    "title": "The Iron Giant",
    "year": 1999,
    "slug": "the-iron-giant",
@@ -9309,16 +9326,6 @@
    "watchedDate": "2026-08-12",
    "rewatch": true,
    "tmdbId": 118340,
-   "review": null
-  },
-  {
-   "title": "The Little Soul",
-   "year": 2019,
-   "slug": "the-little-soul",
-   "rating10": 9,
-   "watchedDate": "2026-08-11",
-   "rewatch": false,
-   "tmdbId": 596434,
    "review": null
   }
  ]
