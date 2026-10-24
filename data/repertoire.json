@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-10-23T19:37:46.914Z",
- "today": "2026-10-23",
+ "generatedAt": "2026-10-24T00:03:17.795Z",
+ "today": "2026-10-24",
  "cinemas": [
   {
    "id": "1065",
@@ -197,16 +197,6 @@
      ]
     },
     "1069": {
-     "2026-10-23": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1767942?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "19:30",
@@ -247,16 +237,6 @@
      ]
     },
     "1079": {
-     "2026-10-23": [
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1769635?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "13:40",
@@ -1208,7 +1188,7 @@
    "lbRatingCount": 0,
    "originalTitle": "Shaun the Sheep: The Beast of Mossy Bottom",
    "firstSeen": "2026-10-06",
-   "status": "premiere"
+   "status": "new"
   },
   {
    "id": "8443s2r",
@@ -2527,16 +2507,6 @@
      ]
     },
     "1075": {
-     "2026-10-23": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1767165?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "12:20",
@@ -2809,7 +2779,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-10-06",
-   "status": "premiere"
+   "status": "new"
   },
   {
    "id": "8614s2r",
@@ -3245,16 +3215,6 @@
      ]
     },
     "1079": {
-     "2026-10-23": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1768943?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "21:40",
@@ -3456,7 +3416,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-28",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8617s2r",
@@ -4449,6 +4409,54 @@
    "status": "upcoming"
   },
   {
+   "id": "8633s2r",
+   "title": "Hauser symfonicznie z londyńskiej Royal",
+   "year": "2024",
+   "releaseDate": "2026-10-21",
+   "length": 135,
+   "poster": "https://www.cinema-city.pl/xmedia-cw/repo/feats/posters/8633S2R.jpg",
+   "trailer": "https://www.youtube.com/watch?v=cL0LerekVSY",
+   "link": "https://www.cinema-city.pl/filmy/hauser-symfonicznie-z-londynskiej-royal/8633s2r",
+   "genres": [],
+   "formats": [
+    "2d"
+   ],
+   "showings": {
+    "1065": {
+     "2026-11-28": [
+      {
+       "time": "15:00",
+       "formats": [],
+       "lang": "subbed",
+       "auditorium": "Sala 3",
+       "booking": "https://tickets.cinema-city.pl/api/order/1760229?lang=pl",
+       "soldOut": false
+      }
+     ]
+    },
+    "1075": {
+     "2026-11-28": [
+      {
+       "time": "15:00",
+       "formats": [],
+       "lang": "subbed",
+       "auditorium": "Sala 2",
+       "booking": "https://tickets.cinema-city.pl/api/order/1760254?lang=pl",
+       "soldOut": false
+      }
+     ]
+    }
+   },
+   "tmdb": null,
+   "lbSlug": null,
+   "lbTitle": null,
+   "lbRating": null,
+   "lbRatingCount": 0,
+   "originalTitle": null,
+   "firstSeen": "2026-10-13",
+   "status": "retro"
+  },
+  {
    "id": "8576o3r",
    "title": "HYBE CHEERING PARTY",
    "year": "2026",
@@ -4545,7 +4553,7 @@
    "lbRatingCount": 0,
    "originalTitle": "하이브 치어링 파티",
    "firstSeen": "2026-09-28",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8328s2r",
@@ -4564,16 +4572,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-23": [
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1772750?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "09:10",
@@ -5002,16 +5000,6 @@
      ]
     },
     "1075": {
-     "2026-10-23": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1767241?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "20:40",
@@ -5344,16 +5332,6 @@
      ]
     },
     "1089": {
-     "2026-10-23": [
-      {
-       "time": "22:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1770023?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "15:00",
@@ -5580,16 +5558,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-23": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1772916?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "09:40",
@@ -5870,16 +5838,6 @@
      ]
     },
     "1069": {
-     "2026-10-23": [
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1767719?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "09:50",
@@ -6102,16 +6060,6 @@
      ]
     },
     "1075": {
-     "2026-10-23": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1767113?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "12:30",
@@ -8517,18 +8465,6 @@
      ]
     },
     "1069": {
-     "2026-10-23": [
-      {
-       "time": "21:30",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": null,
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1767573?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "11:00",
@@ -9283,18 +9219,6 @@
      ]
     },
     "1079": {
-     "2026-10-23": [
-      {
-       "time": "21:30",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": null,
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1768757?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "10:00",
@@ -9889,16 +9813,6 @@
      ]
     },
     "1089": {
-     "2026-10-23": [
-      {
-       "time": "22:10",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1768536?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "10:30",
@@ -10327,18 +10241,6 @@
    ],
    "showings": {
     "1079": {
-     "2026-10-23": [
-      {
-       "time": "22:10",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1768796?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "22:10",
@@ -12530,16 +12432,6 @@
      ]
     },
     "1079": {
-     "2026-10-23": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1768504?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "17:00",
@@ -13121,16 +13013,6 @@
      ]
     },
     "1069": {
-     "2026-10-23": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1769336?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "17:50",
@@ -13209,16 +13091,6 @@
      ]
     },
     "1075": {
-     "2026-10-23": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1767090?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "22:00",
@@ -14058,7 +13930,7 @@
    "lbRatingCount": 0,
    "originalTitle": "Sense and Sensibility",
    "firstSeen": "2026-10-13",
-   "status": "premiere"
+   "status": "new"
   },
   {
    "id": "8325s2r",
@@ -14079,16 +13951,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-23": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1774152?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "12:30",
@@ -14247,16 +14109,6 @@
      ]
     },
     "1069": {
-     "2026-10-23": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1769438?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "14:30",
@@ -14699,16 +14551,6 @@
      ]
     },
     "1089": {
-     "2026-10-23": [
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1770531?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "19:00",
@@ -14909,7 +14751,7 @@
    "lbRatingCount": 0,
    "originalTitle": "SEVENTEEN WORLD TOUR [NEW_] ENCORE",
    "firstSeen": "2026-09-28",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8659s2r",
@@ -15211,16 +15053,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-23": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1772150?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "21:20",
@@ -15748,7 +15580,7 @@
    "lbRatingCount": 0,
    "originalTitle": "Street Fighter",
    "firstSeen": "2026-10-02",
-   "status": "premiere"
+   "status": "new"
   },
   {
    "id": "8548d2r",
@@ -18086,7 +17918,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-28",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8333s2r",
@@ -18355,16 +18187,6 @@
      ]
     },
     "1079": {
-     "2026-10-23": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1774727?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "19:00",
@@ -18547,7 +18369,7 @@
    "lbRatingCount": 0,
    "originalTitle": "Whalefall",
    "firstSeen": "2026-10-13",
-   "status": "premiere"
+   "status": "new"
   },
   {
    "id": "8244s2r",
@@ -18837,7 +18659,7 @@
    "lbRatingCount": 0,
    "originalTitle": "Verity",
    "firstSeen": "2026-09-29",
-   "status": "new"
+   "status": "regular"
   },
   {
    "id": "7955d2r",
@@ -19405,16 +19227,6 @@
      ]
     },
     "1079": {
-     "2026-10-23": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1770047?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-24": [
       {
        "time": "19:20",
@@ -20196,7 +20008,7 @@
    "lbRatingCount": 0,
    "originalTitle": "Forgotten Island",
    "firstSeen": "2026-09-15",
-   "status": "new"
+   "status": "regular"
   },
   {
    "id": "8661s2r",
