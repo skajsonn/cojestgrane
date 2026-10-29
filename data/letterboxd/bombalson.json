@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-10-28T20:41:10.692Z",
+ "generatedAt": "2026-10-29T01:21:50.697Z",
  "fullSyncAt": "2026-09-15T19:16:58.321Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 794,
-  "watchlist": 543
+  "watched": 795,
+  "watchlist": 542
  },
  "watched": [
   {
@@ -5565,6 +5565,13 @@
    "year": 2024,
    "rating10": 6,
    "norm": "agatha all along"
+  },
+  {
+   "slug": "the-devils",
+   "title": "The Devils",
+   "year": 1971,
+   "rating10": 9,
+   "norm": "the devils"
   }
  ],
  "watchlist": [
@@ -5729,12 +5736,6 @@
    "title": "The Company of Strangers",
    "year": 1990,
    "norm": "the company of strangers"
-  },
-  {
-   "slug": "the-devils",
-   "title": "The Devils",
-   "year": 1971,
-   "norm": "the devils"
   },
   {
    "slug": "waves-2019",
@@ -8829,6 +8830,16 @@
  ],
  "recent": [
   {
+   "title": "The Devils",
+   "year": 1971,
+   "slug": "the-devils",
+   "rating10": 9,
+   "watchedDate": "2026-10-29",
+   "rewatch": false,
+   "tmdbId": 31767,
+   "review": null
+  },
+  {
    "title": "Agatha All Along",
    "year": 2024,
    "slug": "agatha-all-along-2024",
@@ -9316,16 +9327,6 @@
    "watchedDate": "2026-08-13",
    "rewatch": false,
    "tmdbId": 99861,
-   "review": null
-  },
-  {
-   "title": "Guardians of the Galaxy",
-   "year": 2014,
-   "slug": "guardians-of-the-galaxy",
-   "rating10": 7,
-   "watchedDate": "2026-08-12",
-   "rewatch": true,
-   "tmdbId": 118340,
    "review": null
   }
  ]
