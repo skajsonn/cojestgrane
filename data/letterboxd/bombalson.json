@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-29T20:43:13.406Z",
+ "generatedAt": "2026-10-30T01:28:06.671Z",
  "fullSyncAt": "2026-09-15T19:16:58.321Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 795,
+  "watched": 796,
   "watchlist": 542
  },
  "watched": [
@@ -5572,6 +5572,13 @@
    "year": 1971,
    "rating10": 9,
    "norm": "the devils"
+  },
+  {
+   "slug": "blue-ruin",
+   "title": "Blue Ruin",
+   "year": 2013,
+   "rating10": 6,
+   "norm": "blue ruin"
   }
  ],
  "watchlist": [
@@ -8830,6 +8837,16 @@
  ],
  "recent": [
   {
+   "title": "Blue Ruin",
+   "year": 2013,
+   "slug": "blue-ruin",
+   "rating10": 6,
+   "watchedDate": "2026-10-30",
+   "rewatch": false,
+   "tmdbId": 188166,
+   "review": null
+  },
+  {
    "title": "The Devils",
    "year": 1971,
    "slug": "the-devils",
@@ -9317,16 +9334,6 @@
    "watchedDate": "2026-08-14",
    "rewatch": false,
    "tmdbId": 102899,
-   "review": null
-  },
-  {
-   "title": "Avengers: Age of Ultron",
-   "year": 2015,
-   "slug": "avengers-age-of-ultron",
-   "rating10": 6,
-   "watchedDate": "2026-08-13",
-   "rewatch": false,
-   "tmdbId": 99861,
    "review": null
   }
  ]

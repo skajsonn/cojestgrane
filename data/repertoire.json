@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-10-29T20:40:27.706Z",
- "today": "2026-10-29",
+ "generatedAt": "2026-10-30T01:25:54.387Z",
+ "today": "2026-10-30",
  "cinemas": [
   {
    "id": "1065",
@@ -1219,7 +1219,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-10-27",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8222s2r",
@@ -1242,16 +1242,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-29": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 9",
-       "booking": "https://tickets.cinema-city.pl/api/order/1746226?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "12:00",
@@ -1564,16 +1554,6 @@
      ]
     },
     "1069": {
-     "2026-10-29": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1746140?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "11:30",
@@ -1864,16 +1844,6 @@
      ]
     },
     "1075": {
-     "2026-10-29": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1745629?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "14:00",
@@ -2106,16 +2076,6 @@
      ]
     },
     "1079": {
-     "2026-10-29": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1746284?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "11:30",
@@ -2416,16 +2376,6 @@
      ]
     },
     "1089": {
-     "2026-10-29": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 2",
-       "booking": "https://tickets.cinema-city.pl/api/order/1745575?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "14:30",
@@ -2814,18 +2764,6 @@
       }
      ]
     },
-    "1075": {
-     "2026-10-29": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1767182?lang=pl",
-       "soldOut": false
-      }
-     ]
-    },
     "1079": {
      "2026-10-31": [
       {
@@ -3015,59 +2953,6 @@
    "originalTitle": "All the Devils Are Here",
    "firstSeen": "2026-10-19",
    "status": "premiere"
-  },
-  {
-   "id": "8221s2r",
-   "title": "Digger",
-   "year": "2026",
-   "releaseDate": "2026-10-09",
-   "length": 129,
-   "poster": "https://www.cinema-city.pl/xmedia-cw/repo/feats/posters/8221S2R.jpg",
-   "trailer": "https://www.youtube.com/watch?v=VEGDt7ph7ww",
-   "link": "https://www.cinema-city.pl/filmy/digger/8221s2r",
-   "genres": [
-    "action",
-    "adventure",
-    "comedy"
-   ],
-   "formats": [
-    "2d"
-   ],
-   "showings": {
-    "1079": {
-     "2026-10-29": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 8",
-       "booking": "https://tickets.cinema-city.pl/api/order/1769210?lang=pl",
-       "soldOut": false
-      }
-     ]
-    }
-   },
-   "tmdb": {
-    "id": 1248832,
-    "originalTitle": "Digger",
-    "title": "DIGGER",
-    "overview": null,
-    "voteAverage": 0,
-    "voteCount": 0,
-    "releaseDate": "2026-09-30",
-    "genres": [
-     "komedia"
-    ],
-    "poster": "https://image.tmdb.org/t/p/w500/2aN8UGVhTSGYP6EggPkzoAelDmJ.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w780/b7PtCwsuMw84REQq15nmQgT9UXN.jpg"
-   },
-   "lbSlug": null,
-   "lbTitle": null,
-   "lbRating": null,
-   "lbRatingCount": 0,
-   "originalTitle": null,
-   "firstSeen": "2026-09-22",
-   "status": "new"
   },
   {
    "id": "8617s2r",
@@ -3690,7 +3575,7 @@
    "lbRatingCount": 0,
    "originalTitle": "Everest: The Other Side",
    "firstSeen": "2026-10-12",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8671o2r",
@@ -3801,7 +3686,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-10-27",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8670s2r",
@@ -3911,7 +3796,7 @@
       {
        "time": "17:40",
        "formats": [],
-       "lang": null,
+       "lang": "subbed",
        "auditorium": "Sala 3",
        "booking": "https://tickets.cinema-city.pl/api/order/1776871?lang=pl",
        "soldOut": false
@@ -3921,7 +3806,7 @@
       {
        "time": "17:40",
        "formats": [],
-       "lang": null,
+       "lang": "subbed",
        "auditorium": "Sala 3",
        "booking": "https://tickets.cinema-city.pl/api/order/1776872?lang=pl",
        "soldOut": false
@@ -3931,7 +3816,7 @@
       {
        "time": "17:40",
        "formats": [],
-       "lang": null,
+       "lang": "subbed",
        "auditorium": "Sala 3",
        "booking": "https://tickets.cinema-city.pl/api/order/1776873?lang=pl",
        "soldOut": false
@@ -5465,16 +5350,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-29": [
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1772813?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "18:40",
@@ -5815,16 +5690,6 @@
      ]
     },
     "1075": {
-     "2026-10-29": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 7",
-       "booking": "https://tickets.cinema-city.pl/api/order/1767283?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "20:10",
@@ -6436,16 +6301,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-29": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1772948?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "19:00",
@@ -6766,16 +6621,6 @@
      ]
     },
     "1075": {
-     "2026-10-29": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": null,
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1767131?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "13:10",
@@ -8387,7 +8232,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-10-27",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8595o2r1",
@@ -8823,18 +8668,6 @@
      ]
     },
     "1069": {
-     "2026-10-29": [
-      {
-       "time": "21:30",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": null,
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1769705?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "11:30",
@@ -9331,18 +9164,6 @@
      ]
     },
     "1079": {
-     "2026-10-29": [
-      {
-       "time": "21:30",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": null,
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1769126?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "11:30",
@@ -9947,18 +9768,6 @@
    ],
    "showings": {
     "1079": {
-     "2026-10-29": [
-      {
-       "time": "22:10",
-       "formats": [
-        "laser-barco"
-       ],
-       "lang": "subbed",
-       "auditorium": "Sala 5",
-       "booking": "https://tickets.cinema-city.pl/api/order/1769142?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "11:00",
@@ -11134,7 +10943,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-10-19",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8642s2r",
@@ -11217,7 +11026,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-10-14",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8643s2r",
@@ -11294,7 +11103,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-10-14",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8644s2r",
@@ -12881,7 +12690,7 @@
    "lbRatingCount": 0,
    "originalTitle": null,
    "firstSeen": "2026-09-30",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8521s2r",
@@ -13138,16 +12947,6 @@
      ]
     },
     "1079": {
-     "2026-10-29": [
-      {
-       "time": "22:00",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 1",
-       "booking": "https://tickets.cinema-city.pl/api/order/1769254?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "21:00",
@@ -13684,16 +13483,6 @@
      ]
     },
     "1069": {
-     "2026-10-29": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1774044?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "22:20",
@@ -13766,16 +13555,6 @@
      ]
     },
     "1075": {
-     "2026-10-29": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 4",
-       "booking": "https://tickets.cinema-city.pl/api/order/1767160?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "22:10",
@@ -13798,16 +13577,6 @@
      ]
     },
     "1079": {
-     "2026-10-29": [
-      {
-       "time": "22:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 3",
-       "booking": "https://tickets.cinema-city.pl/api/order/1774330?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "20:40",
@@ -14266,16 +14035,6 @@
    ],
    "showings": {
     "1065": {
-     "2026-10-29": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 11",
-       "booking": "https://tickets.cinema-city.pl/api/order/1774183?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "19:30",
@@ -14348,16 +14107,6 @@
      ]
     },
     "1069": {
-     "2026-10-29": [
-      {
-       "time": "21:40",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1774494?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "14:40",
@@ -14614,16 +14363,6 @@
      ]
     },
     "1089": {
-     "2026-10-29": [
-      {
-       "time": "21:20",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 6",
-       "booking": "https://tickets.cinema-city.pl/api/order/1770579?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "18:20",
@@ -17378,16 +17117,6 @@
      ]
     },
     "1079": {
-     "2026-10-29": [
-      {
-       "time": "21:30",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 12",
-       "booking": "https://tickets.cinema-city.pl/api/order/1772057?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "13:30",
@@ -17836,16 +17565,6 @@
      ]
     },
     "1079": {
-     "2026-10-29": [
-      {
-       "time": "21:50",
-       "formats": [],
-       "lang": "subbed",
-       "auditorium": "Sala 10",
-       "booking": "https://tickets.cinema-city.pl/api/order/1772049?lang=pl",
-       "soldOut": false
-      }
-     ],
      "2026-10-30": [
       {
        "time": "19:20",
@@ -19248,7 +18967,7 @@
    "lbRatingCount": 0,
    "originalTitle": "호프",
    "firstSeen": "2026-10-19",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8417s2r",
@@ -19761,7 +19480,7 @@
    "lbRatingCount": 0,
    "originalTitle": "Spider Island",
    "firstSeen": "2026-10-27",
-   "status": "upcoming"
+   "status": "premiere"
   },
   {
    "id": "8095d2r",
