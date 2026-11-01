@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-10-31T19:41:48.370Z",
+ "generatedAt": "2026-11-01T00:35:04.730Z",
  "fullSyncAt": "2026-09-15T19:17:06.136Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 531,
-  "watchlist": 132
+  "watched": 532,
+  "watchlist": 131
  },
  "watched": [
   {
@@ -3724,6 +3724,13 @@
    "year": 2026,
    "rating10": 6,
    "norm": "less of a stranger"
+  },
+  {
+   "slug": "scream",
+   "title": "Scream",
+   "year": 1996,
+   "rating10": 6,
+   "norm": "scream"
   }
  ],
  "watchlist": [
@@ -4508,12 +4515,6 @@
    "norm": "the game"
   },
   {
-   "slug": "scream",
-   "title": "Scream",
-   "year": 1996,
-   "norm": "scream"
-  },
-  {
    "slug": "21",
    "title": "21",
    "year": 2008,
@@ -4521,6 +4522,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "Scream",
+   "year": 1996,
+   "slug": "scream",
+   "rating10": 6,
+   "watchedDate": "2026-10-31",
+   "rewatch": false,
+   "tmdbId": 4232,
+   "review": null
+  },
   {
    "title": "Agatha All Along",
    "year": 2024,
@@ -5009,16 +5020,6 @@
    "watchedDate": "2026-08-03",
    "rewatch": true,
    "tmdbId": 1726,
-   "review": null
-  },
-  {
-   "title": "Marvel Zombies",
-   "year": 2025,
-   "slug": "marvel-zombies",
-   "rating10": 7,
-   "watchedDate": "2025-09-12",
-   "rewatch": false,
-   "tmdbId": null,
    "review": null
   }
  ]
