@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-11-07T19:44:54.393Z",
+ "generatedAt": "2026-11-08T01:03:31.209Z",
  "fullSyncAt": "2026-09-15T19:17:06.136Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 533,
+  "watched": 534,
   "watchlist": 131
  },
  "watched": [
@@ -3738,6 +3738,13 @@
    "year": 1997,
    "rating10": 6,
    "norm": "scream 2"
+  },
+  {
+   "slug": "scream-3",
+   "title": "Scream 3",
+   "year": 2000,
+   "rating10": 4,
+   "norm": "scream 3"
   }
  ],
  "watchlist": [
@@ -4530,6 +4537,16 @@
  ],
  "recent": [
   {
+   "title": "Scream 3",
+   "year": 2000,
+   "slug": "scream-3",
+   "rating10": 4,
+   "watchedDate": "2026-11-07",
+   "rewatch": false,
+   "tmdbId": 4234,
+   "review": null
+  },
+  {
    "title": "Scream 2",
    "year": 1997,
    "slug": "scream-2",
@@ -5017,16 +5034,6 @@
    "watchedDate": "2026-08-05",
    "rewatch": true,
    "tmdbId": 1771,
-   "review": null
-  },
-  {
-   "title": "Iron Man 2",
-   "year": 2010,
-   "slug": "iron-man-2",
-   "rating10": 6,
-   "watchedDate": "2026-08-04",
-   "rewatch": true,
-   "tmdbId": 10138,
    "review": null
   }
  ]
