@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-11-08T20:08:27.489Z",
+ "generatedAt": "2026-11-09T01:21:48.600Z",
  "fullSyncAt": "2026-09-15T19:17:06.136Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 535,
+  "watched": 536,
   "watchlist": 131
  },
  "watched": [
@@ -3752,6 +3752,13 @@
    "year": 1983,
    "rating10": 7,
    "norm": "mickey s christmas carol"
+  },
+  {
+   "slug": "scream-4",
+   "title": "Scream 4",
+   "year": 2011,
+   "rating10": 6,
+   "norm": "scream 4"
   }
  ],
  "watchlist": [
@@ -4544,6 +4551,16 @@
  ],
  "recent": [
   {
+   "title": "Scream 4",
+   "year": 2011,
+   "slug": "scream-4",
+   "rating10": 6,
+   "watchedDate": "2026-11-08",
+   "rewatch": false,
+   "tmdbId": 41446,
+   "review": null
+  },
+  {
    "title": "Mickey's Christmas Carol",
    "year": 1983,
    "slug": "mickeys-christmas-carol",
@@ -5031,16 +5048,6 @@
    "watchedDate": "2026-08-07",
    "rewatch": true,
    "tmdbId": 24428,
-   "review": null
-  },
-  {
-   "title": "Thor",
-   "year": 2011,
-   "slug": "thor",
-   "rating10": 6,
-   "watchedDate": "2026-08-06",
-   "rewatch": true,
-   "tmdbId": 10195,
    "review": null
   }
  ]
