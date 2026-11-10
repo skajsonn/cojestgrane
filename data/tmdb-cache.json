@@ -2431,7 +2431,7 @@
   }
  },
  "8582d2r": {
-  "fetchedAt": "2026-11-03",
+  "fetchedAt": "2026-11-10",
   "q": "Piesek",
   "tmdb": null
  },
@@ -2687,7 +2687,7 @@
   }
  },
  "8633s2r": {
-  "fetchedAt": "2026-11-03",
+  "fetchedAt": "2026-11-10",
   "q": "Hauser symfonicznie z londyńskiej Royal",
   "tmdb": null
  },
@@ -2893,7 +2893,7 @@
   }
  },
  "8615d2r": {
-  "fetchedAt": "2026-11-03",
+  "fetchedAt": "2026-11-10",
   "q": "Legendarni",
   "tmdb": null
  },
@@ -3131,7 +3131,7 @@
   "tmdb": null
  },
  "8616s2r": {
-  "fetchedAt": "2026-11-03",
+  "fetchedAt": "2026-11-10",
   "q": "Labirynt Fauna",
   "tmdb": null
  },
@@ -3212,7 +3212,7 @@
   }
  },
  "8674s2r": {
-  "fetchedAt": "2026-11-03",
+  "fetchedAt": "2026-11-10",
   "q": "Inni 25-lecie",
   "tmdb": null
  },
@@ -3316,7 +3316,7 @@
   "tmdb": null
  },
  "8181s2r1": {
-  "fetchedAt": "2026-11-03",
+  "fetchedAt": "2026-11-10",
   "q": "Ladies Night - Poznaj swojego teścia",
   "tmdb": null
  },
@@ -3406,9 +3406,20 @@
   }
  },
  "8637o2r": {
-  "fetchedAt": "2026-11-03",
+  "fetchedAt": "2026-11-10",
   "q": "BTS WORLD TOUR 'ARIRANG' IN KAOHSIUNG: LIVE VIEWING",
-  "tmdb": null
+  "tmdb": {
+   "id": 1820083,
+   "originalTitle": "BTS WORLD TOUR 'ARIRANG' IN KAOHSIUNG: LIVE VIEWING",
+   "title": "BTS WORLD TOUR 'ARIRANG' IN KAOHSIUNG: LIVE VIEWING",
+   "overview": null,
+   "voteAverage": 0,
+   "voteCount": 0,
+   "releaseDate": "2026-11-21",
+   "genres": [],
+   "poster": "https://image.tmdb.org/t/p/w500/kbwAR849GqMmZs01Uwm5MXL6CWd.jpg",
+   "backdrop": null
+  }
  },
  "8675s2r": {
   "fetchedAt": "2026-11-03",
@@ -3472,5 +3483,34 @@
   "fetchedAt": "2026-11-09",
   "q": "Wiedźmin 25 rocznica",
   "tmdb": null
+ },
+ "8640s2r": {
+  "fetchedAt": "2026-11-10",
+  "q": "Diuna: Część druga (re-release)",
+  "tmdb": null
+ },
+ "8639s2r": {
+  "fetchedAt": "2026-11-10",
+  "q": "Diuna (re-release)",
+  "tmdb": null
+ },
+ "8105s2r": {
+  "fetchedAt": "2026-11-10",
+  "q": "Diuna: Część trzecia",
+  "tmdb": {
+   "id": 1170608,
+   "originalTitle": "Dune: Part Three",
+   "title": "Diuna: Część trzecia",
+   "overview": null,
+   "voteAverage": 0,
+   "voteCount": 0,
+   "releaseDate": "2026-12-15",
+   "genres": [
+    "sci-fi",
+    "przygodowy"
+   ],
+   "poster": "https://image.tmdb.org/t/p/w500/nhfOh5lYsaBVx5RN8AqX1dsJmzC.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w780/i5E9H7Ik0u61ylDDTbmUpTL3Yw.jpg"
+  }
  }
 }
