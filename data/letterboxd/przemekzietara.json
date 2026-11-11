@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-11-11T11:36:44.770Z",
+ "generatedAt": "2026-11-11T22:25:06.144Z",
  "fullSyncAt": "2026-09-15T19:17:06.136Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 536,
+  "watched": 537,
   "watchlist": 131
  },
  "watched": [
@@ -3759,6 +3759,13 @@
    "year": 2011,
    "rating10": 6,
    "norm": "scream 4"
+  },
+  {
+   "slug": "visionquest",
+   "title": "VisionQuest",
+   "year": 2026,
+   "rating10": 8,
+   "norm": "visionquest"
   }
  ],
  "watchlist": [
@@ -4551,6 +4558,16 @@
  ],
  "recent": [
   {
+   "title": "VisionQuest",
+   "year": 2026,
+   "slug": "visionquest",
+   "rating10": 8,
+   "watchedDate": "2026-11-11",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
    "title": "Scream 4",
    "year": 2011,
    "slug": "scream-4",
@@ -5038,16 +5055,6 @@
    "watchedDate": "2026-08-08",
    "rewatch": true,
    "tmdbId": 68721,
-   "review": null
-  },
-  {
-   "title": "The Avengers",
-   "year": 2012,
-   "slug": "the-avengers-2012",
-   "rating10": 7,
-   "watchedDate": "2026-08-07",
-   "rewatch": true,
-   "tmdbId": 24428,
    "review": null
   }
  ]

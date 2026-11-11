@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-11-11T11:33:46.530Z",
+ "generatedAt": "2026-11-11T22:22:41.695Z",
  "fullSyncAt": "2026-09-15T19:16:40.237Z",
  "user": "skajson",
  "profileUrl": "https://letterboxd.com/skajson/",
  "counts": {
-  "watched": 254,
+  "watched": 255,
   "watchlist": 55
  },
  "watched": [
@@ -1785,6 +1785,13 @@
    "year": 2026,
    "rating10": 9,
    "norm": "clayface"
+  },
+  {
+   "slug": "you-can-see-everything",
+   "title": "You Can See Everything",
+   "year": 2026,
+   "rating10": 9,
+   "norm": "you can see everything"
   }
  ],
  "watchlist": [
@@ -2120,6 +2127,16 @@
   }
  ],
  "recent": [
+  {
+   "title": "You Can See Everything",
+   "year": 2026,
+   "slug": "you-can-see-everything",
+   "rating10": 9,
+   "watchedDate": "2026-11-11",
+   "rewatch": false,
+   "tmdbId": 1765072,
+   "review": null
+  },
   {
    "title": "Clayface",
    "year": 2026,
@@ -2606,16 +2623,6 @@
    "slug": "mr-mcmahon",
    "rating10": 7,
    "watchedDate": "2024-10-11",
-   "rewatch": false,
-   "tmdbId": null,
-   "review": null
-  },
-  {
-   "title": "The Penguin",
-   "year": 2024,
-   "slug": "the-penguin-2024",
-   "rating10": 9,
-   "watchedDate": "2024-11-19",
    "rewatch": false,
    "tmdbId": null,
    "review": null

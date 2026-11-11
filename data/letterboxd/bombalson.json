@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-11-11T11:35:16.138Z",
+ "generatedAt": "2026-11-11T22:23:55.976Z",
  "fullSyncAt": "2026-09-15T19:16:58.321Z",
  "user": "bombalson",
  "profileUrl": "https://letterboxd.com/bombalson/",
  "counts": {
-  "watched": 798,
+  "watched": 799,
   "watchlist": 542
  },
  "watched": [
@@ -5593,6 +5593,13 @@
    "year": 2026,
    "rating10": 8,
    "norm": "buddy"
+  },
+  {
+   "slug": "visionquest",
+   "title": "VisionQuest",
+   "year": 2026,
+   "rating10": 7,
+   "norm": "visionquest"
   }
  ],
  "watchlist": [
@@ -8851,6 +8858,16 @@
  ],
  "recent": [
   {
+   "title": "VisionQuest",
+   "year": 2026,
+   "slug": "visionquest",
+   "rating10": 7,
+   "watchedDate": "2026-11-11",
+   "rewatch": false,
+   "tmdbId": null,
+   "review": null
+  },
+  {
    "title": "Teenage Sex and Death at Camp Miasma",
    "year": 2026,
    "slug": "teenage-sex-and-death-at-camp-miasma",
@@ -9338,16 +9355,6 @@
    "watchedDate": "2026-08-17",
    "rewatch": false,
    "tmdbId": 271110,
-   "review": null
-  },
-  {
-   "title": "Tenet",
-   "year": 2020,
-   "slug": "tenet",
-   "rating10": 9,
-   "watchedDate": "2026-08-16",
-   "rewatch": false,
-   "tmdbId": 577922,
    "review": null
   }
  ]
