@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-11-14T20:13:35.432Z",
+ "generatedAt": "2026-11-15T01:28:12.032Z",
  "fullSyncAt": "2026-09-15T19:17:06.136Z",
  "user": "przemekzietara",
  "profileUrl": "https://letterboxd.com/przemekzietara/",
  "counts": {
-  "watched": 537,
+  "watched": 538,
   "watchlist": 131
  },
  "watched": [
@@ -3766,6 +3766,13 @@
    "year": 2026,
    "rating10": 8,
    "norm": "visionquest"
+  },
+  {
+   "slug": "a-story-of-derry",
+   "title": "A Story of Derry",
+   "year": 2026,
+   "rating10": 6,
+   "norm": "a story of derry"
   }
  ],
  "watchlist": [
@@ -4558,6 +4565,16 @@
  ],
  "recent": [
   {
+   "title": "A Story of Derry",
+   "year": 2026,
+   "slug": "a-story-of-derry",
+   "rating10": 6,
+   "watchedDate": "2026-10-31",
+   "rewatch": false,
+   "tmdbId": 1813355,
+   "review": null
+  },
+  {
    "title": "Deadpool & Wolverine",
    "year": 2024,
    "slug": "deadpool-wolverine",
@@ -5045,16 +5062,6 @@
    "watchedDate": "2026-08-11",
    "rewatch": true,
    "tmdbId": 100402,
-   "review": null
-  },
-  {
-   "title": "Thor: The Dark World",
-   "year": 2013,
-   "slug": "thor-the-dark-world",
-   "rating10": 4,
-   "watchedDate": "2026-08-10",
-   "rewatch": true,
-   "tmdbId": 76338,
    "review": null
   }
  ]
